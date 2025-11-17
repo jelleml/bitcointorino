@@ -3,8 +3,11 @@
 import Link from "next/link"
 import { useState, useRef } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
+<<<<<<< HEAD
 import { ThemeToggle } from "@/components/theme/theme-toggle"
 import { LanguageSelector } from "@/components/theme/language-selector"
+=======
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,7 +37,11 @@ export function Navbar() {
   ]
 
   return (
+<<<<<<< HEAD
     <nav className="sticky top-0 z-50 w-full border-b bg-white/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:supports-[backdrop-filter]:bg-gray-900/80">
+=======
+    <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -47,6 +54,21 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
+<<<<<<< HEAD
+=======
+            <a
+              href="#chi-siamo"
+              className="text-foreground font-medium hover:text-bitcoin-blue transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault()
+                const element = document.querySelector('#chi-siamo')
+                element?.scrollIntoView({ behavior: 'smooth' })
+              }}
+            >
+              About
+            </a>
+
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
             <div 
               className="relative"
               onMouseEnter={handleEcosystemEnter}
@@ -66,7 +88,11 @@ export function Navbar() {
                   onMouseEnter={handleEcosystemEnter}
                   onMouseLeave={handleEcosystemLeave}
                 >
+<<<<<<< HEAD
                   <div className="w-48 bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2">
+=======
+                  <div className="w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
                     {ecosystemLinks.map((link) => (
                       <Link
                         key={link.href}
@@ -81,12 +107,26 @@ export function Navbar() {
               )}
             </div>
 
+<<<<<<< HEAD
             <Link
               href="/about"
               className="text-foreground font-medium hover:text-bitcoin-blue transition-colors"
             >
               About
             </Link>
+=======
+            <a
+              href="#partner"
+              className="text-foreground font-medium hover:text-bitcoin-blue transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault()
+                const element = document.querySelector('#partner')
+                element?.scrollIntoView({ behavior: 'smooth' })
+              }}
+            >
+              Partner
+            </a>
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
 
             <Link
               href="/faq"
@@ -94,6 +134,7 @@ export function Navbar() {
             >
               FAQ
             </Link>
+<<<<<<< HEAD
 
             {/* Language and Theme Toggles */}
             <div className="flex items-center gap-2 ml-4 pl-4 border-l border-gray-200 dark:border-gray-700">
@@ -115,11 +156,40 @@ export function Navbar() {
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
+=======
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden p-2 rounded-md hover:bg-accent transition-colors"
+            aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden border-t py-4 space-y-4">
+<<<<<<< HEAD
+=======
+            <a
+              href="#chi-siamo"
+              className="block py-2 text-foreground font-medium hover:text-bitcoin-blue transition-colors"
+              onClick={(e) => {
+                e.preventDefault()
+                const element = document.querySelector('#chi-siamo')
+                element?.scrollIntoView({ behavior: 'smooth' })
+                setIsOpen(false)
+              }}
+            >
+              About
+            </a>
+
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
             <div>
               <button
                 onClick={() => setEcosystemOpen(!ecosystemOpen)}
@@ -144,6 +214,7 @@ export function Navbar() {
               )}
             </div>
 
+<<<<<<< HEAD
             <Link
               href="/about"
               className="block py-2 text-foreground font-medium hover:text-bitcoin-blue transition-colors"
@@ -151,6 +222,20 @@ export function Navbar() {
             >
               About
             </Link>
+=======
+            <a
+              href="#partner"
+              className="block py-2 text-foreground font-medium hover:text-bitcoin-blue transition-colors"
+              onClick={(e) => {
+                e.preventDefault()
+                const element = document.querySelector('#partner')
+                element?.scrollIntoView({ behavior: 'smooth' })
+                setIsOpen(false)
+              }}
+            >
+              Partner
+            </a>
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
 
             <Link
               href="/faq"

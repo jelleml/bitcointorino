@@ -108,21 +108,33 @@ export default function MeetupPage() {
       </section>
 
       {/* Communities Grid */}
+<<<<<<< HEAD
       <section className="py-16 bg-white dark:bg-black">
+=======
+      <section className="py-16">
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {communities.map((community, index) => (
                 <div
                   key={index}
+<<<<<<< HEAD
                   className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-all duration-300 hover:shadow-lg"
+=======
+                  className="bg-white rounded-lg p-6 border-2 border-gray-200 hover:border-bitcoin-blue transition-all duration-300 hover:shadow-lg"
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
                 >
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
                         <div className={`w-3 h-3 rounded-full ${community.color}`} />
+<<<<<<< HEAD
                         <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full">
+=======
+                        <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full">
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
                           {community.type}
                         </span>
                       </div>
@@ -174,7 +186,11 @@ export default function MeetupPage() {
       </section>
 
       {/* Create Community Section */}
+<<<<<<< HEAD
       <section className="py-16 bg-gray-50 dark:bg-black">
+=======
+      <section className="py-16 bg-gray-50">
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Users className="h-12 w-12 text-bitcoin-blue mx-auto mb-4" aria-hidden="true" />

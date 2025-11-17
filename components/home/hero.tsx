@@ -4,7 +4,11 @@ import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
+<<<<<<< HEAD
     <section className="relative bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 py-20 md:py-32">
+=======
+    <section className="relative bg-gradient-to-b from-white to-gray-50 py-20 md:py-32">
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}

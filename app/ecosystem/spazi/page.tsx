@@ -1,6 +1,10 @@
 import { Metadata } from "next"
 import Link from "next/link"
+<<<<<<< HEAD
 import { MapPin, ArrowLeft } from "lucide-react"
+=======
+import { MapPin, ArrowLeft, ExternalLink } from "lucide-react"
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
@@ -63,14 +67,32 @@ export default function SpaziPage() {
       </section>
 
       {/* Spaces List */}
+<<<<<<< HEAD
       <section className="py-16 bg-white dark:bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+=======
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">Spazi Disponibili</h2>
+            <div className="bg-bitcoin-blue/10 border-2 border-bitcoin-blue rounded-lg p-8 mb-8 text-center">
+              <p className="text-lg">
+                Stiamo mappando gli spazi Bitcoin-friendly di Torino. 
+                Se gestisci uno spazio che accetta Bitcoin o vuoi ospitare eventi 
+                della community, contattaci!
+              </p>
+            </div>
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
             <div className="space-y-6">
               {spaces.map((space, index) => (
                 <div
                   key={index}
+<<<<<<< HEAD
                   className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
+=======
+                  className="bg-white rounded-lg p-6 border-2 border-gray-200 hover:border-bitcoin-blue transition-colors"
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
                 >
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                     <div className="flex-1">
@@ -78,7 +100,11 @@ export default function SpaziPage() {
                         <span className="px-3 py-1 bg-bitcoin-blue/10 text-bitcoin-blue text-sm font-medium rounded-full">
                           {space.type}
                         </span>
+<<<<<<< HEAD
                         <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium rounded-full">
+=======
+                        <span className="px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
                           {space.availability}
                         </span>
                       </div>
@@ -96,7 +122,11 @@ export default function SpaziPage() {
                       {space.features.map((feature, idx) => (
                         <span
                           key={idx}
+<<<<<<< HEAD
                           className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm rounded-full"
+=======
+                          className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
                         >
                           {feature}
                         </span>
@@ -111,7 +141,11 @@ export default function SpaziPage() {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-16 bg-gray-50 dark:bg-black">
+=======
+      <section className="py-16 bg-gray-50">
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
@@ -121,11 +155,27 @@ export default function SpaziPage() {
               Se gestisci un coworking, una location per eventi o uno spazio 
               che potrebbe ospitare la community Bitcoin di Torino, parliamone!
             </p>
+<<<<<<< HEAD
             <Button asChild size="lg">
               <a href="mailto:info@bitcointorino.org">
                 Proponi il tuo spazio
               </a>
             </Button>
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <a href="mailto:info@bitcointorino.org">
+                  Proponi il tuo spazio
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href="https://t.me/bitcointorino" target="_blank" rel="noopener noreferrer">
+                  Chiedi alla community
+                  <ExternalLink className="ml-2 h-5 w-5" aria-hidden="true" />
+                </a>
+              </Button>
+            </div>
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
           </div>
         </div>
       </section>

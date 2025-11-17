@@ -4,7 +4,10 @@ import "./globals.css"
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import { SkipToContent } from "@/components/accessibility/skip-to-content"
+<<<<<<< HEAD
 import { ThemeProvider } from "@/components/theme/theme-provider"
+=======
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -45,6 +48,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+<<<<<<< HEAD
     <html lang="it" className={inter.variable} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
         <ThemeProvider
@@ -60,6 +64,16 @@ export default function RootLayout({
           </main>
           <Footer />
         </ThemeProvider>
+=======
+    <html lang="it" className={inter.variable}>
+      <body className="min-h-screen flex flex-col">
+        <SkipToContent />
+        <Navbar />
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
+        <Footer />
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
       </body>
     </html>
   )

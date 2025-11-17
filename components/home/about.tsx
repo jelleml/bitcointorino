@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GraduationCap, Users, Rocket } from "lucide-react"
 
 export function About() {
@@ -7,6 +8,61 @@ export function About() {
         <div className="max-w-6xl mx-auto">
           {/* What We Do */}
           <div className="bg-white dark:bg-gray-900 rounded-lg p-8 md:p-12 border-2 border-gray-200 dark:border-gray-700">
+=======
+import { Target, Lightbulb, Heart, Zap, GraduationCap, Users, Rocket } from "lucide-react"
+
+export function About() {
+  const values = [
+    {
+      icon: Target,
+      title: "Mission",
+      description: "Promuovere l'adozione di Bitcoin a Torino attraverso educazione, eventi e supporto alla community locale."
+    },
+    {
+      icon: Lightbulb,
+      title: "Educazione",
+      description: "Organizzare workshop, seminari e meetup per diffondere la conoscenza su Bitcoin e le tecnologie correlate."
+    },
+    {
+      icon: Heart,
+      title: "Community",
+      description: "Creare una rete solida di appassionati, sviluppatori e imprenditori interessati all'ecosistema Bitcoin."
+    },
+    {
+      icon: Zap,
+      title: "Innovazione",
+      description: "Supportare progetti e iniziative che utilizzano Bitcoin per creare valore nel territorio torinese."
+    }
+  ]
+
+  return (
+    <section id="chi-siamo" className="py-20 bg-gray-50 scroll-mt-16">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+
+          {/* Values Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {values.map((value, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg p-8 border-2 border-gray-200 hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-bitcoin-blue/10 flex-shrink-0">
+                    <value.icon className="h-6 w-6 text-bitcoin-blue" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+                    <p className="text-muted-foreground">{value.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* What We Do */}
+          <div className="bg-white rounded-lg p-8 md:p-12 border-2 border-gray-200">
+>>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">
               Cosa Facciamo
             </h3>
