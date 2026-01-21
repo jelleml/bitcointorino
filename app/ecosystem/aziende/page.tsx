@@ -36,7 +36,7 @@ export default function AziendePage() {
       <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Link 
+            <Link
               href="/ecosystem"
               className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
             >
@@ -57,31 +57,14 @@ export default function AziendePage() {
       </section>
 
       {/* Companies List */}
-<<<<<<< HEAD
       <section className="py-16 bg-white dark:bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-=======
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Aziende dell&apos;Ecosystem</h2>
-            <div className="bg-bitcoin-blue/10 border-2 border-bitcoin-blue rounded-lg p-8 mb-8 text-center">
-              <p className="text-lg">
-                Stiamo costruendo la directory delle aziende Bitcoin di Torino. 
-                Se la tua azienda utilizza Bitcoin, contattaci per essere inserito!
-              </p>
-            </div>
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
             <div className="space-y-6">
               {companies.map((company, index) => (
                 <div
                   key={index}
-<<<<<<< HEAD
                   className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
-=======
-                  className="bg-white rounded-lg p-6 border-2 border-gray-200 hover:border-bitcoin-blue transition-colors"
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -96,11 +79,7 @@ export default function AziendePage() {
                     {company.services.map((service, idx) => (
                       <span
                         key={idx}
-<<<<<<< HEAD
                         className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm rounded-full"
-=======
-                        className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
                       >
                         {service}
                       </span>
@@ -114,18 +93,14 @@ export default function AziendePage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-16 bg-gray-50 dark:bg-black">
-=======
-      <section className="py-16 bg-gray-50">
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
               La tua azienda usa Bitcoin?
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Unisciti all&apos;ecosystem Bitcoin di Torino e fai parte della rete 
+              Unisciti all&apos;ecosystem Bitcoin di Torino e fai parte della rete
               di aziende innovative che stanno costruendo il futuro dell&apos;economia.
             </p>
             <Button asChild size="lg">
@@ -139,4 +114,3 @@ export default function AziendePage() {
     </main>
   )
 }
-

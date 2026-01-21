@@ -12,14 +12,10 @@ export function Partners() {
   ]
 
   return (
-<<<<<<< HEAD
-    <section 
-      id="partner" 
+    <section
+      id="partner"
       className="py-16 bg-gray-50 dark:bg-black scroll-mt-16"
     >
-=======
-    <section id="partner" className="py-16 bg-white border-t border-b scroll-mt-16">
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -34,11 +30,7 @@ export function Partners() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-<<<<<<< HEAD
               className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors group"
-=======
-              className="flex items-center justify-center p-6 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-bitcoin-blue transition-colors group"
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
             >
               <div className="text-center">
                 {/* Placeholder logo - in production, use actual images */}
@@ -68,4 +60,3 @@ export function Partners() {
     </section>
   )
 }
-

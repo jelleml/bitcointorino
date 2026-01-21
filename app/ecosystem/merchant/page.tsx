@@ -42,7 +42,7 @@ export default function MerchantPage() {
       <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Link 
+            <Link
               href="/ecosystem"
               className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
             >
@@ -63,11 +63,7 @@ export default function MerchantPage() {
       </section>
 
       {/* Merchants List */}
-<<<<<<< HEAD
       <section className="py-16 bg-white dark:bg-black">
-=======
-      <section className="py-16">
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
@@ -76,11 +72,7 @@ export default function MerchantPage() {
                 return (
                   <div
                     key={index}
-<<<<<<< HEAD
                     className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
-=======
-                    className="bg-white rounded-lg p-6 border-2 border-gray-200 hover:border-bitcoin-blue transition-colors"
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
                   >
                     <div className="flex items-start space-x-4">
                       <div className="bg-bitcoin-blue/10 p-3 rounded-lg">
@@ -119,18 +111,14 @@ export default function MerchantPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-16 bg-gray-50 dark:bg-black">
-=======
-      <section className="py-16 bg-gray-50">
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
               Accetti Bitcoin nella tua attività?
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Entra a far parte della rete di merchant Bitcoin-friendly di Torino 
+              Entra a far parte della rete di merchant Bitcoin-friendly di Torino
               e raggiungi una community di clienti appassionati e innovatori.
             </p>
             <Button asChild size="lg">
@@ -144,4 +132,3 @@ export default function MerchantPage() {
     </main>
   )
 }
-

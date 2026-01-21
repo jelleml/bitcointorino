@@ -4,11 +4,7 @@ import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-<<<<<<< HEAD
     <section className="relative bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 py-20 md:py-32">
-=======
-    <section className="relative bg-gradient-to-b from-white to-gray-50 py-20 md:py-32">
->>>>>>> cec4e76d646139098b0b827bd2c3c6c2514d8809
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
@@ -25,7 +21,7 @@ export function Hero() {
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Promuoviamo l&apos;adozione e lo sviluppo dell&apos;ecosistema Bitcoin attraverso 
+            Promuoviamo l&apos;adozione e lo sviluppo dell&apos;ecosistema Bitcoin attraverso
             eventi, educazione e networking.
           </p>
 
@@ -54,4 +50,3 @@ export function Hero() {
     </section>
   )
 }
-
