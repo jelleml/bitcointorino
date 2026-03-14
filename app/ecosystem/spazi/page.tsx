@@ -38,7 +38,7 @@ const spaces = [
 export default function SpaziPage() {
   return (
     <main className="min-h-screen">
-      <div className="pt-12 pb-6">
+      <div className="pt-12 pb-2 md:pb-6">
         <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Costruisci con altri Bitcoiner</h1>
         </div>

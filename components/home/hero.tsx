@@ -5,11 +5,9 @@ import { Button } from "@/components/ui/button"
 export function Hero() {
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden pt-[50px] pb-[50px] md:pb-[100px]"
       style={{
         background: 'linear-gradient(to bottom, #00020C, #00138E)',
-        paddingTop: '50px',
-        paddingBottom: '100px'
       }}
     >
       <div className="container mx-auto px-4 relative z-10">

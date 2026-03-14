@@ -16,7 +16,7 @@ export function Partners() {
   return (
     <section
       id="partner"
-      className="pt-[114px] pb-[164px] bg-gray-50 dark:bg-black scroll-mt-16"
+      className="pt-16 md:pt-[114px] pb-16 md:pb-[164px] bg-gray-50 dark:bg-black scroll-mt-16"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">

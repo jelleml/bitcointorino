@@ -38,7 +38,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="flex items-center">
-              <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" className="h-[48px] w-auto" />
+              <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" className="h-[56px] w-auto" />
             </div>
           </Link>
 

@@ -11,22 +11,19 @@ export function Footer() {
         background: 'linear-gradient(to bottom, #00138E, #00020C)'
       }}
     >
-      <div className="container mx-auto px-4 pt-[100px] pb-12">
+      <div className="container mx-auto px-4 pt-8 md:pt-[100px] pb-6 md:pb-12">
 
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 md:justify-items-center text-center md:text-left justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mb-8 md:justify-items-center text-center md:text-left justify-items-center">
           {/* About */}
           <div className="flex flex-col items-center md:items-start">
-            <Link href="/" className="inline-block mb-4 md:ml-[-18px] hover:opacity-80 transition-opacity">
+            <Link href="/" className="inline-block mb-2 md:mb-4 md:ml-[-18px] hover:opacity-80 transition-opacity">
               <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" className="h-24 w-auto brightness-0 invert" />
             </Link>
-            <p className="text-white/80 mb-4">
+            <p className="text-white/80">
               Promuoviamo l&apos;ecosistema Bitcoin a Torino.
             </p>
-            <div className="flex items-start justify-center md:justify-start space-x-2 text-white/80">
-              <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-              <span>Torino, Italia</span>
-            </div>
+
           </div>
 
           {/* Quick Links */}
@@ -62,7 +59,7 @@ export function Footer() {
           </div>
 
           {/* Contatti */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
             <h3 className="text-xl font-bold mb-4">Contatti</h3>
             <div className="flex space-x-4 justify-center md:justify-start flex-wrap gap-y-4">
               <a
@@ -112,7 +109,7 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="bg-white/20 mt-[100px] mb-6" />
+        <Separator className="bg-white/20 mt-8 md:mt-[100px] mb-6" />
 
         {/* Copyright */}
         <div className="text-center text-white/60">
