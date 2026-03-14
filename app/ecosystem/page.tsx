@@ -105,7 +105,6 @@ export default function EcosystemPage() {
             <Button asChild size="lg">
               <a href="mailto:info@bitcointorino.org">
                 Contattaci
-                <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
               </a>
             </Button>
           </div>

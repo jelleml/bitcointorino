@@ -14,23 +14,23 @@ export function Footer() {
       <div className="container mx-auto px-4 pt-[100px] pb-12">
 
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 md:justify-items-center text-center md:text-left justify-items-center">
           {/* About */}
-          <div>
-            <Link href="/" className="inline-block mb-4 ml-[-20px] hover:opacity-80 transition-opacity">
+          <div className="flex flex-col items-center md:items-start">
+            <Link href="/" className="inline-block mb-4 md:ml-[-18px] hover:opacity-80 transition-opacity">
               <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" className="h-24 w-auto brightness-0 invert" />
             </Link>
             <p className="text-white/80 mb-4">
               Promuoviamo l&apos;ecosistema Bitcoin a Torino.
             </p>
-            <div className="flex items-start space-x-2 text-white/80">
+            <div className="flex items-start justify-center md:justify-start space-x-2 text-white/80">
               <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
               <span>Torino, Italia</span>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-xl font-bold mb-4">Link Rapidi</h3>
             <ul className="space-y-2">
               <li>
@@ -62,9 +62,9 @@ export function Footer() {
           </div>
 
           {/* Contatti */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-xl font-bold mb-4">Contatti</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center md:justify-start flex-wrap gap-y-4">
               <a
                 href="https://t.me/bitcointorinochannel"
                 target="_blank"
