@@ -33,7 +33,7 @@ const communities = [
     links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/satoshispritzbardonecchia" }],
   },
   {
-    name: "Satoshi Spritz Valsusa",
+    name: "Satoshi Spritz Val Susa",
     description: "Meetup con frequenza irregolare che riunisce gli appassionati di Bitcoin in tutta la Val di Susa.",
     type: "Meetup",
     members: "35",
