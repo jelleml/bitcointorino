@@ -1,8 +1,13 @@
+'use client'
+
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { useTranslations } from 'next-intl'
 
 export function Hero() {
+  const t = useTranslations('Hero');
+
   return (
     <section
       className="relative overflow-hidden pt-[50px] pb-[50px] md:pb-[100px]"
@@ -28,12 +33,12 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="text-base text-black bg-white hover:bg-gray-100">
               <a href="https://t.me/bitcointorinochannel" target="_blank" rel="noopener noreferrer">
-                Entra nel Canale
+                {t('enterChannel')}
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base text-white border-white hover:bg-white hover:text-[#00138E]">
               <a href="https://luma.com/user/bitcointorino" target="_blank" rel="noopener noreferrer">
-                Scopri gli Eventi
+                {t('discoverEvents')}
               </a>
             </Button>
           </div>

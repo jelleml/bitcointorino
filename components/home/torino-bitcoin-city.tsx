@@ -1,6 +1,9 @@
 import Image from "next/image"
+import { useTranslations } from 'next-intl'
 
 export function TorinoBitcoinCity() {
+  const t = useTranslations('TorinoBitcoinCity');
+
   return (
     <section
       className="relative bg-fixed bg-center bg-cover"
@@ -26,7 +29,7 @@ export function TorinoBitcoinCity() {
             </div>
           </div>
           <p className="text-xl md:text-2xl text-gray-100 leading-relaxed font-light">
-            Immaginiamo un futuro dove Bitcoin diventi una colonna portante dell&apos;economia torinese, valorizzandone la tradizione ingegneristica e imprenditoriale. Stiamo creando le fondamenta e le connessioni per realizzarlo.
+            {t('description')}
           </p>
         </div>
       </div>

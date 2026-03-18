@@ -1,6 +1,9 @@
 import { BookOpen, ShieldCheck, Megaphone, Handshake } from "lucide-react"
+import { useTranslations } from 'next-intl'
 
 export function About() {
+  const t = useTranslations('About');
+
   return (
     <section id="chi-siamo" className="py-20 bg-gray-50 dark:bg-black scroll-mt-16">
       <div className="container mx-auto px-4">
@@ -14,9 +17,11 @@ export function About() {
                     <BookOpen className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
                   </div>
                 </div>
-                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">Divulgazione</h4>
+                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">
+                  {t('divulgation.title')}
+                </h4>
                 <p className="text-sm text-muted-foreground">
-                  Supportiamo attività formative ed eventi culturali.
+                  {t('divulgation.description')}
                 </p>
               </div>
               <div className="group text-center">
@@ -25,9 +30,11 @@ export function About() {
                     <ShieldCheck className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
                   </div>
                 </div>
-                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">Adozione</h4>
+                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">
+                  {t('adoption.title')}
+                </h4>
                 <p className="text-sm text-muted-foreground">
-                  Aiutiamo le aziende nel corretto utilizzo e custodia di Bitcoin.
+                  {t('adoption.description')}
                 </p>
               </div>
               <div className="group text-center">
@@ -36,9 +43,11 @@ export function About() {
                     <Megaphone className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
                   </div>
                 </div>
-                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">Promozione</h4>
+                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">
+                  {t('promotion.title')}
+                </h4>
                 <p className="text-sm text-muted-foreground">
-                  Aggreghiamo tutte le attività legate a Bitcoin a Torino.
+                   {t('promotion.description')}
                 </p>
               </div>
               <div className="group text-center">
@@ -47,9 +56,11 @@ export function About() {
                     <Handshake className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
                   </div>
                 </div>
-                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">Connessione</h4>
+                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">
+                  {t('connection.title')}
+                </h4>
                 <p className="text-sm text-muted-foreground">
-                  Favoriamo collaborazioni tra enti del settore e istituzioni cittadine.
+                  {t('connection.description')}
                 </p>
               </div>
             </div>

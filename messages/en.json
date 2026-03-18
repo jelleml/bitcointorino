@@ -1,0 +1,229 @@
+{
+  "Hero": {
+    "enterChannel": "Join the Channel",
+    "discoverEvents": "Discover Events"
+  },
+  "About": {
+    "title": "About Us",
+    "divulgation": {
+      "title": "Education",
+      "description": "We support Bitcoin-related educational activities and cultural events."
+    },
+    "adoption": {
+      "title": "Adoption",
+      "description": "We help businesses with the correct use and custody of Bitcoin."
+    },
+    "promotion": {
+      "title": "Promotion",
+      "description": "We aggregate all Bitcoin-related businesses and initiatives in Turin."
+    },
+    "connection": {
+      "title": "Networking",
+      "description": "We foster collaborations between industry entities and city institutions."
+    }
+  },
+  "TorinoBitcoinCity": {
+    "description": "We imagine a future where Bitcoin becomes a cornerstone of Turin's economy, leveraging its engineering and entrepreneurial tradition. We are building the foundations and connections to make it happen."
+  },
+  "Navbar": {
+    "ecosystem": "Ecosystem",
+    "events": "Events",
+    "people": "People",
+    "activities": "Merchants",
+    "spaces": "Spaces"
+  },
+  "NextEvent": {
+    "title": "Next Event",
+    "type": "Conference",
+    "eventName": "BitCuneo 2026",
+    "description": "The largest event in the province of Cuneo to discuss the Bitcoin protocol and the change it brings. Talks, panels, networking, and learning moments for the curious, students, and professionals.",
+    "date": "March 13-14, 2026",
+    "time": "9:30 AM - 6:00 PM",
+    "locationName": "Provincial Meeting Center",
+    "address": "Corso Dante, 41, Cuneo",
+    "participants": "300 participants",
+    "availability": "Seats available",
+    "register": "Register for the Event"
+  },
+  "Partners": {
+    "title": "Partners",
+    "becomePartner": "Want to become a partner of the association?",
+    "contactUs": "Contact Us"
+  },
+  "Footer": {
+    "description": "Association dedicated to the promotion and development of the Bitcoin ecosystem in Turin.",
+    "links": "Useful Links",
+    "contact": "Contact",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Stay updated on events and news.",
+    "subscribe": "Subscribe",
+    "home": "Home",
+    "ecosystem": "Ecosystem",
+    "about": "About Us",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy"
+  },
+  "Ecosystem": {
+    "title": "Ecosystem",
+    "description": "Explore the Bitcoin ecosystem in Turin: meetups, businesses, merchants, and spaces that accept Bitcoin",
+    "sections": {
+      "people": {
+        "title": "People",
+        "description": "Active Bitcoin communities and groups in Turin and Piedmont."
+      },
+      "activities": {
+        "title": "Merchants",
+        "description": "Shops and businesses that accept Bitcoin."
+      },
+      "spaces": {
+        "title": "Spaces",
+        "description": "Bitcoin-friendly locations and coworking spaces in Turin."
+      }
+    },
+    "explore": "Explore",
+    "ctaTitle": "Want to be part of the ecosystem?",
+    "ctaDescription": "If you manage a community, a business, or a space and want to be included in our map of the Turin Bitcoin ecosystem, contact us!",
+    "contactUs": "Contact Us",
+    "Meetup": {
+      "title": "Meet other Bitcoiners",
+      "filterAll": "All",
+      "members": "members",
+      "ctaTitle": "Want to create a new community?",
+      "ctaDescription": "If you are thinking of starting a new Bitcoin community in Turin or Piedmont, we can help you promote it and put you in touch with other organizers.",
+      "contactUs": "Contact Us",
+      "communities": {
+        "bitpolito": {
+          "name": "BitPolito",
+          "description": "Student team from the Polytechnic of Turin focused on education and development of Bitcoin, bridging university and industry.",
+          "type": "Student Team",
+          "frequency": "Active daily"
+        },
+        "satoshi_torino": {
+          "name": "Satoshi Spritz Torino",
+          "description": "The largest Italian Bitcoin meetup, meets every Thursday to host short talks, film forums, book clubs and encourage networking.",
+          "type": "Meetup",
+          "frequency": "Every Thursday"
+        },
+        "satoshi_bardonecchia": {
+          "name": "Satoshi Spritz Bardonecchia",
+          "description": "Meetup with irregular frequency that brings together Bitcoin enthusiasts in Bardonecchia and surrounding areas.",
+          "type": "Meetup",
+          "frequency": "Occasional"
+        },
+        "satoshi_valsusa": {
+          "name": "Satoshi Spritz Val Susa",
+          "description": "Meetup with irregular frequency that brings together Bitcoin enthusiasts throughout Val di Susa.",
+          "type": "Meetup",
+          "frequency": "Occasional"
+        },
+        "bitcoin_alba": {
+          "name": "Bitcoin Alba-Asti-Cuneo",
+          "description": "Meetup with irregular frequency that brings together Bitcoin enthusiasts in the area of Alba, Asti and Cuneo.",
+          "type": "Community",
+          "frequency": "Occasional"
+        },
+        "bitdevs": {
+          "name": "BitDevs",
+          "description": "Global network of Bitcoin developers focused on advanced technical discussions, mainly on the latest news in the industry.",
+          "type": "Meetup",
+          "frequency": "Every month"
+        },
+        "bitcoin_bitches": {
+          "name": "BitcoinBitches",
+          "description": "Italian community, with a strong presence in Turin, which aggregates girls of all ages passionate about Bitcoin.",
+          "type": "Community",
+          "frequency": "Occasional"
+        }
+      }
+    },
+    "Spaces": {
+      "title": "Build with other Bitcoiners",
+      "services": "Available services:",
+      "openInMaps": "Open in Maps",
+      "ctaTitle": "Have a space to share?",
+      "ctaDescription": "If you manage a coworking space, an event location, or a space that could host the Turin Bitcoin community, let's talk!",
+      "contactUs": "Contact Us",
+      "items": {
+        "blox": {
+          "name": "Blox Space",
+          "type": "Coworking",
+          "description": "Multifunctional space in the center of Turin designed for freelancers and startups active in the world of Bitcoin and freedom technology.",
+          "features": ["Hot Desks", "Meeting Rooms", "Office Rooms", "Events"]
+        },
+        "polito": {
+          "name": "Polytechnic of Turin",
+          "type": "University",
+          "description": "One of the world's leading engineering universities, it has several training courses, research groups, and student teams active in the Bitcoin field.",
+          "features": ["Education", "Study Rooms", "Events"]
+        },
+        "planb": {
+          "name": "Plan B",
+          "type": "Bar",
+          "description": "Informal venue in downtown Turin with a Bitcoin-themed setup that combines a café by day and a cocktail bar in the evening.",
+          "features": ["Catering", "Events"]
+        }
+      }
+    },
+    "Companies": {
+      "title": "Companies",
+      "description": "Businesses and startups using Bitcoin and Lightning Network in Turin",
+      "backToEcosystem": "Back to Ecosystem",
+      "ctaTitle": "Does your company use Bitcoin?",
+      "ctaDescription": "Join the Turin Bitcoin ecosystem and be part of the network of innovative companies building the future of the economy.",
+      "contactUs": "Contact us to be included",
+      "items": {
+        "company1": {
+          "name": "Bitcoin Company 1",
+          "description": "Description of the company and its use of Bitcoin",
+          "category": "Technology",
+          "services": ["Lightning Network", "Wallet Development", "Consulting"]
+        },
+        "company2": {
+          "name": "Bitcoin Company 2",
+          "description": "Description of the company and its use of Bitcoin",
+          "category": "Finance",
+          "services": ["Bitcoin Treasury", "B2B Payments", "Mining"]
+        },
+        "startup1": {
+          "name": "Bitcoin Startup 1",
+          "description": "Description of the startup and its project",
+          "category": "Innovation",
+          "services": ["Smart Contracts", "DeFi", "Education"]
+        }
+      }
+    },
+    "Merchant": {
+      "title": "Businesses",
+      "description": "Shops and commercial activities that accept Bitcoin in Turin",
+      "backToEcosystem": "Back to Ecosystem",
+      "ctaTitle": "Do you accept Bitcoin in your business?",
+      "ctaDescription": "Become part of Turin's Bitcoin-friendly business network and reach a community of passionate customers and innovators.",
+      "contactUs": "Register your business",
+      "items": {
+        "bar": {
+          "name": "Bitcoin Bar",
+          "category": "Bar & Café",
+          "description": "Coffee, breakfast and appetizers payable in Bitcoin and Lightning"
+        },
+        "retail": {
+          "name": "Crypto Shop",
+          "category": "Retail",
+          "description": "Tech products and Bitcoin gadgets"
+        },
+        "food": {
+          "name": "Lightning Restaurant",
+          "category": "Catering",
+          "description": "Traditional cuisine with innovative payments"
+        }
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to the most common questions about Bitcoin Torino",
+    "ctaTitle": "Didn't find the answer you were looking for?",
+    "ctaDescription": "Contact us directly or join our Telegram group to ask your questions to the community.",
+    "sendEmail": "Send an Email",
+    "joinTelegram": "Join on Telegram"
+  }
+}

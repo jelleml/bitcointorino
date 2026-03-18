@@ -1,11 +1,13 @@
 "use client"
 
-import Link from "next/link"
+import {Link} from "@/i18n/navigation"
 import { useState, useRef } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { LanguageSelector } from "@/components/theme/language-selector"
+import { useTranslations } from 'next-intl'
 
 export function Navbar() {
+  const t = useTranslations('Navbar');
   const [isOpen, setIsOpen] = useState(false)
   const [ecosystemOpen, setEcosystemOpen] = useState(false)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -26,9 +28,9 @@ export function Navbar() {
   }
 
   const ecosystemLinks = [
-    { href: "/ecosystem/meetup", label: "Persone", external: false },
-    { href: "https://btcmap.org/map#13/45.07013/7.67146", label: "Attività", external: true },
-    { href: "/ecosystem/spazi", label: "Spazi", external: false },
+    { href: "/ecosystem/meetup", label: t('people'), external: false },
+    { href: "https://btcmap.org/map#13/45.07013/7.67146", label: t('activities'), external: true },
+    { href: "/ecosystem/spazi", label: t('spaces'), external: false },
   ]
 
   return (
@@ -53,7 +55,7 @@ export function Navbar() {
                 href="/ecosystem"
                 className="text-foreground font-medium hover:text-bitcoin-blue transition-colors inline-flex items-center py-2"
               >
-                Ecosistema
+                {t('ecosystem')}
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${ecosystemOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
               </Link>
 
@@ -96,7 +98,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="text-foreground font-medium hover:text-bitcoin-blue transition-colors"
             >
-              Eventi
+              {t('events')}
             </a>
 
 
@@ -126,7 +128,7 @@ export function Navbar() {
                 onClick={() => setEcosystemOpen(!ecosystemOpen)}
                 className="flex items-center justify-between w-full py-2 text-foreground font-medium hover:text-bitcoin-blue transition-colors"
               >
-                Ecosistema
+                {t('ecosystem')}
                 <ChevronDown className={`h-4 w-4 transition-transform ${ecosystemOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
               </button>
               {ecosystemOpen && (
@@ -165,7 +167,7 @@ export function Navbar() {
               className="block py-2 text-foreground font-medium hover:text-bitcoin-blue transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Eventi
+              {t('events')}
             </a>
 
           </div>

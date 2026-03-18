@@ -1,35 +1,33 @@
-import { Metadata } from "next"
-import Link from "next/link"
+'use client'
+
 import { Building2, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-export const metadata: Metadata = {
-  title: "Aziende - Ecosystem Bitcoin Torino",
-  description: "Imprese e startup che utilizzano Bitcoin e Lightning Network a Torino",
-}
-
-const companies = [
-  {
-    name: "Azienda Bitcoin 1",
-    description: "Descrizione dell'azienda e del suo utilizzo di Bitcoin",
-    category: "Tecnologia",
-    services: ["Lightning Network", "Wallet Development", "Consulenza"],
-  },
-  {
-    name: "Azienda Bitcoin 2",
-    description: "Descrizione dell'azienda e del suo utilizzo di Bitcoin",
-    category: "Finanza",
-    services: ["Bitcoin Treasury", "Pagamenti B2B", "Mining"],
-  },
-  {
-    name: "Startup Bitcoin 1",
-    description: "Descrizione della startup e del suo progetto",
-    category: "Innovazione",
-    services: ["Smart Contracts", "DeFi", "Education"],
-  },
-]
+import { useTranslations } from 'next-intl'
+import { Link } from "@/i18n/navigation"
 
 export default function AziendePage() {
+  const t = useTranslations('Ecosystem.Companies');
+
+  const companies = [
+    {
+      id: "company1",
+    },
+    {
+      id: "company2",
+    },
+    {
+      id: "startup1",
+    },
+  ]
+
+  const mappedCompanies = companies.map(c => ({
+    ...c,
+    name: t(`items.${c.id}.name`),
+    description: t(`items.${c.id}.description`),
+    category: t(`items.${c.id}.category`),
+    services: t.raw(`items.${c.id}.services`) as string[],
+  }))
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -41,16 +39,16 @@ export default function AziendePage() {
               className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
             >
               <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
-              Torna all&apos;Ecosystem
+              {t('backToEcosystem')}
             </Link>
             <div className="flex items-center space-x-4 mb-4">
               <div className="bg-white/10 p-4 rounded-lg">
                 <Building2 className="h-8 w-8" aria-hidden="true" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold">Aziende</h1>
+              <h1 className="text-4xl md:text-5xl font-bold">{t('title')}</h1>
             </div>
             <p className="text-xl text-gray-100">
-              Imprese e startup che utilizzano Bitcoin e Lightning Network a Torino
+              {t('description')}
             </p>
           </div>
         </div>
@@ -61,7 +59,7 @@ export default function AziendePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
-              {companies.map((company, index) => (
+              {mappedCompanies.map((company, index) => (
                 <div
                   key={index}
                   className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
@@ -97,15 +95,14 @@ export default function AziendePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
-              La tua azienda usa Bitcoin?
+              {t('ctaTitle')}
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Unisciti all&apos;ecosystem Bitcoin di Torino e fai parte della rete
-              di aziende innovative che stanno costruendo il futuro dell&apos;economia.
+              {t('ctaDescription')}
             </p>
             <Button asChild size="lg">
               <a href="mailto:info@bitcointorino.org">
-                Contattaci per essere inserito
+                {t('contactUs')}
               </a>
             </Button>
           </div>

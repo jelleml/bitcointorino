@@ -3,6 +3,8 @@
 import * as React from "react"
 import { Globe, ChevronDown } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
+import { useRouter, usePathname } from 'next/navigation'
+import { useParams } from 'next/navigation'
 
 const languages = [
   { code: "it", label: "Italiano", flag: "🇮🇹" },
@@ -11,8 +13,13 @@ const languages = [
 
 export function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false)
-  const [selectedLang, setSelectedLang] = useState(languages[0])
+  const router = useRouter()
+  const pathname = usePathname()
+  const params = useParams()
   const dropdownRef = useRef<HTMLDivElement>(null)
+
+  const currentLocale = params.locale as string || 'it'
+  const selectedLang = languages.find(l => l.code === currentLocale) || languages[0]
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -28,10 +35,13 @@ export function LanguageSelector() {
   }, [])
 
   const handleLanguageChange = (lang: typeof languages[0]) => {
-    setSelectedLang(lang)
     setIsOpen(false)
-    // Qui puoi aggiungere la logica per cambiare la lingua
-    // Ad esempio usando next-intl o un sistema di routing
+    
+    // Costruiamo il nuovo path sostituendo il locale
+    const segments = pathname.split('/')
+    segments[1] = lang.code // Assumendo che il locale sia sempre il primo segmento
+    
+    router.push(segments.join('/'))
   }
 
   return (
@@ -66,4 +76,3 @@ export function LanguageSelector() {
     </div>
   )
 }
-

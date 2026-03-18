@@ -1,0 +1,229 @@
+{
+  "Hero": {
+    "enterChannel": "Entra nel Canale",
+    "discoverEvents": "Scopri gli Eventi"
+  },
+  "About": {
+    "title": "Chi Siamo",
+    "divulgation": {
+      "title": "Divulgazione",
+      "description": "Supportiamo attività formative ed eventi culturali."
+    },
+    "adoption": {
+      "title": "Adozione",
+      "description": "Aiutiamo le aziende nel corretto utilizzo e custodia di Bitcoin."
+    },
+    "promotion": {
+      "title": "Promozione",
+      "description": "Aggreghiamo tutte le attività legate a Bitcoin a Torino."
+    },
+    "connection": {
+      "title": "Connessione",
+      "description": "Favoriamo collaborazioni tra enti del settore e istituzioni cittadine."
+    }
+  },
+  "TorinoBitcoinCity": {
+    "description": "Immaginiamo un futuro dove Bitcoin diventi una colonna portante dell'economia torinese, valorizzandone la tradizione ingegneristica e imprenditoriale. Stiamo creando le fondantamenta e le connessioni per realizzarlo."
+  },
+  "Navbar": {
+    "ecosystem": "Ecosistema",
+    "events": "Eventi",
+    "people": "Persone",
+    "activities": "Commercianti",
+    "spaces": "Spazi"
+  },
+  "NextEvent": {
+    "title": "Prossimo Evento",
+    "type": "Conferenza",
+    "eventName": "BitCuneo 2026",
+    "description": "Il più grande evento in provincia di Cuneo per raccontare il protocollo Bitcoin ed il cambiamento che porta con sé. Talk, panel, networking e momenti di apprendimento per curiosi, studenti e professionisti.",
+    "date": "13-14 Marzo 2026",
+    "time": "Ore 9:30 - 18:00",
+    "locationName": "Centro Incontri della Provincia",
+    "address": "Corso Dante, 41, Cuneo",
+    "participants": "300 partecipanti",
+    "availability": "Posti disponibili",
+    "register": "Registrati all'Evento"
+  },
+  "Partners": {
+    "title": "Partners",
+    "becomePartner": "Vuoi diventare partner dell'associazione?",
+    "contactUs": "Contattaci"
+  },
+  "Footer": {
+    "description": "Associazione dedicata alla promozione e sviluppo dell'ecosistema Bitcoin a Torino.",
+    "links": "Link Utili",
+    "contact": "Contatti",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Rimani aggiornato su eventi e novità.",
+    "subscribe": "Iscriviti",
+    "home": "Home",
+    "ecosystem": "Ecosistema",
+    "about": "Chi Siamo",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy"
+  },
+  "Ecosystem": {
+    "title": "Ecosistema",
+    "description": "Esplora l'ecosistema Bitcoin di Torino: meetup, aziende, commercianti e spazi che accettano Bitcoin",
+    "sections": {
+      "people": {
+        "title": "Persone",
+        "description": "Community e gruppi Bitcoin attivi a Torino e in Piemonte."
+      },
+      "activities": {
+        "title": "Commercianti",
+        "description": "Negozi e attività commerciali che accettano Bitcoin."
+      },
+      "spaces": {
+        "title": "Spazi",
+        "description": "Location e coworking Bitcoin-friendly a Torino."
+      }
+    },
+    "explore": "Esplora",
+    "ctaTitle": "Vuoi far parte dell'ecosistema?",
+    "ctaDescription": "Se gestisci una community, un'attività o uno spazio e vuoi essere inserito nella nostra mappa dell'ecosistema Bitcoin di Torino, contattaci!",
+    "contactUs": "Contattaci",
+    "Meetup": {
+      "title": "Incontra altri Bitcoiner",
+      "filterAll": "Tutti",
+      "members": "membri",
+      "ctaTitle": "Vuoi creare una nuova community?",
+      "ctaDescription": "Se stai pensando di avviare una nuova community Bitcoin a Torino o in Piemonte, possiamo aiutarti a promuoverla e metterti in contatto con altri organizzatori.",
+      "contactUs": "Contattaci",
+      "communities": {
+        "bitpolito": {
+          "name": "BitPolito",
+          "description": "Team studentesco del Politecnico di Torino dedicato a sviluppo e divulgazione su Bitcoin, puntando a creare un ponte tra università e industria.",
+          "type": "Team Studentesco",
+          "frequency": "Attivo quotidianamente"
+        },
+        "satoshi_torino": {
+          "name": "Satoshi Spritz Torino",
+          "description": "Il più grande Bitcoin meetup italiano, si riunisce ogni giovedì per ospitare brevi talk, cineforum, book-club e incentivare il networking.",
+          "type": "Meetup",
+          "frequency": "Ogni giovedì"
+        },
+        "satoshi_bardonecchia": {
+          "name": "Satoshi Spritz Bardonecchia",
+          "description": "Meetup con frequenza irregolare che riunisce gli appassionati di Bitcoin a Bardonecchia e dintorni.",
+          "type": "Meetup",
+          "frequency": "Occasionale"
+        },
+        "satoshi_valsusa": {
+          "name": "Satoshi Spritz Val Susa",
+          "description": "Meetup con frequenza irregolare che riunisce gli appassionati di Bitcoin in tutta la Val di Susa.",
+          "type": "Meetup",
+          "frequency": "Occasionale"
+        },
+        "bitcoin_alba": {
+          "name": "Bitcoin Alba-Asti-Cuneo",
+          "description": "Meetup con frequenza irregolare che riunisce gli appassionati di Bitcoin nella zona di Alba, Asti e Cuneo.",
+          "type": "Community",
+          "frequency": "Occasionale"
+        },
+        "bitdevs": {
+          "name": "BitDevs",
+          "description": "Rete globale di sviluppatori Bitcoin focalizzata su discussioni tecniche avanzate, principalmente sulle ultime novità nell’industria.",
+          "type": "Meetup",
+          "frequency": "Ogni mese"
+        },
+        "bitcoin_bitches": {
+          "name": "BitcoinBitches",
+          "description": "Community italiana, con forte presenza a Torino, che aggrega ragazze di tutte le età appassionate di Bitcoin.",
+          "type": "Community",
+          "frequency": "Occasionale"
+        }
+      }
+    },
+    "Spaces": {
+      "title": "Costruisci con altri Bitcoiner",
+      "services": "Servizi disponibili:",
+      "openInMaps": "Apri in Maps",
+      "ctaTitle": "Hai uno spazio da condividere?",
+      "ctaDescription": "Se gestisci un coworking, una location per eventi o uno spazio che potrebbe ospitare la community Bitcoin di Torino, parliamone!",
+      "contactUs": "Contattaci",
+      "items": {
+        "blox": {
+          "name": "Blox Space",
+          "type": "Coworking",
+          "description": "Spazio multifunzionale nel centro di Torino pensato per freelance e startup attivi nel mondo Bitcoin e delle freedom technology.",
+          "features": ["Hot Desks", "Sale Riunioni", "Sale Uffici", "Eventi"]
+        },
+        "polito": {
+          "name": "Politecnico di Torino",
+          "type": "Università",
+          "description": "Una delle principali università d'ingegneria a livello mondiale, conta diversi percorsi formativi, gruppi di ricerca e team studenteschi attivi in ambito Bitcoin.",
+          "features": ["Formazione", "Sale Studio", "Eventi"]
+        },
+        "planb": {
+          "name": "Plan B",
+          "type": "Bar",
+          "description": "Locale informale in centro a Torino allestito a tema Bitcoin che combina caffetteria di giorno e cocktail bar la sera.",
+          "features": ["Ristorazione", "Eventi"]
+        }
+      }
+    },
+    "Companies": {
+      "title": "Aziende",
+      "description": "Imprese e startup che utilizzano Bitcoin e Lightning Network a Torino",
+      "backToEcosystem": "Torna all'Ecosistema",
+      "ctaTitle": "La tua azienda usa Bitcoin?",
+      "ctaDescription": "Unisciti all'ecosistema Bitcoin di Torino e fai parte della rete di aziende innovative che stanno costruendo il futuro dell'economia.",
+      "contactUs": "Contattaci per essere inserito",
+      "items": {
+        "company1": {
+          "name": "Azienda Bitcoin 1",
+          "description": "Descrizione dell'azienda e del suo utilizzo di Bitcoin",
+          "category": "Tecnologia",
+          "services": ["Lightning Network", "Wallet Development", "Consulenza"]
+        },
+        "company2": {
+          "name": "Azienda Bitcoin 2",
+          "description": "Descrizione dell'azienda e del suo utilizzo di Bitcoin",
+          "category": "Finanza",
+          "services": ["Bitcoin Treasury", "Pagamenti B2B", "Mining"]
+        },
+        "startup1": {
+          "name": "Startup Bitcoin 1",
+          "description": "Descrizione della startup e del suo progetto",
+          "category": "Innovazione",
+          "services": ["Smart Contracts", "DeFi", "Education"]
+        }
+      }
+    },
+    "Merchant": {
+      "title": "Attività",
+      "description": "Negozi e attività commerciali che accettano Bitcoin a Torino",
+      "backToEcosystem": "Torna all'Ecosistema",
+      "ctaTitle": "Accetti Bitcoin nella tua attività?",
+      "ctaDescription": "Entra a far parte della rete di attività Bitcoin-friendly di Torino e raggiungi una community di clienti appassionati e innovatori.",
+      "contactUs": "Registra la tua attività",
+      "items": {
+        "bar": {
+          "name": "Bar Bitcoin",
+          "category": "Bar & Caffetteria",
+          "description": "Caffè, colazioni e aperitivi pagabili in Bitcoin e Lightning"
+        },
+        "retail": {
+          "name": "Negozio Crypto",
+          "category": "Retail",
+          "description": "Prodotti tecnologici e gadget Bitcoin"
+        },
+        "food": {
+          "name": "Ristorante Lightning",
+          "category": "Ristorazione",
+          "description": "Cucina tradizionale con pagamenti innovativi"
+        }
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Domande Frequenti",
+    "description": "Trova le risposte alle domande più comuni su Bitcoin Torino",
+    "ctaTitle": "Non hai trovato la risposta che cercavi?",
+    "ctaDescription": "Contattaci direttamente o unisciti al gruppo Telegram per fare le tue domande alla community.",
+    "sendEmail": "Invia una Email",
+    "joinTelegram": "Unisciti su Telegram"
+  }
+}

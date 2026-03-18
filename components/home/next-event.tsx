@@ -1,15 +1,20 @@
+'use client'
+
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Users, ArrowRight } from "lucide-react"
+import { useTranslations } from 'next-intl'
 
 export function NextEvent() {
+  const t = useTranslations('NextEvent');
+
   return (
     <section className="py-16 md:pt-[114px] md:pb-[164px] bg-white dark:bg-gray-950">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            Prossimo Evento
+            {t('title')}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[100px] items-center">
@@ -30,13 +35,13 @@ export function NextEvent() {
             <div className="space-y-6">
               <div>
                 <span className="inline-block px-3 py-1 bg-bitcoin-blue/10 text-bitcoin-blue text-sm font-bold rounded-full mb-4">
-                  Conferenza
+                  {t('type')}
                 </span>
                 <h4 className="text-xl md:text-2xl font-bold mb-4">
-                  BitCuneo 2026
+                  {t('eventName')}
                 </h4>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Il più grande evento in provincia di Cuneo per raccontare il protocollo Bitcoin ed il cambiamento che porta con se. Talk, panel, networking e momenti di apprendimento per curiosi, studenti e professionisti.
+                  {t('description')}
                 </p>
               </div>
 
@@ -44,24 +49,24 @@ export function NextEvent() {
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Calendar className="h-5 w-5 text-bitcoin-blue flex-shrink-0" aria-hidden="true" />
                   <div>
-                    <div className="font-medium">13-14 Marzo 2026</div>
-                    <div className="text-sm">Ore 9:30 - 18:00</div>
+                    <div className="font-medium">{t('date')}</div>
+                    <div className="text-sm">{t('time')}</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <MapPin className="h-5 w-5 text-bitcoin-blue flex-shrink-0" aria-hidden="true" />
                   <div>
-                    <div className="font-medium">Centro Incontri della Provincia</div>
-                    <div className="text-sm">Corso Dante, 41, Cuneo</div>
+                    <div className="font-medium">{t('locationName')}</div>
+                    <div className="text-sm">{t('address')}</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Users className="h-5 w-5 text-bitcoin-blue flex-shrink-0" aria-hidden="true" />
                   <div>
-                    <div className="font-medium">300 partecipanti</div>
-                    <div className="text-sm">Posti disponibili</div>
+                    <div className="font-medium">{t('participants')}</div>
+                    <div className="text-sm">{t('availability')}</div>
                   </div>
                 </div>
               </div>
@@ -73,7 +78,7 @@ export function NextEvent() {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    Registrati all&apos;Evento
+                    {t('register')}
                     <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                   </a>
                 </Button>

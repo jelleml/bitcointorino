@@ -1,7 +1,10 @@
-import { Button } from "@/components/ui/button"
+import { useTranslations } from 'next-intl'
 
 export function Partners() {
+  const t = useTranslations('Partners');
+
   // Mock partner logos (in production, these would be actual logo images)
+// ...
   const partners = [
     { name: "Plan B Network", logo: "/logo-plan-b-network.svg?v=2", href: "https://planb.network" },
     { name: "Blox Space", logo: "/logo-blox.svg?v=2", className: "scale-75", href: "https://linkedin.com/company/blox-space" },
@@ -21,7 +24,7 @@ export function Partners() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Partners
+            {t('title')}
           </h2>
         </div>
 
@@ -51,12 +54,12 @@ export function Partners() {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground">
-            Vuoi diventare partner dell&apos;associazione?{" "}
+            {t('becomePartner')}{" "}
             <a
               href="mailto:bitcoin.torino@proton.me"
               className="text-bitcoin-blue font-bold hover:underline"
             >
-              Contattaci
+              {t('contactUs')}
             </a>
           </p>
         </div>

@@ -1,41 +1,41 @@
-import { Metadata } from "next"
-import Link from "next/link"
+'use client'
+
 import { Store, ArrowLeft, Coffee, ShoppingBag, Utensils, Map } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-export const metadata: Metadata = {
-  title: "Attività - Ecosistema Bitcoin Torino",
-  description: "Negozi e attività commerciali che accettano Bitcoin a Torino",
-}
-
-const merchants = [
-  {
-    name: "Bar Bitcoin",
-    category: "Bar & Caffetteria",
-    icon: Coffee,
-    address: "Via esempio 1, Torino",
-    description: "Caffè, colazioni e aperitivi pagabili in Bitcoin e Lightning",
-    accepts: ["Bitcoin", "Lightning"],
-  },
-  {
-    name: "Negozio Crypto",
-    category: "Retail",
-    icon: ShoppingBag,
-    address: "Corso esempio 2, Torino",
-    description: "Prodotti tecnologici e gadget Bitcoin",
-    accepts: ["Bitcoin", "Lightning"],
-  },
-  {
-    name: "Ristorante Lightning",
-    category: "Ristorazione",
-    icon: Utensils,
-    address: "Piazza esempio 3, Torino",
-    description: "Cucina tradizionale con pagamenti innovativi",
-    accepts: ["Bitcoin", "Lightning"],
-  },
-]
+import { useTranslations } from 'next-intl'
+import { Link } from "@/i18n/navigation"
 
 export default function MerchantPage() {
+  const t = useTranslations('Ecosystem.Merchant');
+
+  const merchants = [
+    {
+      id: "bar",
+      icon: Coffee,
+      address: "Via esempio 1, Torino",
+      accepts: ["Bitcoin", "Lightning"],
+    },
+    {
+      id: "retail",
+      icon: ShoppingBag,
+      address: "Corso esempio 2, Torino",
+      accepts: ["Bitcoin", "Lightning"],
+    },
+    {
+      id: "food",
+      icon: Utensils,
+      address: "Piazza esempio 3, Torino",
+      accepts: ["Bitcoin", "Lightning"],
+    },
+  ]
+
+  const mappedMerchants = merchants.map(m => ({
+    ...m,
+    name: t(`items.${m.id}.name`),
+    category: t(`items.${m.id}.category`),
+    description: t(`items.${m.id}.description`),
+  }))
+
   return (
     <main className="min-h-screen">
       <div className="pt-12 pb-6">
@@ -45,11 +45,11 @@ export default function MerchantPage() {
               className="inline-flex items-center text-bitcoin-blue hover:underline mb-6 transition-colors"
             >
               <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
-              Torna all&apos;Ecosistema
+              {t('backToEcosystem')}
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Attività</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('title')}</h1>
             <p className="text-xl text-muted-foreground">
-              Negozi e attività commerciali che accettano Bitcoin a Torino
+              {t('description')}
             </p>
         </div>
       </div>
@@ -59,7 +59,7 @@ export default function MerchantPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
-              {merchants.map((merchant, index) => {
+              {mappedMerchants.map((merchant, index) => {
                 const Icon = merchant.icon
                 return (
                   <div
@@ -107,15 +107,14 @@ export default function MerchantPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Accetti Bitcoin nella tua attività?
+              {t('ctaTitle')}
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Entra a far parte della rete di attività Bitcoin-friendly di Torino
-              e raggiungi una community di clienti appassionati e innovatori.
+              {t('ctaDescription')}
             </p>
             <Button asChild size="lg">
               <a href="mailto:info@bitcointorino.org">
-                Registra la tua attività
+                {t('contactUs')}
               </a>
             </Button>
           </div>

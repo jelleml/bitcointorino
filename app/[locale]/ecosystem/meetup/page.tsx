@@ -1,92 +1,96 @@
-import { Metadata } from "next"
-import Link from "next/link"
-"use client"
+'use client'
 
 import { useState } from "react"
 import { Users, ExternalLink, MessageCircle, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-
-const communities = [
-  {
-    name: "BitPolito",
-    description: "Team studentesco del Politecnico di Torino dedicato a sviluppo e divulgazione su Bitcoin, puntando a creare un ponte tra università e industria.",
-    type: "Team Studentesco",
-    members: "50",
-    frequency: "Attivo quotidianamente",
-    links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/bitpolito" }],
-  },
-  {
-    name: "Satoshi Spritz Torino",
-    description: "Il più grande Bitcoin meetup italiano, si riunisce ogni giovedì per ospitare brevi talk, cineforum, book-club e incentivare il networking.",
-    type: "Meetup",
-    members: "800",
-    frequency: "Ogni giovedì",
-    links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/satoshispritztorino" }],
-  },
-  {
-    name: "Satoshi Spritz Bardonecchia",
-    description: "Meetup con frequenza irregolare che riunisce gli appassionati di Bitcoin a Bardonecchia e dintorni.",
-    type: "Meetup",
-    members: "30",
-    frequency: "Occasionale",
-    links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/satoshispritzbardonecchia" }],
-  },
-  {
-    name: "Satoshi Spritz Val Susa",
-    description: "Meetup con frequenza irregolare che riunisce gli appassionati di Bitcoin in tutta la Val di Susa.",
-    type: "Meetup",
-    members: "35",
-    frequency: "Occasionale",
-    links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/SatoshiSpritzValSusa" }],
-  },
-  {
-    name: "Bitcoin Alba-Asti-Cuneo",
-    description: "Meetup con frequenza irregolare che riunisce gli appassionati di Bitcoin nella zona di Alba, Asti e Cuneo.",
-    type: "Community",
-    members: "125",
-    frequency: "Occasionale",
-    links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/bitcoinalbacuneo" }],
-  },
-  {
-    name: "BitDevs",
-    description: "Rete globale di sviluppatori Bitcoin focalizzata su discussioni tecniche avanzate, principalmente sulle ultime novità nell’industria.",
-    type: "Meetup",
-    members: "50",
-    frequency: "Ogni mese",
-    links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/bitdevstorino" }],
-  },
-  {
-    name: "BitcoinBitches",
-    description: "Community italiana, con forte presenza a Torino, che aggrega ragazze di tutte le età appassionate di Bitcoin.",
-    type: "Community",
-    members: "100",
-    frequency: "Occasionale",
-    links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/btctorinopiemonte" }],
-  },
-]
+import { useTranslations } from 'next-intl'
+import Image from "next/image"
 
 export default function MeetupPage() {
+  const t = useTranslations('Ecosystem.Meetup');
   const [filter, setFilter] = useState<string | null>(null)
 
-  const filterOptions = ["Meetup", "Community", "Team studenteschi"]
+  const communities = [
+    {
+      id: "bitpolito",
+      members: "50",
+      image: "/pfp-bitpolito.jpg",
+      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/bitpolito" }],
+    },
+    {
+      id: "satoshi_torino",
+      members: "800",
+      image: "/pfp-satoshi-spritz-torino.jpg",
+      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/satoshispritztorino" }],
+    },
+    {
+      id: "satoshi_bardonecchia",
+      members: "30",
+      image: "/pfp-satoshi-spritz-bardonecchia.jpg",
+      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/satoshispritztorino" }], // Fallback if specific missing
+    },
+    {
+      id: "satoshi_valsusa",
+      members: "35",
+      image: "/pfp-satoshi-spritz-valsusa.jpg",
+      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/SatoshiSpritzValSusa" }],
+    },
+    {
+      id: "bitcoin_alba",
+      members: "125",
+      image: "/pfp-bitcoin-alba-asti-cuneo.jpg",
+      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/bitcoinalbacuneo" }],
+    },
+    {
+      id: "bitdevs",
+      members: "50",
+      image: "/pfp-bitdevs-torino.jpg",
+      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/bitdevstorino" }],
+    },
+    {
+      id: "bitcoin_bitches",
+      members: "100",
+      image: "/pfp-bitcoin-bitches-piemonte.jpg",
+      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/btctorinopiemonte" }],
+    },
+  ]
+
+  const mappedCommunities = communities.map(c => ({
+    ...c,
+    name: t(`communities.${c.id}.name`),
+    description: t(`communities.${c.id}.description`),
+    type: t(`communities.${c.id}.type`),
+    frequency: t(`communities.${c.id}.frequency`),
+  }))
+
+  const filterOptions = Array.from(new Set(mappedCommunities.map(c => c.type)))
 
   const filteredCommunities = filter
-    ? communities.filter(c => c.type === filter)
-    : communities
+    ? mappedCommunities.filter(c => c.type === filter)
+    : mappedCommunities
 
   return (
     <main className="min-h-screen">
       <div className="pt-12 pb-6">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">Incontra altri Bitcoiner</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-8">{t('title')}</h1>
 
           <div className="flex flex-wrap justify-center gap-4">
+            <Button
+              variant={filter === null ? "default" : "outline"}
+              onClick={() => setFilter(null)}
+              className={`rounded-full transition-colors ${filter === null
+                  ? "bg-bitcoin-blue text-white hover:bg-bitcoin-blue/90"
+                  : "hover:bg-bitcoin-blue/10 hover:text-bitcoin-blue hover:border-bitcoin-blue/30"
+                }`}
+            >
+              {t('filterAll')}
+            </Button>
             {filterOptions.map((option) => (
               <Button
                 key={option}
                 variant={filter === option ? "default" : "outline"}
-                onClick={() => setFilter(filter === option ? null : option)}
+                onClick={() => setFilter(option)}
                 className={`rounded-full transition-colors ${filter === option
                     ? "bg-bitcoin-blue text-white hover:bg-bitcoin-blue/90"
                     : "hover:bg-bitcoin-blue/10 hover:text-bitcoin-blue hover:border-bitcoin-blue/30"
@@ -110,7 +114,7 @@ export default function MeetupPage() {
                   className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-all duration-300 hover:shadow-lg"
                 >
                   {/* Header */}
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between mb-4 gap-4">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-4">
                         <span className="inline-block px-3 py-1 bg-bitcoin-blue/10 text-bitcoin-blue text-sm font-bold rounded-full">
@@ -119,6 +123,16 @@ export default function MeetupPage() {
                       </div>
                       <h3 className="text-2xl font-bold">{community.name}</h3>
                     </div>
+                    {community.image && (
+                      <div className="relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border border-gray-100 dark:border-gray-800 flex-shrink-0">
+                        <Image
+                          src={community.image}
+                          alt={community.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
                   </div>
 
                   {/* Description */}
@@ -130,7 +144,7 @@ export default function MeetupPage() {
                   <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4 pb-4 border-b">
                     <div className="flex items-center">
                       <Users className="mr-2 h-4 w-4" aria-hidden="true" />
-                      <span>{community.members} membri</span>
+                      <span>{community.members} {t('members')}</span>
                     </div>
                     <div className="flex items-center">
                       <MessageCircle className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -178,14 +192,13 @@ export default function MeetupPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Users className="h-12 w-12 text-bitcoin-blue mx-auto mb-4" aria-hidden="true" />
-            <h2 className="text-3xl font-bold mb-4">Vuoi creare una nuova community?</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('ctaTitle')}</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Se stai pensando di avviare una nuova community Bitcoin a Torino o in Piemonte,
-              possiamo aiutarti a promuoverla e metterti in contatto con altri organizzatori.
+              {t('ctaDescription')}
             </p>
             <Button asChild size="lg" className="bg-bitcoin-blue hover:bg-bitcoin-blue/90 text-white">
-              <a href="mailto:bitcoin.torino@proton.me">
-                Contattaci
+              <a href="mailto:info@bitcointorino.org">
+                {t('contactUs')}
               </a>
             </Button>
           </div>
