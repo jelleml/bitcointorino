@@ -153,7 +153,7 @@
         "polito": {
           "name": "Polytechnic of Turin",
           "type": "University",
-          "description": "One of the world's leading engineering universities, it has several training courses, research groups, and student teams active in the Bitcoin field.",
+          "description": "The prestigious university hosts several Bitcoin-related initiatives, such as the Master on Bitcoin and Lightning Network, the Bitcoin Observatory, and the student team BitPolito.",
           "features": ["Education", "Study Rooms", "Events"]
         },
         "planb": {

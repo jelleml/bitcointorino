@@ -8,11 +8,10 @@ export function Partners() {
   const partners = [
     { name: "Plan B Network", logo: "/logo-plan-b-network.svg?v=2", href: "https://planb.network" },
     { name: "Blox Space", logo: "/logo-blox.svg?v=2", className: "scale-75", href: "https://linkedin.com/company/blox-space" },
-    { name: "Comune di Torino", logo: "/logo-comune-di-torino.svg?v=2", href: "https://comune.torino.it" },
     { name: "BitCuneo", logo: "/logo-bitcuneo.svg?v=2", href: "https://bitcuneo.it" },
-    { name: "ToTeM", logo: "/logo-totem.svg?v=2", className: "scale-150", href: "https://torinotechmap.it" },
     { name: "BitBox", logo: "/logo-bitbox.svg?v=2", className: "scale-75", href: "https://bitbox.swiss" },
-    { name: "Politecnico di Torino", logo: "/logo-politecnico-di-torino.svg?v=2", href: "https://polito.it" },
+    { name: "BitPolito", logo: "/logo-bitpolito.png", href: "https://t.me/bitpolito" },
+    { name: "Osservatorio Bitcoin PoliTO", logo: "/logo-osservatorio-bitcoin.svg?v=2", className: "scale-75", href: "https://crypto.polito.it/bitcoin" },
     { name: "BitCare Forum", logo: "/logo-bitcare-forum.svg?v=2", href: "https://bitcareforum.it" },
   ]
 
@@ -28,11 +27,11 @@ export function Partners() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors group"
+              className="w-[calc(50%-1rem)] md:w-[calc(25%-1.5rem)] flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors group"
             >
               <a 
                 href={partner.href}

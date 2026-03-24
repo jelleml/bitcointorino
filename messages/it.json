@@ -153,7 +153,7 @@
         "polito": {
           "name": "Politecnico di Torino",
           "type": "Università",
-          "description": "Una delle principali università d'ingegneria a livello mondiale, conta diversi percorsi formativi, gruppi di ricerca e team studenteschi attivi in ambito Bitcoin.",
+          "description": "La prestigiosa università ospita diverse iniziative legate a Bitcoin, come il Master su Bitcoin e Lightning Network, l'Osservatorio Bitcoin e il team studentesco BitPolito.",
           "features": ["Formazione", "Sale Studio", "Eventi"]
         },
         "planb": {

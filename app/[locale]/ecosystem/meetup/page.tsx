@@ -14,7 +14,7 @@ export default function MeetupPage() {
     {
       id: "bitpolito",
       members: "50",
-      image: "/pfp-bitpolito.jpg",
+      image: "/logo-bitpolito.png",
       links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/bitpolito" }],
     },
     {
