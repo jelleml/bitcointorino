@@ -22,8 +22,8 @@ export function NextEvent() {
             <div className="relative">
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100 dark:border-gray-800">
                 <Image
-                  src="/bitcuneo-2026.jpg"
-                  alt="BitCuneo 2026 Locandina"
+                  src="/Event Posters/bitcoin-design-challenge-2026.jpg"
+                  alt="Bitcoin Design Challenge Locandina"
                   fill
                   className="object-cover"
                   priority
@@ -71,10 +71,10 @@ export function NextEvent() {
                 </div>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-4 space-y-3">
                 <Button asChild size="lg" className="w-full sm:w-auto">
                   <a 
-                    href="https://www.eventbrite.com/e/biglietti-bitcuneo2026-1982966015733" 
+                    href="https://luma.com/1qurj506" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -82,6 +82,9 @@ export function NextEvent() {
                     <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                   </a>
                 </Button>
+                <div className="text-sm text-muted-foreground">
+                  {t('registrationDeadline')}
+                </div>
               </div>
             </div>
           </div>

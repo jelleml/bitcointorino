@@ -34,16 +34,17 @@
   },
   "NextEvent": {
     "title": "Prossimo Evento",
-    "type": "Conferenza",
-    "eventName": "BitCuneo 2026",
-    "description": "Il più grande evento in provincia di Cuneo per raccontare il protocollo Bitcoin ed il cambiamento che porta con sé. Talk, panel, networking e momenti di apprendimento per curiosi, studenti e professionisti.",
-    "date": "13-14 Marzo 2026",
-    "time": "Ore 9:30 - 18:00",
-    "locationName": "Centro Incontri della Provincia",
-    "address": "Corso Dante, 41, Cuneo",
-    "participants": "300 partecipanti",
-    "availability": "Posti disponibili",
-    "register": "Registrati all'Evento"
+    "type": "Challenge",
+    "eventName": "Bitcoin Design Challenge",
+    "description": "Sfida gli altri studenti di design torinesi nel promuovere Bitcoin con prodotti, servizi e campagne di comunicazione. Realizza progetti ad alto impatto sociale e arricchisci il tuo portfolio.",
+    "date": "13-20 Aprile 2026",
+    "time": "Pitch finale il 20 Aprile",
+    "locationName": "Politecnico di Torino",
+    "address": "In presenza e Online",
+    "participants": "Polito, IED, IAAD, Accademia Albertina",
+    "availability": "Iscrizioni entro il 10 Aprile",
+    "register": "Iscriviti",
+    "registrationDeadline": "Le registrazioni chiudono il 10 aprile."
   },
   "Partners": {
     "title": "Partners",

@@ -34,16 +34,17 @@
   },
   "NextEvent": {
     "title": "Next Event",
-    "type": "Conference",
-    "eventName": "BitCuneo 2026",
-    "description": "The largest event in the province of Cuneo to discuss the Bitcoin protocol and the change it brings. Talks, panels, networking, and learning moments for the curious, students, and professionals.",
-    "date": "March 13-14, 2026",
-    "time": "9:30 AM - 6:00 PM",
-    "locationName": "Provincial Meeting Center",
-    "address": "Corso Dante, 41, Cuneo",
-    "participants": "300 participants",
-    "availability": "Seats available",
-    "register": "Register for the Event"
+    "type": "Challenge",
+    "eventName": "Bitcoin Design Challenge",
+    "description": "Challenge other Turin design students in promoting Bitcoin through products, services, and communication campaigns. Create high-impact projects and enrich your portfolio.",
+    "date": "April 13-20, 2026",
+    "time": "Final pitch on April 20",
+    "locationName": "Polytechnic of Turin",
+    "address": "In person and Online",
+    "participants": "PoliTo, IED, IAAD, Accademia Albertina",
+    "availability": "Sign up by April 10",
+    "register": "Sign up",
+    "registrationDeadline": "The registration closes on 10 April."
   },
   "Partners": {
     "title": "Partners",
