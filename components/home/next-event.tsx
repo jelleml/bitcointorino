@@ -22,8 +22,8 @@ export function NextEvent() {
             <div className="relative">
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100 dark:border-gray-800">
                 <Image
-                  src="/Event Posters/bitcoin-design-challenge-2026.jpg"
-                  alt="Bitcoin Design Challenge Locandina"
+                  src="/Event Posters/dal-politecnico-a-tether.png"
+                  alt="Dal Politecnico a Tether - Giorgio Rasetto"
                   fill
                   className="object-cover"
                   priority
@@ -74,7 +74,7 @@ export function NextEvent() {
               <div className="pt-4 space-y-3">
                 <Button asChild size="lg" className="w-full sm:w-auto">
                   <a 
-                    href="https://luma.com/1qurj506" 
+                    href="https://luma.com/32t6wzgf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >

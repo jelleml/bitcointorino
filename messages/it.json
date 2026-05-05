@@ -34,17 +34,17 @@
   },
   "NextEvent": {
     "title": "Prossimo Evento",
-    "type": "Challenge",
-    "eventName": "Bitcoin Design Challenge",
-    "description": "Sfida gli altri studenti di design torinesi nel promuovere Bitcoin con prodotti, servizi e campagne di comunicazione. Realizza progetti ad alto impatto sociale e arricchisci il tuo portfolio.",
-    "date": "Dal 27 Aprile al 4 Maggio",
-    "time": "Pitch finale il 4 Maggio",
+    "type": "Talk",
+    "eventName": "Dal Politecnico a Tether",
+    "description": "Giorgio Rasetto — head of MOS in Tether ed ex studente del Politecnico di Torino — racconta il suo percorso, dal PoliTo a una carriera in Tether, una delle aziende più profittevoli della storia. Scopri quali opportunità esistono oggi e come costruire una carriera fuori dagli schemi tradizionali.",
+    "date": "14 Maggio 2025",
+    "time": "Dalle 18:00 alle 20:00",
     "locationName": "Politecnico di Torino",
-    "address": "In presenza e Online",
-    "participants": "Polito, IED, IAAD, Accademia Albertina",
-    "availability": "Scadenza iscrizioni 24 Aprile",
+    "address": "Aula 16 — Corso Duca degli Abruzzi 24",
+    "participants": "BitPolito",
+    "availability": "Prenotazione consigliata",
     "register": "Iscriviti",
-    "registrationDeadline": "Scadenza iscrizioni 24 Aprile."
+    "registrationDeadline": "Posti limitati, prenotati per partecipare."
   },
   "Partners": {
     "title": "Partners",

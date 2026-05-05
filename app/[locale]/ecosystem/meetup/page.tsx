@@ -27,7 +27,7 @@ export default function MeetupPage() {
       id: "satoshi_bardonecchia",
       members: "30",
       image: "/pfp-satoshi-spritz-bardonecchia.jpg",
-      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/satoshispritztorino" }], // Fallback if specific missing
+      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/satoshispritzbardonecchia" }],
     },
     {
       id: "satoshi_valsusa",
@@ -81,7 +81,7 @@ export default function MeetupPage() {
               onClick={() => setFilter(null)}
               className={`rounded-full transition-colors ${filter === null
                   ? "bg-bitcoin-blue text-white hover:bg-bitcoin-blue/90"
-                  : "hover:bg-bitcoin-blue/10 hover:text-bitcoin-blue hover:border-bitcoin-blue/30"
+                  : "hover:bg-bitcoin-blue/10 hover:text-bitcoin-blue hover:border-bitcoin-blue"
                 }`}
             >
               {t('filterAll')}
@@ -93,7 +93,7 @@ export default function MeetupPage() {
                 onClick={() => setFilter(option)}
                 className={`rounded-full transition-colors ${filter === option
                     ? "bg-bitcoin-blue text-white hover:bg-bitcoin-blue/90"
-                    : "hover:bg-bitcoin-blue/10 hover:text-bitcoin-blue hover:border-bitcoin-blue/30"
+                    : "hover:bg-bitcoin-blue/10 hover:text-bitcoin-blue hover:border-bitcoin-blue"
                   }`}
               >
                 {option}

@@ -31,12 +31,12 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" className="text-base text-black bg-white hover:bg-gray-100">
+            <Button asChild size="lg" className="text-base text-black bg-white hover:bg-gray-300">
               <a href="https://t.me/bitcointorinochannel" target="_blank" rel="noopener noreferrer">
                 {t('enterChannel')}
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-base text-white border-white hover:bg-white hover:text-[#00138E]">
+            <Button asChild variant="outline" size="lg" className="text-base text-white border-white hover:bg-transparent hover:border-gray-300 hover:text-gray-300">
               <a href="https://luma.com/user/bitcointorino" target="_blank" rel="noopener noreferrer">
                 {t('discoverEvents')}
               </a>
