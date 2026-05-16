@@ -34,17 +34,17 @@
   },
   "NextEvent": {
     "title": "Prossimo Evento",
-    "type": "Talk",
-    "eventName": "Dal Politecnico a Tether",
-    "description": "Giorgio Rasetto — head of MOS in Tether ed ex studente del Politecnico di Torino — racconta il suo percorso, dal PoliTo a una carriera in Tether, una delle aziende più profittevoli della storia. Scopri quali opportunità esistono oggi e come costruire una carriera fuori dagli schemi tradizionali.",
-    "date": "14 Maggio 2025",
-    "time": "Dalle 18:00 alle 20:00",
-    "locationName": "Politecnico di Torino",
-    "address": "Aula 16 — Corso Duca degli Abruzzi 24",
-    "participants": "BitPolito",
-    "availability": "Prenotazione consigliata",
+    "type": "Meetup",
+    "eventName": "Pizza Day 2026 • Brescia",
+    "description": "Serata dedicata alla community Bitcoin, tra presentazioni, giochi, musica e pizza, il giorno prima del BitCare Forum. Un'occasione per incontrare bitcoiner da tutta Italia, scoprire i progetti che stanno costruendo l'ecosistema torinese e vivere una serata ad alto livello di segnale.",
+    "date": "22 Maggio 2026",
+    "time": "17:00-3:00",
+    "locationName": "Der Mast",
+    "address": "Via Giosuè Carducci, 17/E, 25126 Brescia BS, Italia",
+    "participants": "Community Bitcoin italiana",
+    "availability": "I posti sono limitati",
     "register": "Iscriviti",
-    "registrationDeadline": "Posti limitati, prenotati per partecipare."
+    "registrationDeadline": "Le vendite chiuderanno il 18/05."
   },
   "Partners": {
     "title": "Partners",

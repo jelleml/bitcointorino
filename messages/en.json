@@ -34,17 +34,17 @@
   },
   "NextEvent": {
     "title": "Next Event",
-    "type": "Challenge",
-    "eventName": "Bitcoin Design Challenge",
-    "description": "Challenge other Turin design students in promoting Bitcoin through products, services, and communication campaigns. Create high-impact projects and enrich your portfolio.",
-    "date": "27th April to 4th May",
-    "time": "Final pitch on May 4",
-    "locationName": "Polytechnic of Turin",
-    "address": "In person and Online",
-    "participants": "PoliTo, IED, IAAD, Accademia Albertina",
-    "availability": "Application deadline 24th April",
+    "type": "Meetup",
+    "eventName": "Pizza Day 2026 • Brescia",
+    "description": "An evening dedicated to the Bitcoin community, featuring presentations, games, music, and pizza, the day before the BitCare Forum. An opportunity to meet bitcoiners from all over Italy, discover the projects building the Turin ecosystem, and experience a high-signal evening.",
+    "date": "22nd May 2026",
+    "time": "17:00-3:00",
+    "locationName": "Der Mast",
+    "address": "Via Giosuè Carducci, 17/E, 25126 Brescia BS, Italy",
+    "participants": "Italian Bitcoin Community",
+    "availability": "Limited spots",
     "register": "Sign up",
-    "registrationDeadline": "Application deadline 24th April."
+    "registrationDeadline": "Sales will close on 18/05."
   },
   "Partners": {
     "title": "Partners",

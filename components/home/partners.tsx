@@ -6,13 +6,14 @@ export function Partners() {
   // Mock partner logos (in production, these would be actual logo images)
 // ...
   const partners = [
-    { name: "Plan B Network", logo: "/logo-plan-b-network.svg?v=2", href: "https://planb.network" },
-    { name: "Blox Space", logo: "/logo-blox.svg?v=2", className: "scale-75", href: "https://linkedin.com/company/blox-space" },
-    { name: "BitCuneo", logo: "/logo-bitcuneo.svg?v=2", href: "https://bitcuneo.it" },
-    { name: "BitBox", logo: "/logo-bitbox.svg?v=2", className: "scale-75", href: "https://bitbox.swiss" },
-    { name: "BitPolito", logo: "/logo-bitpolito.png", href: "https://t.me/bitpolito" },
-    { name: "Osservatorio Bitcoin PoliTO", logo: "/logo-osservatorio-bitcoin.svg?v=2", className: "scale-75", href: "https://crypto.polito.it/bitcoin" },
-    { name: "BitCare Forum", logo: "/logo-bitcare-forum.svg?v=2", href: "https://bitcareforum.it" },
+    { name: "Plan B Network", logo: "/Partners/logo-plan-b-network.svg?v=2", href: "https://planb.network" },
+    { name: "Blox Space", logo: "/Partners/logo-blox.svg?v=2", className: "scale-75", href: "https://linkedin.com/company/blox-space" },
+    { name: "BitCuneo", logo: "/Partners/logo-bitcuneo.svg?v=2", href: "https://bitcuneo.it" },
+    { name: "BitBox", logo: "/Partners/logo-bitbox.svg?v=2", className: "scale-75", href: "https://bitbox.swiss" },
+    { name: "BitPolito", logo: "/Partners/logo-bitpolito.svg", href: "https://t.me/bitpolito" },
+    { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", className: "scale-75", href: "https://crypto.polito.it/bitcoin" },
+    { name: "BitCare Forum", logo: "/Partners/logo-bitcare-forum.svg?v=2", href: "https://bitcareforum.it" },
+    { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", href: "#" },
   ]
 
   return (

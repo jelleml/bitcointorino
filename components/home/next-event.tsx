@@ -22,8 +22,8 @@ export function NextEvent() {
             <div className="relative">
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100 dark:border-gray-800">
                 <Image
-                  src="/Event Posters/dal-politecnico-a-tether.png"
-                  alt="Dal Politecnico a Tether - Giorgio Rasetto"
+                  src="/Event Posters/btctorino-pizza-day-post.png"
+                  alt="Pizza Day"
                   fill
                   className="object-cover"
                   priority
@@ -40,7 +40,7 @@ export function NextEvent() {
                 <h4 className="text-xl md:text-2xl font-bold mb-4">
                   {t('eventName')}
                 </h4>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
                   {t('description')}
                 </p>
               </div>
@@ -74,7 +74,7 @@ export function NextEvent() {
               <div className="pt-4 space-y-3">
                 <Button asChild size="lg" className="w-full sm:w-auto">
                   <a 
-                    href="https://luma.com/32t6wzgf" 
+                    href="https://luma.com/6pt5t4jr" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
