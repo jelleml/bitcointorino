@@ -82,9 +82,7 @@ export function NextEvent() {
                     <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                   </a>
                 </Button>
-                <div className="text-sm text-muted-foreground">
-                  {t('registrationDeadline')}
-                </div>
+
               </div>
             </div>
           </div>
