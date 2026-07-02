@@ -35,16 +35,16 @@
   "NextEvent": {
     "title": "Prossimo Evento",
     "type": "Meetup",
-    "eventName": "Pizza Day 2026 • Brescia",
-    "description": "Serata dedicata alla community Bitcoin, tra presentazioni, giochi, musica e pizza, il giorno prima del BitCare Forum. Un'occasione per incontrare bitcoiner da tutta Italia, scoprire i progetti che stanno costruendo l'ecosistema torinese e vivere una serata ad alto livello di segnale.",
-    "date": "22 Maggio 2026",
-    "time": "17:00-3:00",
-    "locationName": "Der Mast",
-    "address": "Via Giosuè Carducci, 17/E, 25126 Brescia BS, Italia",
-    "participants": "Community Bitcoin italiana",
-    "availability": "I posti sono limitati",
+    "eventName": "Builder Torino",
+    "description": "Un incontro pensato per chi vuole scoprire cosa si sta costruendo nel mondo Bitcoin a Torino: idee, demo e persone, senza tecnicismi complicati. Perfetto anche per chi è curioso e vuole capire di più.",
+    "date": "Sabato 11 Luglio 2026",
+    "time": "16:30 - 18:00",
+    "locationName": "Blox Space",
+    "address": "Torino",
+    "participants": "Community Bitcoin Torino",
+    "availability": "Ingresso libero",
     "register": "Iscriviti",
-    "registrationDeadline": "Le vendite chiuderanno il 18/05."
+    "registrationDeadline": ""
   },
   "Partners": {
     "title": "Partners",

@@ -22,8 +22,8 @@ export function NextEvent() {
             <div className="relative">
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100 dark:border-gray-800">
                 <Image
-                  src="/Event Posters/btctorino-pizza-day-post.png"
-                  alt="Pizza Day"
+                  src="/Event Posters/builder-torino-july-2026.jpg"
+                  alt="Builder Torino"
                   fill
                   className="object-cover"
                   priority

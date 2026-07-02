@@ -35,16 +35,16 @@
   "NextEvent": {
     "title": "Next Event",
     "type": "Meetup",
-    "eventName": "Pizza Day 2026 • Brescia",
-    "description": "An evening dedicated to the Bitcoin community, featuring presentations, games, music, and pizza, the day before the BitCare Forum. An opportunity to meet bitcoiners from all over Italy, discover the projects building the Turin ecosystem, and experience a high-signal evening.",
-    "date": "22nd May 2026",
-    "time": "17:00-3:00",
-    "locationName": "Der Mast",
-    "address": "Via Giosuè Carducci, 17/E, 25126 Brescia BS, Italy",
-    "participants": "Italian Bitcoin Community",
-    "availability": "Limited spots",
+    "eventName": "Builder Torino",
+    "description": "A meetup for those who want to discover what's being built in the Bitcoin world in Turin: ideas, demos, and people — no complicated jargon. Perfect even for the curious who want to learn more.",
+    "date": "Saturday, July 11th 2026",
+    "time": "16:30 - 18:00",
+    "locationName": "Blox Space",
+    "address": "Turin",
+    "participants": "Bitcoin Torino Community",
+    "availability": "Free entry",
     "register": "Sign up",
-    "registrationDeadline": "Sales will close on 18/05."
+    "registrationDeadline": ""
   },
   "Partners": {
     "title": "Partners",
