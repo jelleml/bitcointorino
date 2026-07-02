@@ -20,7 +20,7 @@ export function NextEvent() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[100px] items-center">
             {/* Locandina Evento - Sinistra */}
             <div className="relative">
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100 dark:border-gray-800">
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100 dark:border-gray-800">
                 <Image
                   src="/Event Posters/builder-torino-july-2026.jpg"
                   alt="Builder Torino"
