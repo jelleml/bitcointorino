@@ -71,6 +71,19 @@ export function NextEvent() {
                 </div>
               </div>
 
+              <div className="pt-4">
+                <Button asChild size="lg" className="w-full sm:w-auto">
+                  <a
+                    href="https://luma.com/cwetsnga"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('register')}
+                    <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                  </a>
+                </Button>
+              </div>
+
             </div>
           </div>
         </div>
