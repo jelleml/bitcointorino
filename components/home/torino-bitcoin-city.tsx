@@ -19,10 +19,10 @@ export function TorinoBitcoinCity() {
           <div className="flex justify-center mb-[50px]">
             <div style={{ width: "780px", maxWidth: "100%" }}>
               <Image
-                src="/torino-bitcoin-city-logo.png"
+                src="/torino-bitcoin-city.png"
                 alt="Torino Bitcoin City"
-                width={1621}
-                height={487}
+                width={1024}
+                height={420}
                 className="w-full h-auto"
                 priority
               />
