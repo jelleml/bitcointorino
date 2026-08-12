@@ -12,7 +12,7 @@ export function Partners() {
     { name: "BitBox", logo: "/Partners/logo-bitbox.svg?v=2", className: "scale-75", href: "https://bitbox.swiss" },
     { name: "BitPolito", logo: "/Partners/logo-bitpolito.svg", href: "https://t.me/bitpolito" },
     { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", className: "scale-75", href: "https://crypto.polito.it/bitcoin" },
-    { name: "BitCare Forum", logo: "/Partners/logo-bitcare-forum.svg?v=2", href: "https://bitcareforum.it" },
+    { name: "BTCPay Server Italia", logo: "/Partners/logo-btcpay-server.svg?v=2", href: "https://btcpayserver.org" },
     { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", href: "#" },
   ]
 
