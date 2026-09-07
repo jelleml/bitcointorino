@@ -37,7 +37,7 @@ export function Hero() {
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base text-white border-white hover:bg-transparent hover:border-gray-300 hover:text-gray-300">
-              <a href="https://francescopelle.notion.site/Onboarding-390e7b9b4ddd80e5a004f33b19659e0a" target="_blank" rel="noopener noreferrer">
+              <a href="/soci" target="_blank" rel="noopener noreferrer">
                 {t('becomeMember')}
               </a>
             </Button>
