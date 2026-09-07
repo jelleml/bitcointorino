@@ -93,7 +93,7 @@ export function Navbar() {
             </div>
 
             <a
-              href="https://luma.com/user/bitcointorino"
+              href="https://luma.com/bitcoin-torino-calendar"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground font-medium hover:text-bitcoin-blue transition-colors"
@@ -161,7 +161,7 @@ export function Navbar() {
             </div>
 
             <a
-              href="https://luma.com/user/bitcointorino"
+              href="https://luma.com/bitcoin-torino-calendar"
               target="_blank"
               rel="noopener noreferrer"
               className="block py-2 text-foreground font-medium hover:text-bitcoin-blue transition-colors"
