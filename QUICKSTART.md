@@ -241,7 +241,7 @@ npm run dev
 
 ## 📞 Supporto
 
-- **Email**: tech@bitcointorino.it
+- **Email**: bitcoin.torino@proton.me
 - **Issues**: Usa GitHub Issues per bug e feature requests
 - **Documentazione completa**: Vedi README.md
 

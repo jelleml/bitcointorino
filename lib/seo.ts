@@ -117,7 +117,7 @@ export function generateOrganizationStructuredData() {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'info@bitcointorino.it',
+      email: 'bitcoin.torino@proton.me',
       contactType: 'customer support',
     },
   }

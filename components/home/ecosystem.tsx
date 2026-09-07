@@ -58,7 +58,7 @@ export function Ecosystem() {
             <div className="text-center">
               <p className="text-muted-foreground mb-4">Sei un commerciante e vuoi accettare Bitcoin?</p>
               <a
-                href="mailto:merchants@bitcointorino.it"
+                href="mailto:bitcoin.torino@proton.me"
                 className="inline-flex items-center text-bitcoin-blue font-bold hover:underline"
               >
                 Contattaci per essere aggiunto alla lista →
@@ -99,7 +99,7 @@ export function Ecosystem() {
             <div className="text-center">
               <p className="text-muted-foreground mb-4">La tua azienda lavora con Bitcoin?</p>
               <a
-                href="mailto:business@bitcointorino.it"
+                href="mailto:bitcoin.torino@proton.me"
                 className="inline-flex items-center text-bitcoin-blue font-bold hover:underline"
               >
                 Entra nell&apos;ecosistema →
@@ -143,7 +143,7 @@ export function Ecosystem() {
             <div className="text-center">
               <p className="text-muted-foreground mb-4">Hai uno spazio da proporre per i nostri eventi?</p>
               <a
-                href="mailto:spaces@bitcointorino.it"
+                href="mailto:bitcoin.torino@proton.me"
                 className="inline-flex items-center text-bitcoin-blue font-bold hover:underline"
               >
                 Proponi uno spazio →

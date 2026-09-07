@@ -135,8 +135,8 @@ export default function CookiePolicyPage() {
               </p>
               <p className="mb-2">
                 <strong>Email:</strong>{" "}
-                <a href="mailto:info@bitcointorino.it" className="text-bitcoin-blue hover:underline">
-                  info@bitcointorino.it
+                <a href="mailto:bitcoin.torino@proton.me" className="text-bitcoin-blue hover:underline">
+                  bitcoin.torino@proton.me
                 </a>
               </p>
               <p>

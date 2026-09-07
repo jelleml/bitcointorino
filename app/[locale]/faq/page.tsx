@@ -44,8 +44,8 @@ export default function FAQPage() {
         {
           question: locale === 'it' ? "Come posso iniziare ad accettare Bitcoin nella mia attività?" : "How can I start accepting Bitcoin in my business?",
           answer: locale === 'it'
-            ? "Ti possiamo aiutare a integrare i pagamenti Bitcoin e Lightning Network nella tua attività. Contattaci a info@bitcointorino.org per una consulenza gratuita e per essere inserito nella directory delle attività Bitcoin-friendly di Torino."
-            : "We can help you integrate Bitcoin and Lightning Network payments into your business. Contact us at info@bitcointorino.org for a free consultation and to be included in the Turin Bitcoin-friendly business directory.",
+            ? "Ti possiamo aiutare a integrare i pagamenti Bitcoin e Lightning Network nella tua attività. Contattaci a bitcoin.torino@proton.me per una consulenza gratuita e per essere inserito nella directory delle attività Bitcoin-friendly di Torino."
+            : "We can help you integrate Bitcoin and Lightning Network payments into your business. Contact us at bitcoin.torino@proton.me for a free consultation and to be included in the Turin Bitcoin-friendly business directory.",
         },
         {
           question: locale === 'it' ? "Quali sono i vantaggi per un'attività che accetta Bitcoin?" : "What are the advantages for a business accepting Bitcoin?",
@@ -56,14 +56,14 @@ export default function FAQPage() {
         {
           question: locale === 'it' ? "Come posso essere inserito nella directory attività?" : "How can I be included in the business directory?",
           answer: locale === 'it'
-            ? "Invia una email a info@bitcointorino.org con il nome della tua attività, indirizzo, tipologia di servizi e informazioni su come accetti Bitcoin. Verificheremo i dettagli e ti inseriremo nella nostra mappa delle attività Bitcoin-friendly."
-            : "Send an email to info@bitcointorino.org with your business name, address, type of services, and information on how you accept Bitcoin. We will verify the details and include you in our map of Bitcoin-friendly businesses.",
+            ? "Invia una email a bitcoin.torino@proton.me con il nome della tua attività, indirizzo, tipologia di servizi e informazioni su come accetti Bitcoin. Verificheremo i dettagli e ti inseriremo nella nostra mappa delle attività Bitcoin-friendly."
+            : "Send an email to bitcoin.torino@proton.me with your business name, address, type of services, and information on how you accept Bitcoin. We will verify the details and include you in our map of Bitcoin-friendly businesses.",
         },
         {
           question: locale === 'it' ? "La mia azienda vuole integrare Bitcoin nel proprio business. Chi posso contattare?" : "My company wants to integrate Bitcoin into its business. Who can I contact?",
           answer: locale === 'it'
-            ? "Contattaci a info@bitcointorino.org. Possiamo metterti in contatto con esperti della community per consulenze su Lightning Network, Bitcoin treasury, pagamenti B2B e altre soluzioni enterprise."
-            : "Contact us at info@bitcointorino.org. We can put you in touch with community experts for advice on Lightning Network, Bitcoin treasury, B2B payments, and other enterprise solutions.",
+            ? "Contattaci a bitcoin.torino@proton.me. Possiamo metterti in contatto con esperti della community per consulenze su Lightning Network, Bitcoin treasury, pagamenti B2B e altre soluzioni enterprise."
+            : "Contact us at bitcoin.torino@proton.me. We can put you in touch with community experts for advice on Lightning Network, Bitcoin treasury, B2B payments, and other enterprise solutions.",
         },
       ],
     },
@@ -85,8 +85,8 @@ export default function FAQPage() {
         {
           question: locale === 'it' ? "Posso proporre un intervento o un workshop?" : "Can I propose a talk or a workshop?",
           answer: locale === 'it'
-            ? "Certamente! Siamo sempre alla ricerca di speaker e relatori. Se hai competenze da condividere con la community, contattaci a info@bitcointorino.org con una proposta del tuo intervento."
-            : "Certainly! We are always looking for speakers and presenters. If you have skills to share with the community, contact us at info@bitcointorino.org with a proposal for your talk.",
+            ? "Certamente! Siamo sempre alla ricerca di speaker e relatori. Se hai competenze da condividere con la community, contattaci a bitcoin.torino@proton.me con una proposta del tuo intervento."
+            : "Certainly! We are always looking for speakers and presenters. If you have skills to share with the community, contact us at bitcoin.torino@proton.me with a proposal for your talk.",
         },
         {
           question: locale === 'it' ? "Gli eventi sono a pagamento?" : "Are the events paid?",
@@ -125,8 +125,8 @@ export default function FAQPage() {
         {
           question: locale === 'it' ? "Come posso diventare partner di Bitcoin Torino?" : "How can I become a partner of Bitcoin Torino?",
           answer: locale === 'it'
-            ? "Se sei un'azienda, un'associazione o un'organizzazione interessata a collaborare con noi, contattaci a info@bitcointorino.org. Valutiamo diverse forme di partnership per supportare e promuovere l'ecosistema Bitcoin."
-            : "If you are a company, an association, or an organization interested in collaborating with us, contact us at info@bitcointorino.org. We evaluate various forms of partnership to support and promote the Bitcoin ecosystem.",
+            ? "Se sei un'azienda, un'associazione o un'organizzazione interessata a collaborare con noi, contattaci a bitcoin.torino@proton.me. Valutiamo diverse forme di partnership per supportare e promuovere l'ecosistema Bitcoin."
+            : "If you are a company, an association, or an organization interested in collaborating with us, contact us at bitcoin.torino@proton.me. We evaluate various forms of partnership to support and promote the Bitcoin ecosystem.",
         },
         {
           question: locale === 'it' ? "Collaborate con università o enti di formazione?" : "Do you collaborate with universities or educational institutions?",
@@ -211,7 +211,7 @@ export default function FAQPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:info@bitcointorino.org"
+                href="mailto:bitcoin.torino@proton.me"
                 className="inline-flex items-center justify-center px-6 py-3 bg-bitcoin-blue text-white font-medium rounded-lg hover:bg-bitcoin-blue-dark transition-colors"
               >
                 {t('sendEmail')}

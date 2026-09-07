@@ -26,7 +26,7 @@ export function FAQ() {
     },
     {
       question: "Come posso diventare membro dell'associazione?",
-      answer: "Per diventare membro, partecipa ad almeno un nostro evento e poi contattaci via email a info@bitcointorino.it. Ti forniremo tutte le informazioni sulla quota associativa e i benefici riservati ai membri."
+      answer: "Per diventare membro, partecipa ad almeno un nostro evento e poi contattaci via email a bitcoin.torino@proton.me. Ti forniremo tutte le informazioni sulla quota associativa e i benefici riservati ai membri."
     },
     {
       question: "Organizzate eventi online o solo in presenza?",
@@ -34,7 +34,7 @@ export function FAQ() {
     },
     {
       question: "Posso proporre un intervento o un workshop?",
-      answer: "Certo! Siamo sempre alla ricerca di speaker e contenuti di qualità. Se hai un'idea per un workshop o una presentazione, scrivici a info@bitcointorino.it con la tua proposta."
+      answer: "Certo! Siamo sempre alla ricerca di speaker e contenuti di qualità. Se hai un'idea per un workshop o una presentazione, scrivici a bitcoin.torino@proton.me con la tua proposta."
     },
     {
       question: "Come posso supportare l'associazione?",
@@ -102,7 +102,7 @@ export function FAQ() {
               Non esitare a contattarci, saremo felici di risponderti
             </p>
             <a
-              href="mailto:info@bitcointorino.it"
+              href="mailto:bitcoin.torino@proton.me"
               className="inline-flex items-center text-bitcoin-blue font-bold hover:underline"
             >
               Scrivici →

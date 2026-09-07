@@ -121,7 +121,7 @@ export default function SpaziPage() {
               {t('ctaDescription')}
             </p>
             <Button asChild size="lg" className="bg-bitcoin-blue hover:bg-bitcoin-blue/90 text-white">
-              <a href="mailto:info@bitcointorino.org">
+              <a href="mailto:bitcoin.torino@proton.me">
                 {t('contactUs')}
               </a>
             </Button>

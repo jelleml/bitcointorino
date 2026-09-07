@@ -101,7 +101,7 @@ export default function AziendePage() {
               {t('ctaDescription')}
             </p>
             <Button asChild size="lg">
-              <a href="mailto:info@bitcointorino.org">
+              <a href="mailto:bitcoin.torino@proton.me">
                 {t('contactUs')}
               </a>
             </Button>

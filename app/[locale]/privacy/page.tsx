@@ -129,8 +129,8 @@ export default function PrivacyPage() {
               </p>
               <p className="mb-2">
                 <strong>Email:</strong>{" "}
-                <a href="mailto:privacy@bitcointorino.it" className="text-bitcoin-blue hover:underline">
-                  privacy@bitcointorino.it
+                <a href="mailto:bitcoin.torino@proton.me" className="text-bitcoin-blue hover:underline">
+                  bitcoin.torino@proton.me
                 </a>
               </p>
               <p>

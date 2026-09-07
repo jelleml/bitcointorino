@@ -124,7 +124,7 @@ export function Team() {
               Vuoi far parte del team?
             </p>
             <a
-              href="mailto:info@bitcointorino.it"
+              href="mailto:bitcoin.torino@proton.me"
               className="inline-flex items-center text-bitcoin-blue font-bold hover:underline"
             >
               Contattaci →
