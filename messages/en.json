@@ -1,7 +1,7 @@
 {
   "Hero": {
-    "enterChannel": "Join the Channel",
-    "discoverEvents": "Discover Events"
+    "joinCommunity": "Join the Community",
+    "becomeMember": "Become a Member"
   },
   "About": {
     "title": "About Us",
