@@ -14,8 +14,8 @@ export function Partners() {
     { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", className: "scale-75", href: "https://crypto.polito.it/bitcoin" },
     { name: "BTCPay Server Italia", logo: "/Partners/logo-btcpay-server.svg?v=2", href: "https://btcpayserver.org" },
     { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", href: "#" },
-    { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", className: "scale-75", href: "#" },
-    { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", className: "scale-75", href: "#" },
+    { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", className: "scale-75", href: "https://www.taxcare.it" },
+    { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", className: "scale-75", href: "https://www.cluborange.org" },
   ]
 
   return (
