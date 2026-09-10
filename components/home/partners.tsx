@@ -14,6 +14,8 @@ export function Partners() {
     { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", className: "scale-75", href: "https://crypto.polito.it/bitcoin" },
     { name: "BTCPay Server Italia", logo: "/Partners/logo-btcpay-server.svg?v=2", href: "https://btcpayserver.org" },
     { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", href: "#" },
+    { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", className: "scale-75", href: "#" },
+    { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", className: "scale-75", href: "#" },
   ]
 
   return (
@@ -32,7 +34,7 @@ export function Partners() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="w-[calc(50%-1rem)] md:w-[calc(25%-1.5rem)] flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors group"
+              className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(20%-1.6rem)] flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors group"
             >
               <a 
                 href={partner.href}
@@ -44,7 +46,7 @@ export function Partners() {
                 <div className="w-24 h-24 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <img src={partner.logo} alt={`${partner.name} logo`} className={`max-w-full max-h-full object-contain ${partner.className || ''}`} />
                 </div>
-                <div className="text-sm font-medium text-muted-foreground group-hover:text-bitcoin-blue transition-colors">
+                <div className="text-sm font-medium text-muted-foreground group-hover:text-bitcoin-blue transition-colors break-words hyphens-auto">
                   {partner.name}
                 </div>
               </a>

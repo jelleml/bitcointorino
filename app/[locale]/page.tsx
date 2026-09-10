@@ -1,6 +1,5 @@
 import { Hero } from "@/components/home/hero"
 import { Partners } from "@/components/home/partners"
-import { AnimatedBackground } from "@/components/home/animated-background"
 import { About } from "@/components/home/about"
 import { NextEvent } from "@/components/home/next-event"
 import { TorinoBitcoinCity } from "@/components/home/torino-bitcoin-city"
@@ -15,8 +14,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <AnimatedBackground />
-      <div className="relative z-10">
+      <div className="relative">
         <Hero />
         <About />
         <NextEvent />
