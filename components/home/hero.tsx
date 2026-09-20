@@ -1,6 +1,6 @@
 'use client'
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useTranslations } from 'next-intl'
@@ -37,9 +37,9 @@ export function Hero() {
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base text-white border-white hover:bg-transparent hover:border-gray-300 hover:text-gray-300">
-              <a href="/soci" target="_blank" rel="noopener noreferrer">
+              <Link href="/soci">
                 {t('becomeMember')}
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
