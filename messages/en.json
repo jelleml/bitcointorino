@@ -230,103 +230,76 @@
   "Soci": {
     "meta": {
       "title": "Become a member | Bitcoin Torino",
-      "description": "How to join Associazione Ricreativa Culturale Bitcoin Torino: what membership involves, the application steps and the association's details."
+      "description": "Bitcoin Torino is the association that brings together the Bitcoin community of Turin. Membership fee, member benefits, ways to take part and how to apply."
     },
     "hero": {
-      "eyebrow": "Associazione Ricreativa Culturale Bitcoin Torino",
-      "title": "Become a member",
-      "subtitle": "We bring together the Bitcoin ecosystem of Turin and connect it with businesses and institutions. Members support the association's activities and set its direction in the general assembly.",
-      "cta": "Apply for membership",
-      "ctaSecondary": "How it works"
+      "eyebrow": "Onboarding",
+      "title": "Join Bitcoin Torino",
+      "subtitle": "Bitcoin Torino is the association that brings together the Bitcoin community of Turin: projects, companies, institutions and citizens who want to grow the Bitcoin ecosystem in the city. Becoming a member means taking an active part in this path.",
+      "cta": "Fill in the application"
     },
-    "pillars": {
-      "title": "What we do",
-      "description": "Four activities set out in our statute and carried out by the members."
+    "fee": {
+      "title": "Membership fee",
+      "amount": "€50 / year",
+      "description": "The fee covers the current membership year and goes directly to the association's activities: events, cultural initiatives and educational work across the territory.",
+      "validity": "The fee is valid for the calendar year in which it is paid."
     },
-    "membership": {
-      "title": "What membership involves",
-      "description": "Rights and commitments are those of the statute, approved at the founding meeting on 13 March 2026.",
-      "items": {
-        "vote": {
-          "title": "Vote in the assembly",
-          "description": "Every member takes part in the General Assembly with voting rights, elects the Board of Directors and can be elected to it."
-        },
-        "projects": {
-          "title": "Contribution to projects",
-          "description": "Events and education, support for merchants accepting bitcoin, relations with businesses and institutions. Each member chooses where to contribute."
-        },
-        "fee": {
-          "title": "Annual membership fee",
-          "description": "The amount is set each year by the Board of Directors and communicated during the application. It covers the current financial year, from 1 January to 31 December."
-        },
-        "transparency": {
-          "title": "Non-profit by statute",
-          "description": "All offices are unpaid, with reimbursement of documented expenses only. Surpluses are never distributed: they stay with the association's activities."
-        }
-      }
-    },
-    "steps": {
-      "title": "How to join",
-      "description": "Four steps, from the first meetup to the members' register.",
+    "benefits": {
+      "title": "What you get as a member",
       "items": [
         {
-          "title": "Come to an event",
-          "description": "Membership starts with getting to know each other. Most events are free and open to everyone, and the calendar is published on Luma."
+          "title": "Members' event",
+          "description": "Access to an exclusive event for members, held alongside the end-of-year plenary meeting."
         },
         {
-          "title": "Fill in the membership application",
-          "description": "The form collects the details needed for the members' register and your acceptance of the statute."
+          "title": "Discounts on events",
+          "description": "Reserved rates on events organised by the association."
         },
         {
-          "title": "Wait for the Board's decision",
-          "description": "The Board of Directors reviews the application and communicates the outcome by email."
+          "title": "Discounts on partner products and services",
+          "description": "Access to preferential terms at the businesses partnered with Bitcoin Torino."
         },
         {
-          "title": "Pay the fee and join the members' channels",
-          "description": "Membership is active for the current financial year once the fee is paid. The confirmation includes access instructions for the internal channels and the assembly."
+          "title": "Governance",
+          "description": "Voting rights in the General Assembly: you contribute to the association's decisions and elect the Board of Directors."
         }
-      ],
-      "note": "Companies, associations and public bodies follow a different route: write to us and we will work out the right form of collaboration."
-    },
-    "facts": {
-      "title": "The association in brief",
-      "description": "The details worth knowing before you apply.",
-      "items": [
-        { "label": "Legal name", "value": "Associazione Ricreativa Culturale Bitcoin Torino" },
-        { "label": "Legal form", "value": "Unincorporated association, non-partisan, non-profit" },
-        { "label": "Founded", "value": "13 March 2026, Turin" },
-        { "label": "Tax code", "value": "97924420017" },
-        { "label": "Registered office", "value": "Via Pietro Micca 21, Turin" },
-        { "label": "Financial year", "value": "1 January – 31 December" }
       ]
     },
-    "before": {
-      "title": "Before you apply",
-      "description": "You do not need to be a member to take part. Events and community channels are open to everyone.",
-      "channels": {
-        "events": {
-          "title": "Events",
-          "description": "Meetups, workshops and screenings on the calendar",
-          "link": "Go to events"
-        },
-        "channel": {
-          "title": "Channel",
-          "description": "Announcements and updates on Telegram",
-          "link": "Follow the channel"
-        },
-        "group": {
-          "title": "Group",
-          "description": "Questions and discussions with the community",
-          "link": "Join the group"
-        }
-      }
+    "participation": {
+      "title": "Two ways to take part",
+      "description": "Becoming a member is not a single fixed commitment: you can choose the level of involvement that suits you best.",
+      "observer": {
+        "title": "Observer member",
+        "description": "You follow the association's activities, take part in its social life and keep your voting rights in the General Assembly, with no direct operational commitment. Sharing ideas and contacts is welcome."
+      },
+      "operational": {
+        "title": "Operational member",
+        "description": "On top of the observer member's benefits, you actively contribute to the life of the association. You can choose to:",
+        "items": [
+          "lend a hand on one or more activities already planned",
+          "propose new initiatives"
+        ]
+      },
+      "note": "The choice is not binding forever: you can move from observer to operational (or the other way round) over time, depending on your availability."
     },
-    "cta": {
-      "title": "Send your application",
-      "description": "The Board of Directors reviews applications and replies by email. If you have questions about requirements or the fee, write to us first.",
-      "primary": "Apply for membership",
-      "secondary": "Write to us",
-      "faq": "Read the frequently asked questions"
+    "meetings": {
+      "title": "Meetings",
+      "items": [
+        "All members (operational and observer) take part in the two half-yearly plenary meetings, the moments of discussion and update shared by the whole association.",
+        "Operational members also take part in working meetings, called as needed and dedicated to the activities under way."
+      ]
+    },
+    "join": {
+      "title": "How to apply",
+      "description": "Joining the association takes two steps:",
+      "steps": [
+        "Fill in the application",
+        "Wait for approval from the Board of Directors"
+      ],
+      "formLink": "Form",
+      "after": "Once your application is approved, you will receive the instructions to pay the fee and to access the members' channels.",
+      "noteLabel": "Note:",
+      "note": "no document is required to apply. The data entered in the form is provided under the responsibility of whoever declares it; the Association takes no responsibility for its accuracy."
     }
   }
 }

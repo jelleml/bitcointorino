@@ -230,103 +230,76 @@
   "Soci": {
     "meta": {
       "title": "Diventa socio | Bitcoin Torino",
-      "description": "Come aderire all'Associazione Ricreativa Culturale Bitcoin Torino: cosa comporta essere socio, i passaggi dell'adesione e i dati dell'associazione."
+      "description": "Bitcoin Torino è l'associazione che unisce la community Bitcoin torinese. Quota associativa, vantaggi per i soci, modalità di partecipazione e come iscriversi."
     },
     "hero": {
-      "eyebrow": "Associazione Ricreativa Culturale Bitcoin Torino",
-      "title": "Diventa socio",
-      "subtitle": "Aggreghiamo l'ecosistema Bitcoin torinese e lo colleghiamo a imprese e istituzioni. I soci sostengono le attività dell'associazione e ne decidono l'indirizzo in assemblea.",
-      "cta": "Richiedi l'adesione",
-      "ctaSecondary": "Come funziona"
+      "eyebrow": "Onboarding",
+      "title": "Entra a far parte di Bitcoin Torino",
+      "subtitle": "Bitcoin Torino è l'associazione che unisce la community Bitcoin torinese: progetti, aziende, istituzioni e cittadini che vogliono far crescere l'ecosistema Bitcoin in città. Diventare socio significa entrare a far parte attiva di questo percorso.",
+      "cta": "Compila la richiesta"
     },
-    "pillars": {
-      "title": "Cosa facciamo",
-      "description": "Quattro attività previste dallo statuto e portate avanti dai soci."
+    "fee": {
+      "title": "Quota associativa",
+      "amount": "50€ / anno",
+      "description": "La quota copre l'anno sociale in corso e contribuisce direttamente alle attività dell'associazione: eventi, iniziative culturali e attività di divulgazione sul territorio.",
+      "validity": "La validità della quota corrisponde all'anno solare in cui viene versata."
     },
-    "membership": {
-      "title": "Cosa comporta essere socio",
-      "description": "Diritti e impegni sono quelli dello statuto, approvato in sede costitutiva il 13 marzo 2026.",
-      "items": {
-        "vote": {
-          "title": "Voto in assemblea",
-          "description": "Ogni socio partecipa all'Assemblea dei Soci con diritto di voto, elegge il Consiglio Direttivo e può essere eletto."
-        },
-        "projects": {
-          "title": "Contributo ai progetti",
-          "description": "Eventi e divulgazione, supporto agli esercenti che accettano bitcoin, rapporti con imprese e istituzioni. Ogni socio sceglie dove contribuire."
-        },
-        "fee": {
-          "title": "Quota associativa annuale",
-          "description": "L'importo è deliberato ogni anno dal Consiglio Direttivo e viene comunicato in fase di adesione. Copre l'esercizio sociale in corso, dal 1 gennaio al 31 dicembre."
-        },
-        "transparency": {
-          "title": "Nessun fine di lucro",
-          "description": "Le cariche sociali sono gratuite, con il solo rimborso delle spese documentate. Utili e avanzi non vengono distribuiti: restano alle attività dell'associazione."
-        }
-      }
-    },
-    "steps": {
-      "title": "Come funziona l'adesione",
-      "description": "Quattro passaggi, dal primo incontro all'iscrizione nel libro dei soci.",
+    "benefits": {
+      "title": "Cosa ottieni come socio",
       "items": [
         {
-          "title": "Partecipa a un evento",
-          "description": "L'adesione parte dalla conoscenza reciproca. La maggior parte degli eventi è gratuita e aperta a tutti, il calendario è pubblicato su Luma."
+          "title": "Evento sociale",
+          "description": "Partecipazione a un evento esclusivo dedicato ai soci, in occasione della riunione plenaria di fine anno."
         },
         {
-          "title": "Compila la richiesta di adesione",
-          "description": "Il modulo raccoglie i dati necessari all'iscrizione nel libro dei soci e l'accettazione dello statuto."
+          "title": "Sconti su eventi",
+          "description": "Condizioni riservate sugli eventi organizzati dall'associazione."
         },
         {
-          "title": "Attendi la delibera del Consiglio Direttivo",
-          "description": "Il Consiglio esamina la richiesta e comunica l'esito via email."
+          "title": "Sconti su prodotti/servizi partner",
+          "description": "Accesso a condizioni agevolate presso le attività convenzionate con Bitcoin Torino."
         },
         {
-          "title": "Versa la quota ed entra nei canali dei soci",
-          "description": "Con il versamento della quota l'iscrizione è attiva per l'esercizio in corso. Insieme alla conferma arrivano le istruzioni per i canali interni e per l'assemblea."
+          "title": "Governance",
+          "description": "Diritto di voto in Assemblea: puoi contribuire alle decisioni dell'associazione ed eleggere il Consiglio Direttivo."
         }
-      ],
-      "note": "Per imprese, associazioni ed enti il percorso è diverso: scrivici e valutiamo insieme la forma di collaborazione."
-    },
-    "facts": {
-      "title": "L'associazione in breve",
-      "description": "I dati utili prima di aderire.",
-      "items": [
-        { "label": "Denominazione", "value": "Associazione Ricreativa Culturale Bitcoin Torino" },
-        { "label": "Forma", "value": "Associazione non riconosciuta, apartitica, senza scopo di lucro" },
-        { "label": "Costituzione", "value": "13 marzo 2026, Torino" },
-        { "label": "Codice fiscale", "value": "97924420017" },
-        { "label": "Sede", "value": "Via Pietro Micca 21, Torino" },
-        { "label": "Esercizio sociale", "value": "1 gennaio – 31 dicembre" }
       ]
     },
-    "before": {
-      "title": "Prima dell'adesione",
-      "description": "Non serve essere socio per partecipare. Eventi e canali della community sono aperti a tutti.",
-      "channels": {
-        "events": {
-          "title": "Eventi",
-          "description": "Meetup, workshop e proiezioni in calendario",
-          "link": "Vai agli eventi"
-        },
-        "channel": {
-          "title": "Canale",
-          "description": "Annunci e aggiornamenti su Telegram",
-          "link": "Segui il canale"
-        },
-        "group": {
-          "title": "Gruppo",
-          "description": "Domande e discussioni con la community",
-          "link": "Entra nel gruppo"
-        }
-      }
+    "participation": {
+      "title": "Due modalità di partecipazione",
+      "description": "Diventare socio non significa un impegno unico e fisso: puoi scegliere il livello di coinvolgimento che ti è più adatto.",
+      "observer": {
+        "title": "Socio osservatore",
+        "description": "Segui le attività dell'associazione, partecipi alla vita sociale e mantieni il tuo diritto di voto in Assemblea, senza impegno operativo diretto. È gradito un contributo a livello di condivisione di idee e contatti."
+      },
+      "operational": {
+        "title": "Socio operativo",
+        "description": "Oltre ai benefici del socio osservatore, contribuisci attivamente alla vita dell'associazione. Puoi scegliere di:",
+        "items": [
+          "dare una mano su una o più attività già in programma",
+          "proporre nuove iniziative"
+        ]
+      },
+      "note": "Non è una scelta vincolante per sempre: puoi passare da osservatore a operativo (o viceversa) nel tempo, in base alla disponibilità che hai."
     },
-    "cta": {
-      "title": "Invia la richiesta",
-      "description": "Il Consiglio Direttivo esamina le richieste e risponde via email. Per dubbi su requisiti o quota, scrivici prima.",
-      "primary": "Richiedi l'adesione",
-      "secondary": "Scrivici",
-      "faq": "Leggi le domande frequenti"
+    "meetings": {
+      "title": "Riunioni",
+      "items": [
+        "Tutti i soci (operativi e osservatori) partecipano alle due plenarie semestrali, i momenti di confronto e aggiornamento comuni a tutta l'associazione.",
+        "I soci operativi partecipano inoltre a riunioni operative, convocate secondo necessità, dedicate al lavoro sulle attività in corso."
+      ]
+    },
+    "join": {
+      "title": "Come iscriverti",
+      "description": "L'ingresso in associazione avviene in due passaggi:",
+      "steps": [
+        "Compila la richiesta",
+        "Attendi l'approvazione da parte del Consiglio Direttivo"
+      ],
+      "formLink": "Form",
+      "after": "Una volta approvata la richiesta, riceverai le istruzioni per il pagamento della quota e per l'accesso ai canali riservati ai soci.",
+      "noteLabel": "Nota:",
+      "note": "per l'iscrizione non è richiesta la presentazione di alcun documento. I dati inseriti nel form sono forniti sotto la responsabilità di chi li dichiara; l'Associazione non si assume responsabilità circa la loro veridicità."
     }
   }
 }
