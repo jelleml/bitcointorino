@@ -63,24 +63,8 @@ export default function SociPage() {
         </div>
       </section>
 
-      {/* Quota associativa */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">{t('fee.title')}</h2>
-            <div className="bg-white dark:bg-gray-950 rounded-lg p-8 md:p-12 border-2 border-gray-200 dark:border-gray-700 text-center">
-              <p className="text-5xl md:text-6xl font-bold text-bitcoin-blue mb-6">
-                {t('fee.amount')}
-              </p>
-              <p className="text-lg text-muted-foreground mb-4">{t('fee.description')}</p>
-              <p className="text-muted-foreground">{t('fee.validity')}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Cosa ottieni come socio */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50 dark:bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -115,7 +99,7 @@ export default function SociPage() {
       </section>
 
       {/* Due modalità di partecipazione */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -169,7 +153,7 @@ export default function SociPage() {
       </section>
 
       {/* Riunioni */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50 dark:bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -190,6 +174,26 @@ export default function SociPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Quota associativa */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">{t('fee.title')}</h2>
+            <div className="bg-white dark:bg-gray-950 rounded-lg p-8 md:p-12 border-2 border-gray-200 dark:border-gray-700 text-center">
+              <p className="text-5xl md:text-6xl font-bold text-bitcoin-blue mb-6">
+                {t('fee.amount')}
+              </p>
+              <p className="text-lg text-muted-foreground">{t('fee.description')}</p>
+            </div>
+
+            <div className="mt-8 flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 p-6">
+              <Info className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
+              <p className="text-muted-foreground">{t('fee.validity')}</p>
+            </div>
           </div>
         </div>
       </section>

@@ -60,6 +60,8 @@
     "subscribe": "Iscriviti",
     "home": "Home",
     "ecosystem": "Ecosistema",
+    "events": "Eventi",
+    "onboarding": "Onboarding",
     "about": "Chi Siamo",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy"
@@ -240,8 +242,8 @@
     },
     "hero": {
       "eyebrow": "Onboarding",
-      "title": "Entra a far parte di Bitcoin Torino",
-      "subtitle": "Bitcoin Torino è l'associazione che unisce la community Bitcoin torinese: progetti, aziende, istituzioni e cittadini che vogliono far crescere l'ecosistema Bitcoin in città. Diventare socio significa entrare a far parte attiva di questo percorso.",
+      "title": "Entra in Bitcoin Torino",
+      "subtitle": "Bitcoin Torino è l'associazione che unisce la community Bitcoin torinese: progetti, aziende, istituzioni e cittadini che vogliono far crescere l'ecosistema Bitcoin in città. Diventare socio significa entrare a far parte di questo percorso.",
       "cta": "Compila la richiesta"
     },
     "fee": {
@@ -255,7 +257,7 @@
       "items": [
         {
           "title": "Evento sociale",
-          "description": "Partecipazione a un evento esclusivo dedicato ai soci, in occasione della riunione plenaria di fine anno."
+          "description": "Partecipazione a un evento esclusivo dedicato ai soci, con cena inclusa."
         },
         {
           "title": "Sconti su eventi",
@@ -291,7 +293,7 @@
     "meetings": {
       "title": "Riunioni",
       "items": [
-        "Tutti i soci (operativi e osservatori) partecipano alle due plenarie semestrali, i momenti di confronto e aggiornamento comuni a tutta l'associazione.",
+        "Tutti i soci partecipano alle due plenarie semestrali, i momenti di confronto e aggiornamento comuni a tutta l'associazione.",
         "I soci operativi partecipano inoltre a riunioni operative, convocate secondo necessità, dedicate al lavoro sulle attività in corso."
       ]
     },

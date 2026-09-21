@@ -60,6 +60,8 @@
     "subscribe": "Subscribe",
     "home": "Home",
     "ecosystem": "Ecosystem",
+    "events": "Events",
+    "onboarding": "Onboarding",
     "about": "About Us",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy"
@@ -241,7 +243,7 @@
     "hero": {
       "eyebrow": "Onboarding",
       "title": "Join Bitcoin Torino",
-      "subtitle": "Bitcoin Torino is the association that brings together the Bitcoin community of Turin: projects, companies, institutions and citizens who want to grow the Bitcoin ecosystem in the city. Becoming a member means taking an active part in this path.",
+      "subtitle": "Bitcoin Torino is the association that brings together the Bitcoin community of Turin: projects, companies, institutions and citizens who want to grow the Bitcoin ecosystem in the city. Becoming a member means taking part in this path.",
       "cta": "Fill in the application"
     },
     "fee": {
@@ -255,7 +257,7 @@
       "items": [
         {
           "title": "Members' event",
-          "description": "Access to an exclusive event for members, held alongside the end-of-year plenary meeting."
+          "description": "Attendance at an exclusive event for members, dinner included."
         },
         {
           "title": "Discounts on events",
@@ -291,7 +293,7 @@
     "meetings": {
       "title": "Meetings",
       "items": [
-        "All members (operational and observer) take part in the two half-yearly plenary meetings, the moments of discussion and update shared by the whole association.",
+        "All members take part in the two half-yearly plenary meetings, the moments of discussion and update shared by the whole association.",
         "Operational members also take part in working meetings, called as needed and dedicated to the activities under way."
       ]
     },
