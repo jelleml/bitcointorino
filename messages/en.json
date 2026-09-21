@@ -275,20 +275,15 @@
     },
     "participation": {
       "title": "Two ways to take part",
-      "description": "Becoming a member is not a single fixed commitment: you can choose the level of involvement that suits you best.",
+      "description": "Becoming a member is not a single fixed commitment: you can choose the level of involvement that suits you best and change it over time.",
       "observer": {
         "title": "Observer member",
         "description": "You follow the association's activities, take part in its social life and keep your voting rights in the General Assembly, with no direct operational commitment. Sharing ideas and contacts is welcome."
       },
       "operational": {
         "title": "Operational member",
-        "description": "On top of the observer member's benefits, you actively contribute to the life of the association. You can choose to:",
-        "items": [
-          "lend a hand on one or more activities already planned",
-          "propose new initiatives"
-        ]
-      },
-      "note": "The choice is not binding forever: you can move from observer to operational (or the other way round) over time, depending on your availability."
+        "description": "On top of the observer member's benefits, you actively contribute to the life of the association. You can choose to lend a hand on one or more activities already planned, or to propose new initiatives."
+      }
     },
     "meetings": {
       "title": "Meetings",

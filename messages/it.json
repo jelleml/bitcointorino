@@ -275,20 +275,15 @@
     },
     "participation": {
       "title": "Due modalità di partecipazione",
-      "description": "Diventare socio non significa un impegno unico e fisso: puoi scegliere il livello di coinvolgimento che ti è più adatto.",
+      "description": "Diventare socio non significa un impegno unico e fisso: puoi scegliere il livello di coinvolgimento che ti è più adatto e cambiare nel tempo.",
       "observer": {
         "title": "Socio osservatore",
         "description": "Segui le attività dell'associazione, partecipi alla vita sociale e mantieni il tuo diritto di voto in Assemblea, senza impegno operativo diretto. È gradito un contributo a livello di condivisione di idee e contatti."
       },
       "operational": {
         "title": "Socio operativo",
-        "description": "Oltre ai benefici del socio osservatore, contribuisci attivamente alla vita dell'associazione. Puoi scegliere di:",
-        "items": [
-          "dare una mano su una o più attività già in programma",
-          "proporre nuove iniziative"
-        ]
-      },
-      "note": "Non è una scelta vincolante per sempre: puoi passare da osservatore a operativo (o viceversa) nel tempo, in base alla disponibilità che hai."
+        "description": "Oltre ai benefici del socio osservatore, contribuisci attivamente alla vita dell'associazione. Puoi scegliere di dare una mano su una o più attività già in programma o proporre nuove iniziative."
+      }
     },
     "meetings": {
       "title": "Riunioni",

@@ -35,7 +35,6 @@ export default function SociPage() {
   const t = useTranslations('Soci')
 
   const benefits = t.raw('benefits.items') as { title: string; description: string }[]
-  const operationalItems = t.raw('participation.operational.items') as string[]
   const meetings = t.raw('meetings.items') as string[]
   const steps = t.raw('join.steps') as string[]
 
@@ -128,26 +127,11 @@ export default function SociPage() {
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{t('participation.operational.title')}</h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground">
                   {t('participation.operational.description')}
                 </p>
-                <ul className="space-y-2">
-                  {operationalItems.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3 text-muted-foreground">
-                      <span
-                        className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-bitcoin-blue"
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
-
-            <p className="mt-8 text-center text-muted-foreground max-w-3xl mx-auto">
-              {t('participation.note')}
-            </p>
           </div>
         </div>
       </section>

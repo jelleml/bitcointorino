@@ -40,11 +40,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/ecosystem" className="text-white/80 hover:text-white transition-colors">
-                  {t('ecosystem')}
-                </Link>
-              </li>
-              <li>
                 <a
                   href="https://luma.com/bitcoin-torino-calendar"
                   target="_blank"
@@ -57,6 +52,11 @@ export function Footer() {
               <li>
                 <Link href="/soci" className="text-white/80 hover:text-white transition-colors">
                   {t('onboarding')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/ecosystem" className="text-white/80 hover:text-white transition-colors">
+                  {t('ecosystem')}
                 </Link>
               </li>
               <li>
