@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Separator } from "@/components/ui/separator"
 import { Send, Mail, Twitter, Instagram, Linkedin } from "lucide-react"
 import { useTranslations } from 'next-intl'
@@ -40,13 +40,23 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/ecosystem" className="text-white/80 hover:text-white transition-colors">
-                  {t('ecosystem')}
+                <a
+                  href="https://luma.com/bitcoin-torino-calendar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors"
+                >
+                  {t('events')}
+                </a>
+              </li>
+              <li>
+                <Link href="/soci" className="text-white/80 hover:text-white transition-colors">
+                  {t('onboarding')}
                 </Link>
               </li>
               <li>
-                <Link href="#chi-siamo" className="text-white/80 hover:text-white transition-colors">
-                  {t('about')}
+                <Link href="/ecosystem" className="text-white/80 hover:text-white transition-colors">
+                  {t('ecosystem')}
                 </Link>
               </li>
               <li>

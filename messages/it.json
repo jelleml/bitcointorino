@@ -60,7 +60,8 @@
     "subscribe": "Iscriviti",
     "home": "Home",
     "ecosystem": "Ecosistema",
-    "about": "Chi Siamo",
+    "events": "Eventi",
+    "onboarding": "Onboarding",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy"
   },
@@ -134,6 +135,12 @@
           "description": "Community italiana, con forte presenza a Torino, che aggrega ragazze di tutte le età appassionate di Bitcoin.",
           "type": "Community",
           "frequency": "Occasionale"
+        },
+        "builder_torino": {
+          "name": "₿uilder Torino",
+          "description": "Fork di ₿uilderSF, meetup mensile dedicato a prodotto, design e strumenti AI per chi costruisce su freedom technologies e Bitcoin. Aperto a tutti.",
+          "type": "Meetup",
+          "frequency": "Ogni mese"
         }
       }
     },
@@ -226,5 +233,75 @@
     "ctaDescription": "Contattaci direttamente o unisciti al gruppo Telegram per fare le tue domande alla community.",
     "sendEmail": "Invia una Email",
     "joinTelegram": "Unisciti su Telegram"
+  },
+  "Soci": {
+    "meta": {
+      "title": "Diventa socio | Bitcoin Torino",
+      "description": "Bitcoin Torino è l'associazione che unisce la community Bitcoin torinese. Quota associativa, vantaggi per i soci, modalità di partecipazione e come iscriversi."
+    },
+    "hero": {
+      "eyebrow": "Onboarding",
+      "title": "Entra in Bitcoin Torino",
+      "subtitle": "Bitcoin Torino è l'associazione che unisce la community Bitcoin torinese: progetti, aziende, istituzioni e cittadini che vogliono far crescere l'ecosistema Bitcoin in città. Diventare socio significa far parte di questo percorso.",
+      "cta": "Compila la richiesta"
+    },
+    "fee": {
+      "title": "Quota associativa",
+      "amount": "50€ / anno",
+      "description": "La quota copre l'anno sociale in corso e contribuisce direttamente alle attività dell'associazione: eventi, iniziative culturali e attività di divulgazione sul territorio.",
+      "validity": "La validità della quota corrisponde all'anno solare in cui viene versata."
+    },
+    "benefits": {
+      "title": "Cosa ottieni come socio",
+      "items": [
+        {
+          "title": "Evento sociale",
+          "description": "Partecipazione all'evento esclusivo di fine anno dedicato ai soci, con cena inclusa."
+        },
+        {
+          "title": "Sconti su eventi",
+          "description": "Condizioni riservate sugli eventi organizzati dall'associazione."
+        },
+        {
+          "title": "Sconti su prodotti/servizi partner",
+          "description": "Accesso a condizioni agevolate presso le attività convenzionate con Bitcoin Torino."
+        },
+        {
+          "title": "Governance",
+          "description": "Diritto di voto in Assemblea: puoi contribuire alle decisioni dell'associazione ed eleggere il Consiglio Direttivo."
+        }
+      ]
+    },
+    "participation": {
+      "title": "Due modalità di partecipazione",
+      "description": "Diventare socio non significa un impegno unico e fisso: puoi scegliere il livello di coinvolgimento che ti è più adatto e cambiare nel tempo.",
+      "observer": {
+        "title": "Socio osservatore",
+        "description": "Segui le attività dell'associazione, partecipi alla vita sociale e mantieni il tuo diritto di voto in Assemblea, senza impegno operativo diretto. È gradito un contributo a livello di condivisione di idee e contatti."
+      },
+      "operational": {
+        "title": "Socio operativo",
+        "description": "Oltre ai benefici del socio osservatore, contribuisci attivamente alla vita dell'associazione. Puoi scegliere di dare una mano su una o più attività già in programma o proporre nuove iniziative."
+      }
+    },
+    "meetings": {
+      "title": "Riunioni",
+      "items": [
+        "Tutti i soci partecipano alle due plenarie semestrali, i momenti di confronto e aggiornamento comuni a tutta l'associazione.",
+        "I soci operativi partecipano inoltre a riunioni operative, convocate secondo necessità, dedicate al lavoro sulle attività in corso."
+      ]
+    },
+    "join": {
+      "title": "Come iscriverti",
+      "description": "L'ingresso in associazione avviene in due passaggi:",
+      "steps": [
+        "Compila la richiesta",
+        "Attendi l'approvazione da parte del Consiglio Direttivo"
+      ],
+      "formLink": "Form",
+      "after": "Una volta approvata la richiesta, riceverai le istruzioni per il pagamento della quota e per l'accesso ai canali riservati ai soci.",
+      "noteLabel": "Nota:",
+      "note": "per l'iscrizione non è richiesta la presentazione di alcun documento. I dati inseriti nel form sono forniti sotto la responsabilità di chi li dichiara; l'Associazione non si assume responsabilità circa la loro veridicità."
+    }
   }
 }

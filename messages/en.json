@@ -60,7 +60,8 @@
     "subscribe": "Subscribe",
     "home": "Home",
     "ecosystem": "Ecosystem",
-    "about": "About Us",
+    "events": "Events",
+    "onboarding": "Onboarding",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy"
   },
@@ -134,6 +135,12 @@
           "description": "Italian community, with a strong presence in Turin, which aggregates girls of all ages passionate about Bitcoin.",
           "type": "Community",
           "frequency": "Occasional"
+        },
+        "builder_torino": {
+          "name": "₿uilder Torino",
+          "description": "A fork of ₿uilderSF, a monthly meetup on product, design and AI tools for those building on freedom technologies and Bitcoin. Open to everyone.",
+          "type": "Meetup",
+          "frequency": "Every month"
         }
       }
     },
@@ -226,5 +233,75 @@
     "ctaDescription": "Contact us directly or join our Telegram group to ask your questions to the community.",
     "sendEmail": "Send an Email",
     "joinTelegram": "Join on Telegram"
+  },
+  "Soci": {
+    "meta": {
+      "title": "Become a member | Bitcoin Torino",
+      "description": "Bitcoin Torino is the association that brings together the Bitcoin community of Turin. Membership fee, member benefits, ways to take part and how to apply."
+    },
+    "hero": {
+      "eyebrow": "Onboarding",
+      "title": "Join Bitcoin Torino",
+      "subtitle": "Bitcoin Torino is the association that brings together the Bitcoin community of Turin: projects, companies, institutions and citizens who want to grow the Bitcoin ecosystem in the city. Becoming a member means taking part in this path.",
+      "cta": "Fill in the application"
+    },
+    "fee": {
+      "title": "Membership fee",
+      "amount": "€50 / year",
+      "description": "The fee covers the current membership year and goes directly to the association's activities: events, cultural initiatives and educational work across the territory.",
+      "validity": "The fee is valid for the calendar year in which it is paid."
+    },
+    "benefits": {
+      "title": "What you get as a member",
+      "items": [
+        {
+          "title": "Members' event",
+          "description": "Attendance at the exclusive end-of-year event for members, dinner included."
+        },
+        {
+          "title": "Discounts on events",
+          "description": "Reserved rates on events organised by the association."
+        },
+        {
+          "title": "Discounts on partner products and services",
+          "description": "Access to preferential terms at the businesses partnered with Bitcoin Torino."
+        },
+        {
+          "title": "Governance",
+          "description": "Voting rights in the General Assembly: you contribute to the association's decisions and elect the Board of Directors."
+        }
+      ]
+    },
+    "participation": {
+      "title": "Two ways to take part",
+      "description": "Becoming a member is not a single fixed commitment: you can choose the level of involvement that suits you best and change it over time.",
+      "observer": {
+        "title": "Observer member",
+        "description": "You follow the association's activities, take part in its social life and keep your voting rights in the General Assembly, with no direct operational commitment. Sharing ideas and contacts is welcome."
+      },
+      "operational": {
+        "title": "Operational member",
+        "description": "On top of the observer member's benefits, you actively contribute to the life of the association. You can choose to lend a hand on one or more activities already planned, or to propose new initiatives."
+      }
+    },
+    "meetings": {
+      "title": "Meetings",
+      "items": [
+        "All members take part in the two half-yearly plenary meetings, the moments of discussion and update shared by the whole association.",
+        "Operational members also take part in working meetings, called as needed and dedicated to the activities under way."
+      ]
+    },
+    "join": {
+      "title": "How to apply",
+      "description": "Joining the association takes two steps:",
+      "steps": [
+        "Fill in the application",
+        "Wait for approval from the Board of Directors"
+      ],
+      "formLink": "Form",
+      "after": "Once your application is approved, you will receive the instructions to pay the fee and to access the members' channels.",
+      "noteLabel": "Note:",
+      "note": "no document is required to apply. The data entered in the form is provided under the responsibility of whoever declares it; the Association takes no responsibility for its accuracy."
+    }
   }
 }
