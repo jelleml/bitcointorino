@@ -243,7 +243,7 @@
     "hero": {
       "eyebrow": "Onboarding",
       "title": "Entra in Bitcoin Torino",
-      "subtitle": "Bitcoin Torino è l'associazione che unisce la community Bitcoin torinese: progetti, aziende, istituzioni e cittadini che vogliono far crescere l'ecosistema Bitcoin in città. Diventare socio significa entrare a far parte di questo percorso.",
+      "subtitle": "Bitcoin Torino è l'associazione che unisce la community Bitcoin torinese: progetti, aziende, istituzioni e cittadini che vogliono far crescere l'ecosistema Bitcoin in città. Diventare socio significa far parte di questo percorso.",
       "cta": "Compila la richiesta"
     },
     "fee": {
@@ -257,7 +257,7 @@
       "items": [
         {
           "title": "Evento sociale",
-          "description": "Partecipazione a un evento esclusivo dedicato ai soci, con cena inclusa."
+          "description": "Partecipazione all'evento esclusivo di fine anno dedicato ai soci, con cena inclusa."
         },
         {
           "title": "Sconti su eventi",
