@@ -53,6 +53,12 @@ export default function MeetupPage() {
       image: "/Community/pfp-bitcoin-bitches-piemonte.jpg",
       links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/btctorinopiemonte" }],
     },
+    {
+      id: "builder_torino",
+      members: "62",
+      image: "/Community/pfp-builder-torino.webp",
+      links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/BitcoinBuilderTorino" }],
+    },
   ]
 
   const mappedCommunities = communities.map(c => ({

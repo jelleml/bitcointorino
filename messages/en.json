@@ -134,6 +134,12 @@
           "description": "Italian community, with a strong presence in Turin, which aggregates girls of all ages passionate about Bitcoin.",
           "type": "Community",
           "frequency": "Occasional"
+        },
+        "builder_torino": {
+          "name": "₿uilder Torino",
+          "description": "A fork of ₿uilderSF, a monthly meetup on product, design and AI tools for those building on freedom technologies and Bitcoin. Open to everyone.",
+          "type": "Meetup",
+          "frequency": "Every month"
         }
       }
     },

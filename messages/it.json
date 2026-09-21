@@ -134,6 +134,12 @@
           "description": "Community italiana, con forte presenza a Torino, che aggrega ragazze di tutte le età appassionate di Bitcoin.",
           "type": "Community",
           "frequency": "Occasionale"
+        },
+        "builder_torino": {
+          "name": "₿uilder Torino",
+          "description": "Fork di ₿uilderSF, meetup mensile dedicato a prodotto, design e strumenti AI per chi costruisce su freedom technologies e Bitcoin. Aperto a tutti.",
+          "type": "Meetup",
+          "frequency": "Ogni mese"
         }
       }
     },
