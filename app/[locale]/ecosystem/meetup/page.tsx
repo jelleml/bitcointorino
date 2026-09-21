@@ -56,7 +56,7 @@ export default function MeetupPage() {
     {
       id: "builder_torino",
       members: "62",
-      image: "/Community/pfp-builder-torino.webp",
+      image: "/Community/pfp-builder-torino.jpg",
       links: [{ type: "telegram", label: "Join on Telegram", url: "https://t.me/BitcoinBuilderTorino" }],
     },
   ]
