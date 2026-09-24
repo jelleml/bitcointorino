@@ -16,7 +16,7 @@ export function Partners() {
     { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", href: "https://www.bitcoin4business.it" },
     { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", className: "scale-75", href: "https://www.taxcare.it" },
     { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", className: "scale-75", href: "https://www.cluborange.org" },
-    { name: "Fondazione Piemonte Innova", logo: "/Partners/logo-fondazione-piemonte-innova.png", className: "dark:brightness-0 dark:invert", href: "https://www.fondazionepiemonteinnova.it" },
+    { name: "Fondazione Piemonte Innova", label: "Fondazione\nPiemonte Innova", logo: "/Partners/logo-fondazione-piemonte-innova.png", className: "dark:brightness-0 dark:invert", href: "https://www.fondazionepiemonteinnova.it" },
   ]
 
   return (
@@ -55,8 +55,8 @@ export function Partners() {
                       <div className="w-full h-24 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
                         <img src={partner.logo} alt={`${partner.name} logo`} className={`max-w-full max-h-full object-contain ${partner.className || ''}`} />
                       </div>
-                      <div className="text-sm font-medium text-muted-foreground group-hover:text-bitcoin-blue transition-colors break-words hyphens-auto">
-                        {partner.name}
+                      <div className="text-sm font-medium text-muted-foreground group-hover:text-bitcoin-blue transition-colors break-words hyphens-auto whitespace-pre-line">
+                        {partner.label ?? partner.name}
                       </div>
                     </a>
                   </li>
