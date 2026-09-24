@@ -22,8 +22,8 @@ export function NextEvent() {
             <div className="relative">
               <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100 dark:border-gray-800">
                 <Image
-                  src="/Event Posters/six-billion-dollar-man.jpg"
-                  alt="The Six Billion Dollar Man - Anteprima & Intervista al regista"
+                  src="/Event Posters/startup-in-bitcoin.jpg"
+                  alt="Startup in Bitcoin"
                   fill
                   className="object-cover"
                   priority
@@ -74,7 +74,7 @@ export function NextEvent() {
               <div className="pt-4">
                 <Button asChild size="lg" className="w-full sm:w-auto">
                   <a
-                    href="https://luma.com/weio6j9b"
+                    href="https://luma.com/f4w3ramr"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
