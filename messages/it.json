@@ -34,7 +34,7 @@
   },
   "NextEvent": {
     "title": "Prossimo Evento",
-    "type": "Panel",
+    "type": "Conferenza",
     "eventName": "Startup in Bitcoin",
     "description": "Una serie di panel dedicati a chi costruisce startup su Bitcoin e a chi le finanzia, con founder e investitori italiani e internazionali. Scopri il programma tramite il link sotto. A seguire, aperitivo di networking.",
     "date": "Venerdì 9 Ottobre 2026",
