@@ -16,6 +16,7 @@ export function Partners() {
     { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", href: "https://www.bitcoin4business.it" },
     { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", className: "scale-75", href: "https://www.taxcare.it" },
     { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", className: "scale-75", href: "https://www.cluborange.org" },
+    { name: "Fondazione Piemonte Innova", logo: "/Partners/logo-fondazione-piemonte-innova.png", className: "dark:brightness-0 dark:invert", href: "https://www.fondazionepiemonteinnova.it" },
   ]
 
   return (
@@ -30,28 +31,39 @@ export function Partners() {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
-          {partners.map((partner) => (
-            <div
-              key={partner.name}
-              className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(20%-1.6rem)] flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors group"
-            >
-              <a 
-                href={partner.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-center block w-full h-full"
+        {/* Two identical copies side by side: translating by -50% loops seamlessly */}
+        <div className="group/marquee relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+          <div className="flex w-max animate-marquee group-hover/marquee:[animation-play-state:paused] group-focus-within/marquee:[animation-play-state:paused] motion-reduce:animate-none motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center">
+            {[0, 1].map((copy) => (
+              <ul
+                key={copy}
+                aria-hidden={copy === 1 ? true : undefined}
+                className={`flex shrink-0 gap-8 pr-8 motion-reduce:flex-wrap motion-reduce:justify-center motion-reduce:pr-0 ${copy === 1 ? 'motion-reduce:hidden' : ''}`}
               >
-                {/* Actual logo image */}
-                <div className="w-24 h-24 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <img src={partner.logo} alt={`${partner.name} logo`} className={`max-w-full max-h-full object-contain ${partner.className || ''}`} />
-                </div>
-                <div className="text-sm font-medium text-muted-foreground group-hover:text-bitcoin-blue transition-colors break-words hyphens-auto">
-                  {partner.name}
-                </div>
-              </a>
-            </div>
-          ))}
+                {partners.map((partner) => (
+                  <li
+                    key={partner.name}
+                    className="w-48 shrink-0 flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors group"
+                  >
+                    <a
+                      href={partner.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      tabIndex={copy === 1 ? -1 : undefined}
+                      className="text-center block w-full h-full"
+                    >
+                      <div className="w-full h-24 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img src={partner.logo} alt={`${partner.name} logo`} className={`max-w-full max-h-full object-contain ${partner.className || ''}`} />
+                      </div>
+                      <div className="text-sm font-medium text-muted-foreground group-hover:text-bitcoin-blue transition-colors break-words hyphens-auto">
+                        {partner.name}
+                      </div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-12">
