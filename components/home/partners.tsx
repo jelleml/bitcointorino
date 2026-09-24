@@ -25,7 +25,7 @@ export function Partners() {
     { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", className: "scale-75", href: "https://www.taxcare.it" },
     { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", className: "scale-75", href: "https://www.cluborange.org" },
     { name: "Fondazione Piemonte Innova", label: "Fondazione\nPiemonte Innova", logo: "/Partners/logo-fondazione-piemonte-innova.png", logoDark: "/Partners/logo-fondazione-piemonte-innova-dark.png", href: "https://piemonteinnova.it" },
-    { name: "ToTeM - Torino Tech Map", label: "ToTeM\nTorino Tech Map", logo: "/Partners/logo-totem.png", logoDark: "/Partners/logo-totem-dark.png", href: "https://torinotechmap.it" },
+    { name: "Torino Tech Map", logo: "/Partners/logo-totem.png", logoDark: "/Partners/logo-totem-dark.png", href: "https://torinotechmap.it" },
   ]
 
   const trackRef = useRef<HTMLDivElement>(null)
