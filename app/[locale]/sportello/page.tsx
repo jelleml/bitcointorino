@@ -57,10 +57,7 @@ export default function SportelloPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('what.title')}</h1>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                {t('what.description')}
-              </p>
+              <h1 className="text-4xl md:text-5xl font-bold">{t('what.title')}</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {whatItems.map((item, index) => {
@@ -106,10 +103,7 @@ export default function SportelloPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('audience.title')}</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                {t('audience.description')}
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold">{t('audience.title')}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {audience.map((group, index) => {
@@ -152,10 +146,7 @@ export default function SportelloPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('how.title')}</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                {t('how.description')}
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold">{t('how.title')}</h2>
             </div>
             <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {lanes.map((lane, index) => (
@@ -191,8 +182,7 @@ export default function SportelloPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('limits.title')}</h2>
-              <p className="text-lg text-muted-foreground">{t('limits.description')}</p>
+              <h2 className="text-3xl md:text-4xl font-bold">{t('limits.title')}</h2>
             </div>
             <ul className="bg-card rounded-lg border-2 border-border divide-y">
               {limits.map((limit, index) => (
@@ -211,10 +201,7 @@ export default function SportelloPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('partners.title')}</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                {t('partners.description')}
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold">{t('partners.title')}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {partnerRules.map((rule, index) => (

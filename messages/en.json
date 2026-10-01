@@ -497,7 +497,6 @@
     },
     "what": {
       "title": "What the Help Desk is",
-      "description": "The Help Desk deals with real, ongoing problems, not basic training. It provides three things:",
       "items": [
         {
           "title": "Documented information",
@@ -518,7 +517,6 @@
     },
     "audience": {
       "title": "Who it is for",
-      "description": "Each audience has different needs. Here are the problems we can guide you on.",
       "items": [
         {
           "title": "Merchants and shops",
@@ -576,7 +574,6 @@
     },
     "how": {
       "title": "How it works",
-      "description": "Send us an email describing the problem. Each request is routed to the most suitable lane:",
       "lanes": [
         {
           "title": "Information request",
@@ -616,7 +613,6 @@
     },
     "limits": {
       "title": "What we don't do",
-      "description": "These limits apply to everyone, with no case-by-case exceptions.",
       "items": [
         "We do not operate on third-party devices, wallets or accounts",
         "We never see, type or store seed phrases or private keys",
@@ -631,7 +627,6 @@
     },
     "partners": {
       "title": "Referral to partners",
-      "description": "When a professional service is needed, we refer you to external parties following three rules.",
       "items": [
         {
           "title": "Never a single name",

@@ -497,7 +497,6 @@
     },
     "what": {
       "title": "Cos'è lo Sportello",
-      "description": "Lo Sportello si occupa di problemi concreti già in corso, non di formazione di base. Produce tre cose:",
       "items": [
         {
           "title": "Informazione documentata",
@@ -518,7 +517,6 @@
     },
     "audience": {
       "title": "A chi si rivolge",
-      "description": "Ogni destinatario ha esigenze diverse. Ecco i problemi su cui possiamo orientarti.",
       "items": [
         {
           "title": "Esercenti e attività commerciali",
@@ -576,7 +574,6 @@
     },
     "how": {
       "title": "Come funziona",
-      "description": "Ci scrivi una mail descrivendo il problema. Ogni richiesta viene smistata nella corsia più adatta:",
       "lanes": [
         {
           "title": "Richiesta informativa",
@@ -616,7 +613,6 @@
     },
     "limits": {
       "title": "Cosa non facciamo",
-      "description": "Questi limiti valgono per tutti e non ammettono eccezioni caso per caso.",
       "items": [
         "Non operiamo su dispositivi, wallet o account di terzi",
         "Non vediamo, non digitiamo e non conserviamo seed o chiavi private",
@@ -631,7 +627,6 @@
     },
     "partners": {
       "title": "Rinvio ai partner",
-      "description": "Quando serve una prestazione professionale, ti indirizziamo verso soggetti esterni seguendo tre regole.",
       "items": [
         {
           "title": "Mai un solo nome",
