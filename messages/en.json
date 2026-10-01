@@ -60,6 +60,7 @@
     "subscribe": "Subscribe",
     "home": "Home",
     "ecosystem": "Ecosystem",
+    "mediaKit": "Media Kit",
     "events": "Events",
     "onboarding": "Onboarding",
     "privacy": "Privacy Policy",
@@ -156,19 +157,31 @@
           "name": "Blox Space",
           "type": "Coworking",
           "description": "Multifunctional space in the center of Turin designed for freelancers and startups active in the world of Bitcoin and freedom technology.",
-          "features": ["Hot Desks", "Meeting Rooms", "Office Rooms", "Events"]
+          "features": [
+            "Hot Desks",
+            "Meeting Rooms",
+            "Office Rooms",
+            "Events"
+          ]
         },
         "polito": {
           "name": "Polytechnic of Turin",
           "type": "University",
           "description": "The prestigious university hosts several Bitcoin-related initiatives, such as the Master on Bitcoin and Lightning Network, the Bitcoin Observatory, and the student team BitPolito.",
-          "features": ["Education", "Study Rooms", "Events"]
+          "features": [
+            "Education",
+            "Study Rooms",
+            "Events"
+          ]
         },
         "planb": {
           "name": "Plan B",
           "type": "Bar",
           "description": "Informal venue in downtown Turin with a Bitcoin-themed setup that combines a café by day and a cocktail bar in the evening.",
-          "features": ["Catering", "Events"]
+          "features": [
+            "Catering",
+            "Events"
+          ]
         }
       }
     },
@@ -184,19 +197,31 @@
           "name": "Bitcoin Company 1",
           "description": "Description of the company and its use of Bitcoin",
           "category": "Technology",
-          "services": ["Lightning Network", "Wallet Development", "Consulting"]
+          "services": [
+            "Lightning Network",
+            "Wallet Development",
+            "Consulting"
+          ]
         },
         "company2": {
           "name": "Bitcoin Company 2",
           "description": "Description of the company and its use of Bitcoin",
           "category": "Finance",
-          "services": ["Bitcoin Treasury", "B2B Payments", "Mining"]
+          "services": [
+            "Bitcoin Treasury",
+            "B2B Payments",
+            "Mining"
+          ]
         },
         "startup1": {
           "name": "Bitcoin Startup 1",
           "description": "Description of the startup and its project",
           "category": "Innovation",
-          "services": ["Smart Contracts", "DeFi", "Education"]
+          "services": [
+            "Smart Contracts",
+            "DeFi",
+            "Education"
+          ]
         }
       }
     },
@@ -302,6 +327,155 @@
       "after": "Once your application is approved, you will receive the instructions to pay the fee and to access the members' channels.",
       "noteLabel": "Note:",
       "note": "no document is required to apply. The data entered in the form is provided under the responsibility of whoever declares it; the Association takes no responsibility for its accuracy."
+    }
+  },
+  "MediaKit": {
+    "meta": {
+      "title": "Media Kit | Bitcoin Torino",
+      "description": "Logos, colours, boilerplate and press contacts of Associazione Bitcoin Torino, ready for journalists, partners and event organisers."
+    },
+    "copy": "Copy",
+    "copyHex": "Copy HEX",
+    "copied": "Copied",
+    "hero": {
+      "eyebrow": "Press and partners",
+      "title": "Media Kit",
+      "subtitle": "Logos, colours, boilerplate and contacts to present Bitcoin Torino accurately.",
+      "cta": "Download the full kit",
+      "contact": "Contact us"
+    },
+    "about": {
+      "title": "About us",
+      "description": "Ready-to-use copy for articles, press releases, event programmes and partner materials.",
+      "short": {
+        "title": "Short description",
+        "text": "Associazione Bitcoin Torino brings together Turin's Bitcoin ecosystem and connects the city's businesses and institutions with industry players in Italy and abroad."
+      },
+      "long": {
+        "title": "Extended description",
+        "text": "Associazione Bitcoin Torino is a non-profit association founded in Turin in March 2026. It promotes the understanding and adoption of Bitcoin and of technologies that protect individual freedom and sovereignty. The association coordinates and represents Turin's Bitcoin ecosystem, made up of 31 businesses that accept bitcoin payments, 8 communities and several academic and entrepreneurial projects. It organises events and educational activities, supports businesses and individuals in the correct use and self-custody of bitcoin, and fosters dialogue between communities, industry players and city institutions. It connects the city's businesses and institutions with industry players in Italy and abroad, with the goal of making Bitcoin a pillar of the city's economy."
+      }
+    },
+    "facts": {
+      "title": "At a glance",
+      "items": [
+        {
+          "label": "Legal name",
+          "value": "Associazione Ricreativa Culturale Bitcoin Torino"
+        },
+        {
+          "label": "Type",
+          "value": "APS — Non-profit social promotion association"
+        },
+        {
+          "label": "Founded",
+          "value": "13 March 2026, Turin"
+        },
+        {
+          "label": "Address",
+          "value": "Via Pietro Micca 21, Turin"
+        },
+        {
+          "label": "President",
+          "value": "Emile Jellinek"
+        },
+        {
+          "label": "Website",
+          "value": "bitcointorino.to"
+        }
+      ]
+    },
+    "logos": {
+      "title": "Logo",
+      "description": "Always use the original files. Pick the version that fits the background: orange and white on dark backgrounds, black and dark grey on light backgrounds.",
+      "large": {
+        "title": "Full logo",
+        "description": "The main logo with flourishes. For large formats: covers, stages, banners, headers."
+      },
+      "small": {
+        "title": "Compact logo",
+        "description": "Pictogram next to the name. For small spaces, partner walls, signatures and print."
+      },
+      "pictogram": {
+        "title": "Pictogram",
+        "description": "The B on its own. For icons, avatars and favicons, and in place of the full logo below 120 px wide."
+      },
+      "variants": {
+        "orangeWhite": "Orange and white",
+        "orangeBlack": "Orange and dark grey",
+        "white": "White",
+        "black": "Black",
+        "orange": "Orange",
+        "svg": "Vector",
+        "favicon": "Rounded icon"
+      },
+      "backgrounds": {
+        "dark": "dark background",
+        "light": "light background"
+      }
+    },
+    "colors": {
+      "title": "Colours & Font",
+      "description": "Orange is the brand colour and is used as an accent. Blue is the interface and supporting colour. Inter is the main font.",
+      "items": {
+        "orange": {
+          "name": "Bitcoin Torino Orange",
+          "usage": "Logo, accent, calls to action"
+        },
+        "blue": {
+          "name": "Bitcoin Blue",
+          "usage": "Secondary colour, links, backgrounds"
+        },
+        "blueDark": {
+          "name": "Bitcoin Blue Dark",
+          "usage": "Main background, gradients, active states"
+        },
+        "blueLight": {
+          "name": "Bitcoin Blue Light",
+          "usage": "Gradients, light variants"
+        },
+        "black": {
+          "name": "Black",
+          "usage": "Text on light backgrounds"
+        },
+        "white": {
+          "name": "White",
+          "usage": "Text on dark backgrounds"
+        }
+      }
+    },
+    "typography": {
+      "title": "Typography: Inter",
+      "description": "Inter is the only typeface in use, for headings and body text. Headings in Bold with tight tracking, body in Regular.",
+      "link": "Get Inter on Google Fonts"
+    },
+    "editorial": {
+      "title": "Writing about us",
+      "description": "A few pointers for referring to the association and to Bitcoin correctly.",
+      "use": "Use",
+      "avoid": "Avoid",
+      "items": [
+        {
+          "use": "Associazione Bitcoin Torino, Bitcoin Torino",
+          "avoid": "ABT, Bitcoin Torino Association"
+        },
+        {
+          "use": "Bitcoin (protocol and network), bitcoin (the money)",
+          "avoid": "cryptocurrency, virtual currency"
+        },
+        {
+          "use": "Bitcoin, Lightning Network",
+          "avoid": "crypto, blockchain, Web3"
+        },
+        {
+          "use": "Bitcoin Observatory @ Politecnico di Torino",
+          "avoid": "Blockchain Observatory"
+        }
+      ]
+    },
+    "press": {
+      "title": "Press contacts",
+      "description": "For interviews, material requests, event participation or partnerships, write to us."
     }
   }
 }
