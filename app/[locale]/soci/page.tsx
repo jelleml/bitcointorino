@@ -63,7 +63,7 @@ export default function SociPage() {
       </section>
 
       {/* Cosa ottieni come socio */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -137,7 +137,7 @@ export default function SociPage() {
       </section>
 
       {/* Riunioni */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -183,7 +183,7 @@ export default function SociPage() {
       </section>
 
       {/* Come iscriverti */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">

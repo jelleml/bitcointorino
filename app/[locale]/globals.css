@@ -29,27 +29,27 @@
     --radius: 0.5rem;
   }
 
-  /* Palette dark dal brand: sfondo #0D0D0D, card #1D1D1D, bordi #333333 */
+  /* Tema scuro su Bitcoin Blue Dark (#053666): sezioni alternate #042B52, card #093D72 */
   .dark {
-    --background: 0 0% 5%;
+    --background: 210 91% 21%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 11%;
+    --card: 211 85% 24%;
     --card-foreground: 0 0% 100%;
-    --popover: 0 0% 11%;
+    --popover: 211 85% 24%;
     --popover-foreground: 0 0% 100%;
     --primary: 208 92% 29%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 11%;
+    --secondary: 210 91% 17%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 11%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 0 0% 15%;
+    --muted: 210 91% 17%;
+    --muted-foreground: 213 36% 78%;
+    --accent: 211 70% 30%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 212 70% 62%;
+    --border: 211 55% 33%;
+    --input: 211 55% 33%;
+    --ring: 212 86% 77%;
   }
 }
 
@@ -87,19 +87,19 @@
 }
 
 
-/* Dark mode: il Bitcoin Blue (#07458D) ha contrasto 2:1 sul nero.
+/* Dark mode: il Bitcoin Blue (#07458D) non si legge sullo sfondo blu scuro.
    Testi, bordi e focus usano una variante più chiara; gli sfondi blu restano invariati. */
 .dark .text-bitcoin-blue,
 .dark .hover\:text-bitcoin-blue:hover,
 .dark .group:hover .group-hover\:text-bitcoin-blue {
-  color: #5B9BE6;
+  color: #93C2F7;
 }
 
 .dark .border-bitcoin-blue,
 .dark .hover\:border-bitcoin-blue:hover {
-  border-color: #5B9BE6;
+  border-color: #93C2F7;
 }
 
 .dark :focus-visible {
-  outline-color: #5B9BE6;
+  outline-color: #93C2F7;
 }

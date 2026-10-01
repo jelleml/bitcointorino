@@ -140,7 +140,7 @@ export default function MediaKitPage() {
       </section>
 
       {/* Chi siamo / boilerplate */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -199,7 +199,7 @@ export default function MediaKitPage() {
       </section>
 
       {/* Logo */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -327,7 +327,7 @@ export default function MediaKitPage() {
       </section>
 
       {/* Linee guida editoriali */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">

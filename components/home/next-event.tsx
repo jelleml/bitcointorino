@@ -10,7 +10,7 @@ export function NextEvent() {
   const t = useTranslations('NextEvent');
 
   return (
-    <section className="py-16 md:pt-[114px] md:pb-[164px] bg-white dark:bg-gray-950">
+    <section className="py-16 md:pt-[114px] md:pb-[164px] bg-white dark:bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -20,7 +20,7 @@ export function NextEvent() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[100px] items-center">
             {/* Locandina Evento - Sinistra */}
             <div className="relative">
-              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100 dark:border-gray-800">
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100 dark:border-border">
                 <Image
                   src="/Event Posters/startup-in-bitcoin.jpg"
                   alt="Startup in Bitcoin"

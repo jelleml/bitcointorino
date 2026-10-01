@@ -46,7 +46,7 @@ export default function SpaziPage() {
       </div>
 
       {/* Spaces List */}
-      <section className="py-16 bg-white dark:bg-black">
+      <section className="py-16 bg-white dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
@@ -111,7 +111,7 @@ export default function SpaziPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50 dark:bg-black">
+      <section className="py-16 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">

@@ -125,7 +125,7 @@ export default function EventiPage() {
       </section>
 
       {/* Upcoming Events */}
-      <section id="upcoming-events" className="py-16 bg-gray-50 dark:bg-black">
+      <section id="upcoming-events" className="py-16 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">

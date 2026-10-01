@@ -5,11 +5,11 @@ export function About() {
   const t = useTranslations('About');
 
   return (
-    <section id="chi-siamo" className="py-20 bg-gray-50 dark:bg-black scroll-mt-16">
+    <section id="chi-siamo" className="py-20 bg-gray-50 dark:bg-muted scroll-mt-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* What We Do */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-8 md:p-12 border-2 border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-card rounded-lg p-8 md:p-12 border-2 border-gray-200 dark:border-border">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[50px]">
               <div className="group text-center">
                 <div className="flex justify-center mb-4">

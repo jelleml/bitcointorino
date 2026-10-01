@@ -94,7 +94,7 @@ export function Partners() {
   return (
     <section
       id="partner"
-      className="pt-16 md:pt-[114px] pb-16 md:pb-[164px] bg-gray-50 dark:bg-black scroll-mt-16"
+      className="pt-16 md:pt-[114px] pb-16 md:pb-[164px] bg-gray-50 dark:bg-muted scroll-mt-16"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -126,7 +126,7 @@ export function Partners() {
                 {partners.map((partner) => (
                   <li
                     key={partner.name}
-                    className="w-48 shrink-0 flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors group"
+                    className="w-48 shrink-0 flex items-center justify-center p-6 bg-gray-50 dark:bg-card rounded-lg border-2 border-gray-200 dark:border-border hover:border-bitcoin-blue transition-colors group"
                   >
                     <a
                       href={partner.href}

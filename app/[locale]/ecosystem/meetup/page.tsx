@@ -110,7 +110,7 @@ export default function MeetupPage() {
       </div>
 
       {/* Communities Grid */}
-      <section className="py-16 bg-white dark:bg-black">
+      <section className="py-16 bg-white dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -194,7 +194,7 @@ export default function MeetupPage() {
       </section>
 
       {/* Create Community Section */}
-      <section className="py-16 bg-gray-50 dark:bg-black">
+      <section className="py-16 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Users className="h-12 w-12 text-bitcoin-blue mx-auto mb-4" aria-hidden="true" />
