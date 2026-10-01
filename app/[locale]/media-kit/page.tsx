@@ -47,11 +47,14 @@ const swatchStyle = (colors: string[]) => ({
 const logos: {
   key: "large" | "small" | "pictogram"
   preview: string
+  // Anteprima su sfondo nero in dark mode
+  previewDark: string
   files: { variant: string; bg: Background; file: string; swatch: string[] }[]
 }[] = [
   {
     key: "large",
     preview: "bitcoin-torino-logo-large-orange-black.png",
+    previewDark: "bitcoin-torino-logo-large-orange-white.png",
     files: [
       { variant: "orangeWhite", bg: "dark", file: "bitcoin-torino-logo-large-orange-white.png", swatch: [ORANGE, WHITE] },
       { variant: "orangeBlack", bg: "light", file: "bitcoin-torino-logo-large-orange-black.png", swatch: [ORANGE, DARK_GREY] },
@@ -63,6 +66,7 @@ const logos: {
   {
     key: "small",
     preview: "bitcoin-torino-logo-small-orange-black.png",
+    previewDark: "bitcoin-torino-logo-small-orange-white.png",
     files: [
       { variant: "orangeWhite", bg: "dark", file: "bitcoin-torino-logo-small-orange-white.png", swatch: [ORANGE, WHITE] },
       { variant: "orangeBlack", bg: "light", file: "bitcoin-torino-logo-small-orange-black.png", swatch: [ORANGE, DARK_GREY] },
@@ -74,6 +78,7 @@ const logos: {
   {
     key: "pictogram",
     preview: "bitcoin-torino-pictogram-orange.png",
+    previewDark: "bitcoin-torino-pictogram-orange.png",
     files: [
       { variant: "orange", bg: "dark", file: "bitcoin-torino-pictogram-orange.png", swatch: [ORANGE] },
       { variant: "white", bg: "dark", file: "bitcoin-torino-pictogram-white.png", swatch: [WHITE] },
@@ -109,7 +114,7 @@ export default function MediaKitPage() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white py-20">
+      <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark dark:from-[#00138E] dark:to-[#00052E] text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-sm md:text-base uppercase tracking-wide text-white/70 mb-4">
@@ -215,12 +220,17 @@ export default function MediaKitPage() {
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div
-                      className="bg-white flex items-center justify-center p-10 md:p-14 min-h-[220px]"
+                      className="bg-white dark:bg-black flex items-center justify-center p-10 md:p-14 min-h-[220px]"
                     >
                       <img
                         src={`${ASSETS_PATH}/${logo.preview}`}
                         alt={t(`logos.${logo.key}.title`)}
-                        className={logo.key === "pictogram" ? "h-28 w-auto" : "max-h-32 w-full object-contain"}
+                        className={`dark:hidden ${logo.key === "pictogram" ? "h-28 w-auto" : "max-h-32 w-full object-contain"}`}
+                      />
+                      <img
+                        src={`${ASSETS_PATH}/${logo.previewDark}`}
+                        alt={t(`logos.${logo.key}.title`)}
+                        className={`hidden dark:block ${logo.key === "pictogram" ? "h-28 w-auto" : "max-h-32 w-full object-contain"}`}
                       />
                     </div>
                     <div className="p-6 md:p-8">

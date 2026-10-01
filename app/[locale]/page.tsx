@@ -2,6 +2,7 @@ import { Hero } from "@/components/home/hero"
 import { Partners } from "@/components/home/partners"
 import { About } from "@/components/home/about"
 import { NextEvent } from "@/components/home/next-event"
+import { SportelloCta } from "@/components/home/sportello-cta"
 import { TorinoBitcoinCity } from "@/components/home/torino-bitcoin-city"
 import { generateOrganizationStructuredData } from "@/lib/seo"
 
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <About />
         <NextEvent />
+        <SportelloCta />
         <TorinoBitcoinCity />
         <Partners />
       </div>

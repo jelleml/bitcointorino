@@ -1,6 +1,6 @@
 {
   "Hero": {
-    "joinCommunity": "Join the Community",
+    "getSupport": "Get support",
     "becomeMember": "Become a Member"
   },
   "About": {
@@ -65,6 +65,7 @@
     "mediaKit": "Media Kit",
     "events": "Events",
     "onboarding": "Onboarding",
+    "sportello": "Help Desk",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy"
   },
@@ -478,6 +479,176 @@
     "press": {
       "title": "Press contacts",
       "description": "For interviews, material requests, event participation or partnerships, write to us."
+    }
+  },
+  "SportelloCta": {
+    "title": "Bitcoin Torino Help Desk",
+    "description": "A free guidance and support service open to merchants, businesses, professionals, organisations and private citizens. Tell us what is happening or what you would like to do, and we will help you understand your options and who to turn to.",
+    "cta": "Request support"
+  },
+  "Sportello": {
+    "meta": {
+      "title": "Bitcoin Help Desk | Bitcoin Torino",
+      "description": "The Bitcoin Torino Help Desk is a free Bitcoin guidance service for merchants, businesses, professionals, organisations and private citizens. Write to us about the problem you are facing."
+    },
+    "email": {
+      "subject": "Bitcoin Torino Help Desk request",
+      "body": "Who you are (merchant, business, professional, organisation/association, private individual):\n\nDescribe the problem you are facing:\n\nTools involved (wallet, app, POS, provider):\n\nPreference for a possible session (online / in person):\n\n---\nNever include seed phrases, private keys or passwords in this email."
+    },
+    "what": {
+      "title": "What the Help Desk is",
+      "items": [
+        {
+          "title": "Documented information",
+          "description": "Written answers, with verifiable sources, to the questions you send us by email."
+        },
+        {
+          "title": "Hands-on training",
+          "description": "Dedicated sessions to tackle specific requests or problems."
+        },
+        {
+          "title": "Referral to qualified parties",
+          "description": "When a request falls outside our scope, we point you to the right people."
+        }
+      ],
+      "notConsulting": "The Help Desk is not a consulting service, neither technical nor financial. It is run by the association's members, on a voluntary and free basis. No session is recorded and no data is collected.",
+      "cta": "Tell us your problem",
+      "free": "Free for everyone, members and non-members"
+    },
+    "audience": {
+      "title": "Who it is for",
+      "items": [
+        {
+          "title": "Retail businesses",
+          "topics": [
+            "What you need to accept bitcoin payments",
+            "Training staff who handle payments",
+            "A real test payment during onboarding",
+            "Which questions to ask your accountant",
+            "Listing on the public map and shop-window materials"
+          ]
+        },
+        {
+          "title": "Non-retail businesses",
+          "topics": [
+            "Receiving a payment from a client, including from abroad",
+            "Securely storing your treasury",
+            "How to technically document a received transaction",
+            "Which questions to ask your accountant",
+            "Overview of existing providers by category"
+          ]
+        },
+        {
+          "title": "Professionals",
+          "topics": [
+            "How to correctly handle custody and payments",
+            "Integrating payments into e-commerce sites",
+            "Which data is needed for reporting",
+            "Training sessions for professional firms"
+          ]
+        },
+        {
+          "title": "Organisations and associations",
+          "topics": [
+            "How to receive bitcoin donations",
+            "Which data is needed for reporting",
+            "How to communicate it to your supporters"
+          ]
+        },
+        {
+          "title": "Private citizens",
+          "topics": [
+            "Trouble accessing a wallet or a device",
+            "Payments that have not arrived, are stuck or incomplete",
+            "Doubts about how a device or app you already use works",
+            "Suspecting you are facing a fraudulent scheme",
+            "Documentation to present to your accountant"
+          ]
+        }
+      ]
+    },
+    "how": {
+      "title": "How it works",
+      "lanes": [
+        {
+          "title": "Information request",
+          "description": "You receive a written answer."
+        },
+        {
+          "title": "Simple operational request",
+          "description": "We schedule a dedicated 30-minute session."
+        },
+        {
+          "title": "Complex operational or tax request",
+          "description": "We refer you to qualified partners."
+        },
+        {
+          "title": "Out of scope",
+          "description": "We point you to useful materials."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Cost",
+          "value": "Free for everyone"
+        },
+        {
+          "label": "Reply",
+          "value": "Within a few working days"
+        },
+        {
+          "label": "Sessions",
+          "value": "30 minutes, by appointment only"
+        },
+        {
+          "label": "Location",
+          "value": "Online or in person, shared on confirmation"
+        }
+      ]
+    },
+    "limits": {
+      "title": "What we don't do",
+      "items": [
+        "We do not operate on third-party devices, wallets or accounts",
+        "We never see, type or store seed phrases or private keys",
+        "We do not hold funds, collect payments on behalf of others or host infrastructure",
+        "We do not recover lost funds or intervene in stuck situations",
+        "We do not provide tax interpretation or fill in tax returns",
+        "We do not tell you how much to buy, hold or when to convert",
+        "We do not handle sign-ups with third-party providers or collect documents",
+        "We give no guarantees on how third-party services work",
+        "We do not deal with assets other than bitcoin"
+      ]
+    },
+    "partners": {
+      "title": "Referral to partners",
+      "items": [
+        {
+          "title": "Never a single name",
+          "description": "We provide at least two names per category, in alphabetical order. One name would be a recommendation, several names are guidance."
+        },
+        {
+          "title": "No compensation",
+          "description": "Bitcoin Torino receives no fees, commissions or revenue share from the parties indicated, in any form."
+        },
+        {
+          "title": "Declared relationships",
+          "description": "If a party indicated is a partner, supporter or funder of the association, we tell you during the session."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Tell us your problem",
+      "description": "Write us an email explaining who you are and what you are facing. The more detail you give, the faster we can guide you.",
+      "checklist": [
+        "Who you are: merchant, business, professional, organisation or private individual",
+        "The problem you are facing and since when",
+        "The tools involved: wallet, app, POS or provider",
+        "Whether you prefer an online or in-person session"
+      ],
+      "warning": "Never send us seed phrases, private keys or passwords. Nobody at the Help Desk will ever ask for them.",
+      "cta": "Email the Help Desk",
+      "disclaimer": "The information provided is for educational and informational purposes and does not constitute professional advice of any kind. Decisions and operations remain the responsibility of whoever contacts the Help Desk."
     }
   }
 }

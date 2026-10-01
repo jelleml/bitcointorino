@@ -29,26 +29,26 @@
     --radius: 0.5rem;
   }
 
-  /* Tema scuro blu notte: sfondo #042444, sezioni alternate #031930, card #0A2F57 */
+  /* Tema scuro sul blu notte della hero (#00020C → #00138E): sfondo #00052E, sezioni alternate #00041F, card #0B1541 */
   .dark {
-    --background: 210 90% 14%;
+    --background: 233 100% 9%;
     --foreground: 0 0% 100%;
-    --card: 211 80% 19%;
+    --card: 229 70% 15%;
     --card-foreground: 0 0% 100%;
-    --popover: 211 80% 19%;
+    --popover: 229 70% 15%;
     --popover-foreground: 0 0% 100%;
     --primary: 208 92% 29%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 90% 10%;
+    --secondary: 233 100% 6%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 210 90% 10%;
-    --muted-foreground: 213 36% 78%;
-    --accent: 211 70% 25%;
+    --muted: 233 100% 6%;
+    --muted-foreground: 225 45% 80%;
+    --accent: 229 65% 22%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
-    --border: 211 50% 28%;
-    --input: 211 50% 28%;
+    --border: 229 50% 27%;
+    --input: 229 50% 27%;
     --ring: 212 86% 77%;
   }
 }

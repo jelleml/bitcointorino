@@ -32,9 +32,9 @@ export function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="text-base text-black bg-white hover:bg-gray-300">
-              <a href="https://t.me/bitcointorinochannel" target="_blank" rel="noopener noreferrer">
-                {t('joinCommunity')}
-              </a>
+              <Link href="/sportello">
+                {t('getSupport')}
+              </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base text-white border-white hover:bg-transparent hover:border-gray-300 hover:text-gray-300">
               <Link href="/soci">

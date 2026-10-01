@@ -1,6 +1,6 @@
 {
   "Hero": {
-    "joinCommunity": "Entra nella Community",
+    "getSupport": "Ricevi supporto",
     "becomeMember": "Diventa socio"
   },
   "About": {
@@ -65,6 +65,7 @@
     "mediaKit": "Media Kit",
     "events": "Eventi",
     "onboarding": "Onboarding",
+    "sportello": "Sportello",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy"
   },
@@ -478,6 +479,176 @@
     "press": {
       "title": "Contatti stampa",
       "description": "Per interviste, richieste di materiali, partecipazione a eventi o collaborazioni, scrivici."
+    }
+  },
+  "SportelloCta": {
+    "title": "Sportello Bitcoin Torino",
+    "description": "Servizio gratuito di orientamento e supporto aperto a esercenti, imprese, professionisti, enti e privati cittadini. Ci racconti cosa sta succedendo o cosa vorresti fare, noi ti aiutiamo a capire le opzioni e a chi rivolgerti.",
+    "cta": "Richiedi supporto"
+  },
+  "Sportello": {
+    "meta": {
+      "title": "Sportello Bitcoin | Bitcoin Torino",
+      "description": "Lo Sportello Bitcoin Torino è un servizio gratuito di orientamento su Bitcoin per esercenti, imprese, professionisti, enti e privati cittadini. Scrivici il problema che stai riscontrando."
+    },
+    "email": {
+      "subject": "Richiesta Sportello Bitcoin Torino",
+      "body": "Chi sei (esercente, impresa, professionista, ente/associazione, privato):\n\nDescrivi il problema che stai riscontrando:\n\nStrumenti coinvolti (wallet, app, POS, fornitore):\n\nPreferenza per l'eventuale sessione (online / in presenza):\n\n---\nNon inserire mai seed, chiavi private o password in questa mail."
+    },
+    "what": {
+      "title": "Cos'è lo Sportello",
+      "items": [
+        {
+          "title": "Informazione documentata",
+          "description": "Risposte scritte, con fonti verificabili, alle domande che ci invii via mail."
+        },
+        {
+          "title": "Formazione operativa",
+          "description": "Sessioni dedicate per affrontare richieste o problemi specifici."
+        },
+        {
+          "title": "Rinvio a soggetti competenti",
+          "description": "Quando la richiesta esce dal nostro perimetro, ti indichiamo a chi rivolgerti."
+        }
+      ],
+      "notConsulting": "Lo Sportello non è un servizio di consulenza, né tecnica né finanziaria. È gestito dai soci dell'associazione, a titolo volontario e gratuito. Nessuna sessione viene registrata e nessun dato viene raccolto.",
+      "cta": "Scrivici il tuo problema",
+      "free": "Gratuito per tutti, soci e non soci"
+    },
+    "audience": {
+      "title": "A chi si rivolge",
+      "items": [
+        {
+          "title": "Attività commerciali",
+          "topics": [
+            "Cosa serve per accettare pagamenti in bitcoin",
+            "Formazione del personale che incassa",
+            "Test di pagamento reale in fase di onboarding",
+            "Quali domande porre al proprio commercialista",
+            "Inserimento sulla mappa pubblica e materiale per la vetrina"
+          ]
+        },
+        {
+          "title": "Imprese non commerciali",
+          "topics": [
+            "Ricevere un pagamento da un cliente, anche estero",
+            "Custodire in sicurezza la propria tesoreria",
+            "Come si documenta tecnicamente una transazione ricevuta",
+            "Quali domande porre al proprio commercialista",
+            "Panoramica dei fornitori esistenti per categoria"
+          ]
+        },
+        {
+          "title": "Professionisti",
+          "topics": [
+            "Come gestire correttamente custodia e pagamenti",
+            "Integrazione dei pagamenti su siti di commercio elettronico",
+            "Quali dati servono per la rendicontazione",
+            "Sessioni formative dedicate a studi professionali"
+          ]
+        },
+        {
+          "title": "Enti e associazioni",
+          "topics": [
+            "Come ricevere donazioni in bitcoin",
+            "Quali dati servono per la rendicontazione",
+            "Come comunicarlo ai propri sostenitori"
+          ]
+        },
+        {
+          "title": "Privati cittadini",
+          "topics": [
+            "Difficoltà di accesso a un wallet o a un dispositivo",
+            "Pagamenti che non risultano arrivati, bloccati o incompleti",
+            "Dubbi sul funzionamento di un dispositivo o di un'applicazione già in uso",
+            "Sospetto di essere di fronte a uno schema fraudolento",
+            "Documentazione da presentare al proprio commercialista"
+          ]
+        }
+      ]
+    },
+    "how": {
+      "title": "Come funziona",
+      "lanes": [
+        {
+          "title": "Richiesta informativa",
+          "description": "Ricevi una risposta scritta."
+        },
+        {
+          "title": "Richiesta operativa semplice",
+          "description": "Fissiamo una sessione dedicata di 30 minuti."
+        },
+        {
+          "title": "Richiesta operativa complessa o fiscale",
+          "description": "Ti indirizziamo verso partner competenti."
+        },
+        {
+          "title": "Fuori perimetro",
+          "description": "Ti indichiamo materiali utili per approfondire."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Costo",
+          "value": "Gratuito per tutti"
+        },
+        {
+          "label": "Risposta",
+          "value": "Entro pochi giorni lavorativi"
+        },
+        {
+          "label": "Sessioni",
+          "value": "30 minuti, solo su appuntamento"
+        },
+        {
+          "label": "Sede",
+          "value": "Online o in presenza, comunicata alla conferma"
+        }
+      ]
+    },
+    "limits": {
+      "title": "Cosa non facciamo",
+      "items": [
+        "Non operiamo su dispositivi, wallet o account di terzi",
+        "Non vediamo, non digitiamo e non conserviamo seed o chiavi private",
+        "Non deteniamo fondi, non incassiamo per conto terzi, non ospitiamo infrastruttura",
+        "Non recuperiamo fondi persi e non interveniamo su situazioni bloccate",
+        "Non forniamo interpretazione fiscale né compiliamo dichiarazioni",
+        "Non indichiamo quanto acquistare, quanto trattenere o quando convertire",
+        "Non seguiamo l'iscrizione presso fornitori terzi e non raccogliamo documenti",
+        "Non rilasciamo garanzie sul funzionamento di servizi di terzi",
+        "Non trattiamo asset diversi da bitcoin"
+      ]
+    },
+    "partners": {
+      "title": "Rinvio ai partner",
+      "items": [
+        {
+          "title": "Mai un solo nome",
+          "description": "Forniamo almeno due nominativi per categoria, in ordine alfabetico. Un solo nome sarebbe una raccomandazione, più nomi sono un orientamento."
+        },
+        {
+          "title": "Nessun compenso",
+          "description": "Bitcoin Torino non percepisce commissioni, provvigioni o quote di ricavo dai soggetti indicati, in nessuna forma."
+        },
+        {
+          "title": "Rapporti dichiarati",
+          "description": "Se un soggetto indicato è partner, sostenitore o finanziatore dell'associazione, te lo diciamo durante la sessione."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Raccontaci il tuo problema",
+      "description": "Scrivici una mail indicando chi sei e cosa stai riscontrando. Più dettagli ci dai, più velocemente possiamo orientarti.",
+      "checklist": [
+        "Chi sei: esercente, impresa, professionista, ente o privato",
+        "Il problema che stai riscontrando e da quando",
+        "Gli strumenti coinvolti: wallet, app, POS o fornitore",
+        "Se preferisci una sessione online o in presenza"
+      ],
+      "warning": "Non inviarci mai seed, chiavi private o password. Nessuno dello Sportello te li chiederà.",
+      "cta": "Invia una mail allo Sportello",
+      "disclaimer": "Le informazioni fornite hanno finalità divulgativa e formativa e non costituiscono consulenza professionale di alcun tipo. Le decisioni e le operazioni restano in capo a chi si rivolge allo Sportello."
     }
   }
 }
