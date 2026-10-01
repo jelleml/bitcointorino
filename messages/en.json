@@ -662,7 +662,6 @@
       ],
       "warning": "Never send us seed phrases, private keys or passwords. Nobody at the Help Desk will ever ask for them.",
       "cta": "Email the Help Desk",
-      "privacy": "The Help Desk is run by the association's members, on a voluntary and free basis. No session is recorded and no data is collected.",
       "disclaimer": "The information provided is for educational and informational purposes and does not constitute professional advice of any kind. Decisions and operations remain the responsibility of whoever contacts the Help Desk."
     }
   }

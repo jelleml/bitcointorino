@@ -282,7 +282,6 @@ export default function SportelloPage() {
             </div>
 
             <div className="mt-12 space-y-3 text-sm text-white/70 border-t border-white/20 pt-6">
-              <p>{t('contact.privacy')}</p>
               <p>{t('contact.disclaimer')}</p>
             </div>
           </div>
