@@ -37,11 +37,6 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base text-white border-white hover:bg-transparent hover:border-gray-300 hover:text-gray-300">
-              <a href="https://t.me/bitcointorinochannel" target="_blank" rel="noopener noreferrer">
-                {t('joinCommunity')}
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="text-base text-white border-white hover:bg-transparent hover:border-gray-300 hover:text-gray-300">
               <Link href="/soci">
                 {t('becomeMember')}
               </Link>
