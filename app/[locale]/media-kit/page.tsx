@@ -109,7 +109,7 @@ export default function MediaKitPage() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white py-20">
+      <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark dark:from-[#00138E] dark:to-[#00052E] text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-sm md:text-base uppercase tracking-wide text-white/70 mb-4">

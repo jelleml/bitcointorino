@@ -7,7 +7,7 @@ export function SportelloCta() {
   const t = useTranslations('SportelloCta');
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark dark:from-[#00138E] dark:to-[#00052E] text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-6">

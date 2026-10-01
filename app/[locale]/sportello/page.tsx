@@ -217,7 +217,7 @@ export default function SportelloPage() {
       </section>
 
       {/* Contatto */}
-      <section className="py-20 bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white">
+      <section className="py-20 bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark dark:from-[#00138E] dark:to-[#00052E] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
