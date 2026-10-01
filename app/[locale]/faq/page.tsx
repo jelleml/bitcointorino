@@ -178,7 +178,7 @@ export default function FAQPage() {
                   {category.questions.map((faq, faqIndex) => (
                     <details
                       key={faqIndex}
-                      className="group bg-white rounded-lg border-2 border-gray-200 hover:border-bitcoin-blue transition-colors overflow-hidden"
+                      className="group bg-card rounded-lg border-2 border-border hover:border-bitcoin-blue transition-colors overflow-hidden"
                     >
                       <summary className="flex items-center justify-between cursor-pointer p-6 font-semibold text-lg list-none">
                         <span className="pr-4">{faq.question}</span>
@@ -200,7 +200,7 @@ export default function FAQPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">

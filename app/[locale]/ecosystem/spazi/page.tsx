@@ -46,14 +46,14 @@ export default function SpaziPage() {
       </div>
 
       {/* Spaces List */}
-      <section className="py-16 bg-white dark:bg-black">
+      <section className="py-16 bg-white dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
               {mappedSpaces.map((space, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
+                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
                 >
                   <div className="flex flex-col md:flex-row md:items-start gap-6 mb-4">
                     <div className="flex-1 order-2 md:order-1">
@@ -70,7 +70,7 @@ export default function SpaziPage() {
                       <p className="text-muted-foreground mb-2">{space.description}</p>
                     </div>
                     {space.image && (
-                      <div className="relative w-full md:w-72 h-48 md:h-56 rounded-lg overflow-hidden flex-shrink-0 order-1 md:order-2 border border-gray-200 dark:border-gray-800">
+                      <div className="relative w-full md:w-72 h-48 md:h-56 rounded-lg overflow-hidden flex-shrink-0 order-1 md:order-2 border border-border">
                         <Image
                           src={space.image}
                           alt={space.name}
@@ -87,7 +87,7 @@ export default function SpaziPage() {
                         {space.features.map((feature, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm rounded-full"
+                            className="px-3 py-1 bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-300 text-sm rounded-full"
                           >
                             {feature}
                           </span>
@@ -111,7 +111,7 @@ export default function SpaziPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50 dark:bg-black">
+      <section className="py-16 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">

@@ -4,6 +4,7 @@ import {Link} from "@/i18n/navigation"
 import { useState, useRef } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { LanguageSelector } from "@/components/theme/language-selector"
+import { ThemeToggle } from "@/components/theme/theme-toggle"
 import { useTranslations } from 'next-intl'
 
 export function Navbar() {
@@ -34,13 +35,14 @@ export function Navbar() {
   ]
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-white/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:supports-[backdrop-filter]:bg-gray-900/80">
+    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="flex items-center">
-              <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" className="h-[56px] w-auto" />
+              <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" className="h-[56px] w-auto dark:hidden" />
+              <img src="/bitcoin-torino-logo-small-dark.svg" alt="Bitcoin Torino" className="h-[56px] w-auto hidden dark:block" />
             </div>
           </Link>
 
@@ -65,7 +67,7 @@ export function Navbar() {
                   onMouseEnter={handleEcosystemEnter}
                   onMouseLeave={handleEcosystemLeave}
                 >
-                  <div className="w-48 bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2">
+                  <div className="w-48 bg-popover rounded-lg shadow-lg border border-border py-2">
                     {ecosystemLinks.map((link) => (
                       link.external ? (
                         <a
@@ -102,13 +104,15 @@ export function Navbar() {
             </a>
 
 
-            <div className="flex items-center gap-2 ml-4 pl-4 border-l border-gray-200">
+            <div className="flex items-center gap-2 ml-4 pl-4 border-l border-border">
               <LanguageSelector />
+              <ThemeToggle />
             </div>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
             <LanguageSelector />
+            <ThemeToggle />
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md hover:bg-accent transition-colors"

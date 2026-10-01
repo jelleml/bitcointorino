@@ -110,14 +110,14 @@ export default function MeetupPage() {
       </div>
 
       {/* Communities Grid */}
-      <section className="py-16 bg-white dark:bg-black">
+      <section className="py-16 bg-white dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredCommunities.map((community, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-all duration-300 hover:shadow-lg"
+                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-all duration-300 hover:shadow-lg"
                 >
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4 gap-4">
@@ -130,7 +130,7 @@ export default function MeetupPage() {
                       <h3 className="text-2xl font-bold">{community.name}</h3>
                     </div>
                     {community.image && (
-                      <div className="relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border border-gray-100 dark:border-gray-800 flex-shrink-0">
+                      <div className="relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border border-gray-100 dark:border-border flex-shrink-0">
                         <Image
                           src={community.image}
                           alt={community.name}
@@ -194,7 +194,7 @@ export default function MeetupPage() {
       </section>
 
       {/* Create Community Section */}
-      <section className="py-16 bg-gray-50 dark:bg-black">
+      <section className="py-16 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Users className="h-12 w-12 text-bitcoin-blue mx-auto mb-4" aria-hidden="true" />

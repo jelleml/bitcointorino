@@ -99,7 +99,7 @@ export default function EventiPage() {
       </section>
 
       {/* Luma Calendar Integration */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
@@ -110,7 +110,7 @@ export default function EventiPage() {
             </div>
             
             {/* Luma Embed - In production this would be the actual embed */}
-            <div className="rounded-lg border-2 border-gray-200 bg-gray-50 p-8 text-center min-h-[400px] flex items-center justify-center">
+            <div className="rounded-lg border-2 border-border bg-gray-50 dark:bg-card p-8 text-center min-h-[400px] flex items-center justify-center">
               <div>
                 <p className="text-lg text-muted-foreground mb-4">
                   📅 Calendario Luma integrato
@@ -125,7 +125,7 @@ export default function EventiPage() {
       </section>
 
       {/* Upcoming Events */}
-      <section id="upcoming-events" className="py-16 bg-gray-50">
+      <section id="upcoming-events" className="py-16 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -188,7 +188,7 @@ export default function EventiPage() {
       </section>
 
       {/* Past Events */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">

@@ -3,7 +3,7 @@ import { Calendar, Send, Users, Mail } from "lucide-react"
 
 export function CTAs() {
   return (
-    <section className="py-16 bg-white border-y">
+    <section className="py-16 bg-background border-y">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -21,7 +21,7 @@ export function CTAs() {
               href="https://luma.com/user/bitcointorino"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg border-2 border-gray-200 bg-white p-6 hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
+              className="group relative overflow-hidden rounded-lg border-2 border-border bg-card p-6 hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="mb-4 p-4 rounded-full bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue group-hover:scale-110 transition-all duration-300">
@@ -40,7 +40,7 @@ export function CTAs() {
             {/* Newsletter */}
             <a
               href="#newsletter"
-              className="group relative overflow-hidden rounded-lg border-2 border-gray-200 bg-white p-6 hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
+              className="group relative overflow-hidden rounded-lg border-2 border-border bg-card p-6 hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="mb-4 p-4 rounded-full bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue group-hover:scale-110 transition-all duration-300">
@@ -61,7 +61,7 @@ export function CTAs() {
               href="https://t.me/bitcointorino"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg border-2 border-gray-200 bg-white p-6 hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
+              className="group relative overflow-hidden rounded-lg border-2 border-border bg-card p-6 hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="mb-4 p-4 rounded-full bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue group-hover:scale-110 transition-all duration-300">
@@ -82,7 +82,7 @@ export function CTAs() {
               href="https://t.me/bitcointorinogroup"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg border-2 border-gray-200 bg-white p-6 hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
+              className="group relative overflow-hidden rounded-lg border-2 border-border bg-card p-6 hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="mb-4 p-4 rounded-full bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue group-hover:scale-110 transition-all duration-300">

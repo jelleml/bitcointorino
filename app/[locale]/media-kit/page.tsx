@@ -140,7 +140,7 @@ export default function MediaKitPage() {
       </section>
 
       {/* Chi siamo / boilerplate */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -152,7 +152,7 @@ export default function MediaKitPage() {
               {(['short', 'long'] as const).map((length) => (
                 <div
                   key={length}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 md:p-8 border-2 border-gray-200 dark:border-gray-700"
+                  className="bg-card rounded-lg p-6 md:p-8 border-2 border-border"
                 >
                   <div className="flex items-center justify-between gap-4 mb-4">
                     <h3 className="text-xl font-bold">{t(`about.${length}.title`)}</h3>
@@ -179,7 +179,7 @@ export default function MediaKitPage() {
               {facts.map((fact, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700"
+                  className="bg-card rounded-lg p-6 border-2 border-border"
                 >
                   <dt className="text-sm uppercase tracking-wide text-muted-foreground mb-1">{fact.label}</dt>
                   <dd className="flex items-start justify-between gap-4">
@@ -199,7 +199,7 @@ export default function MediaKitPage() {
       </section>
 
       {/* Logo */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -211,7 +211,7 @@ export default function MediaKitPage() {
               {logos.map((logo) => (
                 <div
                   key={logo.key}
-                  className="bg-white dark:bg-gray-950 rounded-lg border-2 border-gray-200 dark:border-gray-700 overflow-hidden"
+                  className="bg-card rounded-lg border-2 border-border overflow-hidden"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div
@@ -232,20 +232,22 @@ export default function MediaKitPage() {
                             <a
                               href={`${ASSETS_PATH}/${file.file}`}
                               download
-                              className="flex items-center justify-between gap-4 rounded-md border-2 border-gray-200 dark:border-gray-700 px-4 py-2.5 hover:border-bitcoin-blue transition-colors"
+                              className="flex items-center justify-between gap-4 rounded-md border-2 border-border px-4 py-2.5 hover:border-bitcoin-blue transition-colors"
                             >
-                              <span className="flex items-center gap-3">
+                              <span className="flex items-center gap-3 min-w-0">
                                 <span
-                                  className="h-4 w-4 rounded-full border border-gray-400"
+                                  className="h-4 w-4 flex-shrink-0 rounded-full border border-gray-400"
                                   style={swatchStyle(file.swatch)}
                                   aria-hidden="true"
                                 />
-                                <span className="font-medium">{t(`logos.variants.${file.variant}`)}</span>
-                                <span className="text-sm text-muted-foreground">
-                                  {t(`logos.backgrounds.${file.bg}`)}
+                                <span className="flex flex-wrap items-baseline gap-x-3 min-w-0">
+                                  <span className="font-medium">{t(`logos.variants.${file.variant}`)}</span>
+                                  <span className="text-sm text-muted-foreground">
+                                    {t(`logos.backgrounds.${file.bg}`)}
+                                  </span>
                                 </span>
                               </span>
-                              <span className="flex items-center gap-2 text-sm text-bitcoin-blue font-medium">
+                              <span className="flex flex-shrink-0 items-center gap-2 text-sm text-bitcoin-blue font-medium">
                                 {file.file.split('.').pop()?.toUpperCase()}
                                 <Download className="h-4 w-4" aria-hidden="true" />
                               </span>
@@ -275,31 +277,29 @@ export default function MediaKitPage() {
               {colors.map((color) => (
                 <div
                   key={color.key}
-                  className="bg-white dark:bg-gray-950 rounded-lg border-2 border-gray-200 dark:border-gray-700 overflow-hidden"
+                  className="bg-card rounded-lg border-2 border-border overflow-hidden"
                 >
                   <div
-                    className={`h-28 md:h-36 flex items-end p-4 ${color.textClass}`}
+                    className={`relative h-28 md:h-36 flex items-end p-4 ${color.textClass}`}
                     style={{ backgroundColor: color.hex }}
                   >
                     <span className="font-mono text-sm">{color.hex}</span>
+                    <CopyButton
+                      value={color.hex}
+                      label={t('copyHex')}
+                      copiedLabel={t('copied')}
+                      className="absolute top-3 right-3 bg-white text-gray-900 dark:bg-white dark:border-gray-200"
+                    />
                   </div>
                   <div className="p-4">
-                    <div className="flex items-start justify-between gap-3 mb-1">
-                      <h3 className="font-bold">{t(`colors.items.${color.key}.name`)}</h3>
-                      <CopyButton
-                        value={color.hex}
-                        label={t('copyHex')}
-                        copiedLabel={t('copied')}
-                        className="flex-shrink-0"
-                      />
-                    </div>
+                    <h3 className="font-bold mb-1">{t(`colors.items.${color.key}.name`)}</h3>
                     <p className="text-sm text-muted-foreground">{t(`colors.items.${color.key}.usage`)}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-12 bg-white dark:bg-gray-950 rounded-lg p-8 border-2 border-gray-200 dark:border-gray-700">
+            <div className="mt-12 bg-card rounded-lg p-8 border-2 border-border">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-xl font-bold mb-2">{t('typography.title')}</h3>
@@ -327,26 +327,26 @@ export default function MediaKitPage() {
       </section>
 
       {/* Linee guida editoriali */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('editorial.title')}</h2>
               <p className="text-lg text-muted-foreground">{t('editorial.description')}</p>
             </div>
-            <div className="bg-white dark:bg-gray-950 rounded-lg border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
-              <table className="w-full text-left">
-                <thead className="bg-gray-50 dark:bg-gray-900">
+            <div className="bg-card rounded-lg border-2 border-border overflow-hidden">
+              <table className="w-full table-fixed text-left">
+                <thead className="bg-gray-50 dark:bg-white/5">
                   <tr>
-                    <th scope="col" className="px-6 py-4 font-bold">{t('editorial.use')}</th>
-                    <th scope="col" className="px-6 py-4 font-bold">{t('editorial.avoid')}</th>
+                    <th scope="col" className="px-4 md:px-6 py-4 font-bold">{t('editorial.use')}</th>
+                    <th scope="col" className="px-4 md:px-6 py-4 font-bold">{t('editorial.avoid')}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {editorial.map((row, index) => (
-                    <tr key={index} className="border-t-2 border-gray-200 dark:border-gray-700">
-                      <td className="px-6 py-4">{row.use}</td>
-                      <td className="px-6 py-4 text-muted-foreground">{row.avoid}</td>
+                    <tr key={index} className="border-t-2 border-border">
+                      <td className="px-4 md:px-6 py-4 break-words">{row.use}</td>
+                      <td className="px-4 md:px-6 py-4 break-words text-muted-foreground">{row.avoid}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -381,7 +381,7 @@ export default function MediaKitPage() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 bg-white dark:bg-gray-950 rounded-lg p-4 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
+                    className="flex items-center gap-4 bg-card rounded-lg p-4 border-2 border-border hover:border-bitcoin-blue transition-colors"
                   >
                     <Icon className="h-5 w-5 text-bitcoin-blue" aria-hidden="true" />
                     <span>

@@ -3,38 +3,33 @@
 import * as React from "react"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
+import { useTranslations } from "next-intl"
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const t = useTranslations("Navbar")
+  const { resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = React.useState(false)
 
   React.useEffect(() => {
     setMounted(true)
   }, [])
 
-  if (!mounted) {
-    return (
-      <button
-        className="p-2 rounded-md hover:bg-accent transition-colors"
-        aria-label="Toggle theme"
-      >
-        <Sun className="h-5 w-5" />
-      </button>
-    )
-  }
+  const isDark = mounted && resolvedTheme === "dark"
+  const label = isDark ? t("lightMode") : t("darkMode")
 
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      type="button"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
       className="p-2 rounded-md hover:bg-accent transition-colors"
-      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={label}
+      title={label}
     >
-      {theme === "dark" ? (
-        <Sun className="h-5 w-5" />
+      {isDark ? (
+        <Sun className="h-5 w-5" aria-hidden="true" />
       ) : (
-        <Moon className="h-5 w-5" />
+        <Moon className="h-5 w-5" aria-hidden="true" />
       )}
     </button>
   )
 }
-

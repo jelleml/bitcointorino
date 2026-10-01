@@ -55,14 +55,14 @@ export default function AziendePage() {
       </section>
 
       {/* Companies List */}
-      <section className="py-16 bg-white dark:bg-black">
+      <section className="py-16 bg-white dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
               {mappedCompanies.map((company, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
+                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -77,7 +77,7 @@ export default function AziendePage() {
                     {company.services.map((service, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm rounded-full"
+                        className="px-3 py-1 bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-300 text-sm rounded-full"
                       >
                         {service}
                       </span>
@@ -91,7 +91,7 @@ export default function AziendePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50 dark:bg-black">
+      <section className="py-16 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">

@@ -51,7 +51,7 @@ export function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-20 bg-white scroll-mt-16">
+    <section id="faq" className="py-20 bg-background scroll-mt-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -67,11 +67,11 @@ export function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border-2 border-gray-200 rounded-lg overflow-hidden hover:border-bitcoin-blue transition-colors"
+                className="border-2 border-border rounded-lg overflow-hidden hover:border-bitcoin-blue transition-colors"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between p-6 text-left bg-background hover:bg-gray-50 dark:hover:bg-card transition-colors"
                   aria-expanded={openIndex === index}
                 >
                   <span className="font-bold text-lg pr-8">{faq.question}</span>
@@ -96,7 +96,7 @@ export function FAQ() {
           </div>
 
           {/* Contact CTA */}
-          <div className="mt-12 text-center p-8 bg-gray-50 rounded-lg border-2 border-gray-200">
+          <div className="mt-12 text-center p-8 bg-gray-50 dark:bg-card rounded-lg border-2 border-border">
             <h3 className="text-xl font-bold mb-2">Hai altre domande?</h3>
             <p className="text-muted-foreground mb-4">
               Non esitare a contattarci, saremo felici di risponderti

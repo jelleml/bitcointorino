@@ -46,7 +46,7 @@ export function Team() {
   ]
 
   return (
-    <section id="team" className="py-20 bg-white scroll-mt-16">
+    <section id="team" className="py-20 bg-background scroll-mt-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -62,7 +62,7 @@ export function Team() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-lg border-2 border-gray-200 overflow-hidden hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
+                className="group bg-card rounded-lg border-2 border-border overflow-hidden hover:border-bitcoin-blue hover:shadow-lg transition-all duration-300"
               >
                 {/* Avatar */}
                 <div className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-light h-48 flex items-center justify-center">
@@ -84,7 +84,7 @@ export function Team() {
                         href={member.social.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-gray-100 hover:bg-bitcoin-blue hover:text-white transition-colors"
+                        className="p-2 rounded-full bg-gray-100 dark:bg-accent hover:bg-bitcoin-blue hover:text-white transition-colors"
                         aria-label={`Twitter di ${member.name}`}
                       >
                         <Twitter className="h-4 w-4" aria-hidden="true" />
@@ -95,7 +95,7 @@ export function Team() {
                         href={member.social.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-gray-100 hover:bg-bitcoin-blue hover:text-white transition-colors"
+                        className="p-2 rounded-full bg-gray-100 dark:bg-accent hover:bg-bitcoin-blue hover:text-white transition-colors"
                         aria-label={`LinkedIn di ${member.name}`}
                       >
                         <Linkedin className="h-4 w-4" aria-hidden="true" />
@@ -106,7 +106,7 @@ export function Team() {
                         href={member.social.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-gray-100 hover:bg-bitcoin-blue hover:text-white transition-colors"
+                        className="p-2 rounded-full bg-gray-100 dark:bg-accent hover:bg-bitcoin-blue hover:text-white transition-colors"
                         aria-label={`GitHub di ${member.name}`}
                       >
                         <Github className="h-4 w-4" aria-hidden="true" />
