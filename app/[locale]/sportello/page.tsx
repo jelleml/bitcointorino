@@ -102,7 +102,7 @@ export default function SportelloPage() {
                     key={index}
                     className="group bg-card rounded-lg p-8 border-2 border-border hover:border-bitcoin-blue transition-colors"
                   >
-                    <div className="mb-4 inline-flex p-3 rounded-lg bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue transition-colors">
+                    <div className="mb-4 inline-flex p-3 rounded-lg bg-bitcoin-blue/10 dark:bg-white/10 group-hover:bg-bitcoin-blue dark:group-hover:bg-white/20 transition-colors">
                       <Icon
                         className="h-6 w-6 text-bitcoin-blue group-hover:text-white transition-colors"
                         aria-hidden="true"
@@ -116,11 +116,11 @@ export default function SportelloPage() {
             </div>
 
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 p-6">
+              <div className="flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 dark:border-white/20 dark:bg-white/5 p-6">
                 <Info className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
                 <p className="text-muted-foreground">{t('what.notConsulting')}</p>
               </div>
-              <div className="flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 p-6">
+              <div className="flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 dark:border-white/20 dark:bg-white/5 p-6">
                 <BookOpen className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
                 <p className="text-muted-foreground">
                   {t('what.beginners')}{' '}
@@ -153,7 +153,7 @@ export default function SportelloPage() {
                     className="group bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
                   >
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="flex-shrink-0 p-3 rounded-lg bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue transition-colors">
+                      <div className="flex-shrink-0 p-3 rounded-lg bg-bitcoin-blue/10 dark:bg-white/10 group-hover:bg-bitcoin-blue dark:group-hover:bg-white/20 transition-colors">
                         <Icon
                           className="h-6 w-6 text-bitcoin-blue group-hover:text-white transition-colors"
                           aria-hidden="true"
@@ -196,7 +196,7 @@ export default function SportelloPage() {
                   key={index}
                   className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
                 >
-                  <div className="mb-4 flex items-center justify-center h-10 w-10 rounded-full bg-bitcoin-blue text-white font-bold">
+                  <div className="mb-4 flex items-center justify-center h-10 w-10 rounded-full bg-bitcoin-blue dark:bg-white dark:text-bitcoin-blue-dark text-white font-bold">
                     {index + 1}
                   </div>
                   <h3 className="text-lg font-bold mb-2">{lane.title}</h3>
@@ -205,7 +205,7 @@ export default function SportelloPage() {
               ))}
             </ol>
 
-            <dl className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-6 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 p-6">
+            <dl className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-6 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 dark:border-white/20 dark:bg-white/5 p-6">
               {facts.map((fact, index) => (
                 <div key={index}>
                   <dt className="text-sm uppercase tracking-wide text-bitcoin-blue font-bold mb-1">
@@ -230,7 +230,7 @@ export default function SportelloPage() {
             <ul className="bg-card rounded-lg border-2 border-border divide-y">
               {limits.map((limit, index) => (
                 <li key={index} className="flex items-start gap-3 p-5 text-muted-foreground">
-                  <X className="h-5 w-5 flex-shrink-0 text-red-600 dark:text-red-400 mt-0.5" aria-hidden="true" />
+                  <X className="h-5 w-5 flex-shrink-0 text-red-600 dark:text-red-300 mt-0.5" aria-hidden="true" />
                   <span>{limit}</span>
                 </li>
               ))}
