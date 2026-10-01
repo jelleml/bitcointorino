@@ -105,13 +105,14 @@ export default function SportelloPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold">{t('audience.title')}</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Da PC: tre card nella prima riga, le ultime due a metà riga ciascuna */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
               {audience.map((group, index) => {
                 const Icon = audienceIcons[index]
                 return (
                   <div
                     key={index}
-                    className="group bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
+                    className={`group bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors ${index < 3 ? 'lg:col-span-2' : 'lg:col-span-3'}`}
                   >
                     <div className="flex items-start gap-4 mb-4">
                       <div className="flex-shrink-0 p-3 rounded-lg bg-bitcoin-blue/10 dark:bg-white/10 group-hover:bg-bitcoin-blue dark:group-hover:bg-white/20 transition-colors">
