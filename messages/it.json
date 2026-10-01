@@ -520,7 +520,6 @@
       "items": [
         {
           "title": "Attività commerciali",
-          "summary": "Accettare pagamenti in bitcoin in cassa o online.",
           "topics": [
             "Cosa serve per accettare pagamenti in bitcoin",
             "Formazione del personale che incassa",
@@ -531,7 +530,6 @@
         },
         {
           "title": "Imprese non commerciali",
-          "summary": "Ricevere pagamenti da clienti e documentare le transazioni.",
           "topics": [
             "Ricevere correttamente un pagamento da un cliente, anche estero",
             "Custodire in sicurezza la propria tesoreria",
@@ -542,7 +540,6 @@
         },
         {
           "title": "Professionisti",
-          "summary": "Commercialisti, consulenti e sviluppatori che assistono i propri clienti su strumenti e flussi.",
           "topics": [
             "Come gestire correttamente custodia e pagamenti",
             "Integrazione dei pagamenti su siti di commercio elettronico",
@@ -552,7 +549,6 @@
         },
         {
           "title": "Enti e associazioni",
-          "summary": "Ricevere donazioni in bitcoin.",
           "topics": [
             "Come ricevere donazioni in bitcoin",
             "Quali dati servono per la rendicontazione",
@@ -561,7 +557,6 @@
         },
         {
           "title": "Privati cittadini",
-          "summary": "Problemi concreti già in corso.",
           "topics": [
             "Difficoltà di accesso a un wallet o a un dispositivo",
             "Pagamenti che non risultano arrivati, bloccati o incompleti",

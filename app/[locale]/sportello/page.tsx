@@ -41,7 +41,7 @@ export default function SportelloPage() {
   const t = useTranslations('Sportello')
 
   const whatItems = t.raw('what.items') as { title: string; description: string }[]
-  const audience = t.raw('audience.items') as { title: string; summary: string; topics: string[] }[]
+  const audience = t.raw('audience.items') as { title: string; topics: string[] }[]
   const lanes = t.raw('how.lanes') as { title: string; description: string }[]
   const facts = t.raw('how.facts') as { label: string; value: string }[]
   const limits = t.raw('limits.items') as string[]
@@ -114,17 +114,14 @@ export default function SportelloPage() {
                     key={index}
                     className={`group bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors ${index < 3 ? 'lg:col-span-2' : 'lg:col-span-3'}`}
                   >
-                    <div className="flex items-start gap-4 mb-4">
+                    <div className="flex items-center gap-4 mb-4">
                       <div className="flex-shrink-0 p-3 rounded-lg bg-bitcoin-blue/10 dark:bg-white/10 group-hover:bg-bitcoin-blue dark:group-hover:bg-white/20 transition-colors">
                         <Icon
                           className="h-6 w-6 text-bitcoin-blue group-hover:text-white transition-colors"
                           aria-hidden="true"
                         />
                       </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-1">{group.title}</h3>
-                        <p className="text-sm text-muted-foreground">{group.summary}</p>
-                      </div>
+                      <h3 className="text-xl font-bold">{group.title}</h3>
                     </div>
                     <ul className="space-y-2 border-t pt-4">
                       {group.topics.map((topic, topicIndex) => (

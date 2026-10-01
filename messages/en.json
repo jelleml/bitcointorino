@@ -520,7 +520,6 @@
       "items": [
         {
           "title": "Retail businesses",
-          "summary": "Accepting bitcoin payments in store or online.",
           "topics": [
             "What you need to accept bitcoin payments",
             "Training staff who handle payments",
@@ -531,7 +530,6 @@
         },
         {
           "title": "Non-retail businesses",
-          "summary": "Receiving payments from clients and documenting transactions.",
           "topics": [
             "Correctly receiving a payment from a client, including from abroad",
             "Securely storing your treasury",
@@ -542,7 +540,6 @@
         },
         {
           "title": "Professionals",
-          "summary": "Accountants, consultants and developers supporting their clients with tools and workflows.",
           "topics": [
             "How to correctly handle custody and payments",
             "Integrating payments into e-commerce sites",
@@ -552,7 +549,6 @@
         },
         {
           "title": "Organisations and associations",
-          "summary": "Receiving donations in bitcoin.",
           "topics": [
             "How to receive bitcoin donations",
             "Which data is needed for reporting",
@@ -561,7 +557,6 @@
         },
         {
           "title": "Private citizens",
-          "summary": "Real, ongoing problems.",
           "topics": [
             "Trouble accessing a wallet or a device",
             "Payments that have not arrived, are stuck or incomplete",
