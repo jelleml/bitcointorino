@@ -278,21 +278,19 @@ export default function MediaKitPage() {
                   className="bg-white dark:bg-gray-950 rounded-lg border-2 border-gray-200 dark:border-gray-700 overflow-hidden"
                 >
                   <div
-                    className={`h-28 md:h-36 flex items-end p-4 ${color.textClass}`}
+                    className={`relative h-28 md:h-36 flex items-end p-4 ${color.textClass}`}
                     style={{ backgroundColor: color.hex }}
                   >
                     <span className="font-mono text-sm">{color.hex}</span>
+                    <CopyButton
+                      value={color.hex}
+                      label={t('copyHex')}
+                      copiedLabel={t('copied')}
+                      className="absolute top-3 right-3 bg-white text-gray-900 dark:bg-white dark:border-gray-200"
+                    />
                   </div>
                   <div className="p-4">
-                    <div className="flex items-start justify-between gap-3 mb-1">
-                      <h3 className="font-bold">{t(`colors.items.${color.key}.name`)}</h3>
-                      <CopyButton
-                        value={color.hex}
-                        label={t('copyHex')}
-                        copiedLabel={t('copied')}
-                        className="flex-shrink-0"
-                      />
-                    </div>
+                    <h3 className="font-bold mb-1">{t(`colors.items.${color.key}.name`)}</h3>
                     <p className="text-sm text-muted-foreground">{t(`colors.items.${color.key}.usage`)}</p>
                   </div>
                 </div>
