@@ -15,9 +15,6 @@ export function SportelloCta() {
               <LifeBuoy className="h-10 w-10" aria-hidden="true" />
             </div>
           </div>
-          <p className="text-sm md:text-base uppercase tracking-wide text-white/70 mb-4">
-            {t('eyebrow')}
-          </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('title')}
           </h2>

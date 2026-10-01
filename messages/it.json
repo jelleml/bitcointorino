@@ -483,10 +483,9 @@
     }
   },
   "SportelloCta": {
-    "eyebrow": "Sportello Bitcoin Torino",
-    "title": "Hai un problema concreto con Bitcoin?",
-    "description": "Lo Sportello è il servizio gratuito di orientamento dell'associazione, aperto a esercenti, imprese, professionisti, enti e privati cittadini. Ci racconti cosa sta succedendo, ti aiutiamo a capire le opzioni e a chi rivolgerti.",
-    "cta": "Scopri lo Sportello"
+    "title": "Sportello Bitcoin Torino",
+    "description": "Servizio gratuito di orientamento e supporto aperto a esercenti, imprese, professionisti, enti e privati cittadini. Ci racconti cosa sta succedendo o cosa vorresti fare, noi ti aiutiamo a capire le opzioni e a chi rivolgerti.",
+    "cta": "Richiedi supporto"
   },
   "Sportello": {
     "meta": {

@@ -483,10 +483,9 @@
     }
   },
   "SportelloCta": {
-    "eyebrow": "Bitcoin Torino Help Desk",
-    "title": "Facing a real problem with Bitcoin?",
-    "description": "The Help Desk is the association's free guidance service, open to merchants, businesses, professionals, organisations and private citizens. Tell us what is happening and we will help you understand your options and who to turn to.",
-    "cta": "Discover the Help Desk"
+    "title": "Bitcoin Torino Help Desk",
+    "description": "A free guidance and support service open to merchants, businesses, professionals, organisations and private citizens. Tell us what is happening or what you would like to do, and we will help you understand your options and who to turn to.",
+    "cta": "Request support"
   },
   "Sportello": {
     "meta": {
