@@ -30,7 +30,9 @@
     "events": "Eventi",
     "people": "Persone",
     "activities": "Commercianti",
-    "spaces": "Spazi"
+    "spaces": "Spazi",
+    "darkMode": "Passa al tema scuro",
+    "lightMode": "Passa al tema chiaro"
   },
   "NextEvent": {
     "title": "Prossimo Evento",

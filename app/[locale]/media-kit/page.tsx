@@ -152,7 +152,7 @@ export default function MediaKitPage() {
               {(['short', 'long'] as const).map((length) => (
                 <div
                   key={length}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 md:p-8 border-2 border-gray-200 dark:border-gray-700"
+                  className="bg-card rounded-lg p-6 md:p-8 border-2 border-border"
                 >
                   <div className="flex items-center justify-between gap-4 mb-4">
                     <h3 className="text-xl font-bold">{t(`about.${length}.title`)}</h3>
@@ -179,7 +179,7 @@ export default function MediaKitPage() {
               {facts.map((fact, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700"
+                  className="bg-card rounded-lg p-6 border-2 border-border"
                 >
                   <dt className="text-sm uppercase tracking-wide text-muted-foreground mb-1">{fact.label}</dt>
                   <dd className="flex items-start justify-between gap-4">
@@ -211,7 +211,7 @@ export default function MediaKitPage() {
               {logos.map((logo) => (
                 <div
                   key={logo.key}
-                  className="bg-white dark:bg-gray-950 rounded-lg border-2 border-gray-200 dark:border-gray-700 overflow-hidden"
+                  className="bg-card rounded-lg border-2 border-border overflow-hidden"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div
@@ -232,7 +232,7 @@ export default function MediaKitPage() {
                             <a
                               href={`${ASSETS_PATH}/${file.file}`}
                               download
-                              className="flex items-center justify-between gap-4 rounded-md border-2 border-gray-200 dark:border-gray-700 px-4 py-2.5 hover:border-bitcoin-blue transition-colors"
+                              className="flex items-center justify-between gap-4 rounded-md border-2 border-border px-4 py-2.5 hover:border-bitcoin-blue transition-colors"
                             >
                               <span className="flex items-center gap-3">
                                 <span
@@ -275,7 +275,7 @@ export default function MediaKitPage() {
               {colors.map((color) => (
                 <div
                   key={color.key}
-                  className="bg-white dark:bg-gray-950 rounded-lg border-2 border-gray-200 dark:border-gray-700 overflow-hidden"
+                  className="bg-card rounded-lg border-2 border-border overflow-hidden"
                 >
                   <div
                     className={`relative h-28 md:h-36 flex items-end p-4 ${color.textClass}`}
@@ -297,7 +297,7 @@ export default function MediaKitPage() {
               ))}
             </div>
 
-            <div className="mt-12 bg-white dark:bg-gray-950 rounded-lg p-8 border-2 border-gray-200 dark:border-gray-700">
+            <div className="mt-12 bg-card rounded-lg p-8 border-2 border-border">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-xl font-bold mb-2">{t('typography.title')}</h3>
@@ -332,9 +332,9 @@ export default function MediaKitPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('editorial.title')}</h2>
               <p className="text-lg text-muted-foreground">{t('editorial.description')}</p>
             </div>
-            <div className="bg-white dark:bg-gray-950 rounded-lg border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div className="bg-card rounded-lg border-2 border-border overflow-hidden">
               <table className="w-full text-left">
-                <thead className="bg-gray-50 dark:bg-gray-900">
+                <thead className="bg-gray-50 dark:bg-white/5">
                   <tr>
                     <th scope="col" className="px-6 py-4 font-bold">{t('editorial.use')}</th>
                     <th scope="col" className="px-6 py-4 font-bold">{t('editorial.avoid')}</th>
@@ -342,7 +342,7 @@ export default function MediaKitPage() {
                 </thead>
                 <tbody>
                   {editorial.map((row, index) => (
-                    <tr key={index} className="border-t-2 border-gray-200 dark:border-gray-700">
+                    <tr key={index} className="border-t-2 border-border">
                       <td className="px-6 py-4">{row.use}</td>
                       <td className="px-6 py-4 text-muted-foreground">{row.avoid}</td>
                     </tr>
@@ -379,7 +379,7 @@ export default function MediaKitPage() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 bg-white dark:bg-gray-950 rounded-lg p-4 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
+                    className="flex items-center gap-4 bg-card rounded-lg p-4 border-2 border-border hover:border-bitcoin-blue transition-colors"
                   >
                     <Icon className="h-5 w-5 text-bitcoin-blue" aria-hidden="true" />
                     <span>

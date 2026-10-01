@@ -75,7 +75,7 @@ export default function SociPage() {
                 return (
                   <div
                     key={index}
-                    className="group bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
+                    className="group bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
                   >
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 p-3 rounded-lg bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue transition-colors">
@@ -108,7 +108,7 @@ export default function SociPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="group bg-white dark:bg-gray-950 rounded-lg p-8 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors">
+              <div className="group bg-card rounded-lg p-8 border-2 border-border hover:border-bitcoin-blue transition-colors">
                 <div className="mb-4 inline-flex p-3 rounded-lg bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue transition-colors">
                   <Eye
                     className="h-6 w-6 text-bitcoin-blue group-hover:text-white transition-colors"
@@ -119,7 +119,7 @@ export default function SociPage() {
                 <p className="text-muted-foreground">{t('participation.observer.description')}</p>
               </div>
 
-              <div className="group bg-white dark:bg-gray-950 rounded-lg p-8 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors">
+              <div className="group bg-card rounded-lg p-8 border-2 border-border hover:border-bitcoin-blue transition-colors">
                 <div className="mb-4 inline-flex p-3 rounded-lg bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue transition-colors">
                   <Wrench
                     className="h-6 w-6 text-bitcoin-blue group-hover:text-white transition-colors"
@@ -152,7 +152,7 @@ export default function SociPage() {
               {meetings.map((meeting, index) => (
                 <li
                   key={index}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors text-muted-foreground"
+                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors text-muted-foreground"
                 >
                   {meeting}
                 </li>
@@ -167,7 +167,7 @@ export default function SociPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">{t('fee.title')}</h2>
-            <div className="bg-white dark:bg-gray-950 rounded-lg p-8 md:p-12 border-2 border-gray-200 dark:border-gray-700 text-center">
+            <div className="bg-card rounded-lg p-8 md:p-12 border-2 border-border text-center">
               <p className="text-5xl md:text-6xl font-bold text-bitcoin-blue mb-6">
                 {t('fee.amount')}
               </p>
@@ -195,7 +195,7 @@ export default function SociPage() {
               {steps.map((step, index) => (
                 <li
                   key={index}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
+                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center gap-5">
                     <div className="flex items-center gap-5 flex-1">

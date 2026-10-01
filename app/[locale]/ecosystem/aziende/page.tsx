@@ -62,7 +62,7 @@ export default function AziendePage() {
               {mappedCompanies.map((company, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
+                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -77,7 +77,7 @@ export default function AziendePage() {
                     {company.services.map((service, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm rounded-full"
+                        className="px-3 py-1 bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-300 text-sm rounded-full"
                       >
                         {service}
                       </span>

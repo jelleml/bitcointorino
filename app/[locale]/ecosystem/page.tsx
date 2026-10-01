@@ -73,7 +73,7 @@ export default function EcosystemPage() {
                   href={section.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-white rounded-xl p-12 border-2 border-gray-200 hover:border-bitcoin-blue transition-all duration-300 hover:shadow-xl text-center flex flex-col items-center justify-between"
+                  className="group bg-card rounded-xl p-12 border-2 border-border hover:border-bitcoin-blue transition-all duration-300 hover:shadow-xl text-center flex flex-col items-center justify-between"
                 >
                   {Content}
                 </a>
@@ -81,7 +81,7 @@ export default function EcosystemPage() {
                 <Link
                   key={index}
                   href={section.href}
-                  className="group bg-white rounded-xl p-12 border-2 border-gray-200 hover:border-bitcoin-blue transition-all duration-300 hover:shadow-xl text-center flex flex-col items-center justify-between"
+                  className="group bg-card rounded-xl p-12 border-2 border-border hover:border-bitcoin-blue transition-all duration-300 hover:shadow-xl text-center flex flex-col items-center justify-between"
                 >
                   {Content}
                 </Link>
@@ -92,7 +92,7 @@ export default function EcosystemPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

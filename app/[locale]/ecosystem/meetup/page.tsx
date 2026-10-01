@@ -117,7 +117,7 @@ export default function MeetupPage() {
               {filteredCommunities.map((community, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-all duration-300 hover:shadow-lg"
+                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-all duration-300 hover:shadow-lg"
                 >
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4 gap-4">
@@ -130,7 +130,7 @@ export default function MeetupPage() {
                       <h3 className="text-2xl font-bold">{community.name}</h3>
                     </div>
                     {community.image && (
-                      <div className="relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border border-gray-100 dark:border-gray-800 flex-shrink-0">
+                      <div className="relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border border-gray-100 dark:border-border flex-shrink-0">
                         <Image
                           src={community.image}
                           alt={community.name}

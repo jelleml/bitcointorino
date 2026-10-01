@@ -30,7 +30,7 @@ export function CopyButton({ value, label, copiedLabel, className }: CopyButtonP
       onClick={handleCopy}
       title={copied ? copiedLabel : label}
       className={cn(
-        "inline-flex items-center justify-center rounded-md border-2 border-gray-200 dark:border-gray-700 p-2 hover:border-bitcoin-blue hover:text-bitcoin-blue transition-colors",
+        "inline-flex items-center justify-center rounded-md border-2 border-border p-2 hover:border-bitcoin-blue hover:text-bitcoin-blue transition-colors",
         copied && "border-bitcoin-blue text-bitcoin-blue",
         className
       )}

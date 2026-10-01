@@ -23,7 +23,7 @@ export function Ecosystem() {
   return (
     <>
       {/* Merchant */}
-      <section id="merchant" className="py-20 bg-white scroll-mt-16">
+      <section id="merchant" className="py-20 bg-background scroll-mt-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -69,7 +69,7 @@ export function Ecosystem() {
       </section>
 
       {/* Aziende */}
-      <section id="aziende" className="py-20 bg-gray-50 scroll-mt-16">
+      <section id="aziende" className="py-20 bg-gray-50 dark:bg-black scroll-mt-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -110,7 +110,7 @@ export function Ecosystem() {
       </section>
 
       {/* Spazi */}
-      <section id="spazi" className="py-20 bg-white scroll-mt-16">
+      <section id="spazi" className="py-20 bg-background scroll-mt-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">

@@ -30,7 +30,9 @@
     "events": "Events",
     "people": "People",
     "activities": "Merchants",
-    "spaces": "Spaces"
+    "spaces": "Spaces",
+    "darkMode": "Switch to dark mode",
+    "lightMode": "Switch to light mode"
   },
   "NextEvent": {
     "title": "Next Event",

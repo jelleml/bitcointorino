@@ -64,7 +64,7 @@ export default function MerchantPage() {
                 return (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-950 rounded-lg p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-bitcoin-blue transition-colors"
+                    className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
                   >
                     <div className="flex items-start space-x-4">
                       <div className="bg-bitcoin-blue/10 p-3 rounded-lg">

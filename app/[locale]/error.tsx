@@ -18,8 +18,8 @@ export default function Error({
 
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center p-4 text-center">
-      <div className="bg-red-50 p-6 rounded-full mb-6">
-        <AlertCircle className="h-12 w-12 text-red-600" />
+      <div className="bg-red-50 dark:bg-red-950/40 p-6 rounded-full mb-6">
+        <AlertCircle className="h-12 w-12 text-red-600 dark:text-red-400" />
       </div>
       <h2 className="text-3xl font-bold mb-4">Qualcosa è andato storto</h2>
       <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
@@ -38,9 +38,9 @@ export default function Error({
         </Button>
       </div>
       {process.env.NODE_ENV === 'development' && (
-        <div className="mt-12 p-4 bg-gray-100 rounded text-left overflow-auto max-w-2xl w-full">
-          <p className="font-mono text-sm text-red-600 mb-2">Error: {error.message}</p>
-          <pre className="font-mono text-xs text-gray-700 whitespace-pre-wrap">
+        <div className="mt-12 p-4 bg-muted rounded text-left overflow-auto max-w-2xl w-full">
+          <p className="font-mono text-sm text-red-600 dark:text-red-400 mb-2">Error: {error.message}</p>
+          <pre className="font-mono text-xs text-gray-700 dark:text-gray-300 whitespace-pre-wrap">
             {error.stack}
           </pre>
         </div>

@@ -15,7 +15,7 @@ const buttonVariants = cva(
         outline:
           "border-2 border-bitcoin-blue bg-transparent text-bitcoin-blue hover:bg-bitcoin-blue hover:text-white",
         secondary:
-          "bg-black text-white hover:bg-black/80",
+          "bg-black text-white hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-bitcoin-blue underline-offset-4 hover:underline",
       },

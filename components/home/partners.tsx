@@ -15,17 +15,17 @@ export function Partners() {
 // ...
   const partners = [
     { name: "Plan B Network", logo: "/Partners/logo-plan-b-network.svg?v=2", href: "https://planb.network" },
-    { name: "Blox Space", logo: "/Partners/logo-blox.svg?v=2", className: "scale-75", href: "https://linkedin.com/company/blox-space" },
+    { name: "Blox Space", logo: "/Partners/logo-blox.svg?v=2", className: "scale-75", invertDark: true, href: "https://linkedin.com/company/blox-space" },
     { name: "BitCuneo", logo: "/Partners/logo-bitcuneo.svg?v=2", href: "https://bitcuneo.it" },
-    { name: "BitBox", logo: "/Partners/logo-bitbox.svg?v=2", className: "scale-75", href: "https://bitbox.swiss" },
-    { name: "BitPolito", logo: "/Partners/logo-bitpolito.svg", href: "https://t.me/bitpolito" },
-    { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", className: "scale-75", href: "https://crypto.polito.it/bitcoin" },
+    { name: "BitBox", logo: "/Partners/logo-bitbox.svg?v=2", className: "scale-75", invertDark: true, href: "https://bitbox.swiss" },
+    { name: "BitPolito", logo: "/Partners/logo-bitpolito.svg", invertDark: true, href: "https://t.me/bitpolito" },
+    { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", className: "scale-75", invertDark: true, href: "https://crypto.polito.it/bitcoin" },
     { name: "BTCPay Server Italia", logo: "/Partners/logo-btcpay-server.svg?v=2", href: "https://btcpayserver.org" },
-    { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", href: "https://www.bitcoin4business.it" },
-    { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", className: "scale-75", href: "https://www.taxcare.it" },
+    { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", invertDark: true, href: "https://www.bitcoin4business.it" },
+    { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", className: "scale-75", invertDark: true, href: "https://www.taxcare.it" },
     { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", className: "scale-75", href: "https://www.cluborange.org" },
-    { name: "Fondazione Piemonte Innova", label: "Fondazione\nPiemonte Innova", logo: "/Partners/logo-fondazione-piemonte-innova.png", logoDark: "/Partners/logo-fondazione-piemonte-innova-dark.png", href: "https://piemonteinnova.it" },
-    { name: "Torino Tech Map", logo: "/Partners/logo-totem.png", logoDark: "/Partners/logo-totem-dark.png", href: "https://torinotechmap.it" },
+    { name: "Fondazione Piemonte Innova", label: "Fondazione\nPiemonte Innova", logo: "/Partners/logo-fondazione-piemonte-innova.png?v=2", logoDark: "/Partners/logo-fondazione-piemonte-innova-dark.png", href: "https://piemonteinnova.it" },
+    { name: "ToTeM — Torino Tech Map", logo: "/Partners/logo-totem.png", logoDark: "/Partners/logo-totem-dark.png?v=2", href: "https://torinotechmap.it" },
   ]
 
   const trackRef = useRef<HTMLDivElement>(null)
@@ -137,7 +137,7 @@ export function Partners() {
                       className="text-center block w-full h-full"
                     >
                       <div className="w-full h-24 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img src={partner.logo} draggable={false} alt={`${partner.name} logo`} className={`max-w-full max-h-full object-contain ${partner.logoDark ? 'dark:hidden' : ''} ${partner.className || ''}`} />
+                        <img src={partner.logo} draggable={false} alt={`${partner.name} logo`} className={`max-w-full max-h-full object-contain ${partner.logoDark ? 'dark:hidden' : ''} ${partner.invertDark ? 'dark:brightness-0 dark:invert' : ''} ${partner.className || ''}`} />
                         {partner.logoDark && (
                           <img src={partner.logoDark} draggable={false} alt={`${partner.name} logo`} className={`hidden dark:block max-w-full max-h-full object-contain ${partner.className || ''}`} />
                         )}
