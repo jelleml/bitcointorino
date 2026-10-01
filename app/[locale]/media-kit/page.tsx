@@ -234,18 +234,20 @@ export default function MediaKitPage() {
                               download
                               className="flex items-center justify-between gap-4 rounded-md border-2 border-border px-4 py-2.5 hover:border-bitcoin-blue transition-colors"
                             >
-                              <span className="flex items-center gap-3">
+                              <span className="flex items-center gap-3 min-w-0">
                                 <span
-                                  className="h-4 w-4 rounded-full border border-gray-400"
+                                  className="h-4 w-4 flex-shrink-0 rounded-full border border-gray-400"
                                   style={swatchStyle(file.swatch)}
                                   aria-hidden="true"
                                 />
-                                <span className="font-medium">{t(`logos.variants.${file.variant}`)}</span>
-                                <span className="text-sm text-muted-foreground">
-                                  {t(`logos.backgrounds.${file.bg}`)}
+                                <span className="flex flex-wrap items-baseline gap-x-3 min-w-0">
+                                  <span className="font-medium">{t(`logos.variants.${file.variant}`)}</span>
+                                  <span className="text-sm text-muted-foreground">
+                                    {t(`logos.backgrounds.${file.bg}`)}
+                                  </span>
                                 </span>
                               </span>
-                              <span className="flex items-center gap-2 text-sm text-bitcoin-blue font-medium">
+                              <span className="flex flex-shrink-0 items-center gap-2 text-sm text-bitcoin-blue font-medium">
                                 {file.file.split('.').pop()?.toUpperCase()}
                                 <Download className="h-4 w-4" aria-hidden="true" />
                               </span>
@@ -333,18 +335,18 @@ export default function MediaKitPage() {
               <p className="text-lg text-muted-foreground">{t('editorial.description')}</p>
             </div>
             <div className="bg-card rounded-lg border-2 border-border overflow-hidden">
-              <table className="w-full text-left">
+              <table className="w-full table-fixed text-left">
                 <thead className="bg-gray-50 dark:bg-white/5">
                   <tr>
-                    <th scope="col" className="px-6 py-4 font-bold">{t('editorial.use')}</th>
-                    <th scope="col" className="px-6 py-4 font-bold">{t('editorial.avoid')}</th>
+                    <th scope="col" className="px-4 md:px-6 py-4 font-bold">{t('editorial.use')}</th>
+                    <th scope="col" className="px-4 md:px-6 py-4 font-bold">{t('editorial.avoid')}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {editorial.map((row, index) => (
                     <tr key={index} className="border-t-2 border-border">
-                      <td className="px-6 py-4">{row.use}</td>
-                      <td className="px-6 py-4 text-muted-foreground">{row.avoid}</td>
+                      <td className="px-4 md:px-6 py-4 break-words">{row.use}</td>
+                      <td className="px-4 md:px-6 py-4 break-words text-muted-foreground">{row.avoid}</td>
                     </tr>
                   ))}
                 </tbody>
