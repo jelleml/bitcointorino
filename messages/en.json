@@ -495,12 +495,6 @@
       "subject": "Bitcoin Torino Help Desk request",
       "body": "Who you are (merchant, business, professional, organisation/association, private individual):\n\nDescribe the problem you are facing:\n\nTools involved (wallet, app, POS, provider):\n\nPreference for a possible session (online / in person):\n\n---\nNever include seed phrases, private keys or passwords in this email."
     },
-    "hero": {
-      "title": "Bitcoin Torino Help Desk",
-      "subtitle": "A free Bitcoin guidance service for people dealing with a real, ongoing problem. Tell us what is happening and we will help you understand what went on, what your options are and who to turn to.",
-      "cta": "Tell us your problem",
-      "free": "Free for everyone, members and non-members"
-    },
     "what": {
       "title": "What the Help Desk is",
       "description": "The Help Desk deals with real, ongoing problems, not basic training. It provides three things:",
@@ -518,7 +512,9 @@
           "description": "When a request falls outside our scope, we point you to the right people."
         }
       ],
-      "notConsulting": "The Help Desk is not a consulting service, neither technical nor financial. It is run by the association's members, on a voluntary and free basis. No session is recorded and no data is collected."
+      "notConsulting": "The Help Desk is not a consulting service, neither technical nor financial. It is run by the association's members, on a voluntary and free basis. No session is recorded and no data is collected.",
+      "cta": "Tell us your problem",
+      "free": "Free for everyone, members and non-members"
     },
     "audience": {
       "title": "Who it is for",

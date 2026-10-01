@@ -8,7 +8,6 @@ import {
   Handshake,
   HeartHandshake,
   Info,
-  LifeBuoy,
   Mail,
   ShieldAlert,
   Store,
@@ -53,38 +52,12 @@ export default function SportelloPage() {
 
   return (
     <main className="min-h-screen">
-      {/* Hero */}
-      <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-white/10 p-4 rounded-full">
-                <LifeBuoy className="h-12 w-12" aria-hidden="true" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {t('hero.title')}
-            </h1>
-            <p className="text-lg md:text-xl text-gray-100 mb-8">
-              {t('hero.subtitle')}
-            </p>
-            <Button asChild size="lg" className="text-base text-black bg-white hover:bg-gray-300">
-              <a href={mailto}>
-                <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
-                {t('hero.cta')}
-              </a>
-            </Button>
-            <p className="mt-4 text-sm text-white/70">{t('hero.free')}</p>
-          </div>
-        </div>
-      </section>
-
       {/* Cos'è lo Sportello */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('what.title')}</h2>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('what.title')}</h1>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 {t('what.description')}
               </p>
@@ -113,6 +86,16 @@ export default function SportelloPage() {
             <div className="mt-8 flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 dark:border-white/20 dark:bg-white/5 p-6">
               <Info className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
               <p className="text-muted-foreground">{t('what.notConsulting')}</p>
+            </div>
+
+            <div className="mt-10 text-center">
+              <Button asChild size="lg" className="text-base bg-bitcoin-blue text-white hover:bg-bitcoin-blue-dark dark:bg-white dark:text-bitcoin-blue-dark dark:hover:bg-gray-200">
+                <a href={mailto}>
+                  <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
+                  {t('what.cta')}
+                </a>
+              </Button>
+              <p className="mt-4 text-sm text-muted-foreground">{t('what.free')}</p>
             </div>
           </div>
         </div>

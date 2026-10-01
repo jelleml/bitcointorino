@@ -495,12 +495,6 @@
       "subject": "Richiesta Sportello Bitcoin Torino",
       "body": "Chi sei (esercente, impresa, professionista, ente/associazione, privato):\n\nDescrivi il problema che stai riscontrando:\n\nStrumenti coinvolti (wallet, app, POS, fornitore):\n\nPreferenza per l'eventuale sessione (online / in presenza):\n\n---\nNon inserire mai seed, chiavi private o password in questa mail."
     },
-    "hero": {
-      "title": "Sportello Bitcoin Torino",
-      "subtitle": "Un servizio gratuito di orientamento su Bitcoin per chi ha un problema concreto già in corso. Ci scrivi cosa sta succedendo, ti aiutiamo a capire cosa è successo, quali opzioni hai e a chi rivolgerti.",
-      "cta": "Scrivici il tuo problema",
-      "free": "Gratuito per tutti, soci e non soci"
-    },
     "what": {
       "title": "Cos'è lo Sportello",
       "description": "Lo Sportello si occupa di problemi concreti già in corso, non di formazione di base. Produce tre cose:",
@@ -518,7 +512,9 @@
           "description": "Quando la richiesta esce dal nostro perimetro, ti indichiamo a chi rivolgerti."
         }
       ],
-      "notConsulting": "Lo Sportello non è un servizio di consulenza, né tecnica né finanziaria. È gestito dai soci dell'associazione, a titolo volontario e gratuito. Nessuna sessione viene registrata e nessun dato viene raccolto."
+      "notConsulting": "Lo Sportello non è un servizio di consulenza, né tecnica né finanziaria. È gestito dai soci dell'associazione, a titolo volontario e gratuito. Nessuna sessione viene registrata e nessun dato viene raccolto.",
+      "cta": "Scrivici il tuo problema",
+      "free": "Gratuito per tutti, soci e non soci"
     },
     "audience": {
       "title": "A chi si rivolge",
