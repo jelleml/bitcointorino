@@ -518,7 +518,7 @@
           "description": "When a request falls outside our scope, we point you to the right people."
         }
       ],
-      "notConsulting": "The Help Desk is not a consulting service, neither technical nor financial."
+      "notConsulting": "The Help Desk is not a consulting service, neither technical nor financial. It is run by the association's members, on a voluntary and free basis. No session is recorded and no data is collected."
     },
     "audience": {
       "title": "Who it is for",

@@ -518,7 +518,7 @@
           "description": "Quando la richiesta esce dal nostro perimetro, ti indichiamo a chi rivolgerti."
         }
       ],
-      "notConsulting": "Lo Sportello non è un servizio di consulenza, né tecnica né finanziaria."
+      "notConsulting": "Lo Sportello non è un servizio di consulenza, né tecnica né finanziaria. È gestito dai soci dell'associazione, a titolo volontario e gratuito. Nessuna sessione viene registrata e nessun dato viene raccolto."
     },
     "audience": {
       "title": "A chi si rivolge",
