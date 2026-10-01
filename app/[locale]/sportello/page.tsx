@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 import {
   ArrowRight,
-  BookOpen,
   Building2,
   Check,
   FileText,
@@ -19,7 +18,6 @@ import {
 } from "lucide-react"
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
-import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
 
 const SPORTELLO_EMAIL = "bitcoin.torino@proton.me"
@@ -64,9 +62,6 @@ export default function SportelloPage() {
                 <LifeBuoy className="h-12 w-12" aria-hidden="true" />
               </div>
             </div>
-            <p className="text-sm md:text-base uppercase tracking-wide text-white/70 mb-4">
-              {t('hero.eyebrow')}
-            </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               {t('hero.title')}
             </h1>
@@ -115,20 +110,9 @@ export default function SportelloPage() {
               })}
             </div>
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 dark:border-white/20 dark:bg-white/5 p-6">
-                <Info className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
-                <p className="text-muted-foreground">{t('what.notConsulting')}</p>
-              </div>
-              <div className="flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 dark:border-white/20 dark:bg-white/5 p-6">
-                <BookOpen className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
-                <p className="text-muted-foreground">
-                  {t('what.beginners')}{' '}
-                  <Link href="/eventi" className="font-medium text-bitcoin-blue hover:underline">
-                    {t('what.beginnersLink')} →
-                  </Link>
-                </p>
-              </div>
+            <div className="mt-8 flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 dark:border-white/20 dark:bg-white/5 p-6">
+              <Info className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
+              <p className="text-muted-foreground">{t('what.notConsulting')}</p>
             </div>
           </div>
         </div>
