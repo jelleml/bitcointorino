@@ -23,7 +23,7 @@ export function Hero() {
 
           {/* Badge prossimo evento */}
           <a
-            href="https://luma.com/f4w3ramr"
+            href="https://luma.com/fdgrol0p"
             target="_blank"
             rel="noopener noreferrer"
             className="glass group mb-10 inline-flex max-w-full items-center gap-3 rounded-full py-2 pl-3 pr-4 sm:py-1.5 sm:pl-2 text-sm text-white/90 animate-fade-up hover:bg-white/15 transition-colors"
