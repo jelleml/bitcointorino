@@ -7,7 +7,7 @@
     "title": "About Us",
     "divulgation": {
       "title": "Education",
-      "description": "We support Bitcoin-related educational activities and cultural events."
+      "description": "We organise and support Bitcoin-related educational activities and cultural events."
     },
     "adoption": {
       "title": "Adoption",
@@ -15,7 +15,7 @@
     },
     "promotion": {
       "title": "Promotion",
-      "description": "We aggregate all Bitcoin-related businesses and initiatives in Turin."
+      "description": "We bring together all Bitcoin-related businesses and initiatives active in the Turin area."
     },
     "connection": {
       "title": "Networking",
@@ -28,6 +28,7 @@
   "Navbar": {
     "ecosystem": "Ecosystem",
     "events": "Events",
+    "faq": "FAQ",
     "people": "People",
     "activities": "Merchants",
     "spaces": "Spaces",
@@ -256,7 +257,7 @@
   },
   "FAQ": {
     "title": "Frequently Asked Questions",
-    "description": "Find answers to the most common questions about Bitcoin Torino",
+    "description": "Find answers to the most common questions about Bitcoin Torino.",
     "ctaTitle": "Didn't find the answer you were looking for?",
     "ctaDescription": "Contact us directly or join our Telegram group to ask your questions to the community.",
     "sendEmail": "Send an Email",
@@ -276,8 +277,7 @@
     "fee": {
       "title": "Membership fee",
       "amount": "€50 / year",
-      "description": "The fee covers the current membership year and goes directly to the association's activities: events, cultural initiatives and educational work across the territory.",
-      "validity": "The fee is valid for the calendar year in which it is paid."
+      "description": "The fee covers the current membership year and goes directly to the association's activities: events, cultural initiatives and educational work across the territory."
     },
     "benefits": {
       "title": "What you get as a member",
@@ -312,24 +312,17 @@
         "description": "On top of the observer member's benefits, you actively contribute to the life of the association. You can choose to lend a hand on one or more activities already planned, or to propose new initiatives."
       }
     },
-    "meetings": {
-      "title": "Meetings",
-      "items": [
-        "All members take part in the two half-yearly plenary meetings, the moments of discussion and update shared by the whole association.",
-        "Operational members also take part in working meetings, called as needed and dedicated to the activities under way."
-      ]
-    },
     "join": {
       "title": "How to apply",
-      "description": "Joining the association takes two steps:",
+      "description": "Joining the association takes four steps:",
       "steps": [
         "Fill in the application",
-        "Wait for approval from the Board of Directors"
+        "Wait for approval from the Board of Directors",
+        "Pay the membership fee",
+        "Access the members' channels"
       ],
       "formLink": "Form",
-      "after": "Once your application is approved, you will receive the instructions to pay the fee and to access the members' channels.",
-      "noteLabel": "Note:",
-      "note": "no document is required to apply. The data entered in the form is provided under the responsibility of whoever declares it; the Association takes no responsibility for its accuracy."
+      "note": "No document is required to apply. The data entered in the form is provided under the responsibility of whoever declares it; the Association takes no responsibility for its accuracy."
     }
   },
   "MediaKit": {
@@ -344,18 +337,17 @@
       "eyebrow": "Press and partners",
       "title": "Media Kit",
       "subtitle": "Logos, colours, boilerplate and contacts to present Bitcoin Torino accurately.",
-      "cta": "Download the full kit",
-      "contact": "Contact us"
+      "cta": "Download the full kit"
     },
     "about": {
-      "title": "About us",
+      "title": "Descriptions",
       "description": "Ready-to-use copy for articles, press releases, event programmes and partner materials.",
       "short": {
-        "title": "Short description",
+        "title": "Short",
         "text": "Associazione Bitcoin Torino brings together Turin's Bitcoin ecosystem and connects the city's businesses and institutions with industry players in Italy and abroad."
       },
       "long": {
-        "title": "Extended description",
+        "title": "Extended",
         "text": "Associazione Bitcoin Torino is a non-profit association founded in Turin in March 2026. It promotes the understanding and adoption of Bitcoin and of technologies that protect individual freedom and sovereignty. The association coordinates and represents Turin's Bitcoin ecosystem, made up of 31 businesses that accept bitcoin payments, 8 communities and several academic and entrepreneurial projects. It organises events and educational activities, supports businesses and individuals in the correct use and self-custody of bitcoin, and fosters dialogue between communities, industry players and city institutions. It connects the city's businesses and institutions with industry players in Italy and abroad, with the goal of making Bitcoin a pillar of the city's economy."
       }
     },
@@ -383,8 +375,8 @@
           "value": "Emile Jellinek"
         },
         {
-          "label": "Website",
-          "value": "bitcointorino.to"
+          "label": "Tax code",
+          "value": "97924420017"
         }
       ]
     },
@@ -450,7 +442,7 @@
     "typography": {
       "title": "Typography: Inter",
       "description": "Inter is the only typeface in use, for headings and body text. Headings in Bold with tight tracking, body in Regular.",
-      "link": "Get Inter on Google Fonts"
+      "link": "Get it on Google Fonts"
     },
     "editorial": {
       "title": "Writing about us",
@@ -471,14 +463,15 @@
           "avoid": "crypto, blockchain, Web3"
         },
         {
-          "use": "Bitcoin Observatory @ Politecnico di Torino",
+          "use": "Bitcoin Observatory of the Politecnico di Torino",
           "avoid": "Blockchain Observatory"
         }
       ]
     },
     "press": {
-      "title": "Press contacts",
-      "description": "For interviews, material requests, event participation or partnerships, write to us."
+      "title": "Contacts",
+      "email": "Email",
+      "website": "Website"
     }
   },
   "SportelloCta": {
@@ -609,15 +602,12 @@
     "limits": {
       "title": "What we don't do",
       "items": [
+        "We do not provide consulting services, either technical or financial",
         "We do not operate on third-party devices, wallets or accounts",
         "We never see, type or store seed phrases or private keys",
         "We do not hold funds, collect payments on behalf of others or host infrastructure",
-        "We do not recover lost funds or intervene in stuck situations",
         "We do not provide tax interpretation or fill in tax returns",
-        "We do not tell you how much to buy, hold or when to convert",
-        "We do not handle sign-ups with third-party providers or collect documents",
-        "We give no guarantees on how third-party services work",
-        "We do not deal with assets other than bitcoin"
+        "We do not handle sign-ups with third-party providers or collect documents"
       ]
     },
     "partners": {
@@ -647,8 +637,16 @@
         "Whether you prefer an online or in-person session"
       ],
       "warning": "Never send us seed phrases, private keys or passwords. Nobody at the Help Desk will ever ask for them.",
-      "cta": "Email the Help Desk",
-      "disclaimer": "The information provided is for educational and informational purposes and does not constitute professional advice of any kind. Decisions and operations remain the responsibility of whoever contacts the Help Desk."
+      "cta": "Send an email",
+      "copy": "Copy email",
+      "copied": "Copied",
+      "disclaimer": "The information provided is for informational purposes and does not constitute professional advice of any kind. Decisions and operations remain the responsibility of whoever contacts the Help Desk."
     }
+  },
+  "NotFound": {
+    "eyebrow": "Error",
+    "heading": "Error 404: page not found",
+    "subtitle": "This page does not exist: it may have moved, or the link is wrong.",
+    "home": "Back to Home"
   }
 }

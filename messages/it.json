@@ -7,7 +7,7 @@
     "title": "Chi Siamo",
     "divulgation": {
       "title": "Divulgazione",
-      "description": "Supportiamo attività formative ed eventi culturali."
+      "description": "Organizziamo e supportiamo attività formative ed eventi culturali."
     },
     "adoption": {
       "title": "Adozione",
@@ -15,7 +15,7 @@
     },
     "promotion": {
       "title": "Promozione",
-      "description": "Aggreghiamo tutte le attività legate a Bitcoin a Torino."
+      "description": "Aggreghiamo tutte le attività legate a Bitcoin attive sul territorio torinese."
     },
     "connection": {
       "title": "Connessione",
@@ -28,6 +28,7 @@
   "Navbar": {
     "ecosystem": "Ecosistema",
     "events": "Eventi",
+    "faq": "FAQ",
     "people": "Persone",
     "activities": "Commercianti",
     "spaces": "Spazi",
@@ -256,7 +257,7 @@
   },
   "FAQ": {
     "title": "Domande Frequenti",
-    "description": "Trova le risposte alle domande più comuni su Bitcoin Torino",
+    "description": "Trova le risposte alle domande più comuni su Bitcoin Torino.",
     "ctaTitle": "Non hai trovato la risposta che cercavi?",
     "ctaDescription": "Contattaci direttamente o unisciti al gruppo Telegram per fare le tue domande alla community.",
     "sendEmail": "Invia una Email",
@@ -270,14 +271,13 @@
     "hero": {
       "eyebrow": "Onboarding",
       "title": "Entra in Bitcoin Torino",
-      "subtitle": "Bitcoin Torino è l'associazione che unisce la community Bitcoin torinese: progetti, aziende, istituzioni e cittadini che vogliono far crescere l'ecosistema Bitcoin in città. Diventare socio significa far parte di questo percorso.",
+      "subtitle": "Diventa socio per contribuire allo sviluppo dell'ecosistema Bitcoin torinese.",
       "cta": "Compila la richiesta"
     },
     "fee": {
       "title": "Quota associativa",
       "amount": "50€ / anno",
-      "description": "La quota copre l'anno sociale in corso e contribuisce direttamente alle attività dell'associazione: eventi, iniziative culturali e attività di divulgazione sul territorio.",
-      "validity": "La validità della quota corrisponde all'anno solare in cui viene versata."
+      "description": "La quota vale per l'anno solare in corso e contribuisce direttamente alle attività dell'associazione."
     },
     "benefits": {
       "title": "Cosa ottieni come socio",
@@ -291,7 +291,7 @@
           "description": "Condizioni riservate sugli eventi organizzati dall'associazione."
         },
         {
-          "title": "Sconti su prodotti/servizi partner",
+          "title": "Sconti dai partner",
           "description": "Accesso a condizioni agevolate presso le attività convenzionate con Bitcoin Torino."
         },
         {
@@ -302,34 +302,27 @@
     },
     "participation": {
       "title": "Due modalità di partecipazione",
-      "description": "Diventare socio non significa un impegno unico e fisso: puoi scegliere il livello di coinvolgimento che ti è più adatto e cambiare nel tempo.",
+      "description": "Scegli il livello di coinvolgimento che ti è più adatto e cambia quando vuoi.",
       "observer": {
         "title": "Socio osservatore",
-        "description": "Segui le attività dell'associazione, partecipi alla vita sociale e mantieni il tuo diritto di voto in Assemblea, senza impegno operativo diretto. È gradito un contributo a livello di condivisione di idee e contatti."
+        "description": "Segui le attività dell'associazione, partecipi alla vita sociale e mantieni il tuo diritto di voto in Assemblea, che si riunisce due volte l'anno. Non hai impegni operativi, è gradito un contributo a livello di condivisione di idee e contatti."
       },
       "operational": {
         "title": "Socio operativo",
-        "description": "Oltre ai benefici del socio osservatore, contribuisci attivamente alla vita dell'associazione. Puoi scegliere di dare una mano su una o più attività già in programma o proporre nuove iniziative."
+        "description": "Oltre ai benefici del socio osservatore, contribuisci alla vita dell'associazione a livello operativo. Puoi scegliere di dare una mano su una o più attività già in programma o proporre nuove iniziative."
       }
-    },
-    "meetings": {
-      "title": "Riunioni",
-      "items": [
-        "Tutti i soci partecipano alle due plenarie semestrali, i momenti di confronto e aggiornamento comuni a tutta l'associazione.",
-        "I soci operativi partecipano inoltre a riunioni operative, convocate secondo necessità, dedicate al lavoro sulle attività in corso."
-      ]
     },
     "join": {
       "title": "Come iscriverti",
-      "description": "L'ingresso in associazione avviene in due passaggi:",
+      "description": "L'ingresso in associazione avviene in quattro passaggi:",
       "steps": [
         "Compila la richiesta",
-        "Attendi l'approvazione da parte del Consiglio Direttivo"
+        "Attendi l'approvazione del Consiglio Direttivo",
+        "Versa la quota associativa",
+        "Accedi ai canali riservati ai soci"
       ],
       "formLink": "Form",
-      "after": "Una volta approvata la richiesta, riceverai le istruzioni per il pagamento della quota e per l'accesso ai canali riservati ai soci.",
-      "noteLabel": "Nota:",
-      "note": "per l'iscrizione non è richiesta la presentazione di alcun documento. I dati inseriti nel form sono forniti sotto la responsabilità di chi li dichiara; l'Associazione non si assume responsabilità circa la loro veridicità."
+      "note": "Per l'iscrizione non serve presentare alcun documento. I dati inseriti nel form sono forniti sotto la responsabilità di chi li dichiara; l'Associazione non si assume responsabilità circa la loro veridicità."
     }
   },
   "MediaKit": {
@@ -343,19 +336,18 @@
     "hero": {
       "eyebrow": "Stampa e partner",
       "title": "Media Kit",
-      "subtitle": "Logo, colori, testi istituzionali e contatti per raccontare Bitcoin Torino in modo corretto.",
-      "cta": "Scarica il kit completo",
-      "contact": "Contattaci"
+      "subtitle": "Logo, colori, testi, linee guida e contatti per raccontare Bitcoin Torino correttamente.",
+      "cta": "Scarica il kit completo"
     },
     "about": {
-      "title": "Chi siamo",
+      "title": "Descrizioni",
       "description": "Testi pronti da usare in articoli, comunicati, programmi di eventi e materiali dei partner.",
       "short": {
-        "title": "Descrizione breve",
+        "title": "Breve",
         "text": "Associazione Bitcoin Torino aggrega l'ecosistema Bitcoin torinese e mette in contatto imprese e istituzioni della città con realtà del settore, italiane ed estere."
       },
       "long": {
-        "title": "Descrizione estesa",
+        "title": "Estesa",
         "text": "Associazione Bitcoin Torino è un'associazione senza scopo di lucro costituita a Torino nel marzo 2026. Promuove la conoscenza e l'adozione di Bitcoin e delle tecnologie che difendono la libertà e la sovranità degli individui. L'associazione coordina e rappresenta l'ecosistema Bitcoin torinese, composto da 31 attività commerciali che accettano pagamenti in bitcoin, 8 community e diversi progetti accademici e imprenditoriali. Organizza eventi e attività formative, supporta aziende e privati nel corretto utilizzo e nell'autocustodia di bitcoin e favorisce il dialogo tra community, realtà del settore e istituzioni cittadine. Mette in contatto imprese e istituzioni della città con realtà del settore, italiane ed estere, con l'obiettivo di rendere Bitcoin una colonna portante dell'economia cittadina."
       }
     },
@@ -383,8 +375,8 @@
           "value": "Emile Jellinek"
         },
         {
-          "label": "Sito",
-          "value": "bitcointorino.to"
+          "label": "Codice fiscale",
+          "value": "97924420017"
         }
       ]
     },
@@ -450,7 +442,7 @@
     "typography": {
       "title": "Tipografia: Inter",
       "description": "Inter è l'unico font in uso, per titoli e testi. Titoli in Bold con spaziatura ridotta, testi in Regular.",
-      "link": "Scarica Inter da Google Fonts"
+      "link": "Scarica da Google Fonts"
     },
     "editorial": {
       "title": "Come scrivere di noi",
@@ -471,19 +463,20 @@
           "avoid": "crypto, blockchain, Web3"
         },
         {
-          "use": "Osservatorio Bitcoin @ Politecnico di Torino",
+          "use": "Osservatorio Bitcoin del Politecnico di Torino",
           "avoid": "Osservatorio Blockchain"
         }
       ]
     },
     "press": {
-      "title": "Contatti stampa",
-      "description": "Per interviste, richieste di materiali, partecipazione a eventi o collaborazioni, scrivici."
+      "title": "Contatti",
+      "email": "Email",
+      "website": "Sito"
     }
   },
   "SportelloCta": {
     "title": "Sportello Bitcoin Torino",
-    "description": "Servizio gratuito di orientamento e supporto aperto a esercenti, imprese, professionisti, enti e privati cittadini. Ci racconti cosa sta succedendo o cosa vorresti fare, noi ti aiutiamo a capire le opzioni e a chi rivolgerti.",
+    "description": "Raccontaci cosa sta succedendo o cosa vorresti fare, noi ti aiutiamo gratuitamente a capire come muoverti e a chi rivolgerti.",
     "cta": "Richiedi supporto"
   },
   "Sportello": {
@@ -511,7 +504,7 @@
           "description": "Quando la richiesta esce dal nostro perimetro, ti indichiamo a chi rivolgerti."
         }
       ],
-      "notConsulting": "Lo Sportello non è un servizio di consulenza, né tecnica né finanziaria. È gestito dai soci dell'associazione, a titolo volontario e gratuito. Nessuna sessione viene registrata e nessun dato viene raccolto.",
+      "notConsulting": "Lo Sportello non è un servizio di consulenza, né tecnica né finanziaria. È gestito dai soci dell'associazione, a titolo volontario e gratuito. Non registriamo sessioni e non raccogliamo dati.",
       "cta": "Scrivici il tuo problema",
       "free": "Gratuito per tutti, soci e non soci"
     },
@@ -602,22 +595,19 @@
         },
         {
           "label": "Sede",
-          "value": "Online o in presenza, comunicata alla conferma"
+          "value": "Online o in presenza"
         }
       ]
     },
     "limits": {
       "title": "Cosa non facciamo",
       "items": [
+        "Non forniamo servizi di consulenza, né tecnica né finanziaria",
         "Non operiamo su dispositivi, wallet o account di terzi",
-        "Non vediamo, non digitiamo e non conserviamo seed o chiavi private",
-        "Non deteniamo fondi, non incassiamo per conto terzi, non ospitiamo infrastruttura",
-        "Non recuperiamo fondi persi e non interveniamo su situazioni bloccate",
+        "Non vediamo, non digitiamo e non conserviamo chiavi private",
+        "Non deteniamo fondi, non incassiamo né gestiamo infrastruttura per conto terzi",
         "Non forniamo interpretazione fiscale né compiliamo dichiarazioni",
-        "Non indichiamo quanto acquistare, quanto trattenere o quando convertire",
-        "Non seguiamo l'iscrizione presso fornitori terzi e non raccogliamo documenti",
-        "Non rilasciamo garanzie sul funzionamento di servizi di terzi",
-        "Non trattiamo asset diversi da bitcoin"
+        "Non seguiamo la relazione con fornitori terzi"
       ]
     },
     "partners": {
@@ -625,21 +615,21 @@
       "items": [
         {
           "title": "Mai un solo nome",
-          "description": "Forniamo almeno due nominativi per categoria, in ordine alfabetico. Un solo nome sarebbe una raccomandazione, più nomi sono un orientamento."
+          "description": "Forniamo più nominativi per ogni categoria, fornendo un servizio di orientamento."
         },
         {
           "title": "Nessun compenso",
-          "description": "Bitcoin Torino non percepisce commissioni, provvigioni o quote di ricavo dai soggetti indicati, in nessuna forma."
+          "description": "Non percepiamo commissioni, provvigioni o quote di ricavo dai soggetti indicati."
         },
         {
           "title": "Rapporti dichiarati",
-          "description": "Se un soggetto indicato è partner, sostenitore o finanziatore dell'associazione, te lo diciamo durante la sessione."
+          "description": "Comunichiamo se un soggetto indicato è partner dell'associazione."
         }
       ]
     },
     "contact": {
       "title": "Raccontaci il tuo problema",
-      "description": "Scrivici una mail indicando chi sei e cosa stai riscontrando. Più dettagli ci dai, più velocemente possiamo orientarti.",
+      "description": "Scrivici fornendo più dettagli possibili sulla tua situazione.",
       "checklist": [
         "Chi sei: esercente, impresa, professionista, ente o privato",
         "Il problema che stai riscontrando e da quando",
@@ -647,8 +637,16 @@
         "Se preferisci una sessione online o in presenza"
       ],
       "warning": "Non inviarci mai seed, chiavi private o password. Nessuno dello Sportello te li chiederà.",
-      "cta": "Invia una mail allo Sportello",
-      "disclaimer": "Le informazioni fornite hanno finalità divulgativa e formativa e non costituiscono consulenza professionale di alcun tipo. Le decisioni e le operazioni restano in capo a chi si rivolge allo Sportello."
+      "cta": "Invia una mail",
+      "copy": "Copia email",
+      "copied": "Copiata",
+      "disclaimer": "Le informazioni fornite hanno finalità divulgativa e non costituiscono consulenza professionale di alcun tipo. Le decisioni e le operazioni restano in capo a chi si rivolge allo Sportello."
     }
+  },
+  "NotFound": {
+    "eyebrow": "Errore",
+    "heading": "Errore 404: pagina non trovata",
+    "subtitle": "Questa pagina non esiste: forse è stata spostata, oppure il link è sbagliato.",
+    "home": "Torna alla Home"
   }
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
+import { Reveal } from '@/components/fx/reveal'
 
 // Seconds for one full pass over the partner list
 const LOOP_SECONDS = 40
@@ -11,21 +12,23 @@ const DRAG_THRESHOLD = 5
 export function Partners() {
   const t = useTranslations('Partners');
 
-  // Mock partner logos (in production, these would be actual logo images)
-// ...
+  // height = altezza in px dell'immagine, calcolata perché tutti i loghi abbiano la stessa area visiva:
+  // a parità di area un logo stretto e alto cresce in altezza, uno largo si abbassa; i loghi pieni
+  // (Blox, ToTeM) sono leggermente ridotti, quelli a filo sottile (Osservatorio, BitCuneo, FPI) ingranditi.
+  // Per BitCuneo, BTCPay e Club Orange l'altezza compensa anche il margine trasparente dentro al file.
   const partners = [
-    { name: "Plan B Network", logo: "/Partners/logo-plan-b-network.svg?v=2", href: "https://planb.network" },
-    { name: "Blox Space", logo: "/Partners/logo-blox.svg?v=2", className: "scale-75", invertDark: true, href: "https://linkedin.com/company/blox-space" },
-    { name: "BitCuneo", logo: "/Partners/logo-bitcuneo.svg?v=2", href: "https://bitcuneo.it" },
-    { name: "BitBox", logo: "/Partners/logo-bitbox.svg?v=2", className: "scale-75", invertDark: true, href: "https://bitbox.swiss" },
-    { name: "BitPolito", logo: "/Partners/logo-bitpolito.svg", invertDark: true, href: "https://t.me/bitpolito" },
-    { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", className: "scale-75", invertDark: true, href: "https://crypto.polito.it/bitcoin" },
-    { name: "BTCPay Server Italia", logo: "/Partners/logo-btcpay-server.svg?v=2", href: "https://btcpayserver.org" },
-    { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", invertDark: true, href: "https://www.bitcoin4business.it" },
-    { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", className: "scale-75", invertDark: true, href: "https://www.taxcare.it" },
-    { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", className: "scale-75", href: "https://www.cluborange.org" },
-    { name: "Fondazione Piemonte Innova", label: "Fondazione\nPiemonte Innova", logo: "/Partners/logo-fondazione-piemonte-innova.png?v=2", logoDark: "/Partners/logo-fondazione-piemonte-innova-dark.png", href: "https://piemonteinnova.it" },
-    { name: "ToTeM — Torino Tech Map", logo: "/Partners/logo-totem.png?v=2", href: "https://torinotechmap.it" },
+    { name: "Plan B Network", logo: "/Partners/logo-plan-b-network.svg?v=2", height: 90, href: "https://planb.network" },
+    { name: "Blox Space", logo: "/Partners/logo-blox.svg?v=2", height: 66, invertDark: true, href: "https://linkedin.com/company/blox-space" },
+    { name: "BitCuneo", logo: "/Partners/logo-bitcuneo.svg?v=2", height: 93, href: "https://bitcuneo.it" },
+    { name: "BitBox", logo: "/Partners/logo-bitbox.svg?v=2", height: 74, invertDark: true, href: "https://bitbox.swiss" },
+    { name: "BitPolito", logo: "/Partners/logo-bitpolito.svg", height: 66, invertDark: true, href: "https://t.me/bitpolito" },
+    { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", height: 74, invertDark: true, href: "https://crypto.polito.it/bitcoin" },
+    { name: "BTCPay Server Italia", logo: "/Partners/logo-btcpay-server.svg?v=2", height: 96, href: "https://btcpayserver.org" },
+    { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", height: 76, invertDark: true, href: "https://www.bitcoin4business.it" },
+    { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", height: 74, invertDark: true, href: "https://www.taxcare.it" },
+    { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", height: 74, href: "https://www.cluborange.org" },
+    { name: "Fondazione Piemonte Innova", label: "Fondazione\nPiemonte Innova", logo: "/Partners/logo-fondazione-piemonte-innova.png?v=3", height: 52, href: "https://piemonteinnova.it" },
+    { name: "ToTeM — Torino Tech Map", logo: "/Partners/logo-totem.png?v=2", height: 60, href: "https://torinotechmap.it" },
   ]
 
   const trackRef = useRef<HTMLDivElement>(null)
@@ -94,18 +97,19 @@ export function Partners() {
   return (
     <section
       id="partner"
-      className="pt-16 md:pt-[114px] pb-16 md:pb-[164px] bg-gray-50 dark:bg-muted scroll-mt-16"
+      className="relative isolate overflow-hidden py-16 md:py-32 bg-gray-50 dark:bg-muted scroll-mt-16"
     >
+      <div aria-hidden="true" className="dot-pattern absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t('title')}
+        <Reveal className="text-center mb-14">
+          <h2 className="text-3xl md:text-6xl font-bold tracking-tight">
+            <span className="text-gradient">{t('title')}</span>
           </h2>
-        </div>
+        </Reveal>
 
         {/* Two identical copies side by side: translating by -50% loops seamlessly */}
         <div
-          className="relative overflow-hidden select-none cursor-grab active:cursor-grabbing touch-pan-y motion-reduce:cursor-auto [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
+          className="relative overflow-hidden py-3 select-none cursor-grab active:cursor-grabbing touch-pan-y motion-reduce:cursor-auto [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
           onMouseEnter={() => { paused.current = true }}
           onMouseLeave={() => { paused.current = false }}
           onFocus={() => { paused.current = true }}
@@ -126,7 +130,7 @@ export function Partners() {
                 {partners.map((partner) => (
                   <li
                     key={partner.name}
-                    className="w-48 shrink-0 flex items-center justify-center p-6 bg-gray-50 dark:bg-card rounded-lg border-2 border-gray-200 dark:border-border hover:border-bitcoin-blue transition-colors group"
+                    className="w-48 shrink-0 flex items-center justify-center p-6 bg-white/80 dark:bg-card/70 backdrop-blur rounded-2xl border border-gray-200 dark:border-border shadow-sm hover:border-bitcoin-blue/50 hover:shadow-xl hover:shadow-bitcoin-blue/15 hover:-translate-y-1 transition-all duration-300 group"
                   >
                     <a
                       href={partner.href}
@@ -137,10 +141,13 @@ export function Partners() {
                       className="text-center block w-full h-full"
                     >
                       <div className="w-full h-24 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img src={partner.logo} draggable={false} alt={`${partner.name} logo`} className={`max-w-full max-h-full object-contain ${partner.logoDark ? 'dark:hidden' : ''} ${partner.invertDark ? 'dark:brightness-0 dark:invert' : ''} ${partner.className || ''}`} />
-                        {partner.logoDark && (
-                          <img src={partner.logoDark} draggable={false} alt={`${partner.name} logo`} className={`hidden dark:block max-w-full max-h-full object-contain ${partner.className || ''}`} />
-                        )}
+                        <img
+                          src={partner.logo}
+                          draggable={false}
+                          alt={`${partner.name} logo`}
+                          style={{ height: partner.height }}
+                          className={`w-auto max-w-none object-contain ${partner.invertDark ? 'dark:brightness-0 dark:invert' : ''}`}
+                        />
                       </div>
                       <div className="text-sm font-medium text-muted-foreground group-hover:text-bitcoin-blue transition-colors break-words hyphens-auto whitespace-pre-line">
                         {partner.label ?? partner.name}

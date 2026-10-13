@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import {
   Download,
-  FileText,
+  Globe,
   Mail,
   Send,
   Twitter,
@@ -10,7 +10,8 @@ import {
 } from "lucide-react"
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
-import { Button } from "@/components/ui/button"
+import { PageHero } from "@/components/layout/page-hero"
+import { SectionHeading } from "@/components/layout/section-heading"
 import { CopyButton } from "@/components/media-kit/copy-button"
 
 const ASSETS_PATH = "/media-kit"
@@ -98,11 +99,13 @@ const colors = [
   { key: "white", hex: "#FEFEFE", textClass: "text-gray-900" },
 ]
 
+const WEBSITE = "bitcointorino.to"
+
 const socials = [
-  { label: "Telegram", handle: "t.me/bitcointorinochannel", href: "https://t.me/bitcointorinochannel", Icon: Send },
-  { label: "X", handle: "@BitcoinTorino", href: "https://x.com/BitcoinTorino", Icon: Twitter },
-  { label: "Instagram", handle: "@bitcointorino", href: "https://instagram.com/bitcointorino", Icon: Instagram },
-  { label: "LinkedIn", handle: "Bitcoin Torino", href: "https://linkedin.com/company/bitcoin-torino", Icon: Linkedin },
+  { label: "Telegram", handle: "t.me/bitcointorinochannel", Icon: Send },
+  { label: "X", handle: "@BitcoinTorino", Icon: Twitter },
+  { label: "Instagram", handle: "@bitcointorino", Icon: Instagram },
+  { label: "LinkedIn", handle: "Bitcoin Torino", Icon: Linkedin },
 ]
 
 export default function MediaKitPage() {
@@ -110,54 +113,37 @@ export default function MediaKitPage() {
 
   const facts = t.raw('facts.items') as { label: string; value: string }[]
   const editorial = t.raw('editorial.items') as { use: string; avoid: string }[]
+  const contacts = [
+    { label: t('press.email'), handle: PRESS_EMAIL, Icon: Mail },
+    { label: t('press.website'), handle: WEBSITE, Icon: Globe },
+    ...socials,
+  ]
 
   return (
     <main className="min-h-screen">
-      {/* Hero */}
-      <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark dark:from-[#00138E] dark:to-[#00052E] text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm md:text-base uppercase tracking-wide text-white/70 mb-4">
-              {t('hero.eyebrow')}
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {t('hero.title')}
-            </h1>
-            <p className="text-lg md:text-xl text-gray-100 mb-8">
-              {t('hero.subtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="text-base text-black bg-white hover:bg-gray-300">
-                <a href={KIT_ZIP} download>
-                  <Download className="mr-2 h-5 w-5" aria-hidden="true" />
-                  {t('hero.cta')}
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="text-base border-white text-white hover:bg-white hover:text-black">
-                <a href={`mailto:${PRESS_EMAIL}`}>
-                  <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
-                  {t('hero.contact')}
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
+      >
+        <a href={KIT_ZIP} download className="btn-shine btn-orange group inline-flex h-14 items-center justify-center rounded-full px-9 text-base font-bold">
+          <span className="relative z-10 inline-flex items-center">
+            <Download className="mr-2 h-5 w-5" aria-hidden="true" />
+            {t('hero.cta')}
+          </span>
+        </a>
+      </PageHero>
 
       {/* Chi siamo / boilerplate */}
-      <section className="py-20 bg-gray-50 dark:bg-muted">
+      <section className="section-alt py-16 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('about.title')}</h2>
-              <p className="text-lg text-muted-foreground">{t('about.description')}</p>
-            </div>
+            <SectionHeading title={t('about.title')} />
 
             <div className="space-y-6">
               {(['short', 'long'] as const).map((length) => (
                 <div
                   key={length}
-                  className="bg-card rounded-lg p-6 md:p-8 border-2 border-border"
+                  className="spotlight-card p-6 md:p-8"
                 >
                   <div className="flex items-center justify-between gap-4 mb-4">
                     <h3 className="text-xl font-bold">{t(`about.${length}.title`)}</h3>
@@ -176,15 +162,15 @@ export default function MediaKitPage() {
       </section>
 
       {/* Dati chiave */}
-      <section className="py-20">
+      <section className="py-16 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">{t('facts.title')}</h2>
+            <SectionHeading title={t('facts.title')} />
             <dl className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {facts.map((fact, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-lg p-6 border-2 border-border"
+                  className="spotlight-card p-6"
                 >
                   <dt className="text-sm uppercase tracking-wide text-muted-foreground mb-1">{fact.label}</dt>
                   <dd className="flex items-start justify-between gap-4">
@@ -204,19 +190,16 @@ export default function MediaKitPage() {
       </section>
 
       {/* Logo */}
-      <section className="py-20 bg-gray-50 dark:bg-muted">
+      <section className="section-alt py-16 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('logos.title')}</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{t('logos.description')}</p>
-            </div>
+            <SectionHeading title={t('logos.title')} />
 
             <div className="space-y-8">
               {logos.map((logo) => (
                 <div
                   key={logo.key}
-                  className="bg-card rounded-lg border-2 border-border overflow-hidden"
+                  className="spotlight-card"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div
@@ -242,7 +225,7 @@ export default function MediaKitPage() {
                             <a
                               href={`${ASSETS_PATH}/${file.file}`}
                               download
-                              className="flex items-center justify-between gap-4 rounded-md border-2 border-border px-4 py-2.5 hover:border-bitcoin-blue transition-colors"
+                              className="group flex items-center justify-between gap-4 rounded-xl border border-border px-4 py-3 transition-all duration-300 hover:border-bitcoin-blue/50 hover:bg-bitcoin-blue/5 dark:hover:border-[#93C2F7]/40 dark:hover:bg-white/5"
                             >
                               <span className="flex items-center gap-3 min-w-0">
                                 <span
@@ -259,7 +242,7 @@ export default function MediaKitPage() {
                               </span>
                               <span className="flex flex-shrink-0 items-center gap-2 text-sm text-bitcoin-blue font-medium">
                                 {file.file.split('.').pop()?.toUpperCase()}
-                                <Download className="h-4 w-4" aria-hidden="true" />
+                                <Download className="h-4 w-4 transition-transform group-hover:translate-y-0.5" aria-hidden="true" />
                               </span>
                             </a>
                           </li>
@@ -275,19 +258,16 @@ export default function MediaKitPage() {
       </section>
 
       {/* Colori e tipografia */}
-      <section className="py-20">
+      <section className="py-16 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('colors.title')}</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{t('colors.description')}</p>
-            </div>
+            <SectionHeading title={t('colors.title')} />
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {colors.map((color) => (
                 <div
                   key={color.key}
-                  className="bg-card rounded-lg border-2 border-border overflow-hidden"
+                  className="spotlight-card"
                 >
                   <div
                     className={`relative h-28 md:h-36 flex items-end p-4 ${color.textClass}`}
@@ -298,7 +278,7 @@ export default function MediaKitPage() {
                       value={color.hex}
                       label={t('copyHex')}
                       copiedLabel={t('copied')}
-                      className="absolute top-3 right-3 bg-white text-gray-900 dark:bg-white dark:border-gray-200"
+                      className="absolute top-3 right-3 bg-transparent border border-current text-current opacity-70 hover:opacity-100 hover:border-current hover:text-current"
                     />
                   </div>
                   <div className="p-4">
@@ -309,7 +289,7 @@ export default function MediaKitPage() {
               ))}
             </div>
 
-            <div className="mt-12 bg-card rounded-lg p-8 border-2 border-border">
+            <div className="mt-12 spotlight-card p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-xl font-bold mb-2">{t('typography.title')}</h3>
@@ -325,7 +305,7 @@ export default function MediaKitPage() {
                 </div>
                 <div>
                   <p className="text-6xl md:text-7xl font-bold tracking-tight mb-2">Aa</p>
-                  <p className="text-lg">
+                  <p className="text-base md:text-lg">
                     <span className="font-light">Light 300</span> · <span>Regular 400</span> ·{' '}
                     <span className="font-medium">Medium 500</span> · <span className="font-bold">Bold 700</span>
                   </p>
@@ -337,16 +317,13 @@ export default function MediaKitPage() {
       </section>
 
       {/* Linee guida editoriali */}
-      <section className="py-20 bg-gray-50 dark:bg-muted">
+      <section className="section-alt py-16 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('editorial.title')}</h2>
-              <p className="text-lg text-muted-foreground">{t('editorial.description')}</p>
-            </div>
-            <div className="bg-card rounded-lg border-2 border-border overflow-hidden">
+            <SectionHeading title={t('editorial.title')} />
+            <div className="spotlight-card">
               <table className="w-full table-fixed text-left">
-                <thead className="bg-gray-50 dark:bg-white/5">
+                <thead className="bg-bitcoin-blue/5 dark:bg-white/5">
                   <tr>
                     <th scope="col" className="px-4 md:px-6 py-4 font-bold">{t('editorial.use')}</th>
                     <th scope="col" className="px-4 md:px-6 py-4 font-bold">{t('editorial.avoid')}</th>
@@ -354,7 +331,7 @@ export default function MediaKitPage() {
                 </thead>
                 <tbody>
                   {editorial.map((row, index) => (
-                    <tr key={index} className="border-t-2 border-border">
+                    <tr key={index} className="border-t border-border">
                       <td className="px-4 md:px-6 py-4 break-words">{row.use}</td>
                       <td className="px-4 md:px-6 py-4 break-words text-muted-foreground">{row.avoid}</td>
                     </tr>
@@ -366,39 +343,30 @@ export default function MediaKitPage() {
         </div>
       </section>
 
-      {/* Contatti stampa */}
-      <section className="py-20">
+      {/* Contatti */}
+      <section className="py-16 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="p-4 rounded-full bg-bitcoin-blue/10">
-                <FileText className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
-              </div>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('press.title')}</h2>
-            <p className="text-lg text-muted-foreground mb-8">{t('press.description')}</p>
-            <a
-              href={`mailto:${PRESS_EMAIL}`}
-              className="inline-flex items-center justify-center px-6 py-3 bg-bitcoin-blue text-white font-medium rounded-lg hover:bg-bitcoin-blue-dark transition-colors"
-            >
-              <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
-              {PRESS_EMAIL}
-            </a>
-            <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-              {socials.map(({ label, handle, href, Icon }) => (
+            <SectionHeading
+              title={t('press.title')}
+              className="mb-10 md:mb-12"
+            />
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+              {contacts.map(({ label, handle, Icon }) => (
                 <li key={label}>
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 bg-card rounded-lg p-4 border-2 border-border hover:border-bitcoin-blue transition-colors"
-                  >
-                    <Icon className="h-5 w-5 text-bitcoin-blue" aria-hidden="true" />
-                    <span>
+                  <div className="spotlight-card group flex items-center gap-4 p-4">
+                    <span className="icon-tile h-10 w-10 rounded-xl"><Icon className="h-5 w-5" aria-hidden="true" /></span>
+                    <span className="min-w-0 flex-1">
                       <span className="block font-medium">{label}</span>
-                      <span className="block text-sm text-muted-foreground">{handle}</span>
+                      <span className="block truncate text-sm text-muted-foreground">{handle}</span>
                     </span>
-                  </a>
+                    <CopyButton
+                      value={handle}
+                      label={t('copy')}
+                      copiedLabel={t('copied')}
+                      className="shrink-0 rounded-full border p-2"
+                    />
+                  </div>
                 </li>
               ))}
             </ul>

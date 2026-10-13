@@ -17,19 +17,21 @@ export default function Error({
   }, [error])
 
   return (
-    <div className="min-h-[70vh] flex flex-col items-center justify-center p-4 text-center">
-      <div className="bg-red-50 dark:bg-red-950/40 p-6 rounded-full mb-6">
-        <AlertCircle className="h-12 w-12 text-red-600 dark:text-red-400" />
+    <div className="section-alt min-h-[70vh] flex flex-col items-center justify-center p-4 py-24 text-center">
+      <div className="relative mb-8 h-24 w-24 animate-float">
+        <div aria-hidden="true" className="absolute inset-0 rounded-full bg-red-500/20 blur-2xl" />
+        <div className="relative flex h-full w-full items-center justify-center rounded-full border border-red-500/30 bg-red-50 dark:bg-red-950/40">
+          <AlertCircle className="h-11 w-11 text-red-600 dark:text-red-400" />
+        </div>
       </div>
-      <h2 className="text-3xl font-bold mb-4">Qualcosa è andato storto</h2>
-      <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+        <span className="text-gradient">Qualcosa è andato storto</span>
+      </h2>
+      <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-md mx-auto">
         Si è verificato un errore durante il caricamento della pagina. Abbiamo notificato il team tecnico.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Button
-          onClick={() => reset()}
-          className="bg-bitcoin-blue hover:bg-bitcoin-blue/90"
-        >
+        <Button onClick={() => reset()}>
           <RefreshCcw className="mr-2 h-4 w-4" />
           Riprova
         </Button>

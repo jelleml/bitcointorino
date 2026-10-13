@@ -1,8 +1,28 @@
 'use client'
 
 import { Metadata } from "next"
-import { HelpCircle, Plus, Minus } from "lucide-react"
+import { Plus, Minus } from "lucide-react"
 import { useTranslations, useLocale } from 'next-intl'
+import { PageHero } from "@/components/layout/page-hero"
+import { ContactCta } from "@/components/layout/contact-cta"
+import { Reveal } from "@/components/fx/reveal"
+
+const LUMA_URL = "https://luma.com/bitcoin-torino-calendar"
+const TELEGRAM_URL = "https://t.me/bitcointorinochannel"
+const EMAIL_URL = "mailto:bitcoin.torino@proton.me"
+
+function FaqLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const external = href.startsWith("http")
+  return (
+    <a
+      href={href}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      className="font-medium text-bitcoin-blue underline underline-offset-4 hover:no-underline dark:text-bitcoin-blue-light"
+    >
+      {children}
+    </a>
+  )
+}
 
 export default function FAQPage() {
   const t = useTranslations('FAQ');
@@ -14,38 +34,44 @@ export default function FAQPage() {
       questions: [
         {
           question: locale === 'it' ? "Cos'è Bitcoin Torino?" : "What is Bitcoin Torino?",
-          answer: locale === 'it' 
-            ? "Bitcoin Torino è un'associazione dedicata alla promozione e sviluppo dell'ecosistema Bitcoin nella città di Torino e dintorni. Organizziamo eventi, meetup, workshop e supportiamo la crescita della community locale."
-            : "Bitcoin Torino is an association dedicated to the promotion and development of the Bitcoin ecosystem in the city of Turin and its surroundings. We organize events, meetups, workshops, and support the growth of the local community.",
+          answer: locale === 'it'
+            ? "Bitcoin Torino è un'associazione dedicata alla promozione e sviluppo dell'ecosistema Bitcoin nella città di Torino e dintorni. Supportiamo la crescita della community locale e fungiamo da aggregatore dei progetti presenti sul territorio. Mettiamo in contatto imprese e istituzioni della città con realtà del settore, italiane ed estere."
+            : "Bitcoin Torino is an association dedicated to the promotion and development of the Bitcoin ecosystem in the city of Turin and its surroundings. We support the growth of the local community and act as an aggregator of the projects active in the area. We connect the city's businesses and institutions with industry players, both Italian and international.",
         },
         {
           question: locale === 'it' ? "Come posso partecipare agli eventi?" : "How can I participate in the events?",
           answer: locale === 'it'
-            ? "Tutti i nostri eventi sono pubblicati su Luma. Puoi iscriverti gratuitamente visitando il nostro calendario eventi su luma.com/user/bitcointorino. La maggior parte degli eventi sono gratuiti e aperti a tutti."
-            : "All our events are published on Luma. You can register for free by visiting our event calendar at luma.com/user/bitcointorino. Most events are free and open to everyone.",
+            ? <>Tutti i nostri eventi e dei nostri partner sono pubblicati su <FaqLink href={LUMA_URL}>Luma</FaqLink>. Puoi iscriverti gratuitamente visitando il nostro <FaqLink href={LUMA_URL}>calendario eventi</FaqLink>. La maggior parte degli eventi sono gratuiti e aperti a tutti.</>
+            : <>All our events and our partners' events are published on <FaqLink href={LUMA_URL}>Luma</FaqLink>. You can register for free by visiting our <FaqLink href={LUMA_URL}>event calendar</FaqLink>. Most events are free and open to everyone.</>,
         },
         {
           question: locale === 'it' ? "Devo essere un esperto di Bitcoin per partecipare?" : "Do I need to be a Bitcoin expert to participate?",
           answer: locale === 'it'
-            ? "Assolutamente no! I nostri eventi sono aperti a tutti, dai principianti agli esperti. Organizziamo workshop specifici per chi si avvicina per la prima volta a Bitcoin e meetup per discussioni più tecniche."
-            : "Absolutely not! Our events are open to everyone, from beginners to experts. We organize specific workshops for those approaching Bitcoin for the first time and meetups for more technical discussions.",
+            ? <>Dipende, i nostri eventi e dei nostri partner sono pensati sia per principianti che per esperti. Controlla il <FaqLink href={LUMA_URL}>calendario Luma</FaqLink>, nella descrizione di ogni evento è sempre specificato a chi si rivolge.</>
+            : <>It depends: our events and our partners' events are designed for both beginners and experts. Check the <FaqLink href={LUMA_URL}>Luma calendar</FaqLink>, where each event description always states who it is for.</>,
         },
         {
           question: locale === 'it' ? "Come posso unirmi alla community?" : "How can I join the community?",
           answer: locale === 'it'
-            ? "Puoi unirti al nostro gruppo Telegram per rimanere aggiornato su eventi e novità, seguirci su Luma per gli eventi, e partecipare ai nostri meetup mensili. Trova tutti i link nella homepage."
-            : "You can join our Telegram group to stay updated on events and news, follow us on Luma for events, and participate in our monthly meetups. Find all the links on the homepage.",
+            ? <>Puoi unirti al nostro <FaqLink href={TELEGRAM_URL}>gruppo Telegram</FaqLink> per rimanere aggiornato su tutte le novità, e seguire il <FaqLink href={LUMA_URL}>calendario Luma</FaqLink> per essere informato su tutti gli eventi.</>
+            : <>You can join our <FaqLink href={TELEGRAM_URL}>Telegram group</FaqLink> to stay updated on all the news, and follow the <FaqLink href={LUMA_URL}>Luma calendar</FaqLink> to be informed about all events.</>,
+        },
+        {
+          question: locale === 'it' ? "Come posso diventare partner di Bitcoin Torino?" : "How can I become a partner of Bitcoin Torino?",
+          answer: locale === 'it'
+            ? <>Se sei un'azienda, un'associazione o un'organizzazione interessata a collaborare con noi, <FaqLink href={EMAIL_URL}>contattaci via email</FaqLink>. Valutiamo diverse forme di partnership per supportare e promuovere l'ecosistema Bitcoin.</>
+            : <>If you are a company, an association, or an organization interested in collaborating with us, <FaqLink href={EMAIL_URL}>contact us by email</FaqLink>. We evaluate various forms of partnership to support and promote the Bitcoin ecosystem.</>,
         },
       ],
     },
     {
-      category: locale === 'it' ? "Per Aziende e Attività" : "For Businesses and Activities",
+      category: locale === 'it' ? "Aziende e Attività" : "Businesses and Activities",
       questions: [
         {
           question: locale === 'it' ? "Come posso iniziare ad accettare Bitcoin nella mia attività?" : "How can I start accepting Bitcoin in my business?",
           answer: locale === 'it'
-            ? "Ti possiamo aiutare a integrare i pagamenti Bitcoin e Lightning Network nella tua attività. Contattaci a bitcoin.torino@proton.me per una consulenza gratuita e per essere inserito nella directory delle attività Bitcoin-friendly di Torino."
-            : "We can help you integrate Bitcoin and Lightning Network payments into your business. Contact us at bitcoin.torino@proton.me for a free consultation and to be included in the Turin Bitcoin-friendly business directory.",
+            ? <>Ti possiamo aiutare a integrare i pagamenti Bitcoin e Lightning Network nella tua attività. <FaqLink href={EMAIL_URL}>Contattaci via email</FaqLink> per ricevere supporto gratuito e per essere inserito nella directory delle attività che accettano bitcoin.</>
+            : <>We can help you integrate Bitcoin and Lightning Network payments into your business. <FaqLink href={EMAIL_URL}>Contact us by email</FaqLink> to receive free support and to be included in the directory of businesses that accept bitcoin.</>,
         },
         {
           question: locale === 'it' ? "Quali sono i vantaggi per un'attività che accetta Bitcoin?" : "What are the advantages for a business accepting Bitcoin?",
@@ -56,14 +82,20 @@ export default function FAQPage() {
         {
           question: locale === 'it' ? "Come posso essere inserito nella directory attività?" : "How can I be included in the business directory?",
           answer: locale === 'it'
-            ? "Invia una email a bitcoin.torino@proton.me con il nome della tua attività, indirizzo, tipologia di servizi e informazioni su come accetti Bitcoin. Verificheremo i dettagli e ti inseriremo nella nostra mappa delle attività Bitcoin-friendly."
-            : "Send an email to bitcoin.torino@proton.me with your business name, address, type of services, and information on how you accept Bitcoin. We will verify the details and include you in our map of Bitcoin-friendly businesses.",
+            ? <><FaqLink href={EMAIL_URL}>Inviaci una email</FaqLink> con il nome della tua attività, indirizzo, tipologia di servizi e informazioni su come accetti Bitcoin. Verificheremo i dettagli e ti inseriremo nella mappa delle attività che accettano bitcoin.</>
+            : <><FaqLink href={EMAIL_URL}>Send us an email</FaqLink> with your business name, address, type of services, and information on how you accept Bitcoin. We will verify the details and add you to the map of businesses that accept bitcoin.</>,
         },
         {
-          question: locale === 'it' ? "La mia azienda vuole integrare Bitcoin nel proprio business. Chi posso contattare?" : "My company wants to integrate Bitcoin into its business. Who can I contact?",
+          question: locale === 'it' ? "Offrite supporto tecnico per wallet e sicurezza?" : "Do you offer technical support for wallets and security?",
           answer: locale === 'it'
-            ? "Contattaci a bitcoin.torino@proton.me. Possiamo metterti in contatto con esperti della community per consulenze su Lightning Network, Bitcoin treasury, pagamenti B2B e altre soluzioni enterprise."
-            : "Contact us at bitcoin.torino@proton.me. We can put you in touch with community experts for advice on Lightning Network, Bitcoin treasury, B2B payments, and other enterprise solutions.",
+            ? "Sì, offriamo supporto gratuito su come utilizzare Bitcoin in sicurezza. Per questioni più specifiche e avanzate, ti orientiamo verso partner e soluzioni di terze parti."
+            : "Yes, we offer free support on how to use Bitcoin safely. For more specific and advanced matters, we direct you to partners and third-party solutions.",
+        },
+        {
+          question: locale === 'it' ? "Offrite supporto per la gestione fiscale di bitcoin?" : "Do you offer support with bitcoin tax matters?",
+          answer: locale === 'it'
+            ? "Non direttamente, rigiriamo la questione ai nostri partner specializzati in questi temi."
+            : "Not directly: we refer the matter to our partners who specialize in these topics.",
         },
       ],
     },
@@ -73,72 +105,32 @@ export default function FAQPage() {
         {
           question: locale === 'it' ? "Con che frequenza organizzate eventi?" : "How often do you organize events?",
           answer: locale === 'it'
-            ? "Organizziamo un meetup mensile principale (generalmente il primo giovedì del mese) e vari workshop ed eventi speciali durante l'anno. Consulta il calendario Luma per gli eventi aggiornati."
-            : "We organize a main monthly meetup (generally the first Thursday of the month) and various workshops and special events throughout the year. Check the Luma calendar for updated events.",
+            ? <>L’associazione organizza eventi occasionalmente. L’unico evento fisso è quello dedicato ai soci di fine anno. I nostri partner, invece, organizzano eventi molto più spesso, alcuni su base settimanale. Segui il <FaqLink href={LUMA_URL}>calendario Luma</FaqLink> per ricevere aggiornamenti su tutti gli eventi in programma.</>
+            : <>The association organizes events occasionally. The only recurring event is the end-of-year event for members. Our partners, on the other hand, organize events much more often, some on a weekly basis. Follow the <FaqLink href={LUMA_URL}>Luma calendar</FaqLink> to get updates on all upcoming events.</>,
         },
         {
           question: locale === 'it' ? "Dove si svolgono gli eventi?" : "Where do the events take place?",
           answer: locale === 'it'
-            ? "Gli eventi si svolgono in diverse location di Torino. L'indirizzo specifico viene comunicato al momento della pubblicazione dell'evento su Luma. Stiamo anche costruendo una rete di spazi Bitcoin-friendly."
-            : "Events take place in various locations in Turin. The specific address is communicated when the event is published on Luma. We are also building a network of Bitcoin-friendly spaces.",
+            ? <>Gli eventi si svolgono in diverse location di Torino. L'indirizzo specifico viene comunicato al momento della pubblicazione dell'evento, controlla nella descrizione sul <FaqLink href={LUMA_URL}>calendario Luma</FaqLink>.</>
+            : <>Events take place in various locations in Turin. The specific address is announced when the event is published: check the description on the <FaqLink href={LUMA_URL}>Luma calendar</FaqLink>.</>,
         },
         {
           question: locale === 'it' ? "Posso proporre un intervento o un workshop?" : "Can I propose a talk or a workshop?",
           answer: locale === 'it'
-            ? "Certamente! Siamo sempre alla ricerca di speaker e relatori. Se hai competenze da condividere con la community, contattaci a bitcoin.torino@proton.me con una proposta del tuo intervento."
-            : "Certainly! We are always looking for speakers and presenters. If you have skills to share with the community, contact us at bitcoin.torino@proton.me with a proposal for your talk.",
+            ? <>Sì, siamo felici di dare spazio a speaker e relatori competenti. <FaqLink href={EMAIL_URL}>Contattaci via email</FaqLink>, valuteremo la tua richiesta e procederemo ad organizzare insieme l’evento.</>
+            : <>Yes, we are happy to give space to knowledgeable speakers and presenters. <FaqLink href={EMAIL_URL}>Contact us by email</FaqLink>: we will evaluate your request and organize the event together.</>,
         },
         {
           question: locale === 'it' ? "Gli eventi sono a pagamento?" : "Are the events paid?",
           answer: locale === 'it'
-            ? "La maggior parte dei nostri eventi sono gratuiti. Alcuni workshop specialistici potrebbero richiedere un contributo per coprire i costi organizzativi. Il costo è sempre indicato nella descrizione dell'evento su Luma."
-            : "Most of our events are free. Some specialized workshops may require a contribution to cover organizational costs. The cost is always indicated in the event description on Luma.",
-        },
-      ],
-    },
-    {
-      category: locale === 'it' ? "Tecnico" : "Technical",
-      questions: [
-        {
-          question: locale === 'it' ? "Cos'è Lightning Network?" : "What is Lightning Network?",
-          answer: locale === 'it'
-            ? "Lightning Network è un protocollo di secondo livello costruito su Bitcoin che permette transazioni istantanee a costi minimi. È ideale per micropagamenti e uso quotidiano. Organizziamo workshop dedicati per imparare a usarlo."
-            : "Lightning Network is a second-layer protocol built on top of Bitcoin that allows for instant transactions at minimal costs. It is ideal for micropayments and daily use. We organize dedicated workshops to learn how to use it.",
-        },
-        {
-          question: locale === 'it' ? "Offrite supporto tecnico per wallet e sicurezza?" : "Do you offer technical support for wallets and security?",
-          answer: locale === 'it'
-            ? "Durante i nostri workshop e meetup offriamo supporto e consigli su wallet, best practices di sicurezza e utilizzo di Bitcoin. Per questioni specifiche, puoi chiedere nel gruppo Telegram dove la community è sempre disponibile ad aiutare."
-            : "During our workshops and meetups, we offer support and advice on wallets, security best practices, and the use of Bitcoin. For specific questions, you can ask in the Telegram group where the community is always available to help.",
-        },
-        {
-          question: locale === 'it' ? "Posso contribuire tecnicamente al progetto?" : "Can I contribute technically to the project?",
-          answer: locale === 'it'
-            ? "Sì! Siamo sempre alla ricerca di sviluppatori, designer e volontari che vogliano contribuire. Contattaci per sapere come puoi aiutare a far crescere l'ecosistema Bitcoin a Torino."
-            : "Yes! We are always looking for developers, designers, and volunteers who want to contribute. Contact us to find out how you can help grow the Bitcoin ecosystem in Turin.",
-        },
-      ],
-    },
-    {
-      category: locale === 'it' ? "Partnership e Collaborazioni" : "Partnerships and Collaborations",
-      questions: [
-        {
-          question: locale === 'it' ? "Come posso diventare partner di Bitcoin Torino?" : "How can I become a partner of Bitcoin Torino?",
-          answer: locale === 'it'
-            ? "Se sei un'azienda, un'associazione o un'organizzazione interessata a collaborare con noi, contattaci a bitcoin.torino@proton.me. Valutiamo diverse forme di partnership per supportare e promuovere l'ecosistema Bitcoin."
-            : "If you are a company, an association, or an organization interested in collaborating with us, contact us at bitcoin.torino@proton.me. We evaluate various forms of partnership to support and promote the Bitcoin ecosystem.",
-        },
-        {
-          question: locale === 'it' ? "Collaborate con università o enti di formazione?" : "Do you collaborate with universities or educational institutions?",
-          answer: locale === 'it'
-            ? "Sì, siamo aperti a collaborazioni con università, scuole e centri di formazione per organizzare corsi, seminari e workshop su Bitcoin e blockchain technology. Contattaci per discutere possibili progetti."
-            : "Yes, we are open to collaborations with universities, schools, and training centers to organize courses, seminars, and workshops on Bitcoin and blockchain technology. Contact us to discuss possible projects.",
+            ? <>La maggior parte dei nostri eventi e di quelli dei nostri partner sono gratuiti, ma alcuni potrebbero richiedere un contributo per coprire i costi organizzativi. Il costo è sempre indicato nella descrizione dell'evento su <FaqLink href={LUMA_URL}>Luma</FaqLink>.</>
+            : <>Most of our events and our partners' events are free, but some may require a contribution to cover organizational costs. The cost is always indicated in the event description on <FaqLink href={LUMA_URL}>Luma</FaqLink>.</>,
         },
         {
           question: locale === 'it' ? "Posso sponsorizzare un evento?" : "Can I sponsor an event?",
           answer: locale === 'it'
-            ? "Sì, accettiamo sponsorizzazioni per i nostri eventi. Le sponsorizzazioni ci aiutano a organizzare eventi di qualità e a far crescere la community. Contattaci per conoscere le opportunità disponibili."
-            : "Yes, we accept sponsorships for our events. Sponsorships help us organize high-quality events and grow the community. Contact us to learn about available opportunities.",
+            ? <>No, non accettiamo sponsorizzazioni, solamente donazioni. Tuttavia, offriamo visibilità ai partner che sposano i nostri obiettivi e contribuiscono portando contenuti di valore. <FaqLink href={EMAIL_URL}>Contattaci via email</FaqLink> per conoscere le opportunità disponibili.</>
+            : <>No, we do not accept sponsorships, only donations. However, we offer visibility to partners who share our goals and contribute valuable content. <FaqLink href={EMAIL_URL}>Contact us by email</FaqLink> to learn about available opportunities.</>,
         },
       ],
     },
@@ -146,51 +138,38 @@ export default function FAQPage() {
 
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-white/10 p-4 rounded-full">
-                <HelpCircle className="h-12 w-12" aria-hidden="true" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {t('title')}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-100">
-              {t('description')}
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title={t('title')}
+        subtitle={t('description')}
+      />
 
       {/* FAQ Sections */}
-      <section className="py-20">
+      <section className="section-alt py-16 md:py-28">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-16">
             {faqs.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-bitcoin-blue">
-                  {category.category}
-                </h2>
+              <div key={categoryIndex}>
+                <Reveal>
+                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">
+                    <span className="text-gradient">{category.category}</span>
+                  </h2>
+                </Reveal>
                 <div className="space-y-4">
                   {category.questions.map((faq, faqIndex) => (
-                    <details
-                      key={faqIndex}
-                      className="group bg-card rounded-lg border-2 border-border hover:border-bitcoin-blue transition-colors overflow-hidden"
-                    >
-                      <summary className="flex items-center justify-between cursor-pointer p-6 font-semibold text-lg list-none">
-                        <span className="pr-4">{faq.question}</span>
-                        <span className="flex-shrink-0 text-bitcoin-blue">
-                          <Plus className="h-5 w-5 group-open:hidden" aria-hidden="true" />
-                          <Minus className="h-5 w-5 hidden group-open:block" aria-hidden="true" />
-                        </span>
-                      </summary>
-                      <div className="px-6 pb-6 text-muted-foreground border-t pt-4">
-                        <p>{faq.answer}</p>
-                      </div>
-                    </details>
+                    <Reveal key={faqIndex} delay={faqIndex * 60}>
+                      <details className="spotlight-card group">
+                        <summary className="flex items-center justify-between cursor-pointer p-6 font-semibold text-lg list-none [&::-webkit-details-marker]:hidden">
+                          <span className="pr-4">{faq.question}</span>
+                          <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-bitcoin-blue/10 text-bitcoin-blue transition-all duration-300 group-open:rotate-180 group-open:bg-gradient-to-br group-open:from-bitcoin-blue-light group-open:to-bitcoin-blue-dark group-open:text-white dark:bg-white/10">
+                            <Plus className="h-5 w-5 group-open:hidden" aria-hidden="true" />
+                            <Minus className="h-5 w-5 hidden group-open:block" aria-hidden="true" />
+                          </span>
+                        </summary>
+                        <div className="px-6 pb-6 text-muted-foreground leading-relaxed border-t pt-5">
+                          <p>{faq.answer}</p>
+                        </div>
+                      </details>
+                    </Reveal>
                   ))}
                 </div>
               </div>
@@ -199,36 +178,21 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 bg-gray-50 dark:bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              {t('ctaTitle')}
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              {t('ctaDescription')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:bitcoin.torino@proton.me"
-                className="inline-flex items-center justify-center px-6 py-3 bg-bitcoin-blue text-white font-medium rounded-lg hover:bg-bitcoin-blue-dark transition-colors"
-              >
-                {t('sendEmail')}
-              </a>
-              <a
-                href="https://t.me/bitcointorino"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-bitcoin-blue text-bitcoin-blue font-medium rounded-lg hover:bg-bitcoin-blue hover:text-white transition-colors"
-              >
-                {t('joinTelegram')}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactCta
+        title={t('ctaTitle')}
+        description={t('ctaDescription')}
+        label={t('sendEmail')}
+        extra={
+          <a
+            href="https://t.me/bitcointorino"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass inline-flex h-14 items-center justify-center rounded-full px-9 text-base font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-white/15"
+          >
+            {t('joinTelegram')}
+          </a>
+        }
+      />
     </main>
   )
 }
-

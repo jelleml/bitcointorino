@@ -1,69 +1,51 @@
 import { BookOpen, ShieldCheck, Megaphone, Handshake } from "lucide-react"
 import { useTranslations } from 'next-intl'
+import { Reveal } from "@/components/fx/reveal"
+import { Spotlight } from "@/components/fx/spotlight"
+
+const ITEMS = [
+  { key: 'divulgation', icon: BookOpen },
+  { key: 'adoption', icon: ShieldCheck },
+  { key: 'promotion', icon: Megaphone },
+  { key: 'connection', icon: Handshake },
+] as const
 
 export function About() {
   const t = useTranslations('About');
 
   return (
-    <section id="chi-siamo" className="py-20 bg-gray-50 dark:bg-muted scroll-mt-16">
+    <section id="chi-siamo" className="relative isolate overflow-hidden py-16 md:py-32 bg-gray-50 dark:bg-muted scroll-mt-16">
+      <div aria-hidden="true" className="dot-pattern absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
+      <div aria-hidden="true" className="absolute -top-40 left-1/2 -z-10 h-80 w-[60rem] -translate-x-1/2 rounded-full bg-bitcoin-blue/10 blur-3xl dark:bg-[#00138E]/40" />
+
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* What We Do */}
-          <div className="bg-white dark:bg-card rounded-lg p-8 md:p-12 border-2 border-gray-200 dark:border-border">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[50px]">
-              <div className="group text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 rounded-lg bg-bitcoin-blue/10 group-hover:scale-110 transition-transform duration-300">
-                    <BookOpen className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
+          {/* Titolo nascosto alla vista ma mantenuto per screen reader e SEO */}
+          <h2 className="sr-only">{t('title')}</h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+            {ITEMS.map(({ key, icon: Icon }, i) => (
+              <Reveal key={key} delay={i * 110}>
+                <Spotlight className="group h-full p-7 md:p-8">
+                  <span aria-hidden="true" className="absolute right-6 top-5 font-mono text-xs text-muted-foreground/60">
+                    0{i + 1}
+                  </span>
+                  <div className="relative mb-6 inline-flex">
+                    <div aria-hidden="true" className="absolute inset-0 rounded-2xl bg-bitcoin-blue/40 blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-bitcoin-blue-light to-bitcoin-blue-dark text-white shadow-lg shadow-bitcoin-blue/30 ring-1 ring-white/20 transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
+                      <Icon className="h-7 w-7" aria-hidden="true" />
+                    </div>
                   </div>
-                </div>
-                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">
-                  {t('divulgation.title')}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  {t('divulgation.description')}
-                </p>
-              </div>
-              <div className="group text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 rounded-lg bg-bitcoin-blue/10 group-hover:scale-110 transition-transform duration-300">
-                    <ShieldCheck className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
-                  </div>
-                </div>
-                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">
-                  {t('adoption.title')}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  {t('adoption.description')}
-                </p>
-              </div>
-              <div className="group text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 rounded-lg bg-bitcoin-blue/10 group-hover:scale-110 transition-transform duration-300">
-                    <Megaphone className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
-                  </div>
-                </div>
-                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">
-                  {t('promotion.title')}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                   {t('promotion.description')}
-                </p>
-              </div>
-              <div className="group text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 rounded-lg bg-bitcoin-blue/10 group-hover:scale-110 transition-transform duration-300">
-                    <Handshake className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
-                  </div>
-                </div>
-                <h4 className="font-bold mb-2 group-hover:text-bitcoin-blue transition-colors">
-                  {t('connection.title')}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  {t('connection.description')}
-                </p>
-              </div>
-            </div>
+                  <h3 className="text-lg font-bold mb-2 transition-colors group-hover:text-bitcoin-blue">
+                    {t(`${key}.title`)}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {t(`${key}.description`)}
+                  </p>
+                  <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-bitcoin-blue via-[#5B8DEF] to-transparent transition-transform duration-500 group-hover:scale-x-100" />
+                </Spotlight>
+              </Reveal>
+            ))}
           </div>
         </div>
       </div>

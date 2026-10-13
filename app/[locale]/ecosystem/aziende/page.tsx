@@ -1,9 +1,11 @@
 'use client'
 
-import { Building2, ArrowLeft } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Building2 } from "lucide-react"
 import { useTranslations } from 'next-intl'
-import { Link } from "@/i18n/navigation"
+import { BackLink } from "@/components/layout/back-link"
+import { PageHero } from "@/components/layout/page-hero"
+import { ContactCta } from "@/components/layout/contact-cta"
+import { Reveal } from "@/components/fx/reveal"
 
 export default function AziendePage() {
   const t = useTranslations('Ecosystem.Companies');
@@ -30,84 +32,40 @@ export default function AziendePage() {
 
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Link
-              href="/ecosystem"
-              className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
-              {t('backToEcosystem')}
-            </Link>
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="bg-white/10 p-4 rounded-lg">
-                <Building2 className="h-8 w-8" aria-hidden="true" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold">{t('title')}</h1>
-            </div>
-            <p className="text-xl text-gray-100">
-              {t('description')}
-            </p>
+      <PageHero
+        title={t('title')}
+        subtitle={t('description')}
+        back={<BackLink label={t('backToEcosystem')} />}
+        icon={
+          <div className="glass flex h-16 w-16 items-center justify-center rounded-2xl">
+            <Building2 className="h-8 w-8" aria-hidden="true" />
           </div>
-        </div>
-      </section>
+        }
+      />
 
       {/* Companies List */}
-      <section className="py-16 bg-white dark:bg-muted">
+      <section className="section-alt py-16 md:py-28">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {mappedCompanies.map((company, index) => (
-                <div
-                  key={index}
-                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <span className="px-3 py-1 bg-bitcoin-blue/10 text-bitcoin-blue text-sm font-medium rounded-full">
-                        {company.category}
-                      </span>
-                      <h3 className="text-2xl font-bold mt-3 mb-2">{company.name}</h3>
-                      <p className="text-muted-foreground mb-4">{company.description}</p>
-                    </div>
-                  </div>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {mappedCompanies.map((company, index) => (
+              <Reveal key={index}>
+                <div className="spotlight-card p-7">
+                  <span className="chip">{company.category}</span>
+                  <h3 className="text-2xl font-bold tracking-tight mt-4 mb-2">{company.name}</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-5">{company.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {company.services.map((service, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-300 text-sm rounded-full"
-                      >
-                        {service}
-                      </span>
+                      <span key={idx} className="chip-muted">{service}</span>
                     ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gray-50 dark:bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              {t('ctaTitle')}
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              {t('ctaDescription')}
-            </p>
-            <Button asChild size="lg">
-              <a href="mailto:bitcoin.torino@proton.me">
-                {t('contactUs')}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <ContactCta title={t('ctaTitle')} description={t('ctaDescription')} label={t('contactUs')} />
     </main>
   )
 }

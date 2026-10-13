@@ -36,7 +36,7 @@ export function BlogCards() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ultime Notizie
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Resta aggiornato sulle attività dell&apos;associazione, eventi passati e 
             risorse utili per la community.
           </p>

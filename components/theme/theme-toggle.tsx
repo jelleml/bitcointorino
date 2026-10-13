@@ -5,7 +5,7 @@ import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useTranslations } from "next-intl"
 
-export function ThemeToggle() {
+export function ThemeToggle({ bordered = false }: { bordered?: boolean }) {
   const t = useTranslations("Navbar")
   const { resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = React.useState(false)
@@ -21,7 +21,9 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="p-2 rounded-md hover:bg-accent transition-colors"
+      className={bordered
+        ? "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border hover:bg-accent transition-colors"
+        : "p-2 rounded-md hover:bg-accent transition-colors"}
       aria-label={label}
       title={label}
     >

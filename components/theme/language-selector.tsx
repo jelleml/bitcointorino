@@ -3,8 +3,8 @@
 import * as React from "react"
 import { Globe, ChevronDown } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
-import { useRouter, usePathname } from 'next/navigation'
 import { useParams } from 'next/navigation'
+import { useRouter, usePathname } from '@/i18n/navigation'
 
 const languages = [
   { code: "it", label: "Italiano", flag: "🇮🇹" },
@@ -37,11 +37,8 @@ export function LanguageSelector() {
   const handleLanguageChange = (lang: typeof languages[0]) => {
     setIsOpen(false)
     
-    // Costruiamo il nuovo path sostituendo il locale
-    const segments = pathname.split('/')
-    segments[1] = lang.code // Assumendo che il locale sia sempre il primo segmento
-    
-    router.push(segments.join('/'))
+    // usePathname di next-intl restituisce il path senza locale: il router antepone quello nuovo
+    router.replace(pathname, { locale: lang.code as 'it' | 'en' })
   }
 
   return (
@@ -73,6 +70,43 @@ export function LanguageSelector() {
           ))}
         </div>
       )}
+    </div>
+  )
+}
+
+/** Variante a pulsanti affiancati (IT | EN), usata nel menu mobile. */
+export function LanguageSegmented({ onChange }: { onChange?: () => void }) {
+  const router = useRouter()
+  const pathname = usePathname()
+  const params = useParams()
+  const currentLocale = params.locale as string || 'it'
+
+  const handleLanguageChange = (code: string) => {
+    router.replace(pathname, { locale: code as 'it' | 'en' })
+    onChange?.()
+  }
+
+  return (
+    <div className="inline-flex items-center gap-1 rounded-full border border-border p-1" role="group" aria-label="Select language">
+      <Globe className="ml-2 mr-1 h-4 w-4 text-muted-foreground" aria-hidden="true" />
+      {languages.map((lang) => {
+        const active = lang.code === currentLocale
+        return (
+          <button
+            key={lang.code}
+            type="button"
+            onClick={() => handleLanguageChange(lang.code)}
+            aria-pressed={active}
+            className={`h-8 rounded-full px-3 text-sm font-semibold transition-colors ${
+              active
+                ? "bg-gradient-to-r from-bitcoin-blue to-bitcoin-blue-light text-white"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {lang.code.toUpperCase()}
+          </button>
+        )
+      })}
     </div>
   )
 }

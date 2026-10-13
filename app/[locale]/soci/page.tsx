@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 import {
   ArrowRight,
-  CalendarDays,
   Eye,
   Handshake,
   Info,
@@ -12,7 +11,9 @@ import {
 } from "lucide-react"
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
-import { Button } from "@/components/ui/button"
+import { PageHero } from "@/components/layout/page-hero"
+import { SectionHeading } from "@/components/layout/section-heading"
+import { Reveal } from "@/components/fx/reveal"
 
 const MEMBERSHIP_FORM_URL = "https://forms.gle/gXgsVYPf8fqnZ6678"
 
@@ -35,61 +36,55 @@ export default function SociPage() {
   const t = useTranslations('Soci')
 
   const benefits = t.raw('benefits.items') as { title: string; description: string }[]
-  const meetings = t.raw('meetings.items') as string[]
   const steps = t.raw('join.steps') as string[]
+
+  const participation = [
+    { icon: Eye, title: t('participation.observer.title'), description: t('participation.observer.description') },
+    { icon: Wrench, title: t('participation.operational.title'), description: t('participation.operational.description') },
+  ]
 
   return (
     <main className="min-h-screen">
-      {/* Hero */}
-      <section className="relative bg-gradient-to-br from-bitcoin-blue to-bitcoin-blue-dark text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm md:text-base uppercase tracking-wide text-white/70 mb-4">
-              {t('hero.eyebrow')}
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {t('hero.title')}
-            </h1>
-            <p className="text-lg md:text-xl text-gray-100 mb-8">
-              {t('hero.subtitle')}
-            </p>
-            <Button asChild size="lg" className="text-base text-black bg-white hover:bg-gray-300">
-              <a href={MEMBERSHIP_FORM_URL} target="_blank" rel="noopener noreferrer">
-                {t('hero.cta')}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
+      >
+        <a
+          href={MEMBERSHIP_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-shine btn-orange group inline-flex h-14 items-center justify-center rounded-full px-9 text-base font-bold"
+        >
+          <span className="relative z-10 inline-flex items-center">
+            {t('hero.cta')}
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+          </span>
+        </a>
+      </PageHero>
 
       {/* Cosa ottieni come socio */}
-      <section className="py-20 bg-gray-50 dark:bg-muted">
+      <section className="section-alt py-16 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-              {t('benefits.title')}
-            </h2>
+            <SectionHeading title={t('benefits.title')} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => {
                 const Icon = benefitIcons[index]
                 return (
-                  <div
-                    key={index}
-                    className="group bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 p-3 rounded-lg bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue transition-colors">
-                        <Icon
-                          className="h-6 w-6 text-bitcoin-blue group-hover:text-white transition-colors"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                        <p className="text-muted-foreground">{benefit.description}</p>
+                  <Reveal key={index} delay={(index % 2) * 100}>
+                    <div className="spotlight-card group h-full p-7">
+                      {/* Su mobile l'icona sta sopra ai testi, da sm torna affiancata */}
+                      <div className="flex flex-col items-start gap-5 sm:flex-row">
+                        <div className="icon-tile h-12 w-12 shrink-0">
+                          <Icon className="h-6 w-6" aria-hidden="true" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+                          <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Reveal>
                 )
               })}
             </div>
@@ -98,137 +93,90 @@ export default function SociPage() {
       </section>
 
       {/* Due modalità di partecipazione */}
-      <section className="py-20">
+      <section className="py-16 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('participation.title')}</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                {t('participation.description')}
-              </p>
-            </div>
+            <SectionHeading title={t('participation.title')} description={t('participation.description')} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="group bg-card rounded-lg p-8 border-2 border-border hover:border-bitcoin-blue transition-colors">
-                <div className="mb-4 inline-flex p-3 rounded-lg bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue transition-colors">
-                  <Eye
-                    className="h-6 w-6 text-bitcoin-blue group-hover:text-white transition-colors"
-                    aria-hidden="true"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{t('participation.observer.title')}</h3>
-                <p className="text-muted-foreground">{t('participation.observer.description')}</p>
-              </div>
-
-              <div className="group bg-card rounded-lg p-8 border-2 border-border hover:border-bitcoin-blue transition-colors">
-                <div className="mb-4 inline-flex p-3 rounded-lg bg-bitcoin-blue/10 group-hover:bg-bitcoin-blue transition-colors">
-                  <Wrench
-                    className="h-6 w-6 text-bitcoin-blue group-hover:text-white transition-colors"
-                    aria-hidden="true"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{t('participation.operational.title')}</h3>
-                <p className="text-muted-foreground">
-                  {t('participation.operational.description')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Riunioni */}
-      <section className="py-20 bg-gray-50 dark:bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="flex justify-center mb-6">
-                <div className="p-4 rounded-full bg-bitcoin-blue/10">
-                  <CalendarDays className="h-8 w-8 text-bitcoin-blue" aria-hidden="true" />
-                </div>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold">{t('meetings.title')}</h2>
-            </div>
-            <ul className="space-y-4">
-              {meetings.map((meeting, index) => (
-                <li
-                  key={index}
-                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors text-muted-foreground"
-                >
-                  {meeting}
-                </li>
+              {participation.map(({ icon: Icon, title, description }, index) => (
+                <Reveal key={title} delay={index * 100}>
+                  <div className="spotlight-card group h-full p-8">
+                    <div className="icon-tile mb-6 h-14 w-14">
+                      <Icon className="h-7 w-7" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{description}</p>
+                  </div>
+                </Reveal>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Quota associativa */}
-      <section className="py-20">
+      <section className="section-alt section-night overflow-hidden py-16 md:py-28">
+        {/* Sfondo blu notte visibile solo in light mode, come la fascia Sportello in home */}
+        <div aria-hidden="true" className="band-night-mesh absolute inset-0 -z-20 bg-[length:300%_300%] animate-gradient-pan dark:hidden" />
+        <div aria-hidden="true" className="absolute -top-32 -right-32 -z-10 h-96 w-96 rounded-full bg-[#93C2F7]/20 blur-3xl animate-aurora dark:hidden" />
+        <div aria-hidden="true" className="absolute -bottom-40 -left-24 -z-10 h-[28rem] w-[28rem] rounded-full bg-[#00138E]/70 blur-3xl animate-aurora [animation-delay:-8s] dark:hidden" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)] dark:hidden" />
+
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">{t('fee.title')}</h2>
-            <div className="bg-card rounded-lg p-8 md:p-12 border-2 border-border text-center">
-              <p className="text-5xl md:text-6xl font-bold text-bitcoin-blue mb-6">
-                {t('fee.amount')}
-              </p>
-              <p className="text-lg text-muted-foreground">{t('fee.description')}</p>
-            </div>
-
-            <div className="mt-8 flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 p-6">
-              <Info className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
-              <p className="text-muted-foreground">{t('fee.validity')}</p>
-            </div>
+            <SectionHeading title={t('fee.title')} />
+            <Reveal>
+              <div className="spotlight-card relative p-10 md:p-14 text-center">
+                <div aria-hidden="true" className="absolute left-1/2 top-0 -z-10 h-40 w-80 -translate-x-1/2 rounded-full bg-bitcoin-blue/15 blur-3xl dark:bg-[#00138E]/60" />
+                <p className="text-6xl md:text-7xl font-bold tracking-tight mb-6">
+                  <span className="text-gradient">{t('fee.amount')}</span>
+                </p>
+                <p className="text-base md:text-lg text-muted-foreground">{t('fee.description')}</p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* Come iscriverti */}
-      <section className="py-20 bg-gray-50 dark:bg-muted">
+      <section className="py-16 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('join.title')}</h2>
-              <p className="text-lg text-muted-foreground">{t('join.description')}</p>
-            </div>
+            <SectionHeading title={t('join.title')} description={t('join.description')} />
 
-            <ol className="space-y-6">
+            <ol className="space-y-5">
               {steps.map((step, index) => (
-                <li
-                  key={index}
-                  className="bg-card rounded-lg p-6 border-2 border-border hover:border-bitcoin-blue transition-colors"
-                >
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-5">
-                    <div className="flex items-center gap-5 flex-1">
-                      <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-full bg-bitcoin-blue text-white font-bold">
-                        {index + 1}
+                <Reveal as="li" key={index} delay={index * 100}>
+                  <div className="spotlight-card p-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+                      <div className="flex items-center gap-5 flex-1">
+                        <div className="step-badge">{index + 1}</div>
+                        <p className="text-lg font-medium">{step}</p>
                       </div>
-                      <p className="text-lg font-medium">{step}</p>
+                      {index === 0 && (
+                        <a
+                          href={MEMBERSHIP_FORM_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group inline-flex h-11 items-center justify-center rounded-full bg-gradient-to-r from-bitcoin-blue to-bitcoin-blue-light px-6 font-bold text-white shadow-lg shadow-bitcoin-blue/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-bitcoin-blue/40 sm:flex-shrink-0"
+                        >
+                          {t('join.formLink')}
+                          <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                        </a>
+                      )}
                     </div>
-                    {index === 0 && (
-                      <a
-                        href={MEMBERSHIP_FORM_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-6 py-3 bg-bitcoin-blue text-white font-medium rounded-lg hover:bg-bitcoin-blue-dark transition-colors sm:flex-shrink-0"
-                      >
-                        {t('join.formLink')}
-                        <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-                      </a>
-                    )}
                   </div>
-                </li>
+                </Reveal>
               ))}
             </ol>
 
-            <p className="mt-8 text-muted-foreground">{t('join.after')}</p>
-
-            <div className="mt-8 flex items-start gap-3 rounded-lg border-2 border-bitcoin-blue/20 bg-bitcoin-blue/5 p-6">
-              <Info className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
-              <p className="text-muted-foreground">
-                <span className="font-medium text-foreground">{t('join.noteLabel')}</span>{' '}
-                {t('join.note')}
-              </p>
-            </div>
+            <Reveal className="mt-8">
+              {/* Su mobile l'icona sta sopra al testo, da sm torna affiancata */}
+              <div className="callout flex-col sm:flex-row">
+                <Info className="h-6 w-6 flex-shrink-0 text-bitcoin-blue" aria-hidden="true" />
+                <p className="text-muted-foreground">{t('join.note')}</p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>

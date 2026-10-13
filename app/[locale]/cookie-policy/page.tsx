@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
+import { PageHero } from "@/components/layout/page-hero"
+import { BackLink } from "@/components/layout/back-link"
+import { Reveal } from "@/components/fx/reveal"
 
 export const metadata: Metadata = {
   title: "Cookie Policy - Bitcoin Torino",
@@ -14,23 +14,17 @@ export const metadata: Metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <Button asChild variant="ghost" className="mb-6">
-            <Link href="/">
-              <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
-              Torna alla Home
-            </Link>
-          </Button>
-
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">Cookie Policy</h1>
-
+    <div className="min-h-screen">
+      <PageHero
+        title="Cookie Policy"
+        subtitle="Ultimo aggiornamento: 15 Novembre 2025"
+        back={<BackLink label="Torna alla Home" href="/" />}
+      />
+      <section className="section-alt py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <Reveal className="max-w-4xl mx-auto">
+          <div className="spotlight-card p-8 md:p-12 hover:!translate-y-0 [&_h2]:tracking-tight [&_h2]:text-bitcoin-blue [&_a]:text-bitcoin-blue dark:[&_h2]:text-[#93C2F7] dark:[&_a]:text-[#93C2F7] [&_a]:underline [&_a]:underline-offset-4">
           <div className="prose prose-lg max-w-none">
-            <p className="text-muted-foreground mb-8">
-              Ultimo aggiornamento: 15 Novembre 2025
-            </p>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">1. Cosa sono i Cookie</h2>
               <p className="mb-4">
@@ -144,9 +138,10 @@ export default function CookiePolicyPage() {
               </p>
             </section>
           </div>
+          </div>
+          </Reveal>
         </div>
-      </div>
+      </section>
     </div>
   )
 }
-

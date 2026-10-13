@@ -1,9 +1,9 @@
 "use client"
 
 import {Link} from "@/i18n/navigation"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
-import { LanguageSelector } from "@/components/theme/language-selector"
+import { LanguageSelector, LanguageSegmented } from "@/components/theme/language-selector"
 import { ThemeToggle } from "@/components/theme/theme-toggle"
 import { useTranslations } from 'next-intl'
 
@@ -11,6 +11,7 @@ export function Navbar() {
   const t = useTranslations('Navbar');
   const [isOpen, setIsOpen] = useState(false)
   const [ecosystemOpen, setEcosystemOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const toggleMenu = () => setIsOpen(!isOpen)
@@ -34,15 +35,35 @@ export function Navbar() {
     { href: "/ecosystem/spazi", label: t('spaces'), external: false },
   ]
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <nav
+      className={`sticky top-0 z-50 w-full border-b transition-all duration-500 ${
+        scrolled
+          ? 'bg-white/90 supports-[backdrop-filter]:bg-white/80 dark:bg-[#00052E]/90 dark:supports-[backdrop-filter]:bg-[#00052E]/30 backdrop-blur-2xl backdrop-saturate-[1.8] border-white/40 dark:border-white/10 shadow-[0_8px_32px_-12px_rgba(7,69,141,0.3),inset_0_1px_0_rgba(255,255,255,0.5)] dark:shadow-[0_8px_32px_-12px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.08)]'
+          : 'bg-background border-transparent'
+      }`}
+    >
+      {/* Riga luminosa sotto la navbar */}
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-bitcoin-blue/60 to-transparent transition-opacity duration-500 dark:via-[#93C2F7]/50 ${scrolled ? 'opacity-100' : 'opacity-0'}`}
+      />
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="flex items-center">
-              <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" className="h-[56px] w-auto dark:hidden" />
-              <img src="/bitcoin-torino-logo-small-dark.svg" alt="Bitcoin Torino" className="h-[56px] w-auto hidden dark:block" />
+              {/* Su mobile solo il pittogramma: il logo completo sta nella hero */}
+              <img src="/bitcoin-torino-pictogram.svg" alt="Bitcoin Torino" className="h-7 w-auto md:hidden" />
+              <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" className="h-[56px] w-auto hidden md:block dark:md:hidden" />
+              <img src="/bitcoin-torino-logo-small-dark.svg" alt="Bitcoin Torino" className="h-[56px] w-auto hidden dark:md:block" />
             </div>
           </Link>
 
@@ -55,7 +76,7 @@ export function Navbar() {
             >
               <Link
                 href="/ecosystem"
-                className="text-foreground font-medium hover:text-bitcoin-blue transition-colors inline-flex items-center py-2"
+                className="nav-link text-foreground font-medium hover:text-bitcoin-blue transition-colors inline-flex items-center py-2"
               >
                 {t('ecosystem')}
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${ecosystemOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
@@ -67,7 +88,7 @@ export function Navbar() {
                   onMouseEnter={handleEcosystemEnter}
                   onMouseLeave={handleEcosystemLeave}
                 >
-                  <div className="w-48 bg-popover rounded-lg shadow-lg border border-border py-2">
+                  <div className="w-52 bg-popover/95 backdrop-blur-xl rounded-xl shadow-2xl shadow-bitcoin-blue/15 border border-border p-1.5 animate-in fade-in-0 zoom-in-95 slide-in-from-top-2 duration-200 [&>*]:rounded-lg">
                     {ecosystemLinks.map((link) => (
                       link.external ? (
                         <a
@@ -98,10 +119,17 @@ export function Navbar() {
               href="https://luma.com/bitcoin-torino-calendar"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground font-medium hover:text-bitcoin-blue transition-colors"
+              className="nav-link text-foreground font-medium hover:text-bitcoin-blue transition-colors py-2"
             >
               {t('events')}
             </a>
+
+            <Link
+              href="/faq"
+              className="nav-link text-foreground font-medium hover:text-bitcoin-blue transition-colors py-2"
+            >
+              {t('faq')}
+            </Link>
 
 
             <div className="flex items-center gap-2 ml-4 pl-4 border-l border-border">
@@ -111,8 +139,6 @@ export function Navbar() {
           </div>
 
           <div className="md:hidden flex items-center gap-2">
-            <LanguageSelector />
-            <ThemeToggle />
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md hover:bg-accent transition-colors"
@@ -126,7 +152,7 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden border-t py-4 space-y-4">
+          <div className="md:hidden border-t py-4 space-y-4 animate-in fade-in-0 slide-in-from-top-2 duration-300">
             <div>
               <button
                 onClick={() => setEcosystemOpen(!ecosystemOpen)}
@@ -174,6 +200,19 @@ export function Navbar() {
               {t('events')}
             </a>
 
+            <Link
+              href="/faq"
+              className="block py-2 text-foreground font-medium hover:text-bitcoin-blue transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {t('faq')}
+            </Link>
+
+            {/* Lingua e tema: su mobile stanno nel menu */}
+            <div className="flex items-center justify-between gap-3 border-t pt-4">
+              <LanguageSegmented onChange={() => setIsOpen(false)} />
+              <ThemeToggle bordered />
+            </div>
           </div>
         )}
       </div>

@@ -31,7 +31,7 @@ export function Ecosystem() {
                 <Store className="h-10 w-10 text-bitcoin-blue" aria-hidden="true" />
                 <h2 className="text-3xl md:text-4xl font-bold">Attività</h2>
               </div>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                 Negozi e attività a Torino che accettano Bitcoin
               </p>
             </div>
@@ -77,7 +77,7 @@ export function Ecosystem() {
                 <Building2 className="h-10 w-10 text-bitcoin-blue" aria-hidden="true" />
                 <h2 className="text-3xl md:text-4xl font-bold">Aziende</h2>
               </div>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                 Imprese del territorio che operano nell&apos;ecosistema Bitcoin
               </p>
             </div>
@@ -118,7 +118,7 @@ export function Ecosystem() {
                 <MapPin className="h-10 w-10 text-bitcoin-blue" aria-hidden="true" />
                 <h2 className="text-3xl md:text-4xl font-bold">Spazi</h2>
               </div>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                 Location e spazi dove organizziamo eventi e incontri
               </p>
             </div>

@@ -58,7 +58,7 @@ export function FAQ() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Domande Frequenti
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               Tutto quello che devi sapere su Bitcoin Torino
             </p>
           </div>

@@ -1,10 +1,11 @@
 'use client'
 
-import { Metadata } from "next"
 import {Link} from "@/i18n/navigation"
-import { Users, Building2, Store, MapPin, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Users, Store, MapPin, ArrowRight } from "lucide-react"
 import { useTranslations } from 'next-intl'
+import { PageHero } from "@/components/layout/page-hero"
+import { ContactCta } from "@/components/layout/contact-cta"
+import { Reveal } from "@/components/fx/reveal"
 
 export default function EcosystemPage() {
   const t = useTranslations('Ecosystem');
@@ -16,8 +17,6 @@ export default function EcosystemPage() {
       icon: Users,
       href: "/ecosystem/meetup",
       external: false,
-      color: "text-bitcoin-blue",
-      bgColor: "bg-bitcoin-blue/10",
     },
     {
       title: t('sections.activities.title'),
@@ -25,8 +24,6 @@ export default function EcosystemPage() {
       icon: Store,
       href: "https://btcmap.org/map#13/45.07013/7.67146",
       external: true,
-      color: "text-bitcoin-blue",
-      bgColor: "bg-bitcoin-blue/10",
     },
     {
       title: t('sections.spaces.title'),
@@ -34,82 +31,67 @@ export default function EcosystemPage() {
       icon: MapPin,
       href: "/ecosystem/spazi",
       external: false,
-      color: "text-bitcoin-blue",
-      bgColor: "bg-bitcoin-blue/10",
     },
   ]
 
+  const cardClass = "spotlight-card group h-full p-10 md:p-12 text-center flex flex-col items-center justify-between"
+
   return (
     <main className="min-h-screen">
+      <PageHero
+        title={t('title')}
+        subtitle={t('description')}
+      />
+
       {/* Ecosystem Grid */}
-      <section className="py-20">
+      <section className="section-alt py-16 md:py-28">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {ecosystemSections.map((section, index) => {
               const Icon = section.icon
               const Content = (
                 <>
-                  <div className="flex flex-col items-center flex-1 w-full relative z-10">
-                    <div className={`${section.bgColor} p-6 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className={`h-12 w-12 ${section.color}`} aria-hidden="true" />
+                  <div className="flex flex-col items-center flex-1 w-full">
+                    <div className="relative mb-8">
+                      <div aria-hidden="true" className="absolute inset-0 rounded-3xl bg-bitcoin-blue/40 blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                      <div className="icon-tile h-20 w-20 rounded-3xl">
+                        <Icon className="h-10 w-10" aria-hidden="true" />
+                      </div>
                     </div>
-                    <h2 className="text-3xl font-bold mb-4 group-hover:text-bitcoin-blue transition-colors">
+                    <h2 className="text-3xl font-bold tracking-tight mb-4 transition-colors group-hover:text-bitcoin-blue">
                       {section.title}
                     </h2>
-                    <p className="text-lg text-muted-foreground mb-8">
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
                       {section.description}
                     </p>
                   </div>
-                  <div className="flex justify-center items-center text-bitcoin-blue font-medium text-lg mt-auto pb-4">
+                  <div className="inline-flex items-center text-bitcoin-blue font-semibold text-lg mt-auto">
                     {t('explore')}
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" aria-hidden="true" />
                   </div>
+                  <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-bitcoin-blue via-[#5B8DEF] to-transparent transition-transform duration-500 group-hover:scale-x-100" />
                 </>
               )
 
-              return section.external ? (
-                <a
-                  key={index}
-                  href={section.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-card rounded-xl p-12 border-2 border-border hover:border-bitcoin-blue transition-all duration-300 hover:shadow-xl text-center flex flex-col items-center justify-between"
-                >
-                  {Content}
-                </a>
-              ) : (
-                <Link
-                  key={index}
-                  href={section.href}
-                  className="group bg-card rounded-xl p-12 border-2 border-border hover:border-bitcoin-blue transition-all duration-300 hover:shadow-xl text-center flex flex-col items-center justify-between"
-                >
-                  {Content}
-                </Link>
+              return (
+                <Reveal key={index} delay={index * 110}>
+                  {section.external ? (
+                    <a href={section.href} target="_blank" rel="noopener noreferrer" className={cardClass}>
+                      {Content}
+                    </a>
+                  ) : (
+                    <Link href={section.href} className={cardClass}>
+                      {Content}
+                    </Link>
+                  )}
+                </Reveal>
               )
             })}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gray-50 dark:bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('ctaTitle')}
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              {t('ctaDescription')}
-            </p>
-            <Button asChild size="lg">
-              <a href="mailto:bitcoin.torino@proton.me">
-                {t('contactUs')}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <ContactCta title={t('ctaTitle')} description={t('ctaDescription')} label={t('contactUs')} />
     </main>
   )
 }
-
