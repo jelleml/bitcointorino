@@ -13,7 +13,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bitcointorino.it"),
+  metadataBase: new URL("https://www.bitcointorino.to"),
   title: "Bitcoin Torino - Associazione Bitcoin Torino",
   description: "Associazione dedicata alla promozione e sviluppo dell'ecosistema Bitcoin a Torino e dintorni. Eventi, risorse e community.",
   keywords: ["Bitcoin", "Torino", "Criptovalute", "Blockchain", "Associazione", "Eventi", "Community"],

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://bitcointorino.it'
+  const baseUrl = 'https://www.bitcointorino.to'
 
   return [
     {

@@ -44,7 +44,7 @@ export function generateArticleStructuredData(config: {
       name: 'Bitcoin Torino',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://bitcointorino.it/logo.png',
+        url: 'https://www.bitcointorino.to/logo.png',
       },
     },
   }
@@ -88,7 +88,7 @@ export function generateEventStructuredData(config: {
     organizer: {
       '@type': 'Organization',
       name: 'Bitcoin Torino',
-      url: 'https://bitcointorino.it',
+      url: 'https://www.bitcointorino.to',
     },
   }
 }
@@ -102,8 +102,8 @@ export function generateOrganizationStructuredData() {
     '@type': 'Organization',
     name: 'Bitcoin Torino',
     alternateName: 'Associazione Bitcoin Torino',
-    url: 'https://bitcointorino.it',
-    logo: 'https://bitcointorino.it/logo.png',
+    url: 'https://www.bitcointorino.to',
+    logo: 'https://www.bitcointorino.to/logo.png',
     description:
       'Associazione dedicata alla promozione e sviluppo dell\'ecosistema Bitcoin a Torino e dintorni',
     address: {
