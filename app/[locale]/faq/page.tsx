@@ -42,13 +42,13 @@ export default function FAQPage() {
           question: locale === 'it' ? "Come posso partecipare agli eventi?" : "How can I participate in the events?",
           answer: locale === 'it'
             ? <>Tutti i nostri eventi e dei nostri partner sono pubblicati su <FaqLink href={LUMA_URL}>Luma</FaqLink>. Puoi iscriverti gratuitamente visitando il nostro <FaqLink href={LUMA_URL}>calendario eventi</FaqLink>. La maggior parte degli eventi sono gratuiti e aperti a tutti.</>
-            : <>All our events and our partners' events are published on <FaqLink href={LUMA_URL}>Luma</FaqLink>. You can register for free by visiting our <FaqLink href={LUMA_URL}>event calendar</FaqLink>. Most events are free and open to everyone.</>,
+            : <>All our events and our partners&apos; events are published on <FaqLink href={LUMA_URL}>Luma</FaqLink>. You can register for free by visiting our <FaqLink href={LUMA_URL}>event calendar</FaqLink>. Most events are free and open to everyone.</>,
         },
         {
           question: locale === 'it' ? "Devo essere un esperto di Bitcoin per partecipare?" : "Do I need to be a Bitcoin expert to participate?",
           answer: locale === 'it'
             ? <>Dipende, i nostri eventi e dei nostri partner sono pensati sia per principianti che per esperti. Controlla il <FaqLink href={LUMA_URL}>calendario Luma</FaqLink>, nella descrizione di ogni evento è sempre specificato a chi si rivolge.</>
-            : <>It depends: our events and our partners' events are designed for both beginners and experts. Check the <FaqLink href={LUMA_URL}>Luma calendar</FaqLink>, where each event description always states who it is for.</>,
+            : <>It depends: our events and our partners&apos; events are designed for both beginners and experts. Check the <FaqLink href={LUMA_URL}>Luma calendar</FaqLink>, where each event description always states who it is for.</>,
         },
         {
           question: locale === 'it' ? "Come posso unirmi alla community?" : "How can I join the community?",
@@ -59,7 +59,7 @@ export default function FAQPage() {
         {
           question: locale === 'it' ? "Come posso diventare partner di Bitcoin Torino?" : "How can I become a partner of Bitcoin Torino?",
           answer: locale === 'it'
-            ? <>Se sei un'azienda, un'associazione o un'organizzazione interessata a collaborare con noi, <FaqLink href={EMAIL_URL}>contattaci via email</FaqLink>. Valutiamo diverse forme di partnership per supportare e promuovere l'ecosistema Bitcoin.</>
+            ? <>Se sei un&apos;azienda, un&apos;associazione o un&apos;organizzazione interessata a collaborare con noi, <FaqLink href={EMAIL_URL}>contattaci via email</FaqLink>. Valutiamo diverse forme di partnership per supportare e promuovere l&apos;ecosistema Bitcoin.</>
             : <>If you are a company, an association, or an organization interested in collaborating with us, <FaqLink href={EMAIL_URL}>contact us by email</FaqLink>. We evaluate various forms of partnership to support and promote the Bitcoin ecosystem.</>,
         },
       ],
@@ -111,7 +111,7 @@ export default function FAQPage() {
         {
           question: locale === 'it' ? "Dove si svolgono gli eventi?" : "Where do the events take place?",
           answer: locale === 'it'
-            ? <>Gli eventi si svolgono in diverse location di Torino. L'indirizzo specifico viene comunicato al momento della pubblicazione dell'evento, controlla nella descrizione sul <FaqLink href={LUMA_URL}>calendario Luma</FaqLink>.</>
+            ? <>Gli eventi si svolgono in diverse location di Torino. L&apos;indirizzo specifico viene comunicato al momento della pubblicazione dell&apos;evento, controlla nella descrizione sul <FaqLink href={LUMA_URL}>calendario Luma</FaqLink>.</>
             : <>Events take place in various locations in Turin. The specific address is announced when the event is published: check the description on the <FaqLink href={LUMA_URL}>Luma calendar</FaqLink>.</>,
         },
         {
@@ -123,8 +123,8 @@ export default function FAQPage() {
         {
           question: locale === 'it' ? "Gli eventi sono a pagamento?" : "Are the events paid?",
           answer: locale === 'it'
-            ? <>La maggior parte dei nostri eventi e di quelli dei nostri partner sono gratuiti, ma alcuni potrebbero richiedere un contributo per coprire i costi organizzativi. Il costo è sempre indicato nella descrizione dell'evento su <FaqLink href={LUMA_URL}>Luma</FaqLink>.</>
-            : <>Most of our events and our partners' events are free, but some may require a contribution to cover organizational costs. The cost is always indicated in the event description on <FaqLink href={LUMA_URL}>Luma</FaqLink>.</>,
+            ? <>La maggior parte dei nostri eventi e di quelli dei nostri partner sono gratuiti, ma alcuni potrebbero richiedere un contributo per coprire i costi organizzativi. Il costo è sempre indicato nella descrizione dell&apos;evento su <FaqLink href={LUMA_URL}>Luma</FaqLink>.</>
+            : <>Most of our events and our partners&apos; events are free, but some may require a contribution to cover organizational costs. The cost is always indicated in the event description on <FaqLink href={LUMA_URL}>Luma</FaqLink>.</>,
         },
         {
           question: locale === 'it' ? "Posso sponsorizzare un evento?" : "Can I sponsor an event?",
