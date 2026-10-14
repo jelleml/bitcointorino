@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Reveal } from '@/components/fx/reveal'
 
@@ -19,7 +19,7 @@ export function Partners() {
   const partners = [
     { name: "Plan B Network", logo: "/Partners/logo-plan-b-network.svg?v=2", height: 90, href: "https://planb.network" },
     { name: "Blox Space", logo: "/Partners/logo-blox.svg?v=2", height: 66, invertDark: true, href: "https://linkedin.com/company/blox-space" },
-    { name: "BitCuneo", logo: "/Partners/logo-bitcuneo.svg?v=2", height: 93, href: "https://bitcuneo.it" },
+    { name: "BitCuneo", logo: "/Partners/logo-bitcuneo.svg?v=3", height: 93, href: "https://bitcuneo.it" },
     { name: "BitBox", logo: "/Partners/logo-bitbox.svg?v=2", height: 74, invertDark: true, href: "https://bitbox.swiss" },
     { name: "BitPolito", logo: "/Partners/logo-bitpolito.svg", height: 66, invertDark: true, href: "https://t.me/bitpolito" },
     { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", height: 74, invertDark: true, href: "https://crypto.polito.it/bitcoin" },
@@ -36,30 +36,66 @@ export function Partners() {
   const paused = useRef(false)
   const drag = useRef<{ startX: number; startOffset: number; pointerId: number; moved: boolean } | null>(null)
   const suppressClick = useRef(false)
+  // Logos load only when the section gets close to the viewport, so they don't compete with the hero.
+  // (loading="lazy" can't be used: logos clipped by the carousel would pop in while scrolling past)
+  const [logosNear, setLogosNear] = useState(false)
+
+  useEffect(() => {
+    const track = trackRef.current
+    if (!track) return
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setLogosNear(true)
+        io.disconnect()
+      }
+    }, { rootMargin: '800px 0px' })
+    io.observe(track)
+    return () => io.disconnect()
+  }, [])
 
   useEffect(() => {
     const track = trackRef.current
     if (!track) return
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 
+    // The track holds two identical copies, so wrapping by half its width is seamless.
+    // Width is cached (reading scrollWidth every frame would force a layout each time)
+    let half = track.scrollWidth / 2
+    const ro = new ResizeObserver(() => { half = track.scrollWidth / 2 })
+    ro.observe(track)
+
     let frame = 0
-    let last = performance.now()
+    let last = 0
     const tick = (now: number) => {
-      const dt = (now - last) / 1000
+      const dt = last ? Math.min((now - last) / 1000, 0.1) : 0
       last = now
       if (reducedMotion.matches) {
         track.style.transform = ''
       } else {
-        // The track holds two identical copies, so wrapping by half its width is seamless
-        const half = track.scrollWidth / 2
         if (!paused.current && !drag.current) offset.current -= (half / LOOP_SECONDS) * dt
         if (half > 0) offset.current = ((offset.current % half) - half) % half
         track.style.transform = `translate3d(${offset.current}px, 0, 0)`
       }
       frame = requestAnimationFrame(tick)
     }
-    frame = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(frame)
+
+    // Runs only while the carousel is on screen
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !frame) {
+        last = 0
+        frame = requestAnimationFrame(tick)
+      } else if (!entry.isIntersecting && frame) {
+        cancelAnimationFrame(frame)
+        frame = 0
+      }
+    })
+    io.observe(track)
+
+    return () => {
+      cancelAnimationFrame(frame)
+      ro.disconnect()
+      io.disconnect()
+    }
   }, [])
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -142,7 +178,8 @@ export function Partners() {
                     >
                       <div className="w-full h-24 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
                         <img
-                          src={partner.logo}
+                          src={logosNear ? partner.logo : undefined}
+                          decoding="async"
                           draggable={false}
                           alt={`${partner.name} logo`}
                           style={{ height: partner.height }}

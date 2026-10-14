@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/components/layout/navbar"
 import { ScrollProgress } from "@/components/fx/scroll-progress"
@@ -6,6 +7,13 @@ import { SpotlightTracker } from "@/components/fx/spotlight-tracker"
 import { Footer } from "@/components/layout/footer"
 import { SkipToContent } from "@/components/accessibility/skip-to-content"
 import { ThemeProvider } from "@/components/theme/theme-provider"
+
+// Font servito dal sito stesso e precaricato: niente catena di richieste verso Google Fonts
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+})
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -50,6 +58,7 @@ export const metadata: Metadata = {
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { pick } from '@/lib/utils';
 
 export default async function RootLayout({
   children,
@@ -58,14 +67,14 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
+  // Al client arrivano solo i testi usati dai componenti client presenti in tutte le pagine
   const messages = await getMessages();
+  const clientMessages = pick(messages, ['Navbar', 'Footer', 'Partners']);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} className={inter.variable} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col" suppressHydrationWarning>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={clientMessages}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

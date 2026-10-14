@@ -1,7 +1,5 @@
-'use client'
-
 import { Link } from "@/i18n/navigation"
-import Image from "next/image"
+import { getImageProps } from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTranslations } from 'next-intl'
@@ -10,6 +8,14 @@ import { HeroBackground } from "@/components/home/hero-background"
 export function Hero() {
   const t = useTranslations('Hero');
   const tEvent = useTranslations('NextEvent');
+  const { props: desktopLogo } = getImageProps({
+    src: '/hero-logo-new.png',
+    alt: '',
+    width: 2400,
+    height: 900,
+    sizes: '(min-width: 1024px) 1024px, 100vw',
+    priority: true,
+  })
 
   return (
     <section
@@ -26,7 +32,7 @@ export function Hero() {
             href="https://luma.com/fdgrol0p"
             target="_blank"
             rel="noopener noreferrer"
-            className="glass group mb-10 inline-flex max-w-full items-center gap-3 rounded-full py-2 pl-3 pr-4 sm:py-1.5 sm:pl-2 text-sm text-white/90 animate-fade-up hover:bg-white/15 transition-colors"
+            className="glass group mb-10 inline-flex max-w-full items-center gap-3 rounded-full py-2 pl-3 pr-4 sm:py-1.5 sm:pl-2 text-sm text-white/90 animate-[fade-up_0.5s_cubic-bezier(0.22,1,0.36,1)_both] hover:bg-white/15 transition-colors"
           >
             <span className="relative flex h-6 shrink-0 items-center gap-2 rounded-full bg-white/10 px-2 sm:px-2.5 text-xs font-semibold uppercase tracking-wider">
               <span className="relative flex h-2 w-2">
@@ -44,27 +50,23 @@ export function Hero() {
             <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </a>
 
-          <div className="relative mb-12 w-full max-w-5xl flex justify-center animate-fade-up [animation-delay:150ms]">
+          <div className="relative mb-12 w-full max-w-5xl flex justify-center">
             {/* Alone dietro al logo */}
             <div aria-hidden="true" className="absolute inset-x-[10%] inset-y-[15%] -z-10 bg-[radial-gradient(ellipse_at_center,rgba(9,85,165,0.45),transparent_70%)]" />
-            <Image
-              src="/hero-logo-new.png"
-              alt="Bitcoin Torino Logo"
-              width={2400}
-              height={900}
-              className="hidden md:block w-full h-auto object-contain brightness-0 invert drop-shadow-[0_0_40px_rgba(147,194,247,0.35)]"
-              priority
-            />
-            {/* Su mobile il logo compatto (pittogramma + scritta), più leggibile a larghezze ridotte */}
-            <img
-              src="/bitcoin-torino-logo-small-dark.svg"
-              alt="Bitcoin Torino Logo"
-              className="md:hidden -my-[12%] w-[118%] max-w-lg shrink-0 h-auto drop-shadow-[0_0_40px_rgba(147,194,247,0.35)]"
-            />
+            {/* Un solo <picture>: su mobile il logo compatto (pittogramma + scritta) in SVG, su desktop il logo esteso ottimizzato.
+                Il browser scarica solo la versione che mostra. */}
+            <picture className="contents">
+              <source media="(max-width: 767px)" srcSet="/bitcoin-torino-logo-small-dark.svg" width={2016} height={894} />
+              <img
+                {...desktopLogo}
+                alt="Bitcoin Torino Logo"
+                className="h-auto shrink-0 md:drop-shadow-[0_0_40px_rgba(147,194,247,0.35)] max-md:-my-[12%] max-md:w-[118%] max-md:max-w-lg md:w-full md:object-contain md:brightness-0 md:invert"
+              />
+            </picture>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up [animation-delay:300ms]">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="btn-shine btn-orange group h-14 rounded-full px-9 text-base hover:bg-transparent">
               <Link href="/sportello">
                 <span className="relative z-10 inline-flex items-center">

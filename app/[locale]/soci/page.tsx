@@ -118,8 +118,8 @@ export default function SociPage() {
       <section className="section-alt section-night overflow-hidden py-16 md:py-28">
         {/* Sfondo blu notte visibile solo in light mode, come la fascia Sportello in home */}
         <div aria-hidden="true" className="band-night-mesh absolute inset-0 -z-20 bg-[length:300%_300%] animate-gradient-pan dark:hidden" />
-        <div aria-hidden="true" className="absolute -top-32 -right-32 -z-10 h-96 w-96 rounded-full bg-[#93C2F7]/20 blur-3xl animate-aurora dark:hidden" />
-        <div aria-hidden="true" className="absolute -bottom-40 -left-24 -z-10 h-[28rem] w-[28rem] rounded-full bg-[#00138E]/70 blur-3xl animate-aurora [animation-delay:-8s] dark:hidden" />
+        <div aria-hidden="true" className="absolute -top-32 -right-32 -z-10 h-96 w-96 bg-[radial-gradient(closest-side,rgba(147,194,247,0.2),transparent)] animate-aurora dark:hidden" />
+        <div aria-hidden="true" className="absolute -bottom-40 -left-24 -z-10 h-[28rem] w-[28rem] bg-[radial-gradient(closest-side,rgba(0,19,142,0.7),transparent)] animate-aurora [animation-delay:-8s] dark:hidden" />
         <div aria-hidden="true" className="absolute inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)] dark:hidden" />
 
         <div className="container mx-auto px-4">
@@ -127,7 +127,7 @@ export default function SociPage() {
             <SectionHeading title={t('fee.title')} />
             <Reveal>
               <div className="spotlight-card relative p-10 md:p-14 text-center">
-                <div aria-hidden="true" className="absolute left-1/2 top-0 -z-10 h-40 w-80 -translate-x-1/2 rounded-full bg-bitcoin-blue/15 blur-3xl dark:bg-[#00138E]/60" />
+                <div aria-hidden="true" className="absolute left-1/2 top-0 -z-10 h-40 w-80 -translate-x-1/2 bg-[radial-gradient(closest-side,rgba(7,69,141,0.15),transparent)] dark:bg-[radial-gradient(closest-side,rgba(0,19,142,0.6),transparent)]" />
                 <p className="text-6xl md:text-7xl font-bold tracking-tight mb-6">
                   <span className="text-gradient">{t('fee.amount')}</span>
                 </p>

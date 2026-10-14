@@ -24,7 +24,7 @@ export default function NotFound() {
           </span>
 
           <h1 className="relative mb-2 animate-fade-up [animation-delay:100ms]">
-            <div aria-hidden="true" className="absolute inset-x-[10%] inset-y-[20%] -z-10 rounded-full bg-[#0955A5]/40 blur-[80px]" />
+            <div aria-hidden="true" className="absolute inset-x-[10%] inset-y-[20%] -z-10 bg-[radial-gradient(closest-side,rgba(9,85,165,0.45),transparent)]" />
             <span className="sr-only">{t("heading")}</span>
             <span aria-hidden="true" className="block text-[7rem] sm:text-[9rem] md:text-[12rem] font-bold leading-none tracking-tighter bg-gradient-to-b from-white to-[#93C2F7]/40 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(147,194,247,0.35)]">
               404

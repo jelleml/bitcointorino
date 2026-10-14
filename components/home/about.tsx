@@ -16,7 +16,7 @@ export function About() {
   return (
     <section id="chi-siamo" className="relative isolate overflow-hidden py-16 md:py-32 bg-gray-50 dark:bg-muted scroll-mt-16">
       <div aria-hidden="true" className="dot-pattern absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
-      <div aria-hidden="true" className="absolute -top-40 left-1/2 -z-10 h-80 w-[60rem] -translate-x-1/2 rounded-full bg-bitcoin-blue/10 blur-3xl dark:bg-[#00138E]/40" />
+      <div aria-hidden="true" className="absolute -top-40 left-1/2 -z-10 h-80 w-[60rem] -translate-x-1/2 bg-[radial-gradient(closest-side,rgba(7,69,141,0.10),transparent)] dark:bg-[radial-gradient(closest-side,rgba(0,19,142,0.4),transparent)]" />
 
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">

@@ -1,5 +1,3 @@
-'use client'
-
 import { Metadata } from "next"
 import { Plus, Minus } from "lucide-react"
 import { useTranslations, useLocale } from 'next-intl'

@@ -17,8 +17,8 @@ export function CtaBand({ title, description, icon, children, width = 'md', clas
   return (
     <section className={cn('band-night relative isolate overflow-hidden py-16 md:py-32 text-white', className)}>
       <div aria-hidden="true" className="band-night-mesh absolute inset-0 -z-20 bg-[length:300%_300%] animate-gradient-pan" />
-      <div aria-hidden="true" className="absolute -top-32 -right-32 -z-10 h-96 w-96 rounded-full bg-[#93C2F7]/20 blur-3xl animate-aurora" />
-      <div aria-hidden="true" className="absolute -bottom-40 -left-24 -z-10 h-[28rem] w-[28rem] rounded-full bg-[#00138E]/70 blur-3xl animate-aurora [animation-delay:-8s]" />
+      <div aria-hidden="true" className="absolute -top-32 -right-32 -z-10 h-96 w-96 bg-[radial-gradient(closest-side,rgba(147,194,247,0.2),transparent)] animate-aurora" />
+      <div aria-hidden="true" className="absolute -bottom-40 -left-24 -z-10 h-[28rem] w-[28rem] bg-[radial-gradient(closest-side,rgba(0,19,142,0.7),transparent)] animate-aurora [animation-delay:-8s]" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
 
       <div className="container mx-auto px-4">

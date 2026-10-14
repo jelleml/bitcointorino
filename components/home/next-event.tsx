@@ -1,5 +1,3 @@
-'use client'
-
 import Image from "next/image"
 import { Calendar, MapPin, Users, ArrowRight } from "lucide-react"
 import { useTranslations } from 'next-intl'
@@ -17,7 +15,7 @@ export function NextEvent() {
 
   return (
     <section id="prossimo-evento" className="relative isolate overflow-hidden py-16 md:py-32 bg-white dark:bg-background scroll-mt-16">
-      <div aria-hidden="true" className="absolute -left-40 top-1/3 -z-10 h-[32rem] w-[32rem] rounded-full bg-bitcoin-blue/10 blur-3xl dark:bg-[#00138E]/50" />
+      <div aria-hidden="true" className="absolute -left-40 top-1/3 -z-10 h-[32rem] w-[32rem] bg-[radial-gradient(closest-side,rgba(7,69,141,0.10),transparent)] dark:bg-[radial-gradient(closest-side,rgba(0,19,142,0.5),transparent)]" />
 
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
@@ -30,15 +28,15 @@ export function NextEvent() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             {/* Locandina */}
             <Reveal className="relative">
-              <div aria-hidden="true" className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-bitcoin-blue-light/40 via-[#00138E]/30 to-transparent blur-2xl animate-float" />
+              <div aria-hidden="true" className="absolute -inset-10 -z-10 bg-[radial-gradient(closest-side,rgba(9,85,165,0.4),rgba(0,19,142,0.25)_60%,transparent)] animate-float" />
               <Tilt className="rounded-3xl">
                 <div className="relative aspect-square overflow-hidden rounded-3xl shadow-2xl shadow-bitcoin-blue/25 ring-1 ring-black/5 dark:ring-white/10">
                   <Image
                     src="/Event Posters/bitcoin-handle-with-care.png"
                     alt="Bitcoin: Handle with Care"
                     fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover"
-                    priority
                   />
                 </div>
               </Tilt>

@@ -19,7 +19,7 @@ export default function Error({
   return (
     <div className="section-alt min-h-[70vh] flex flex-col items-center justify-center p-4 py-24 text-center">
       <div className="relative mb-8 h-24 w-24 animate-float">
-        <div aria-hidden="true" className="absolute inset-0 rounded-full bg-red-500/20 blur-2xl" />
+        <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(closest-side,rgba(239,68,68,0.2),transparent)]" />
         <div className="relative flex h-full w-full items-center justify-center rounded-full border border-red-500/30 bg-red-50 dark:bg-red-950/40">
           <AlertCircle className="h-11 w-11 text-red-600 dark:text-red-400" />
         </div>

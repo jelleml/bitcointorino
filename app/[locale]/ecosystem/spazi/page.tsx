@@ -1,5 +1,3 @@
-'use client'
-
 import { MapPin, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTranslations } from 'next-intl'

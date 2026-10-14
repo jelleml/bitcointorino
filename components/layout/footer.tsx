@@ -16,7 +16,7 @@ export function Footer() {
       }}
     >
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#93C2F7]/70 to-transparent" />
-      <div aria-hidden="true" className="pointer-events-none absolute -top-48 left-1/2 -z-10 h-96 w-[70rem] -translate-x-1/2 rounded-full bg-[#0955A5]/40 blur-[100px] animate-aurora" />
+      <div aria-hidden="true" className="pointer-events-none absolute -top-48 left-1/2 -z-10 h-96 w-[70rem] -translate-x-1/2 bg-[radial-gradient(closest-side,rgba(9,85,165,0.4),transparent)] animate-aurora" />
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:linear-gradient(to_bottom,black,transparent_70%)]" />
       <div className="container mx-auto px-4 pt-12 md:pt-[100px] pb-6 md:pb-12">
 
@@ -27,7 +27,7 @@ export function Footer() {
             {/* Il file del logo ha ampi margini trasparenti: lo ingrandiamo e compensiamo con margini negativi
                 così il marchio visibile occupa la stessa riga (h-12) delle intestazioni delle altre colonne */}
             <Link href="/" className="mb-4 flex h-12 items-center hover:opacity-80 transition-opacity">
-              <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" className="-my-[31px] -mx-[25px] md:mr-0 h-[110px] w-auto max-w-none brightness-0 invert" />
+              <img src="/bitcoin-torino-logo-small.svg" alt="Bitcoin Torino" loading="lazy" decoding="async" className="-my-[31px] -mx-[25px] md:mr-0 h-[110px] w-auto max-w-none brightness-0 invert" />
             </Link>
             <p className="max-w-xs text-white/80">
               {t('description')}
