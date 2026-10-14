@@ -441,7 +441,10 @@ details.spotlight-card:hover {
   .animate-aurora,
   .animate-drift,
   .animate-breathe,
-  .animate-float {
+  .animate-float,
+  .animate-gradient-pan,
+  .animate-spin-slow,
+  .text-gradient {
     animation: none;
   }
   .noise::after {
