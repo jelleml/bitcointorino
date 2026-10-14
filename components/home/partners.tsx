@@ -202,7 +202,7 @@ export function Partners() {
             {t('becomePartner')}{" "}
             <a
               href="mailto:bitcoin.torino@proton.me"
-              className="text-bitcoin-blue font-bold hover:underline"
+              className="nav-link inline-block py-1 text-bitcoin-blue font-bold dark:text-[#93C2F7]"
             >
               {t('contactUs')}
             </a>

@@ -72,12 +72,12 @@ export default async function MerchantPage({ params: { locale } }: { params: { l
       <div className="mt-auto pt-6">
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t pt-5 text-sm font-medium">
           {place.website && (
-            <a href={place.website} {...externalLinkProps} className="inline-flex items-center text-bitcoin-blue hover:underline dark:text-[#93C2F7]">
+            <a href={place.website} {...externalLinkProps} className="nav-link inline-flex items-center py-1 text-bitcoin-blue dark:text-[#93C2F7]">
               <Globe className="mr-1.5 h-4 w-4" aria-hidden="true" />
               {t('website')}
             </a>
           )}
-          <a href={btcMapUrl(place)} {...externalLinkProps} className="ml-auto inline-flex items-center text-bitcoin-blue hover:underline dark:text-[#93C2F7]">
+          <a href={btcMapUrl(place)} {...externalLinkProps} className="nav-link ml-auto inline-flex items-center py-1 text-bitcoin-blue dark:text-[#93C2F7]">
             <ExternalLink className="mr-1.5 h-4 w-4" aria-hidden="true" />
             {t('viewOnBtcmap')}
           </a>

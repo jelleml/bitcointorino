@@ -291,7 +291,7 @@ export default function MediaKitPage({ params: { locale } }: { params: { locale:
                     href="https://fonts.google.com/specimen/Inter"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-bitcoin-blue font-medium hover:underline"
+                    className="nav-link inline-block py-1 text-bitcoin-blue font-medium dark:text-[#93C2F7]"
                   >
                     {t('typography.link')}
                   </a>
