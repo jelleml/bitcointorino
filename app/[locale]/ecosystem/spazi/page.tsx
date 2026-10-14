@@ -5,8 +5,16 @@ import Image from "next/image"
 import { PageHero } from "@/components/layout/page-hero"
 import { ContactCta } from "@/components/layout/contact-cta"
 import { Reveal } from "@/components/fx/reveal"
+import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
+import { setRequestLocale } from 'next-intl/server'
 
-export default function SpaziPage() {
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'Meta.spaces', '/ecosystem/spazi')
+}
+
+export default function SpaziPage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   const t = useTranslations('Ecosystem.Spaces');
 
   const spaces = [
@@ -22,12 +30,6 @@ export default function SpaziPage() {
       image: "/Spazi/logo-politecnico-di-torino.jpg",
       mapsLink: "https://maps.app.goo.gl/nwpoNC9mAzEjvkit9",
     },
-    {
-      id: "planb",
-      address: "Corso Valdocco, 3C, Torino",
-      image: "/Spazi/logo-plan-b.jpg",
-      mapsLink: "https://maps.app.goo.gl/wmvGGaTH8xdGdkj1A",
-    },
   ]
 
   const mappedSpaces = spaces.map(s => ({
@@ -40,7 +42,7 @@ export default function SpaziPage() {
 
   return (
     <main className="min-h-screen">
-      <PageHero title={t('title')} />
+      <PageHero title={t('title')} subtitle={t('description')} />
 
       {/* Spaces List */}
       <section className="section-alt py-16 md:py-28">

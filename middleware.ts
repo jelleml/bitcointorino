@@ -1,13 +1,7 @@
 import createMiddleware from 'next-intl/middleware';
+import {routing} from './i18n/routing';
 
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ['en', 'it'],
-
-  // Used when no locale matches
-  defaultLocale: 'it',
-  localePrefix: 'always'
-});
+export default createMiddleware(routing);
 
 export const config = {
   // Match all pathnames except for the ones starting with:
@@ -15,5 +9,5 @@ export const config = {
   // - _next (Next.js internals)
   // - _vercel (Vercel internals)
   // - static files (e.g. favicon.ico, sitemap.xml, etc.)
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/', '/(it|en)/:path*']
+  matcher: ['/((?!api|_next|_vercel|.*\..*).*)', '/', '/(it|en)/:path*']
 };

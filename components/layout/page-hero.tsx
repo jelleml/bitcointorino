@@ -6,6 +6,8 @@ type PageHeroProps = {
   title: ReactNode
   eyebrow?: ReactNode
   subtitle?: ReactNode
+  /** Classi aggiuntive per il sottotitolo (es. per tenerlo su una riga) */
+  subtitleClassName?: string
   /** Link "torna indietro" mostrato sopra al titolo */
   back?: ReactNode
   /** Icona o elemento decorativo sopra al titolo */
@@ -16,7 +18,7 @@ type PageHeroProps = {
 }
 
 /** Testata delle pagine interne: stesso sfondo blu notte e muro di mattoni della home, in formato compatto. */
-export function PageHero({ title, eyebrow, subtitle, back, icon, children, className }: PageHeroProps) {
+export function PageHero({ title, eyebrow, subtitle, subtitleClassName, back, icon, children, className }: PageHeroProps) {
   return (
     <section
       className={cn('noise relative isolate overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32 text-white', className)}
@@ -36,7 +38,7 @@ export function PageHero({ title, eyebrow, subtitle, back, icon, children, class
             <span className="bg-gradient-to-b from-white to-[#93C2F7] bg-clip-text text-transparent">{title}</span>
           </h1>
           {subtitle && (
-            <p className="mt-6 max-w-2xl text-base md:text-xl text-white/80 leading-relaxed animate-fade-up [animation-delay:200ms]">
+            <p className={cn('mt-6 max-w-2xl text-base md:text-xl text-white/80 leading-relaxed animate-fade-up [animation-delay:200ms]', subtitleClassName)}>
               {subtitle}
             </p>
           )}

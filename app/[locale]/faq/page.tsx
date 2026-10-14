@@ -1,9 +1,11 @@
 import { Metadata } from "next"
 import { Plus, Minus } from "lucide-react"
-import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { PageHero } from "@/components/layout/page-hero"
 import { ContactCta } from "@/components/layout/contact-cta"
 import { Reveal } from "@/components/fx/reveal"
+import { pageMetadata } from "@/lib/seo"
+import { setRequestLocale } from 'next-intl/server'
 
 const LUMA_URL = "https://luma.com/bitcoin-torino-calendar"
 const TELEGRAM_URL = "https://t.me/bitcointorinochannel"
@@ -22,9 +24,13 @@ function FaqLink({ href, children }: { href: string; children: React.ReactNode }
   )
 }
 
-export default function FAQPage() {
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'Meta.faq', '/faq')
+}
+
+export default function FAQPage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   const t = useTranslations('FAQ');
-  const locale = useLocale();
 
   const faqs = [
     {

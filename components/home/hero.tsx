@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTranslations } from 'next-intl'
 import { HeroBackground } from "@/components/home/hero-background"
+import { NEXT_EVENT } from "@/components/home/next-event"
 
 export function Hero() {
   const t = useTranslations('Hero');
@@ -29,7 +30,7 @@ export function Hero() {
 
           {/* Badge prossimo evento */}
           <a
-            href="https://luma.com/fdgrol0p"
+            href={NEXT_EVENT.url}
             target="_blank"
             rel="noopener noreferrer"
             className="glass group mb-10 inline-flex max-w-full items-center gap-3 rounded-full py-2 pl-3 pr-4 sm:py-1.5 sm:pl-2 text-sm text-white/90 animate-[fade-up_0.5s_cubic-bezier(0.22,1,0.36,1)_both] hover:bg-white/15 transition-colors"
@@ -50,6 +51,8 @@ export function Hero() {
             <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </a>
 
+          <h1 className="sr-only">{t('h1')}</h1>
+
           <div className="relative mb-12 w-full max-w-5xl flex justify-center">
             {/* Alone dietro al logo */}
             <div aria-hidden="true" className="absolute inset-x-[10%] inset-y-[15%] -z-10 bg-[radial-gradient(ellipse_at_center,rgba(9,85,165,0.45),transparent_70%)]" />
@@ -59,7 +62,7 @@ export function Hero() {
               <source media="(max-width: 767px)" srcSet="/bitcoin-torino-logo-small-dark.svg" width={2016} height={894} />
               <img
                 {...desktopLogo}
-                alt="Bitcoin Torino Logo"
+                alt="Bitcoin Torino"
                 className="h-auto shrink-0 md:drop-shadow-[0_0_40px_rgba(147,194,247,0.35)] max-md:-my-[11%] max-md:w-[111%] max-md:max-w-[30rem] md:w-full md:object-contain md:brightness-0 md:invert"
               />
             </picture>

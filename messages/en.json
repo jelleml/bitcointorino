@@ -93,8 +93,7 @@
     "ctaDescription": "If you manage a community, a business, or a space and want to be included in our map of the Turin Bitcoin ecosystem, contact us!",
     "contactUs": "Contact Us",
     "Meetup": {
-      "title": "Meet other Bitcoiners",
-      "filterAll": "All",
+      "title": "Bitcoin communities in Turin",
       "members": "members",
       "ctaTitle": "Want to create a new community?",
       "ctaDescription": "If you are thinking of starting a new Bitcoin community in Turin or Piedmont, we can help you promote it and put you in touch with other organizers.",
@@ -145,13 +144,20 @@
         "builder_torino": {
           "name": "₿uilder Torino",
           "description": "A fork of ₿uilderSF, a monthly meetup on product, design and AI tools for those building on freedom technologies and Bitcoin. Open to everyone.",
-          "type": "Meetup",
+          "type": "Community",
           "frequency": "Every month"
         }
-      }
+      },
+      "description": "Meetups, groups and communities where you can meet fellow Bitcoiners in Turin and Piedmont.",
+      "groups": {
+        "meetup": "Meetups",
+        "community": "Communities",
+        "student": "Student teams"
+      },
+      "sectionsLabel": "Page sections"
     },
     "Spaces": {
-      "title": "Build with other Bitcoiners",
+      "title": "Bitcoin spaces in Turin",
       "services": "Available services:",
       "openInMaps": "Open in Maps",
       "ctaTitle": "Have a space to share?",
@@ -178,17 +184,9 @@
             "Study Rooms",
             "Events"
           ]
-        },
-        "planb": {
-          "name": "Plan B",
-          "type": "Bar",
-          "description": "Informal venue in downtown Turin with a Bitcoin-themed setup that combines a café by day and a cocktail bar in the evening.",
-          "features": [
-            "Catering",
-            "Events"
-          ]
         }
-      }
+      },
+      "description": "Places where the Turin Bitcoin community regularly meets and builds."
     },
     "Companies": {
       "title": "Companies",
@@ -231,29 +229,32 @@
       }
     },
     "Merchant": {
-      "title": "Businesses",
-      "description": "Shops and commercial activities that accept Bitcoin in Turin",
-      "backToEcosystem": "Back to Ecosystem",
-      "ctaTitle": "Do you accept Bitcoin in your business?",
+      "title": "Bitcoin-friendly businesses in Turin",
+      "description": "Shops, venues and professionals that accept Bitcoin in Turin and the surrounding area.",
+      "ctaTitle": "Accept Bitcoin in your business",
       "ctaDescription": "Become part of Turin's Bitcoin-friendly business network and reach a community of passionate customers and innovators.",
       "contactUs": "Register your business",
-      "items": {
-        "bar": {
-          "name": "Bitcoin Bar",
-          "category": "Bar & Café",
-          "description": "Coffee, breakfast and appetizers payable in Bitcoin and Lightning"
-        },
-        "retail": {
-          "name": "Crypto Shop",
-          "category": "Retail",
-          "description": "Tech products and Bitcoin gadgets"
-        },
-        "food": {
-          "name": "Lightning Restaurant",
-          "category": "Catering",
-          "description": "Traditional cuisine with innovative payments"
-        }
-      }
+      "intro": "{count} businesses in and around Turin (within {radius} km of the city centre) accept bitcoin.",
+      "categories": {
+        "food": "Restaurants",
+        "bars": "Bars and pubs",
+        "shops": "Shops",
+        "wellness": "Health and wellbeing",
+        "professional": "Professionals",
+        "services": "Services",
+        "leisure": "Sports and leisure",
+        "stays": "Accommodation"
+      },
+      "atmTitle": "Bitcoin ATMs",
+      "atmLabel": "Bitcoin ATM",
+      "atmDescription": "Machines where you can buy bitcoin with cash. Check fees and limits before using them.",
+      "website": "Website",
+      "viewOnBtcmap": "View on BTC Map",
+      "verifiedOn": "Verified {date}",
+      "unavailable": "We can't load the list of businesses right now. You can browse it directly on the BTC Map map.",
+      "openMap": "Open the map",
+      "attribution": "Data from <btcmap>BTC Map</btcmap>, © <osm>OpenStreetMap contributors</osm>. Listings are added by the community: check opening hours and payment options before you go.",
+      "sectionsLabel": "Page sections"
     }
   },
   "FAQ": {
@@ -660,12 +661,12 @@
       "description": "Meetups, companies, merchants and spaces working with Bitcoin in Turin and the surrounding area: a map of the local Bitcoin ecosystem."
     },
     "meetup": {
-      "title": "Bitcoin meetups and communities in Piedmont | Bitcoin Torino",
+      "title": "Bitcoin communities in Turin and Piedmont | Bitcoin Torino",
       "description": "Bitcoin meetups and communities in Turin and Piedmont: Satoshi Spritz, BitDevs, Builder Torino and other groups where you can meet fellow Bitcoiners."
     },
     "spaces": {
       "title": "Bitcoin spaces in Turin | Bitcoin Torino",
-      "description": "Coworkings, hubs and universities where the Turin Bitcoin community meets and builds: Blox, Plan B and Politecnico di Torino."
+      "description": "Coworkings, hubs and universities where the Turin Bitcoin community meets and builds: Blox and Politecnico di Torino."
     },
     "companies": {
       "title": "Bitcoin companies in Turin | Bitcoin Torino",

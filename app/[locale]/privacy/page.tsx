@@ -2,17 +2,15 @@ import type { Metadata } from "next"
 import { PageHero } from "@/components/layout/page-hero"
 import { BackLink } from "@/components/layout/back-link"
 import { Reveal } from "@/components/fx/reveal"
+import { pageMetadata } from "@/lib/seo"
+import { setRequestLocale } from 'next-intl/server'
 
-export const metadata: Metadata = {
-  title: "Privacy Policy - Bitcoin Torino",
-  description: "Informativa sulla privacy dell'Associazione Bitcoin Torino",
-  robots: {
-    index: true,
-    follow: true,
-  },
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'Meta.privacy', '/privacy')
 }
 
-export default function PrivacyPage() {
+export default function PrivacyPage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   return (
     <div className="min-h-screen">
       <PageHero

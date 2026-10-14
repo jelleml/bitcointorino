@@ -1,8 +1,9 @@
 import { ArrowLeft } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
+import type { Pathname } from '@/i18n/routing'
 
 /** Link "torna indietro" in vetro, da usare dentro PageHero. */
-export function BackLink({ label, href = '/ecosystem' }: { label: string; href?: string }) {
+export function BackLink({ label, href = '/ecosystem' }: { label: string; href?: Pathname }) {
   return (
     <Link
       href={href}

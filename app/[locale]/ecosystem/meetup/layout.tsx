@@ -1,15 +1,13 @@
 import type { ReactNode } from 'react'
-import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
+import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 
-/** La pagina Meetup è un componente client (filtro): le passiamo solo i suoi testi. */
-export default async function MeetupLayout({ children }: { children: ReactNode }) {
-  const messages = await getMessages()
-  const ecosystem = messages.Ecosystem as Record<string, unknown>
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'Meta.meetup', '/ecosystem/meetup')
+}
 
-  return (
-    <NextIntlClientProvider messages={{ Ecosystem: { Meetup: ecosystem.Meetup } }}>
-      {children}
-    </NextIntlClientProvider>
-  )
+export default function MeetupLayout({ children, params: { locale } }: { children: ReactNode; params: { locale: string } }) {
+  setRequestLocale(locale)
+  return children
 }

@@ -6,6 +6,7 @@ import { PageHero } from "@/components/layout/page-hero"
 import { SectionHeading } from "@/components/layout/section-heading"
 import { ContactCta } from "@/components/layout/contact-cta"
 import { Reveal } from "@/components/fx/reveal"
+import { setRequestLocale } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: "Eventi - Bitcoin Torino",
@@ -79,7 +80,8 @@ const pastEvents = [
   },
 ]
 
-export default function EventiPage() {
+export default function EventiPage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   return (
     <div className="min-h-screen">
       <PageHero

@@ -1,11 +1,20 @@
 import {Link} from "@/i18n/navigation"
+import type { Pathname } from "@/i18n/routing"
 import { Users, Store, MapPin, ArrowRight } from "lucide-react"
 import { useTranslations } from 'next-intl'
 import { PageHero } from "@/components/layout/page-hero"
 import { ContactCta } from "@/components/layout/contact-cta"
 import { Reveal } from "@/components/fx/reveal"
+import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
+import { setRequestLocale } from 'next-intl/server'
 
-export default function EcosystemPage() {
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'Meta.ecosystem', '/ecosystem')
+}
+
+export default function EcosystemPage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   const t = useTranslations('Ecosystem');
 
   const ecosystemSections = [
@@ -20,8 +29,8 @@ export default function EcosystemPage() {
       title: t('sections.activities.title'),
       description: t('sections.activities.description'),
       icon: Store,
-      href: "https://btcmap.org/map#13/45.07013/7.67146",
-      external: true,
+      href: "/ecosystem/merchant",
+      external: false,
     },
     {
       title: t('sections.spaces.title'),
@@ -78,7 +87,7 @@ export default function EcosystemPage() {
                       {Content}
                     </a>
                   ) : (
-                    <Link href={section.href} className={cardClass}>
+                    <Link href={section.href as Pathname} className={cardClass}>
                       {Content}
                     </Link>
                   )}

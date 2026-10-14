@@ -4,8 +4,16 @@ import { BackLink } from "@/components/layout/back-link"
 import { PageHero } from "@/components/layout/page-hero"
 import { ContactCta } from "@/components/layout/contact-cta"
 import { Reveal } from "@/components/fx/reveal"
+import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
+import { setRequestLocale } from 'next-intl/server'
 
-export default function AziendePage() {
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'Meta.companies', '/ecosystem/aziende')
+}
+
+export default function AziendePage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   const t = useTranslations('Ecosystem.Companies');
 
   const companies = [

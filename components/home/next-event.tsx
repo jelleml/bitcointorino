@@ -3,9 +3,53 @@ import { Calendar, MapPin, Users, ArrowRight } from "lucide-react"
 import { useTranslations } from 'next-intl'
 import { Reveal } from "@/components/fx/reveal"
 import { Tilt } from "@/components/fx/tilt"
+import { SITE_URL } from "@/lib/seo"
+
+/**
+ * Dati "macchina" del prossimo evento, per i dati strutturati di Google (risultati Eventi).
+ * Quando cambia l'evento, aggiornare questi campi insieme ai testi in messages/*.json (NextEvent).
+ */
+export const NEXT_EVENT = {
+  url: "https://luma.com/fdgrol0p",
+  poster: "/Event Posters/bitcoin-handle-with-care.png",
+  startDate: "2026-10-15T17:30:00+02:00",
+  endDate: "2026-10-15T19:30:00+02:00",
+  inLanguage: "en",
+  performer: "Luca Giuliani",
+  streetAddress: "Corso Duca degli Abruzzi 24",
+  postalCode: "10129",
+}
 
 export function NextEvent() {
   const t = useTranslations('NextEvent');
+
+  const eventStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: t('eventName'),
+    description: t('description'),
+    startDate: NEXT_EVENT.startDate,
+    endDate: NEXT_EVENT.endDate,
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    inLanguage: NEXT_EVENT.inLanguage,
+    image: [`${SITE_URL}${encodeURI(NEXT_EVENT.poster)}`],
+    url: NEXT_EVENT.url,
+    location: {
+      '@type': 'Place',
+      name: t('locationName'),
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: NEXT_EVENT.streetAddress,
+        postalCode: NEXT_EVENT.postalCode,
+        addressLocality: 'Torino',
+        addressRegion: 'TO',
+        addressCountry: 'IT',
+      },
+    },
+    performer: { '@type': 'Person', name: NEXT_EVENT.performer },
+    organizer: { '@type': 'Organization', name: 'Bitcoin Torino', url: SITE_URL },
+  }
 
   const details = [
     { icon: Calendar, title: t('date'), subtitle: t('time') },
@@ -15,6 +59,10 @@ export function NextEvent() {
 
   return (
     <section id="prossimo-evento" className="relative isolate overflow-hidden py-16 md:py-32 bg-white dark:bg-background scroll-mt-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventStructuredData) }}
+      />
       <div aria-hidden="true" className="absolute -left-40 top-1/3 -z-10 h-[32rem] w-[32rem] bg-[radial-gradient(closest-side,rgba(7,69,141,0.10),transparent)] dark:bg-[radial-gradient(closest-side,rgba(0,19,142,0.5),transparent)]" />
 
       <div className="container mx-auto px-4">
@@ -32,7 +80,7 @@ export function NextEvent() {
               <Tilt className="rounded-3xl">
                 <div className="relative aspect-square overflow-hidden rounded-3xl shadow-2xl shadow-bitcoin-blue/25 ring-1 ring-black/5 dark:ring-white/10">
                   <Image
-                    src="/Event Posters/bitcoin-handle-with-care.png"
+                    src={NEXT_EVENT.poster}
                     alt="Bitcoin: Handle with Care"
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
@@ -78,7 +126,7 @@ export function NextEvent() {
 
               <Reveal delay={500}>
                 <a
-                  href="https://luma.com/fdgrol0p"
+                  href={NEXT_EVENT.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-shine group inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-bitcoin-blue via-bitcoin-blue-light to-bitcoin-blue bg-[length:200%_100%] px-9 text-base font-bold text-white shadow-xl shadow-bitcoin-blue/30 transition-all duration-500 hover:-translate-y-0.5 hover:bg-[position:100%_0] hover:shadow-bitcoin-blue/50"

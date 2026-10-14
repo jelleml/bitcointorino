@@ -16,32 +16,25 @@ import {
   X,
 } from "lucide-react"
 import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHero } from "@/components/layout/page-hero"
 import { SectionHeading } from "@/components/layout/section-heading"
 import { CtaBand } from "@/components/layout/cta-band"
 import { Reveal } from "@/components/fx/reveal"
 import { CopyButton } from "@/components/media-kit/copy-button"
+import { pageMetadata } from "@/lib/seo"
 
 const SPORTELLO_EMAIL = "bitcoin.torino@proton.me"
 
-export async function generateMetadata({
-  params: { locale }
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'Sportello.meta' })
-
-  return {
-    title: t('title'),
-    description: t('description'),
-  }
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'Sportello.meta', '/sportello')
 }
 
 const whatIcons = [FileText, GraduationCap, Handshake]
 const audienceIcons = [Store, Building2, Users, HeartHandshake, User]
 
-export default function SportelloPage() {
+export default function SportelloPage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   const t = useTranslations('Sportello')
   const tCta = useTranslations('SportelloCta')
 

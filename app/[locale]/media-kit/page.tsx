@@ -9,26 +9,18 @@ import {
   Linkedin,
 } from "lucide-react"
 import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHero } from "@/components/layout/page-hero"
 import { SectionHeading } from "@/components/layout/section-heading"
 import { CopyButton } from "@/components/media-kit/copy-button"
+import { pageMetadata } from "@/lib/seo"
 
 const ASSETS_PATH = "/media-kit"
 const KIT_ZIP = `${ASSETS_PATH}/bitcoin-torino-media-kit.zip`
 const PRESS_EMAIL = "bitcoin.torino@proton.me"
 
-export async function generateMetadata({
-  params: { locale }
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'MediaKit.meta' })
-
-  return {
-    title: t('title'),
-    description: t('description'),
-  }
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'MediaKit.meta', '/media-kit')
 }
 
 type Background = "dark" | "light"
@@ -108,7 +100,8 @@ const socials = [
   { label: "LinkedIn", handle: "Bitcoin Torino", Icon: Linkedin },
 ]
 
-export default function MediaKitPage() {
+export default function MediaKitPage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   const t = useTranslations('MediaKit')
 
   const facts = t.raw('facts.items') as { label: string; value: string }[]

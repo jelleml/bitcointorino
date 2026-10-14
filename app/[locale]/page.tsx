@@ -5,8 +5,16 @@ import { NextEvent } from "@/components/home/next-event"
 import { SportelloCta } from "@/components/home/sportello-cta"
 import { TorinoBitcoinCity } from "@/components/home/torino-bitcoin-city"
 import { generateOrganizationStructuredData } from "@/lib/seo"
+import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
+import { setRequestLocale } from 'next-intl/server'
 
-export default function Home() {
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'Meta.home', '/')
+}
+
+export default function Home({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   const structuredData = generateOrganizationStructuredData()
 
   return (

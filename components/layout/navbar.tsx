@@ -1,6 +1,7 @@
 "use client"
 
 import {Link} from "@/i18n/navigation"
+import type { Pathname } from "@/i18n/routing"
 import { useState, useRef, useEffect } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { LanguageSelector, LanguageSegmented } from "@/components/theme/language-selector"
@@ -31,7 +32,7 @@ export function Navbar() {
 
   const ecosystemLinks = [
     { href: "/ecosystem/meetup", label: t('people'), external: false },
-    { href: "https://btcmap.org/map#13/45.07013/7.67146", label: t('activities'), external: true },
+    { href: "/ecosystem/merchant", label: t('activities'), external: false },
     { href: "/ecosystem/spazi", label: t('spaces'), external: false },
   ]
 
@@ -103,7 +104,7 @@ export function Navbar() {
                       ) : (
                         <Link
                           key={link.href}
-                          href={link.href}
+                          href={link.href as Pathname}
                           className="block px-4 py-2 text-foreground hover:bg-bitcoin-blue/10 hover:text-bitcoin-blue transition-colors"
                         >
                           {link.label}
@@ -178,7 +179,7 @@ export function Navbar() {
                     ) : (
                       <Link
                         key={link.href}
-                        href={link.href}
+                        href={link.href as Pathname}
                         className="block py-2 text-sm text-muted-foreground hover:text-bitcoin-blue transition-colors"
                         onClick={() => setIsOpen(false)}
                       >

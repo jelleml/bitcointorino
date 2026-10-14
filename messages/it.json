@@ -93,8 +93,7 @@
     "ctaDescription": "Se gestisci una community, un'attività o uno spazio e vuoi essere inserito nella nostra mappa dell'ecosistema Bitcoin di Torino, contattaci!",
     "contactUs": "Contattaci",
     "Meetup": {
-      "title": "Incontra altri Bitcoiner",
-      "filterAll": "Tutti",
+      "title": "Community Bitcoin a Torino",
       "members": "membri",
       "ctaTitle": "Vuoi creare una nuova community?",
       "ctaDescription": "Se stai pensando di avviare una nuova community Bitcoin a Torino o in Piemonte, possiamo aiutarti a promuoverla e metterti in contatto con altri organizzatori.",
@@ -145,13 +144,20 @@
         "builder_torino": {
           "name": "₿uilder Torino",
           "description": "Fork di ₿uilderSF, meetup mensile dedicato a prodotto, design e strumenti AI per chi costruisce su freedom technologies e Bitcoin. Aperto a tutti.",
-          "type": "Meetup",
+          "type": "Community",
           "frequency": "Ogni mese"
         }
-      }
+      },
+      "description": "Meetup, gruppi e community dove incontrare altri bitcoiner a Torino e in Piemonte.",
+      "groups": {
+        "meetup": "Meetup",
+        "community": "Community",
+        "student": "Team studenteschi"
+      },
+      "sectionsLabel": "Sezioni della pagina"
     },
     "Spaces": {
-      "title": "Costruisci con altri Bitcoiner",
+      "title": "Spazi Bitcoin a Torino",
       "services": "Servizi disponibili:",
       "openInMaps": "Apri in Maps",
       "ctaTitle": "Hai uno spazio da condividere?",
@@ -178,17 +184,9 @@
             "Sale Studio",
             "Eventi"
           ]
-        },
-        "planb": {
-          "name": "Plan B",
-          "type": "Bar",
-          "description": "Locale informale in centro a Torino allestito a tema Bitcoin che combina caffetteria di giorno e cocktail bar la sera.",
-          "features": [
-            "Ristorazione",
-            "Eventi"
-          ]
         }
-      }
+      },
+      "description": "Luoghi dove la community Bitcoin di Torino si incontra e costruisce regolarmente."
     },
     "Companies": {
       "title": "Aziende",
@@ -231,29 +229,32 @@
       }
     },
     "Merchant": {
-      "title": "Attività",
-      "description": "Negozi e attività commerciali che accettano Bitcoin a Torino",
-      "backToEcosystem": "Torna all'Ecosistema",
-      "ctaTitle": "Accetti Bitcoin nella tua attività?",
+      "title": "Attività Bitcoin-friendly a Torino",
+      "description": "Negozi, locali e professionisti che accettano Bitcoin a Torino e dintorni.",
+      "ctaTitle": "Accetta Bitcoin nella tua attività",
       "ctaDescription": "Entra a far parte della rete di attività Bitcoin-friendly di Torino e raggiungi una community di clienti appassionati e innovatori.",
       "contactUs": "Registra la tua attività",
-      "items": {
-        "bar": {
-          "name": "Bar Bitcoin",
-          "category": "Bar & Caffetteria",
-          "description": "Caffè, colazioni e aperitivi pagabili in Bitcoin e Lightning"
-        },
-        "retail": {
-          "name": "Negozio Crypto",
-          "category": "Retail",
-          "description": "Prodotti tecnologici e gadget Bitcoin"
-        },
-        "food": {
-          "name": "Ristorante Lightning",
-          "category": "Ristorazione",
-          "description": "Cucina tradizionale con pagamenti innovativi"
-        }
-      }
+      "intro": "{count} attività a Torino e dintorni (entro {radius} km dal centro) accettano bitcoin.",
+      "categories": {
+        "food": "Ristoranti",
+        "bars": "Bar e locali",
+        "shops": "Negozi",
+        "wellness": "Salute e benessere",
+        "professional": "Professionisti",
+        "services": "Servizi",
+        "leisure": "Sport e tempo libero",
+        "stays": "Alloggi"
+      },
+      "atmTitle": "Bitcoin ATM",
+      "atmLabel": "Bitcoin ATM",
+      "atmDescription": "Sportelli automatici dove acquistare bitcoin in contanti. Prima di usarli, verifica commissioni e limiti.",
+      "website": "Sito web",
+      "viewOnBtcmap": "Vedi su BTC Map",
+      "verifiedOn": "Verificato {date}",
+      "unavailable": "Al momento non riusciamo a caricare l'elenco delle attività. Puoi consultarlo direttamente sulla mappa di BTC Map.",
+      "openMap": "Apri la mappa",
+      "attribution": "Dati da <btcmap>BTC Map</btcmap>, © <osm>contributori di OpenStreetMap</osm>. Le informazioni sono inserite dalla community: verifica orari e modalità di pagamento prima di andare.",
+      "sectionsLabel": "Sezioni della pagina"
     }
   },
   "FAQ": {
@@ -660,12 +661,12 @@
       "description": "Meetup, aziende, attività commerciali e spazi che lavorano con Bitcoin a Torino e dintorni: la mappa dell'ecosistema bitcoiner torinese."
     },
     "meetup": {
-      "title": "Meetup e community Bitcoin in Piemonte | Bitcoin Torino",
+      "title": "Community Bitcoin a Torino e in Piemonte | Bitcoin Torino",
       "description": "I meetup e le community Bitcoin di Torino e del Piemonte: Satoshi Spritz, BitDevs, Builder Torino e altri gruppi dove incontrare altri bitcoiner."
     },
     "spaces": {
       "title": "Spazi Bitcoin a Torino | Bitcoin Torino",
-      "description": "Coworking, hub e università dove la community Bitcoin di Torino si incontra e costruisce: Blox, Plan B e Politecnico di Torino."
+      "description": "Coworking, hub e università dove la community Bitcoin di Torino si incontra e costruisce: Blox e Politecnico di Torino."
     },
     "companies": {
       "title": "Aziende Bitcoin a Torino | Bitcoin Torino",

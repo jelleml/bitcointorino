@@ -10,29 +10,22 @@ import {
   Wrench,
 } from "lucide-react"
 import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHero } from "@/components/layout/page-hero"
 import { SectionHeading } from "@/components/layout/section-heading"
 import { Reveal } from "@/components/fx/reveal"
+import { pageMetadata } from "@/lib/seo"
 
 const MEMBERSHIP_FORM_URL = "https://forms.gle/gXgsVYPf8fqnZ6678"
 
-export async function generateMetadata({
-  params: { locale }
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'Soci.meta' })
-
-  return {
-    title: t('title'),
-    description: t('description'),
-  }
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata(locale, 'Soci.meta', '/soci')
 }
 
 const benefitIcons = [PartyPopper, Ticket, Handshake, Vote]
 
-export default function SociPage() {
+export default function SociPage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   const t = useTranslations('Soci')
 
   const benefits = t.raw('benefits.items') as { title: string; description: string }[]
