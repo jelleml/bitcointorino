@@ -1,7 +1,8 @@
 {
   "Hero": {
     "getSupport": "Ricevi supporto",
-    "becomeMember": "Diventa socio"
+    "becomeMember": "Diventa socio",
+    "h1": "Bitcoin Torino – Associazione per Bitcoin a Torino"
   },
   "About": {
     "title": "Chi Siamo",
@@ -646,7 +647,45 @@
   "NotFound": {
     "eyebrow": "Errore",
     "heading": "Errore 404: pagina non trovata",
-    "subtitle": "Questa pagina non esiste: forse è stata spostata, oppure il link è sbagliato.",
+    "subtitle": "Questa pagina non esiste.",
     "home": "Torna alla Home"
+  },
+  "Meta": {
+    "home": {
+      "title": "Bitcoin Torino | Associazione per Bitcoin a Torino",
+      "description": "Associazione Bitcoin Torino: eventi, meetup, formazione e uno sportello gratuito per chi vuole capire e usare Bitcoin a Torino e in Piemonte."
+    },
+    "ecosystem": {
+      "title": "Ecosistema Bitcoin a Torino | Bitcoin Torino",
+      "description": "Meetup, aziende, attività commerciali e spazi che lavorano con Bitcoin a Torino e dintorni: la mappa dell'ecosistema bitcoiner torinese."
+    },
+    "meetup": {
+      "title": "Meetup e community Bitcoin in Piemonte | Bitcoin Torino",
+      "description": "I meetup e le community Bitcoin di Torino e del Piemonte: Satoshi Spritz, BitDevs, Builder Torino e altri gruppi dove incontrare altri bitcoiner."
+    },
+    "spaces": {
+      "title": "Spazi Bitcoin a Torino | Bitcoin Torino",
+      "description": "Coworking, hub e università dove la community Bitcoin di Torino si incontra e costruisce: Blox, Plan B e Politecnico di Torino."
+    },
+    "companies": {
+      "title": "Aziende Bitcoin a Torino | Bitcoin Torino",
+      "description": "Imprese e startup torinesi che sviluppano prodotti e servizi con Bitcoin e Lightning Network."
+    },
+    "merchant": {
+      "title": "Dove pagare in Bitcoin a Torino | Bitcoin Torino",
+      "description": "Negozi, bar e attività commerciali che accettano pagamenti in Bitcoin e Lightning Network a Torino."
+    },
+    "faq": {
+      "title": "Domande frequenti | Bitcoin Torino",
+      "description": "Cos'è Bitcoin Torino, come partecipare agli eventi, se serve essere esperti, come unirsi alla community e diventare partner: le risposte alle domande più comuni."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Bitcoin Torino",
+      "description": "Informativa sul trattamento dei dati personali dell'Associazione Bitcoin Torino: quali dati raccogliamo, perché e quali sono i tuoi diritti."
+    },
+    "cookies": {
+      "title": "Cookie Policy | Bitcoin Torino",
+      "description": "Informativa sui cookie usati dal sito dell'Associazione Bitcoin Torino e su come gestire le tue preferenze."
+    }
   }
 }

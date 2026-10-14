@@ -1,7 +1,8 @@
 {
   "Hero": {
     "getSupport": "Get support",
-    "becomeMember": "Become a Member"
+    "becomeMember": "Become a Member",
+    "h1": "Bitcoin Torino – Bitcoin association in Turin"
   },
   "About": {
     "title": "About Us",
@@ -646,7 +647,45 @@
   "NotFound": {
     "eyebrow": "Error",
     "heading": "Error 404: page not found",
-    "subtitle": "This page does not exist: it may have moved, or the link is wrong.",
+    "subtitle": "This page does not exist.",
     "home": "Back to Home"
+  },
+  "Meta": {
+    "home": {
+      "title": "Bitcoin Torino | Bitcoin association in Turin, Italy",
+      "description": "Associazione Bitcoin Torino: events, meetups, education and a free help desk for anyone who wants to understand and use Bitcoin in Turin and Piedmont."
+    },
+    "ecosystem": {
+      "title": "Bitcoin ecosystem in Turin | Bitcoin Torino",
+      "description": "Meetups, companies, merchants and spaces working with Bitcoin in Turin and the surrounding area: a map of the local Bitcoin ecosystem."
+    },
+    "meetup": {
+      "title": "Bitcoin meetups and communities in Piedmont | Bitcoin Torino",
+      "description": "Bitcoin meetups and communities in Turin and Piedmont: Satoshi Spritz, BitDevs, Builder Torino and other groups where you can meet fellow Bitcoiners."
+    },
+    "spaces": {
+      "title": "Bitcoin spaces in Turin | Bitcoin Torino",
+      "description": "Coworkings, hubs and universities where the Turin Bitcoin community meets and builds: Blox, Plan B and Politecnico di Torino."
+    },
+    "companies": {
+      "title": "Bitcoin companies in Turin | Bitcoin Torino",
+      "description": "Turin-based businesses and startups building products and services with Bitcoin and the Lightning Network."
+    },
+    "merchant": {
+      "title": "Where to pay with Bitcoin in Turin | Bitcoin Torino",
+      "description": "Shops, bars and businesses in Turin that accept Bitcoin and Lightning Network payments."
+    },
+    "faq": {
+      "title": "Frequently asked questions | Bitcoin Torino",
+      "description": "What Bitcoin Torino is, how to join events, whether you need to be an expert, how to join the community and become a partner: answers to the most common questions."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Bitcoin Torino",
+      "description": "How Associazione Bitcoin Torino processes personal data: what we collect, why, and what your rights are."
+    },
+    "cookies": {
+      "title": "Cookie Policy | Bitcoin Torino",
+      "description": "The cookies used by the Associazione Bitcoin Torino website and how to manage your preferences."
+    }
   }
 }
