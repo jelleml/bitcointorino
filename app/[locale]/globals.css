@@ -435,3 +435,21 @@ details.spotlight-card[open] {
 details.spotlight-card:hover {
   transform: none;
 }
+
+/* Mobile: niente animazioni infinite su layer sfocati e niente overlay con blend, per non appesantire GPU/batteria */
+@media (max-width: 767px), (pointer: coarse) {
+  .animate-aurora,
+  .animate-drift,
+  .animate-breathe,
+  .animate-float {
+    animation: none;
+  }
+  .noise::after {
+    display: none;
+  }
+  .glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.10);
+  }
+}

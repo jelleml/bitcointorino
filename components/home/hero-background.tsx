@@ -8,8 +8,8 @@ export function HeroBackground() {
       <div className="absolute left-1/2 top-[-35%] h-[90%] w-[120%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(147,194,247,0.28),rgba(9,85,165,0.12)_35%,transparent_65%)] animate-breathe" />
 
       {/* Seta luminosa che si muove lentamente */}
-      <div className="absolute -left-[20%] top-[10%] h-[70%] w-[75%] rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(9,85,165,0.45),transparent_65%)] blur-3xl animate-drift" />
-      <div className="absolute -right-[20%] bottom-[-10%] h-[75%] w-[80%] rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(0,19,142,0.85),transparent_65%)] blur-3xl animate-drift [animation-delay:-20s] [animation-direction:reverse]" />
+      <div className="absolute -left-[20%] top-[10%] h-[70%] w-[75%] rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(9,85,165,0.45),transparent_65%)] animate-drift" />
+      <div className="absolute -right-[20%] bottom-[-10%] h-[75%] w-[80%] rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(0,19,142,0.85),transparent_65%)] animate-drift [animation-delay:-20s] [animation-direction:reverse]" />
 
       {/* Muro di mattoni a vista che reagisce al puntatore */}
       <HeroBricks />

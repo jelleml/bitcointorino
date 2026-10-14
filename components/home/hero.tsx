@@ -46,7 +46,7 @@ export function Hero() {
 
           <div className="relative mb-12 w-full max-w-5xl flex justify-center animate-fade-up [animation-delay:150ms]">
             {/* Alone dietro al logo */}
-            <div aria-hidden="true" className="absolute inset-x-[10%] inset-y-[15%] -z-10 rounded-full bg-[#0955A5]/40 blur-[80px]" />
+            <div aria-hidden="true" className="absolute inset-x-[10%] inset-y-[15%] -z-10 bg-[radial-gradient(ellipse_at_center,rgba(9,85,165,0.45),transparent_70%)]" />
             <Image
               src="/hero-logo-new.png"
               alt="Bitcoin Torino Logo"

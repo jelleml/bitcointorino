@@ -39,8 +39,12 @@ export function HeroBricks() {
     if (!canvas || !host || !ctx) return
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    // Su touch/schermi piccoli: muro statico (niente onda continua né alone), si anima solo al tocco
+    const lite = window.matchMedia('(pointer: coarse), (max-width: 767px)').matches
+    const FRAME_MS = 1000 / 30
     let width = 0
     let height = 0
+    let frame = 0
 
     // Puntatore: posizione reale, posizione smussata e intensità (entra/esce in dissolvenza)
     const target = { x: -9999, y: -9999, active: false }
@@ -49,7 +53,7 @@ export function HeroBricks() {
 
     const resize = () => {
       const rect = host.getBoundingClientRect()
-      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const dpr = lite ? 1 : Math.min(window.devicePixelRatio || 1, 1.5)
       width = rect.width
       height = rect.height
       canvas.width = Math.round(width * dpr)
@@ -57,7 +61,7 @@ export function HeroBricks() {
       canvas.style.width = `${width}px`
       canvas.style.height = `${height}px`
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-      if (reducedMotion) draw(0)
+      if (reducedMotion || (lite && !frame)) draw(0)
     }
 
     const draw = (time: number) => {
@@ -99,7 +103,7 @@ export function HeroBricks() {
           if (edge <= 0) continue
 
           // Luce radente lenta che scorre in diagonale anche senza interazione
-          const wave = reducedMotion ? 0 : (Math.sin(t * 0.5 + mx * 0.004 + my * 0.008) + 1) / 2
+          const wave = reducedMotion || lite ? 0 : (Math.sin(t * 0.5 + mx * 0.004 + my * 0.008) + 1) / 2
 
           let boost = 0
           let dx = mx - pointer.x
@@ -159,18 +163,25 @@ export function HeroBricks() {
       }
     }
 
-    let frame = 0
     let visible = true
+    let last = 0
     const loop = (time: number) => {
-      // Smussatura del movimento: il muro "insegue" il cursore con un po' di inerzia
-      pointer.x += (target.x - pointer.x) * 0.12
-      pointer.y += (target.y - pointer.y) * 0.12
-      pointer.strength += ((target.active ? 1 : 0) - pointer.strength) * 0.06
+      frame = 0
+      if (!visible) return
       const now = time / 1000
       while (ripples.length && now - ripples[0].t0 > RIPPLE_LIFE) ripples.shift()
-      draw(time)
-      frame = visible ? requestAnimationFrame(loop) : 0
+      if (time - last >= FRAME_MS - 2) {
+        last = time
+        // Smussatura del movimento: il muro "insegue" il cursore con un po' di inerzia
+        pointer.x += (target.x - pointer.x) * 0.2
+        pointer.y += (target.y - pointer.y) * 0.2
+        pointer.strength += ((target.active ? 1 : 0) - pointer.strength) * 0.1
+        draw(time)
+      }
+      // In modalità lite il ciclo gira solo finché ci sono onde in corso
+      if (!lite || ripples.length) frame = requestAnimationFrame(loop)
     }
+    const kick = () => { if (!frame && visible) frame = requestAnimationFrame(loop) }
 
     const onMove = (e: PointerEvent) => {
       const rect = host.getBoundingClientRect()
@@ -189,6 +200,7 @@ export function HeroBricks() {
     const onDown = (e: PointerEvent) => {
       const rect = host.getBoundingClientRect()
       ripples.push({ x: e.clientX - rect.left, y: e.clientY - rect.top, t0: performance.now() / 1000 })
+      kick()
     }
 
     resize()
@@ -199,21 +211,27 @@ export function HeroBricks() {
 
     const io = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting
-      if (visible && !frame) frame = requestAnimationFrame(loop)
+      if (!visible) return
+      if (lite) draw(0)
+      else kick()
     })
     io.observe(host)
 
-    host.addEventListener('pointermove', onMove)
-    host.addEventListener('pointerleave', onLeave)
-    host.addEventListener('pointerdown', onDown)
-    frame = requestAnimationFrame(loop)
+    if (!lite) {
+      host.addEventListener('pointermove', onMove, { passive: true })
+      host.addEventListener('pointerleave', onLeave)
+    }
+    host.addEventListener('pointerdown', onDown, { passive: true })
+    if (!lite) kick()
 
     return () => {
       cancelAnimationFrame(frame)
       ro.disconnect()
       io.disconnect()
-      host.removeEventListener('pointermove', onMove)
-      host.removeEventListener('pointerleave', onLeave)
+      if (!lite) {
+        host.removeEventListener('pointermove', onMove)
+        host.removeEventListener('pointerleave', onLeave)
+      }
       host.removeEventListener('pointerdown', onDown)
     }
   }, [])
