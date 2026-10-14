@@ -60,7 +60,7 @@ export function Hero() {
               <img
                 {...desktopLogo}
                 alt="Bitcoin Torino Logo"
-                className="h-auto shrink-0 md:drop-shadow-[0_0_40px_rgba(147,194,247,0.35)] max-md:-my-[12%] max-md:w-[118%] max-md:max-w-lg md:w-full md:object-contain md:brightness-0 md:invert"
+                className="h-auto shrink-0 md:drop-shadow-[0_0_40px_rgba(147,194,247,0.35)] max-md:-my-[11%] max-md:w-[111%] max-md:max-w-[30rem] md:w-full md:object-contain md:brightness-0 md:invert"
               />
             </picture>
           </div>
