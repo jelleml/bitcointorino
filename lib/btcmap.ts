@@ -71,7 +71,8 @@ const byVerification = (a: BtcMapPlace, b: BtcMapPlace) => (b.verified_at ?? '')
 export async function getTorinoPlaces(): Promise<{ merchants: BtcMapPlace[]; atms: BtcMapPlace[] } | null> {
   try {
     const url = `https://api.btcmap.org/v4/places/search/?lat=${CENTER.lat}&lon=${CENTER.lon}&radius_km=${RADIUS_KM}`
-    const res = await fetch(url, { next: { revalidate: REVALIDATE_SECONDS } })
+    // Timeout: se BTC Map è lento, la pagina mostra il rimando alla mappa invece di bloccare il build
+    const res = await fetch(url, { next: { revalidate: REVALIDATE_SECONDS }, signal: AbortSignal.timeout(15_000) })
     if (!res.ok) return null
     const places = ((await res.json()) as BtcMapPlace[]).filter((p) => p.name && !isCommunity(p))
 

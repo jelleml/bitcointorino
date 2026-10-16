@@ -14,9 +14,11 @@ export function Partners() {
 
   // height = altezza in px dell'immagine, calcolata perché tutti i loghi abbiano la stessa area visiva:
   // a parità di area un logo stretto e alto cresce in altezza, uno largo si abbassa; i loghi pieni
-  // (Blox, ToTeM) sono leggermente ridotti, quelli a filo sottile (Osservatorio, BitCuneo, FPI) ingranditi.
+  // (Blox, ToTeM) sono leggermente ridotti, quelli a filo sottile (Osservatorio, BitCuneo) ingranditi.
+  // Polo ICT è una scritta molto larga: la sua altezza è limitata dalla larghezza della card.
   // Per BitCuneo, BTCPay e Club Orange l'altezza compensa anche il margine trasparente dentro al file.
-  const partners = [
+  // label: testo sotto al logo, se diverso dal nome (es. per andare a capo)
+  const partners: { name: string; label?: string; logo: string; height: number; invertDark?: boolean; href: string }[] = [
     { name: "Plan B Network", logo: "/Partners/logo-plan-b-network.svg?v=2", height: 90, href: "https://planb.network" },
     { name: "Blox Space", logo: "/Partners/logo-blox.svg?v=2", height: 66, invertDark: true, href: "https://linkedin.com/company/blox-space" },
     { name: "BitCuneo", logo: "/Partners/logo-bitcuneo.svg?v=3", height: 93, href: "https://bitcuneo.it" },
@@ -27,7 +29,7 @@ export function Partners() {
     { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", height: 76, invertDark: true, href: "https://www.bitcoin4business.it" },
     { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", height: 74, invertDark: true, href: "https://www.taxcare.it" },
     { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", height: 74, href: "https://www.cluborange.org" },
-    { name: "Fondazione Piemonte Innova", label: "Fondazione\nPiemonte Innova", logo: "/Partners/logo-fondazione-piemonte-innova.png?v=3", height: 52, href: "https://piemonteinnova.it" },
+    { name: "Polo di Innovazione ICT", logo: "/Partners/logo-polo-ict.svg", height: 19, invertDark: true, href: "https://poloinnovazioneict.org/" },
     { name: "ToTeM — Torino Tech Map", logo: "/Partners/logo-totem.png?v=2", height: 60, href: "https://torinotechmap.it" },
   ]
 
