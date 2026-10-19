@@ -31,6 +31,7 @@ export function Partners() {
     { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", height: 74, href: "https://www.cluborange.org" },
     { name: "Polo di Innovazione ICT", logo: "/Partners/logo-polo-ict.svg", height: 19, invertDark: true, href: "https://poloinnovazioneict.org/" },
     { name: "ToTeM — Torino Tech Map", logo: "/Partners/logo-totem.png?v=2", height: 60, href: "https://torinotechmap.it" },
+    { name: "₿arattolo", logo: "/Partners/logo-barattolo.png", height: 76, href: "https://barattolo.store/" },
   ]
 
   const trackRef = useRef<HTMLDivElement>(null)
