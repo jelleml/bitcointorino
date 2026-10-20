@@ -361,6 +361,10 @@
           "value": "Associazione Ricreativa Culturale Bitcoin Torino"
         },
         {
+          "label": "One liner",
+          "value": "L’aggregatore dell’ecosistema Bitcoin torinese."
+        },
+        {
           "label": "Forma",
           "value": "APS — Associazione di promozione sociale senza scopo di lucro"
         },
@@ -375,10 +379,6 @@
         {
           "label": "Presidente",
           "value": "Emile Jellinek"
-        },
-        {
-          "label": "Codice fiscale",
-          "value": "97924420017"
         }
       ]
     },

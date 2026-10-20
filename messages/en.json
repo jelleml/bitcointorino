@@ -361,6 +361,10 @@
           "value": "Associazione Ricreativa Culturale Bitcoin Torino"
         },
         {
+          "label": "One liner",
+          "value": "The hub of Turin’s Bitcoin ecosystem."
+        },
+        {
           "label": "Type",
           "value": "APS — Non-profit social promotion association"
         },
@@ -375,10 +379,6 @@
         {
           "label": "President",
           "value": "Emile Jellinek"
-        },
-        {
-          "label": "Tax code",
-          "value": "97924420017"
         }
       ]
     },
