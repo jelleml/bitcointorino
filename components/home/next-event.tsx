@@ -10,12 +10,12 @@ import { SITE_URL } from "@/lib/seo"
  * Quando cambia l'evento, aggiornare questi campi insieme ai testi in messages/*.json (NextEvent).
  */
 export const NEXT_EVENT = {
-  url: "https://luma.com/fdgrol0p",
-  poster: "/Event Posters/bitcoin-handle-with-care.png",
-  startDate: "2026-10-15T17:30:00+02:00",
-  endDate: "2026-10-15T19:30:00+02:00",
+  url: "https://luma.com/3hti78j0",
+  poster: "/Event Posters/sovereign-artificial-intelligence.png",
+  startDate: "2026-11-03T17:30:00+01:00",
+  endDate: "2026-11-03T19:30:00+01:00",
   inLanguage: "en",
-  performer: "Luca Giuliani",
+  performer: "Simone Esposito",
   streetAddress: "Corso Duca degli Abruzzi 24",
   postalCode: "10129",
 }
@@ -81,7 +81,7 @@ export function NextEvent() {
                 <div className="relative aspect-square overflow-hidden rounded-3xl shadow-2xl shadow-bitcoin-blue/25 ring-1 ring-black/5 dark:ring-white/10">
                   <Image
                     src={NEXT_EVENT.poster}
-                    alt="Bitcoin: Handle with Care"
+                    alt="Sovereign Artificial Intelligence"
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover"

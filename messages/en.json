@@ -39,13 +39,13 @@
   "NextEvent": {
     "title": "Next Event",
     "type": "Talk",
-    "eventName": "Bitcoin: Handle with Care",
-    "description": "An introduction to Bitcoin, its principles and its adoption, with Luca Giuliani from BitBox. From the problems of fiat to self-custody and hardware wallets. Open to newcomers. Followed by questions and discussion.",
-    "date": "Thursday, October 15th 2026",
+    "eventName": "Sovereign Artificial Intelligence",
+    "description": "Local and open-source AI as an alternative to cloud services: from how models work to hands-on demos of tools that run on your own devices.",
+    "date": "Tuesday, November 3rd 2026",
     "time": "17:30 - 19:30",
-    "locationName": "Room 19A - Politecnico di Torino",
+    "locationName": "Room 10A - Politecnico di Torino",
     "address": "Corso Duca degli Abruzzi 24, Turin",
-    "participants": "Newcomers and the curious",
+    "participants": "Open to everyone",
     "availability": "Event held in English",
     "register": "Sign up",
     "registrationDeadline": ""
