@@ -18,7 +18,7 @@ export function Partners() {
   // Polo ICT è una scritta molto larga: la sua altezza è limitata dalla larghezza della card.
   // Per BitCuneo, BTCPay e Club Orange l'altezza compensa anche il margine trasparente dentro al file.
   // label: testo sotto al logo, se diverso dal nome (es. per andare a capo)
-  const partners: { name: string; label?: string; logo: string; height: number; invertDark?: boolean; href: string }[] = [
+  const partners: { name: string; label?: string; logo: string; darkLogo?: string; height: number; invertDark?: boolean; href: string }[] = [
     { name: "Plan B Network", logo: "/partners/logo-plan-b-network.svg?v=2", height: 90, href: "https://planb.network" },
     { name: "Blox Space", logo: "/partners/logo-blox.svg?v=2", height: 66, invertDark: true, href: "https://linkedin.com/company/blox-space" },
     { name: "BitCuneo", logo: "/partners/logo-bitcuneo.svg?v=3", height: 93, href: "https://bitcuneo.it" },
@@ -33,6 +33,7 @@ export function Partners() {
     { name: "ToTeM — Torino Tech Map", logo: "/partners/logo-totem.png?v=2", height: 60, href: "https://torinotechmap.it" },
     { name: "₿arattolo", logo: "/partners/logo-barattolo.png", height: 76, href: "https://barattolo.store/" },
     { name: "BitVault", logo: "/partners/logo-bitvault.svg", height: 40, invertDark: true, href: "https://www.bitvault.sv/" },
+    { name: "SatsList", logo: "/partners/logo-satslist.svg", darkLogo: "/partners/logo-satslist-dark.svg", height: 80, href: "https://satslist.shop/" },
     { name: "Bull Bitcoin", logo: "/partners/logo-bullbitcoin.svg", height: 80, href: "https://www.bullbitcoin.com/" },
   ]
 
@@ -182,14 +183,17 @@ export function Partners() {
                       className="text-center block w-full h-full"
                     >
                       <div className="w-full h-24 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img
-                          src={logosNear ? partner.logo : undefined}
-                          decoding="async"
-                          draggable={false}
-                          alt={`${partner.name} logo`}
-                          style={{ height: partner.height }}
-                          className={`w-auto max-w-none object-contain ${partner.invertDark ? 'dark:brightness-0 dark:invert' : ''}`}
-                        />
+                        {[partner.logo, partner.darkLogo].map((src, i) => src && (
+                          <img
+                            key={src}
+                            src={logosNear ? src : undefined}
+                            decoding="async"
+                            draggable={false}
+                            alt={i === 0 ? `${partner.name} logo` : ''}
+                            style={{ height: partner.height }}
+                            className={`w-auto max-w-none object-contain ${i === 1 ? 'hidden dark:block' : partner.darkLogo ? 'dark:hidden' : ''} ${i === 0 && partner.invertDark ? 'dark:brightness-0 dark:invert' : ''}`}
+                          />
+                        ))}
                       </div>
                       <div className="text-sm font-medium text-muted-foreground group-hover:text-bitcoin-blue transition-colors break-words hyphens-auto whitespace-pre-line">
                         {partner.label ?? partner.name}
