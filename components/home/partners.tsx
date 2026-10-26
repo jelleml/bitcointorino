@@ -19,19 +19,21 @@ export function Partners() {
   // Per BitCuneo, BTCPay e Club Orange l'altezza compensa anche il margine trasparente dentro al file.
   // label: testo sotto al logo, se diverso dal nome (es. per andare a capo)
   const partners: { name: string; label?: string; logo: string; height: number; invertDark?: boolean; href: string }[] = [
-    { name: "Plan B Network", logo: "/Partners/logo-plan-b-network.svg?v=2", height: 90, href: "https://planb.network" },
-    { name: "Blox Space", logo: "/Partners/logo-blox.svg?v=2", height: 66, invertDark: true, href: "https://linkedin.com/company/blox-space" },
-    { name: "BitCuneo", logo: "/Partners/logo-bitcuneo.svg?v=3", height: 93, href: "https://bitcuneo.it" },
-    { name: "BitBox", logo: "/Partners/logo-bitbox.svg?v=2", height: 74, invertDark: true, href: "https://bitbox.swiss" },
-    { name: "BitPolito", logo: "/Partners/logo-bitpolito.svg", height: 66, invertDark: true, href: "https://t.me/bitpolito" },
-    { name: "Osservatorio Bitcoin PoliTO", logo: "/Partners/logo-osservatorio-bitcoin.svg?v=2", height: 74, invertDark: true, href: "https://crypto.polito.it/bitcoin" },
-    { name: "BTCPay Server Italia", logo: "/Partners/logo-btcpay-server.svg?v=2", height: 96, href: "https://btcpayserver.org" },
-    { name: "Bitcoin4Business", logo: "/Partners/logo-b4b.svg?v=2", height: 76, invertDark: true, href: "https://www.bitcoin4business.it" },
-    { name: "TaxCare", logo: "/Partners/logo-taxcare.svg", height: 74, invertDark: true, href: "https://www.taxcare.it" },
-    { name: "Club Orange", logo: "/Partners/logo-orange-club.svg", height: 74, href: "https://www.cluborange.org" },
-    { name: "Polo di Innovazione ICT", logo: "/Partners/logo-polo-ict.svg", height: 19, invertDark: true, href: "https://poloinnovazioneict.org/" },
-    { name: "ToTeM — Torino Tech Map", logo: "/Partners/logo-totem.png?v=2", height: 60, href: "https://torinotechmap.it" },
-    { name: "₿arattolo", logo: "/Partners/logo-barattolo.png", height: 76, href: "https://barattolo.store/" },
+    { name: "Plan B Network", logo: "/partners/logo-plan-b-network.svg?v=2", height: 90, href: "https://planb.network" },
+    { name: "Blox Space", logo: "/partners/logo-blox.svg?v=2", height: 66, invertDark: true, href: "https://linkedin.com/company/blox-space" },
+    { name: "BitCuneo", logo: "/partners/logo-bitcuneo.svg?v=3", height: 93, href: "https://bitcuneo.it" },
+    { name: "BitBox", logo: "/partners/logo-bitbox.svg?v=2", height: 74, invertDark: true, href: "https://bitbox.swiss" },
+    { name: "BitPolito", logo: "/partners/logo-bitpolito.svg", height: 66, invertDark: true, href: "https://t.me/bitpolito" },
+    { name: "Osservatorio Bitcoin PoliTO", logo: "/partners/logo-osservatorio-bitcoin.svg?v=2", height: 74, invertDark: true, href: "https://crypto.polito.it/bitcoin" },
+    { name: "BTCPay Server Italia", logo: "/partners/logo-btcpay-server.svg?v=2", height: 96, href: "https://btcpayserver.org" },
+    { name: "Bitcoin4Business", logo: "/partners/logo-b4b.svg?v=2", height: 76, invertDark: true, href: "https://www.bitcoin4business.it" },
+    { name: "TaxCare", logo: "/partners/logo-taxcare.svg", height: 74, invertDark: true, href: "https://www.taxcare.it" },
+    { name: "Club Orange", logo: "/partners/logo-orange-club.svg", height: 74, href: "https://www.cluborange.org" },
+    { name: "Polo di Innovazione ICT", logo: "/partners/logo-polo-ict.svg", height: 19, invertDark: true, href: "https://poloinnovazioneict.org/" },
+    { name: "ToTeM — Torino Tech Map", logo: "/partners/logo-totem.png?v=2", height: 60, href: "https://torinotechmap.it" },
+    { name: "₿arattolo", logo: "/partners/logo-barattolo.png", height: 76, href: "https://barattolo.store/" },
+    { name: "BitVault", logo: "/partners/logo-bitvault.svg", height: 40, invertDark: true, href: "https://www.bitvault.sv/" },
+    { name: "Bull Bitcoin", logo: "/partners/logo-bullbitcoin.svg", height: 80, href: "https://www.bullbitcoin.com/" },
   ]
 
   const trackRef = useRef<HTMLDivElement>(null)

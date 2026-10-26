@@ -21,13 +21,13 @@ export default function SpaziPage({ params: { locale } }: { params: { locale: st
     {
       id: "blox",
       address: "Via Pietro Micca, 21/B, Torino",
-      image: "/Spazi/logo-blox.jpg",
+      image: "/spazi/logo-blox.jpg",
       mapsLink: "https://maps.app.goo.gl/9jpuBg4GYpL3i85KA",
     },
     {
       id: "polito",
       address: "Corso Castelfidardo, 122, Torino",
-      image: "/Spazi/logo-politecnico-di-torino.jpg",
+      image: "/spazi/logo-politecnico-di-torino.jpg",
       mapsLink: "https://maps.app.goo.gl/nwpoNC9mAzEjvkit9",
     },
   ]

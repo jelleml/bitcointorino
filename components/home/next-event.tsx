@@ -11,7 +11,7 @@ import { SITE_URL } from "@/lib/seo"
  */
 export const NEXT_EVENT = {
   url: "https://luma.com/3hti78j0",
-  poster: "/Event Posters/sovereign-artificial-intelligence.png",
+  poster: "/event/sovereign-artificial-intelligence.png",
   startDate: "2026-11-03T17:30:00+01:00",
   endDate: "2026-11-03T19:30:00+01:00",
   inLanguage: "en",
