@@ -43,7 +43,6 @@ export default function SportelloPage({ params: { locale } }: { params: { locale
   const lanes = t.raw('how.lanes') as { title: string; description: string }[]
   const facts = t.raw('how.facts') as { label: string; value: string }[]
   const limits = t.raw('limits.items') as string[]
-  const partnerRules = t.raw('partners.items') as { title: string; description: string }[]
   const checklist = t.raw('contact.checklist') as string[]
 
   const mailto = `mailto:${SPORTELLO_EMAIL}?subject=${encodeURIComponent(t('email.subject'))}&body=${encodeURIComponent(t('email.body'))}`
@@ -184,25 +183,6 @@ export default function SportelloPage({ params: { locale } }: { params: { locale
                 ))}
               </ul>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Rinvio ai partner */}
-      <section className="py-16 md:py-28">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <SectionHeading title={t('partners.title')} />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {partnerRules.map((rule, index) => (
-                <Reveal key={index} delay={index * 100}>
-                  <div className="spotlight-card h-full p-8">
-                    <h3 className="text-xl font-bold mb-2">{rule.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{rule.description}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
           </div>
         </div>
       </section>

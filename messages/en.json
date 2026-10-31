@@ -612,23 +612,6 @@
         "We do not handle sign-ups with third-party providers or collect documents"
       ]
     },
-    "partners": {
-      "title": "Referral to partners",
-      "items": [
-        {
-          "title": "Never a single name",
-          "description": "We provide at least two names per category, in alphabetical order. One name would be a recommendation, several names are guidance."
-        },
-        {
-          "title": "No compensation",
-          "description": "Bitcoin Torino receives no fees, commissions or revenue share from the parties indicated, in any form."
-        },
-        {
-          "title": "Declared relationships",
-          "description": "If a party indicated is a partner, supporter or funder of the association, we tell you during the session."
-        }
-      ]
-    },
     "contact": {
       "title": "Tell us your problem",
       "description": "Write us an email explaining who you are and what you are facing. The more detail you give, the faster we can guide you.",

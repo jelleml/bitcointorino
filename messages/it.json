@@ -612,23 +612,6 @@
         "Non seguiamo la relazione con fornitori terzi"
       ]
     },
-    "partners": {
-      "title": "Rinvio ai partner",
-      "items": [
-        {
-          "title": "Mai un solo nome",
-          "description": "Forniamo più nominativi per ogni categoria, fornendo un servizio di orientamento."
-        },
-        {
-          "title": "Nessun compenso",
-          "description": "Non percepiamo commissioni, provvigioni o quote di ricavo dai soggetti indicati."
-        },
-        {
-          "title": "Rapporti dichiarati",
-          "description": "Comunichiamo se un soggetto indicato è partner dell'associazione."
-        }
-      ]
-    },
     "contact": {
       "title": "Raccontaci il tuo problema",
       "description": "Scrivici fornendo più dettagli possibili sulla tua situazione.",
