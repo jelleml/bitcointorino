@@ -20,7 +20,7 @@ export function Hero() {
 
   return (
     <section
-      className="noise relative isolate overflow-hidden min-h-[calc(100svh-4rem)] flex items-center pt-16 pb-28 md:pt-20 md:pb-36"
+      className="noise relative isolate overflow-hidden min-h-[calc(100svh-4rem)] flex items-center pt-16 pb-28 md:pt-[clamp(2rem,6svh,5rem)] md:pb-[clamp(3rem,9svh,7rem)]"
       style={{ background: 'linear-gradient(to bottom, #00020C 0%, #00052E 45%, #00138E 100%)' }}
     >
       <HeroBackground />
@@ -33,7 +33,7 @@ export function Hero() {
             href={NEXT_EVENT.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass group mb-10 inline-flex max-w-full items-center gap-3 rounded-full py-2 pl-3 pr-4 sm:py-1.5 sm:pl-2 text-sm text-white/90 animate-[fade-up_0.5s_cubic-bezier(0.22,1,0.36,1)_both] hover:bg-white/15 transition-colors"
+            className="glass group mb-10 md:mb-[clamp(1.5rem,4svh,2.5rem)] inline-flex max-w-full items-center gap-3 rounded-full py-2 pl-3 pr-4 sm:py-1.5 sm:pl-2 text-sm text-white/90 animate-[fade-up_0.5s_cubic-bezier(0.22,1,0.36,1)_both] hover:bg-white/15 transition-colors"
           >
             <span className="relative flex h-6 shrink-0 items-center gap-2 rounded-full bg-white/10 px-2 sm:px-2.5 text-xs font-semibold uppercase tracking-wider">
               <span className="relative flex h-2 w-2">
@@ -53,17 +53,18 @@ export function Hero() {
 
           <h1 className="sr-only">{t('h1')}</h1>
 
-          <div className="relative mb-12 w-full max-w-5xl flex justify-center">
+          <div className="relative mb-12 md:mb-[clamp(1.5rem,5svh,3rem)] w-full max-w-5xl flex justify-center">
             {/* Alone dietro al logo */}
             <div aria-hidden="true" className="absolute inset-x-[10%] inset-y-[15%] -z-10 bg-[radial-gradient(ellipse_at_center,rgba(9,85,165,0.45),transparent_70%)]" />
             {/* Un solo <picture>: su mobile il logo compatto (pittogramma + scritta) in SVG, su desktop il logo esteso ottimizzato.
-                Il browser scarica solo la versione che mostra. */}
+                Il browser scarica solo la versione che mostra.
+                Da md in su l'altezza del logo segue quella dello schermo, così badge, logo e pulsanti stanno sempre nella prima schermata. */}
             <picture className="contents">
               <source media="(max-width: 767px)" srcSet="/bitcoin-torino-logo-small-dark.svg" width={2016} height={894} />
               <img
                 {...desktopLogo}
                 alt="Bitcoin Torino"
-                className="h-auto shrink-0 md:drop-shadow-[0_0_40px_rgba(147,194,247,0.35)] max-md:-my-[11%] max-md:w-[111%] max-md:max-w-[30rem] md:w-full md:object-contain md:brightness-0 md:invert"
+                className="h-auto shrink-0 md:drop-shadow-[0_0_40px_rgba(147,194,247,0.35)] max-md:-my-[11%] max-md:w-[111%] max-md:max-w-[30rem] md:w-full md:h-[clamp(8rem,calc(74svh-10rem),28rem)] md:object-contain md:brightness-0 md:invert"
               />
             </picture>
           </div>
