@@ -25,6 +25,7 @@ export function Partners() {
     { name: "BitBox", logo: "/partners/logo-bitbox.svg?v=2", height: 74, invertDark: true, href: "https://bitbox.swiss" },
     { name: "BitPolito", logo: "/partners/logo-bitpolito.svg", height: 66, invertDark: true, href: "https://t.me/bitpolito" },
     { name: "Osservatorio Bitcoin PoliTO", logo: "/partners/logo-osservatorio-bitcoin.svg?v=2", height: 74, invertDark: true, href: "https://crypto.polito.it/bitcoin" },
+    { name: "CrypTO", logo: "/partners/logo-cyrpto-light.png", darkLogo: "/partners/logo-cyrpto-dark.png", height: 96, href: "https://crypto.polito.it/" },
     { name: "BTCPay Server Italia", logo: "/partners/logo-btcpay-server.svg?v=2", height: 96, href: "https://btcpayserver.org" },
     { name: "Bitcoin4Business", logo: "/partners/logo-b4b.svg?v=2", height: 76, invertDark: true, href: "https://www.bitcoin4business.it" },
     { name: "TaxCare", logo: "/partners/logo-taxcare.svg", height: 74, invertDark: true, href: "https://www.taxcare.it" },
