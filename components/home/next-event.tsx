@@ -10,14 +10,15 @@ import { SITE_URL } from "@/lib/seo"
  * Quando cambia l'evento, aggiornare questi campi insieme ai testi in messages/*.json (NextEvent).
  */
 export const NEXT_EVENT = {
-  url: "https://luma.com/3hti78j0",
-  poster: "/event/sovereign-artificial-intelligence.png",
-  startDate: "2026-11-03T17:30:00+01:00",
-  endDate: "2026-11-03T19:30:00+01:00",
-  inLanguage: "en",
-  performer: "Simone Esposito",
-  streetAddress: "Corso Duca degli Abruzzi 24",
-  postalCode: "10129",
+  url: "https://www.eventbrite.it/e/biglietti-workshop-tribe-bitcoin-per-la-tua-startup-pagamenti-e-modelli-di-business-2004243878393?aff=odcleoeventsincollection",
+  poster: "/event/tribe-bitcoin-startup-workshop.jpg",
+  posterAspect: "4 / 5", // proporzioni della locandina (larghezza / altezza)
+  startDate: "2026-11-25T18:00:00+01:00",
+  endDate: "2026-11-25T20:00:00+01:00",
+  inLanguage: "it",
+  performer: "Filippo Farenga",
+  streetAddress: "Via Pietro Micca 21",
+  postalCode: "10121",
 }
 
 export function NextEvent() {
@@ -78,10 +79,10 @@ export function NextEvent() {
             <Reveal className="relative">
               <div aria-hidden="true" className="absolute -inset-10 -z-10 bg-[radial-gradient(closest-side,rgba(9,85,165,0.4),rgba(0,19,142,0.25)_60%,transparent)] animate-float" />
               <Tilt className="rounded-3xl">
-                <div className="relative aspect-square overflow-hidden rounded-3xl shadow-2xl shadow-bitcoin-blue/25 ring-1 ring-black/5 dark:ring-white/10">
+                <div style={{ aspectRatio: NEXT_EVENT.posterAspect }} className="relative overflow-hidden rounded-3xl shadow-2xl shadow-bitcoin-blue/25 ring-1 ring-black/5 dark:ring-white/10">
                   <Image
                     src={NEXT_EVENT.poster}
-                    alt="Sovereign Artificial Intelligence"
+                    alt={t('eventName')}
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover"

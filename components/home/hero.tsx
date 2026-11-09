@@ -45,7 +45,7 @@ export function Hero() {
             <span className="flex flex-col items-start text-left leading-tight sm:block sm:leading-normal font-medium">
               {/* Su mobile l'etichetta sta in piccolo sopra al titolo, su desktop è nel badge a sinistra */}
               <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 sm:hidden">{tEvent('title')}</span>
-              {tEvent('eventName')}
+              {tEvent('shortName')}
               <span className="hidden sm:inline text-white/60"> · {tEvent('date')}</span>
             </span>
             <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" aria-hidden="true" />
