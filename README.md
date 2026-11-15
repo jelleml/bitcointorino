@@ -116,7 +116,7 @@ Questo progetto è rilasciato con licenza MIT.
 
 ## 📞 Contatti
 
-- **Email:** bitcoin.torino@proton.me
+- **Email:** info@bitcointorino.to
 - **Twitter:** [@bitcointorino](https://twitter.com/bitcointorino)
 - **Telegram:** [t.me/associazionebitcointorino](https://t.me/associazionebitcointorino)
 

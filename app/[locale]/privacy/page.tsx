@@ -121,8 +121,8 @@ export default function PrivacyPage({ params: { locale } }: { params: { locale: 
               </p>
               <p className="mb-2">
                 <strong>Email:</strong>{" "}
-                <a href="mailto:bitcoin.torino@proton.me" className="text-bitcoin-blue hover:underline">
-                  bitcoin.torino@proton.me
+                <a href="mailto:info@bitcointorino.to" className="text-bitcoin-blue hover:underline">
+                  info@bitcointorino.to
                 </a>
               </p>
               <p>

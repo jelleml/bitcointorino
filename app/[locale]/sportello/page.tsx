@@ -24,7 +24,7 @@ import { Reveal } from "@/components/fx/reveal"
 import { CopyButton } from "@/components/media-kit/copy-button"
 import { pageMetadata } from "@/lib/seo"
 
-const SPORTELLO_EMAIL = "bitcoin.torino@proton.me"
+const SPORTELLO_EMAIL = "info@bitcointorino.to"
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata(locale, 'Sportello.meta', '/sportello')

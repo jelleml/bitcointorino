@@ -211,7 +211,7 @@ export function Partners() {
           <p className="text-muted-foreground">
             {t('becomePartner')}{" "}
             <a
-              href="mailto:bitcoin.torino@proton.me"
+              href="mailto:info@bitcointorino.to"
               className="nav-link inline-block py-1 text-bitcoin-blue font-bold dark:text-[#93C2F7]"
             >
               {t('contactUs')}

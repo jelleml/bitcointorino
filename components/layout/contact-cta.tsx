@@ -17,7 +17,7 @@ export function ContactCta({
   title,
   description,
   label,
-  href = 'mailto:bitcoin.torino@proton.me',
+  href = 'mailto:info@bitcointorino.to',
   icon = <Mail className="h-9 w-9" aria-hidden="true" />,
   extra,
 }: ContactCtaProps) {

@@ -9,7 +9,7 @@ import { setRequestLocale } from 'next-intl/server'
 
 const LUMA_URL = "https://luma.com/bitcoin-torino-calendar"
 const TELEGRAM_URL = "https://t.me/bitcointorinochannel"
-const EMAIL_URL = "mailto:bitcoin.torino@proton.me"
+const EMAIL_URL = "mailto:info@bitcointorino.to"
 
 function FaqLink({ href, children }: { href: string; children: React.ReactNode }) {
   const external = href.startsWith("http")

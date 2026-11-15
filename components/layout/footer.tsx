@@ -112,7 +112,7 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" aria-hidden="true" />
               </a>
               <a
-                href="mailto:bitcoin.torino@proton.me"
+                href="mailto:info@bitcointorino.to"
                 className="glass group/social p-3 rounded-full transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 hover:shadow-[0_10px_30px_-8px_rgba(147,194,247,0.7)]"
                 aria-label="Email"
               >

@@ -17,7 +17,7 @@ import { pageMetadata } from "@/lib/seo"
 
 const ASSETS_PATH = "/media-kit"
 const KIT_ZIP = `${ASSETS_PATH}/bitcoin-torino-media-kit.zip`
-const PRESS_EMAIL = "bitcoin.torino@proton.me"
+const PRESS_EMAIL = "info@bitcointorino.to"
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata(locale, 'MediaKit.meta', '/media-kit')

@@ -325,7 +325,7 @@ module.exports = {
 ## 📞 Support
 
 Per problemi di deployment, contatta:
-- Email: bitcoin.torino@proton.me
+- Email: info@bitcointorino.to
 - Documentazione Next.js: [nextjs.org/docs](https://nextjs.org/docs)
 - Vercel Support: [vercel.com/support](https://vercel.com/support)
 
